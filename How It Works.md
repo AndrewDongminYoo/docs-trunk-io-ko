@@ -7,9 +7,7 @@ description: >-
 
 # How It Works
 
-{% hint style="info" %}
 If you don't use GitHub, we recommend you check out the [Continuous Integration](../continuous-integration/) guide.
-{% endhint %}
 
 ## How it works
 

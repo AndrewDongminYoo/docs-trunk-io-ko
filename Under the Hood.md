@@ -4,7 +4,7 @@
 
 ## Hold the Line
 
-Linters usually operate only on source code and have no awareness of your commit history, which makes introducing a linter into an existing codebase a nightmarish exercise. Sure, this new linter may be flagging all sorts of potential existing bugs in your code, but you've got features to ship and you know your code works as is, so clearly those potential bugs aren't showstoppers. Trunk's ability to [hold-the-line](./#hold-the-line) suppresses pre-existing issues, which means only new issues are flagged. We achieve this by checking both your mainline and in-progress code and comparing the results and source code to determine which issues you actually care about.
+Linters usually operate only on source code and have no awareness of your commit history, which makes introducing a linter into an existing codebase a nightmarish exercise. Sure, this new linter may be flagging all sorts of potential existing bugs in your code, but you've got features to ship and you know your code works as is, so clearly those potential bugs aren't showstoppers. Trunk's ability to [hold-the-line](./Under%20the%20Hood.md#hold-the-line) suppresses pre-existing issues, which means only new issues are flagged. We achieve this by checking both your mainline and in-progress code and comparing the results and source code to determine which issues you actually care about.
 
 ## Caching and Reproducibility
 
@@ -29,19 +29,19 @@ Over the course of a `trunk check` run, changes made to the filesystem outside o
 
 ## Why does trunk only work in a git repo?
 
-`trunk` uses git to detect your changes so we only check the code you've changed. Additionally we use it to accurately detect errors _caused_ by your changes, even if the errors aren't on lines you changed. You'll read more about [hold-the-line](./#hold-the-line) later in the docs.
+`trunk` uses git to detect your changes so we only check the code you've changed. Additionally we use it to accurately detect errors _caused_ by your changes, even if the errors aren't on lines you changed. You'll read more about [hold-the-line](./Under%20the%20Hood.md#hold-the-line) later in the docs.
 
 ## CPU Utilization
 
-By default `check` will run concurrent jobs using up to half the available cores on your machine. This default is intended to balance system utilization and check responsiveness. If `check` detects that it is running in a continuous integration environment or you pass the [`--ci`](usage/) flag, then it will instead use all cores on the machine. This behavior can be overwritten by manually calling `check` with the [`--jobs`](usage/#options) argument.
+By default `check` will run concurrent jobs using up to half the available cores on your machine. This default is intended to balance system utilization and check responsiveness. If `check` detects that it is running in a continuous integration environment or you pass the [`--ci`](./Usage.md#global-options) flag, then it will instead use all cores on the machine. This behavior can be overwritten by manually calling `check` with the [`--jobs`](./Usage.md#options) argument.
 
 ## Memory Utilization
 
 `check` does not current support a mechanism to throttle back jobs based on the memory consumption of concurrently runs jobs. In order to throttle memory utilization you can lower the\
-[`--jobs`](usage/#options) count to indirectly reduct system load.
+[`--jobs`](./Usage.md#options) count to indirectly reduct system load.
 
 ## Daemon
 
 `trunk check` runs a daemon which monitors relevant file changes and triggers jobs to precompute in the background while you work. The daemon is used both to support realtime background checking in supported extensions (e.g. VS Code) and to precompute check results for faster commits/pushes. Some native linters are more compute/memory intensive and `check` supports disabling background linting of those tools.\
 \
-By default linters run whenever a file is modified in the background. You can override this behavior by editing the [`run_when`](configuration/custom-linters/#run_when) configuration for a tool. \\
+By default linters run whenever a file is modified in the background. You can override this behavior by editing the [`run_when`](./Custom%20Linters.md#run_when) configuration for a tool. \\

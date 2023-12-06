@@ -11,9 +11,7 @@ trunk fmt         # runs all the enabled formatters and auto-applies changes
 
 You can always find this list using `trunk check --help`.
 
-{% hint style="info" %}
 Trunk is git-aware. When you run `trunk check` it will **only run on files you've modified according to git**. To run on a sampling in your repo, run: `trunk check --sample 5`
-{% endhint %}
 
 ## check
 

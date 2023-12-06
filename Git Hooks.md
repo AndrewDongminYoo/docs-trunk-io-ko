@@ -23,8 +23,6 @@ As an example let's examine how we implement the `git-lfs` action in the [plugin
 
 ### Definition
 
-{% code lineNumbers="true" %}
-
 ```yaml
 - id: git-lfs
   display_name: Git LFS
@@ -33,8 +31,6 @@ As an example let's examine how we implement the `git-lfs` action in the [plugin
   triggers:
     - git_hooks: [post-checkout, post-commit, post-merge, pre-push]
 ```
-
-{% endcode %}
 
 ### Template resolution
 

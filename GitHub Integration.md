@@ -10,17 +10,11 @@ Now that you have `trunk check` running on your local computer, your next step i
 
 Sign up at [app.trunk.io](https://app.trunk.io), create a Trunk organization, and connect it to your repositories. See our GitHub App permissions [here](../../../administration/github-app-permissions.md) if interested.
 
-{% @supademo/embed demoId="HXyBmoBn0_OX9Xite2fqd" url="https://app.supademo.com/demo/HXyBmoBn0_OX9Xite2fqd" %}
-
 ## Set Up Trunk Check
-
-{% @supademo/embed demoId="pRr_eDzh-klIQdK_yW3se" url="https://app.supademo.com/demo/pRr_eDzh-klIQdK_yW3se" %}
 
 ## Configure Slack Notifications (optional)
 
-{% @supademo/embed demoId="cllpdjqhy1jf1051a1nff1a3y" url="https://app.supademo.com/demo/cllpdjqhy1jf1051a1nff1a3y" %}
-
-## Use it!
+## Use it
 
 ### Ensure that PRs are free of issues
 
@@ -50,4 +44,4 @@ Not only do our daily scans allow you to browse and triage the issues in your re
 
 [Read the documentation about our GitHub integration to learn more.](github-integration.md)
 
-If you don't host your source code on GitHub, we recommend setting[ up Trunk locally](broken-reference).
+If you don't host your source code on GitHub, we recommend setting up Trunk locally.

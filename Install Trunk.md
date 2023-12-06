@@ -4,55 +4,29 @@ The below commands install the Trunk Launcher, a bash script that downloads the 
 
 Run one of the following commands to install the Trunk Launcher, or add it as a dev dependency to your project if you use `npm`, `pnpm`, or `yarn`. You can also commit the Trunk launcher directly into your repo (see below).
 
-{% tabs %}
-{% tab title="bash" %}
-
 ```sh
 curl https://get.trunk.io -fsSL | bash
 ```
-
-{% endtab %}
-
-{% tab title="bash (no prompts)" %}
 
 ```sh
 curl https://get.trunk.io -fsSL | bash -s -- -y
 ```
 
-{% endtab %}
-
-{% tab title="brew" %}
-
 ```sh
 brew install trunk-io
 ```
-
-{% endtab %}
-
-{% tab title="npm" %}
 
 ```sh
 npm install -D @trunkio/launcher
 ```
 
-{% endtab %}
-
-{% tab title="pnpm" %}
-
 ```sh
 pnpm add -D @trunkio/launcher
 ```
 
-{% endtab %}
-
-{% tab title="yarn" %}
-
 ```sh
 yarn add -D @trunkio/launcher
 ```
-
-{% endtab %}
-{% endtabs %}
 
 For use on Windows, check out our [Windows (beta)](windows-beta.md) page.
 
