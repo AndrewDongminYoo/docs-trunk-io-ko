@@ -1,0 +1,11 @@
+{
+  "cSpell.words": ["Getx", "Grott", "localizely", "unsplit"],
+  "cSpell.customDictionaries": {
+    "workspace": {
+      "name": "workspace",
+      "path": "${workspaceFolder:markdowns}/.cspell/workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
+    }
+  }
+}

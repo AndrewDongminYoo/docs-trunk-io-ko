@@ -1,0 +1,1 @@
+In a repository with many contributors, the state of the main branch will have advanced significantly after step 1. Because of this, the results of the tests run in step 4 are out of date. Merge solves for this by adding another test pass to ensure no broken code lands on your main branch. A developer workflow with Merge integrated might look like this:
