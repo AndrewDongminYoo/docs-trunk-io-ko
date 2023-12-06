@@ -149,7 +149,7 @@ runtimes:
 
 ## `lint`
 
-See the [check configuration](../../configuration/) and [custom linter](../../configuration/custom-linters/) documentation.
+See the [check configuration](./Configuration.md) and [custom linter](./Custom%20Linters.md) documentation.
 
 ### Disable upgrade notifications
 

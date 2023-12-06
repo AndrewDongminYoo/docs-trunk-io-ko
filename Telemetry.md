@@ -1,6 +1,6 @@
 # Telemetry
 
-Trunk sends basic usage metrics from our local tools ([CLI](../cli/) & [VS Code Extension](vs-code.md)) to our analytics system to help us understand our usage and improve our tools over time. We do not send your code or codebase to our backend.
+Trunk sends basic usage metrics from our local tools ([CLI](./CLI.md) & [VS Code Extension](./VS%20Code.md)) to our analytics system to help us understand our usage and improve our tools over time. We do not send your code or codebase to our backend.
 
 ## Why we collect usage data
 

@@ -48,7 +48,7 @@ This makes it much easier for you to share Trunk with your colleagues!
 
 Trunk has a very minimal installation, and therefore, there's not much to uninstall. The two system paths we use are:
 
-- `/usr/local/bin/trunk`: the [Trunk Launcher](../reference/components.md#trunk-launcher)
+- `/usr/local/bin/trunk`: the [Trunk Launcher](./Components.md#trunk-launcher)
 - `~/.cache/trunk`: cached versions of the trunk cli, linters, formatters, etc.
 
 You can delete those two paths to uninstall.

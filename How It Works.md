@@ -7,7 +7,7 @@ description: >-
 
 # How It Works
 
-If you don't use GitHub, we recommend you check out the [Continuous Integration](../continuous-integration/) guide.
+If you don't use GitHub, we recommend you check out the [Continuous Integration](./Non-GitHub%20Integration.md) guide.
 
 ## How it works
 
@@ -37,7 +37,7 @@ If you want to version the linter configuration for a given repo or enable linte
 
 Trunk Check can automatically detect new Check issues on your pull requests and flag them so that you can prevent pull requests from introducing any new issues in your repository.
 
-When running on a pull request, Trunk Check will only flag _new_ issues, not existing ones, so that your engineers don't have to fix pre-existing linter issues in every file they touch - this is the same [hold-the-line technology](../../#hold-the-line) that our VSCode extension and CLI use.
+When running on a pull request, Trunk Check will only flag _new_ issues, not existing ones, so that your engineers don't have to fix pre-existing linter issues in every file they touch - this is the same [hold-the-line technology](./Under%20the%20Hood.md#hold-the-line) that our VSCode extension and CLI use.
 
 <details>
 
@@ -57,7 +57,7 @@ If this continues to fail, then run `git checkout refs/pull/<PR number>/merge &&
 
 You can include `/trunk skip-check` in the body of a PR description (i.e. the first comment on a given PR) to mark Trunk Check as "skipped". Trunk Check will still run on your PR and report issues, but this will allow the PR to pass a GitHub required status check on `Trunk Check`.
 
-This can be helpful if Check is flagging known issues in a given PR which you don't want to [ignore](../../usage/ignoring-issues.md), which if you're doing a large refactor, can come in very handy.
+This can be helpful if Check is flagging known issues in a given PR which you don't want to [ignore](./Ignoring%20Issues.md), which if you're doing a large refactor, can come in very handy.
 
 </details>
 

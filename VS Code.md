@@ -4,7 +4,7 @@ Trunk is also available as a [VSCode extension](https://marketplace.visualstudio
 
 ## Get Started
 
-By default, Trunk will try to automatically initialize itself in single-player mode. This means that it'll create a Trunk configuration that is hidden from git, which allows you to try it out [without Trunk's versioning powers](vs-code.md#single-player-mode).
+By default, Trunk will try to automatically initialize itself in single-player mode. This means that it'll create a Trunk configuration that is hidden from git, which allows you to try it out [without Trunk's versioning powers](./VS%20Code.md#single-player-mode).
 
 If Trunk has not initialized itself in single-player mode, then you will need to initialize it manually, either by pressing the 'Initialize Trunk' button in the Trunk side panel:
 
@@ -50,7 +50,7 @@ or click on the notification to "Share trunk config", which will commit `.trunk/
 
 ## Learn more
 
-Check out how to [install the CLI](../cli/install-trunk.md), [set it up in CI](../check-cloud-ci-integration/get-started/github-integration.md), [ignore issues](../usage/ignoring-issues.md), and set up [Custom Linters](../configuration/custom-linters/).
+Check out how to [install the CLI](./Install%20Trunk.md), [set it up in CI](./GitHub%20Integration.md), [ignore issues](./Ignoring%20Issues.md), and set up [Custom Linters](./Custom%20Linters.md).
 
 ![linter code docs](https://static.trunk.io/assets/vscode_doc_links.png)
 

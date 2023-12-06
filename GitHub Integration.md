@@ -8,7 +8,7 @@ Now that you have `trunk check` running on your local computer, your next step i
 
 ## Connect your Trunk organization to GitHub
 
-Sign up at [app.trunk.io](https://app.trunk.io), create a Trunk organization, and connect it to your repositories. See our GitHub App permissions [here](../../../administration/github-app-permissions.md) if interested.
+Sign up at [app.trunk.io](https://app.trunk.io), create a Trunk organization, and connect it to your repositories. See our GitHub App permissions [here](./GitHub%20Codespaces.md) if interested.
 
 ## Set Up Trunk Check
 
@@ -42,6 +42,6 @@ Not only do our daily scans allow you to browse and triage the issues in your re
 
 ## Learn more
 
-[Read the documentation about our GitHub integration to learn more.](github-integration.md)
+[Read the documentation about our GitHub integration to learn more.](./GitHub%20Integration.md)
 
 If you don't host your source code on GitHub, we recommend setting up Trunk locally.

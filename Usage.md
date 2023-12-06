@@ -31,7 +31,7 @@ Run all applicable formatters as configured in `trunk.yaml`. `trunk fmt` is shor
 | `--no-fix`      | Surface, but do not prompt for autofixes                                                                                              |
 | `--filter`      | List of comma-separated linters to run. Specify `--filter=-linter` to disable a linter.                                               |
 | `--sample=N`    | Run check on a [sampling](./#sample) of all files in the repo                                                                         |
-| `--ci`          | Run in [Continuous Integration mode](../check-cloud-ci-integration/continuous-integration/)                                           |
+| `--ci`          | Run in [Continuous Integration mode](./Non-GitHub%20Integration.md)                                                                   |
 | `--no-progress` | Do not show progress while running                                                                                                    |
 | `--ci-progress` | Only show progress every 30s while running (useful for CI jobs). Implied by `--ci`.                                                   |
 | `--jobs`        | number of concurrent jobs (does not affect background linting)                                                                        |
@@ -118,7 +118,7 @@ Upgrade will also recommend new tools that have become applicable since the last
 
 ### Pinned System Versions
 
-When you enable a packaged or downloaded linter in your `trunk.yaml` and don't specify a version, trunk will attempt to use the version of that tool installed on your system. Trunk will not automatically suggest upgrades for this tool. If you wish to upgrade to the latest version, you will first have to specify a base version in your `trunk.yaml`. See [Configuration](../configuration/) for more information about `trunk.yaml`.
+When you enable a packaged or downloaded linter in your `trunk.yaml` and don't specify a version, trunk will attempt to use the version of that tool installed on your system. Trunk will not automatically suggest upgrades for this tool. If you wish to upgrade to the latest version, you will first have to specify a base version in your `trunk.yaml`. See [Configuration](./Configuration.md) for more information about `trunk.yaml`.
 
 ## Advanced Features
 
