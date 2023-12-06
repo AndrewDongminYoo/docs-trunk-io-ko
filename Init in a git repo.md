@@ -27,9 +27,7 @@ When in single-player mode, the `.trunk` directory will be listed in `.git/info/
 ```sh
 # Turn single-player mode on.
 trunk config hide
-```
 
-```sh
 # Turn single-player mode off.
 trunk config share
 ```

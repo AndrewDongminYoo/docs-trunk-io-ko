@@ -10,25 +10,20 @@ To use `trunk` locally, install via:
 
 ```sh
 curl https://get.trunk.io -fsSL | bash
-```
 
-```sh
+# 프롬프트 응답 없이 설치하려면:
 curl https://get.trunk.io -fsSL | bash -s -- -y
-```
 
-```sh
+# OSX Homebrew로 설치하기
 brew install trunk-io
-```
 
-```sh
+# NPM으로 설치하기
 npm install -D @trunkio/launcher
-```
 
-```sh
+# PNPM으로 설치하기
 pnpm add -D @trunkio/launcher
-```
 
-```sh
+# Yarn으로 설치하기
 yarn add -D @trunkio/launcher
 ```
 
