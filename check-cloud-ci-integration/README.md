@@ -1,2 +1,0 @@
-# Check Cloud - CI Integration
-
