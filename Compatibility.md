@@ -10,7 +10,7 @@ Trunk will run on macOS version 10.15 or later.
 
 ## Windows
 
-[Currently in public beta.](windows-beta.md)
+[Currently in public beta.](<./Windows%20Support%20(beta).md>)
 
 ## Backward Compatibility
 

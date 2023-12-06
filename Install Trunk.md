@@ -28,7 +28,7 @@ pnpm add -D @trunkio/launcher
 yarn add -D @trunkio/launcher
 ```
 
-For use on Windows, check out our [Windows (beta)](windows-beta.md) page.
+For use on Windows, check out our [Windows (beta)](<./Windows%20Support%20(beta).md>) page.
 
 ## Commit the Trunk Launcher (optional)
 

@@ -1,6 +1,6 @@
 # Creating Organization Configs
 
-To standardize Trunk configuration across an organization, you can create and publish a public plugins repository. This repo can define new linter definitions, specify enabled linters and actions, and even [export linter configs](exported-configs.md).
+To standardize Trunk configuration across an organization, you can create and publish a public plugins repository. This repo can define new linter definitions, specify enabled linters and actions, and even [export linter configs](./Import%20Export%20Linter%20Configs.md).
 
 Once you've created your plugin repository, you can source it in other repositories to adopt shared configuration across your organization. For an example of how we do this in our own org, check out our [configs repo](https://github.com/trunk-io/configs).
 

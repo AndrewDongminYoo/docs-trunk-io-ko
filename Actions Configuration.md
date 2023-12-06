@@ -130,7 +130,7 @@ Note: We only provide file triggers for files inside of your workspace.
 
 ### Git hooks
 
-You can also configure trunk to manage your git hooks. More detail is provided on this in our [git hooks reference](git-hooks.md).
+You can also configure trunk to manage your git hooks. More detail is provided on this in our [git hooks reference](./Git%20Hooks.md).
 
 ## Interactivity
 

@@ -14,7 +14,7 @@ Trunk currently supports the following types of additional/proprietary linters:
 | [`arcanist`](./#arcanist)           |       ✓        | Produces diagnostics as Arcanist JSON.                                                                                                   |
 | [`rewrite`](./#formatters)          |       ✓        | Writes the formatted version of a file to `stdout`.                                                                                      |
 
-If your linter produces a different output type, you can also write a [parser](custom-parsers.md) to transform the linter's output into something trunk can understand.
+If your linter produces a different output type, you can also write a [parser](./Custom%20Parsers.md) to transform the linter's output into something trunk can understand.
 
 To set up a custom linter, add it to `trunk.yaml` under `lint > definitions` and enable it:
 
