@@ -1,12 +1,12 @@
 ---
-description: Learn more about the Trunk CLI
+description: Trunk CLI에 대해 자세히 알아보기
 ---
 
 # CLI
 
 ## Getting Started
 
-To use `trunk` locally, install via:
+로컬에서 `trunk`를 사용하려면 다음을 통해 설치하세요:
 
 ```sh
 curl https://get.trunk.io -fsSL | bash
@@ -27,31 +27,31 @@ pnpm add -D @trunkio/launcher
 yarn add -D @trunkio/launcher
 ```
 
-## What can it do?
+## 무엇을 할 수 있나요?
 
-The Trunk CLI can be used for:
+Trunk CLI는 다음과 같은 용도로 사용할 수 있습니다:
 
-- [Trunk Check](./Check.md): a pluggable superlinter with a builtin language server and pre-existing issue detection
-- [Trunk Tools:](./Tools.md) hermetic runtime and CLI tool manager
-- [Trunk Actions](./Actions.md): local workflow automation and githooks manager
-- [Trunk Merge](./GitHub%20Integration.md): a merge queue to make merging code in github safer and easier
+- [Trunk Check](./Check.md): 언어 서버가 내장되어 있고 기존 이슈를 감지하는 플러그형 수퍼린터
+- [Trunk Tools](./Tools.md): 비공개 런타임 및 CLI 도구 관리자
+- [Trunk Actions](./Actions.md): 로컬 워크플로 자동화 및 깃훅 관리자
+- [Trunk Merge](./GitHub%20Integration.md): 깃허브에서 코드를 더 안전하고 쉽게 병합할 수 있는 병합 대기열
 
-[Trunk Check](./Check.md) and [Trunk Actions](./Actions.md) can be used entirely locally without depending on hosted services or even having a Trunk account
+[Trunk Check](./Check.md) 및 [Trunk Actions](./Actions.md)은 호스팅 서비스에 의존하거나 Trunk 계정이 없어도 로컬에서 완전히 사용할 수 있습니다.
 
-## Initialize Trunk in your repo
+## 리포지토리에서 Trunk Init하기
 
-Whether you aim to use [Trunk Check](./Check.md), [Trunk Merge](./GitHub%20Integration.md), [Trunk Actions](./Actions.md), or all of the above, the first step is to initialize Trunk in your git repo:
+[Trunk Check](./Check.md), [Trunk Merge](./GitHub%20Integration.md), [Trunk Actions](./Actions.md) 또는 위의 모든 것을 사용하려는 경우 첫 번째 단계는 git 리포지토리에서 Trunk를 초기화해야 합니다:
 
 ```sh
 trunk init
 ```
 
-Note: for an extra layer of security you can optionally run `trunk init --lock` instead of `trunk init` which adds sha256s of the trunk cli to the trunk config file. This is then used by the Trunk Launcher when it downloads the `trunk` binary.
+참고: 보안을 강화하려면 `trunk init` 대신 `trunk init --lock`을 선택적으로 실행하여 Trunk Config 파일에 Trunk CLI의 sha256을 추가할 수 있습니다. 그러면 Trunk Launcher가 `trunk` 바이너리를 다운로드할 때 이 파일을 사용합니다.
 
-`init` scans the files in your repo and generates a `.trunk/trunk.yaml` configuration file tailored to your repo (it may also generate linter-specific config files, such as `.shellcheckrc`). The scan will identify all the particular languages and technologies you use and automatically configure the correct set of linters / formatters to run.
+`init`은 리포지토리의 파일을 스캔하여 리포지토리에 맞는 `.trunk/trunk.yaml` 구성 파일을 생성합니다(`.shellcheckrc`와 같은 린터별 구성 파일도 생성할 수 있음). 이 검사는 사용하는 모든 특정 언어와 기술을 식별하고 실행할 올바른 린터/포맷터 세트를 자동으로 구성합니다.
 
-If you only want to use [Trunk Merge](./GitHub%20Integration.md), you can safely ignore the linter setup, or even strip enabled linters from `.trunk/trunk.yaml`. You will additionally need to login to use [Trunk Merge](./GitHub%20Integration.md) via `trunk login`.
+[Trunk Merge](./GitHub%20Integration.md)만 사용하려는 경우, 린터 설정을 무시하거나 활성화된 린터를 `.trunk/trunk.yaml`에서 제거할 수도 있습니다. `trunk 로그인`을 통해 `trunk 병합`(./GitHub%20Integration.md)을 사용하려면 추가적으로 로그인해야 합니다.
 
-## Next Steps
+## 다음 단계
 
-Check out the docs for [Trunk Merge](./GitHub%20Integration.md), [Trunk Check](./Check.md), and [Trunk Actions](./Actions.md).
+[Trunk Merge](./GitHub%20Integration.md), [Trunk Check](./Check.md), [Trunk Actions](./Actions.md) 문서를 확인하세요.

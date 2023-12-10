@@ -86,7 +86,7 @@ trunk check enable {linter}
 
 ## 작동 방식
 
-트렁크는 온디맨드 실행에 필요한 모든 것을 다운로드하여 `~/.cache/trunk`에 캐시합니다. 린터를 백그라운드에서 병렬로 실행하고 [언어 서버](https://microsoft.github.io/language-server-protocol)로 기능하여 \[Trunk VSCode Extension]\[vscode]를 통해 VSCode에 결과를 인라인으로 표시합니다.
+Trunk는 온디맨드 실행에 필요한 모든 것을 다운로드하여 `~/.cache/trunk`에 캐시합니다. 린터를 백그라운드에서 병렬로 실행하고 [언어 서버](https://microsoft.github.io/language-server-protocol)로 기능하여 \[Trunk VSCode Extension]\[vscode]를 통해 VSCode에 결과를 인라인으로 표시합니다.
 
 ## CLI 설치
 

@@ -1,22 +1,22 @@
 # Custom Linters
 
-The beautiful thing about `trunk` is that you can leverage our caching and hold-the-line solution with your own custom linters; you just need to tell us how to interpret the results from your linter.
+`trunk`의 장점은 사용자 지정 린터로 캐싱 및 대기열 유지 솔루션을 활용할 수 있다는 것인데, 린터의 결과를 어떻게 해석할지 알려주기만 하면 됩니다.
 
-Trunk currently supports the following types of additional/proprietary linters:
+Trunk는 현재 다음과 같은 유형의 추가/전용 린터를 지원합니다:
 
-|                                     |                |                                                                                                                                          |
-| :---------------------------------- | :------------: | :--------------------------------------------------------------------------------------------------------------------------------------- |
-| Linter Type                         | Autofixsupport | Description                                                                                                                              |
-| [`sarif`](./#sarif)                 |       ✓        | Produces diagnostics as [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) JSON. |
-| [`lsp_json`](./#lsp-json)           |                | Produces diagnostics as [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) JSON.                          |
-| [`pass_fail`](./#pass-fail-linters) |                | Writes a single file-level diagnostic to `stdout`.                                                                                       |
-| [`regex`](./#regex)                 |                | Produces diagnostics using a custom regex format.                                                                                        |
-| [`arcanist`](./#arcanist)           |       ✓        | Produces diagnostics as Arcanist JSON.                                                                                                   |
-| [`rewrite`](./#formatters)          |       ✓        | Writes the formatted version of a file to `stdout`.                                                                                      |
+|                                     |                |                                                                                                                                        |
+| :---------------------------------- | :------------: | :------------------------------------------------------------------------------------------------------------------------------------- |
+| Linter Type                         | Autofixsupport | Description                                                                                                                            |
+| [`sarif`](./#sarif)                 |       ✓        | 진단을 [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) JSON으로 생성합니다. |
+| [`lsp_json`](./#lsp-json)           |                | 진단을 [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) JSON으로 생성합니다.                          |
+| [`pass_fail`](./#pass-fail-linters) |                | 단일 파일 수준 진단을 `stdout`에 씁니다.                                                                                               |
+| [`regex`](./#regex)                 |                | 사용자 지정 정규식 형식을 사용하여 진단을 생성합니다.                                                                                  |
+| [`arcanist`](./#arcanist)           |       ✓        | 진단을 Arcanist JSON으로 생성합니다.                                                                                                   |
+| [`rewrite`](./#formatters)          |       ✓        | 형식이 지정된 파일 버전을 `stdout`에 씁니다.                                                                                           |
 
-If your linter produces a different output type, you can also write a [parser](./Custom%20Parsers.md) to transform the linter's output into something trunk can understand.
+린터가 다른 출력 유형을 생성하는 경우, [parser](./Custom%20Parsers.md)를 작성하여 린터의 출력을 Trunk가 이해할 수 있는 형식으로 변환할 수도 있습니다.
 
-To set up a custom linter, add it to `trunk.yaml` under `lint > definitions` and enable it:
+사용자 정의 린터를 설정하려면 `lint > 정의`의 `trunk.yaml`에 추가하고 활성화하세요:
 
 ```yaml
 lint:
@@ -33,36 +33,30 @@ lint:
     - foo@SYSTEM
 ```
 
-The `@SYSTEM` is a special identifier that indicates that we will forward the `PATH` environment variable to the custom linter when we invoke it.
+`@SYSTEM`은 사용자 정의 린터를 호출할 때 `PATH` 환경 변수를 사용자 정의 린터로 전달할 것을 나타내는 특수 식별자입니다.
 
-Every custom linter must specify a name, the types of files it will run on, at least one command, and `success_codes` or `error_codes`.
+모든 커스텀 린터는 이름, 실행할 파일 유형, 하나 이상의 명령, `success_codes` 또는 `error_codes`를 지정해야 합니다.
 
-> Info: Entries in `enabled` must specify both a linter name and a version. If you commit your linter into\
-> your repository, you should simply use `@SYSTEM`, which will run the linter with your shell's\
-> `PATH`. If you have a versioned release pipeline for your linter, though, you'll want to define your\
-> custom linter using a [`download`](./#downloads) and specify the download version to use.
+> 정보: `enabled`의 항목은 린터 이름과 버전을 모두 지정해야 합니다. 리포지토리에 커밋하는 경우, `@SYSTEM`을 사용하면 셸의 `PATH`를 통해 린터를 실행할 수 있습니다. 하지만 린터에 대한 버전이 지정된 릴리스 파이프라인이 있는 경우에는 [`download`](./#downloads)를 사용하여 사용자 지정 린터를 정의하고 사용할 다운로드 버전을 지정해야 합니다.
 
 ## Execution Model
 
-Running `trunk check` tells `trunk` to do the following:
+`trunk check`를 실행하면 `trunk`는 다음을 수행합니다:
 
-- compute the set of modified files (by comparing the current working tree and `upstream-ref`,\
-  usually your `main` or `master` branch)
-- compute the set of lint actions to run based on the modified files
-  - each enabled linter is invoked once per applicable modified file ([details](./)); for\
-    example, if `pylint` and `flake8` are enabled, they will both be run on every modified `python`\
-    file but not on any modified `markdown` files
-  - every lint action also will have a corresponding _upstream_ lint action, i.e. the linter will\
-    also be run on the upstream version of the file, so that we can determine which issues already\
-    exist in your repository
-- execute uncached lint actions
-- determine which lint issues are new, existing, or fixed
+- 수정된 파일 집합을 계산한다 (현재 작업 트리와 `upstream-ref`, 일반적으로 `main` 또는 `master` 브랜치를 비교한다.
+  보통 `main` 또는 `master` 브랜치)를 비교합니다.
+- 수정된 파일을 기반으로 실행할 린트 액션 집합을 계산합니다.
+  - 활성화된 각 린터는 해당 수정된 파일([details](./)) 당 한 번씩 호출됩니다.
+    예를 들어, `pylint`와 `flake8`이 활성화된 경우, 둘 다 수정된 모든 `python` 파일에서는 실행되지만, 수정된 `markdown` 파일에서는 실행되지 않습니다.
+  - 모든 린트 액션에는 상응하는 _업스트림_ 린트 액션도 있습니다, 즉, 린트는 업스트림 버전에서도 파일의 업스트림 버전에서도 실행되므로 저장소에 이미 어떤 이슈가 있는지 확인할 수 있습니다.
+- 캐시되지 않은 린트 액션을 실행합니다.
+- 어떤 린트 이슈가 새 이슈인지, 기존 이슈인지, 수정된 이슈인지 확인합니다.
 
 ## Linter Types
 
 ### SARIF
 
-`output: sarif` linters produce diagnostics in the [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html):
+`output: sarif` 린터는 [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html)으로 진단을 생성합니다:
 
 ```json
 {
@@ -87,7 +81,7 @@ Running `trunk check` tells `trunk` to do the following:
             }
           ],
           "message": {
-            "text": "A class should always override hashCode when overriding equals and the other way around."
+            "text": "클래스는 equals를 재정의할 때 항상 hashCode를 재정의해야 하며, 그 반대의 경우도 마찬가지입니다.."
           },
           "ruleId": "detekt.potential-bugs.EqualsWithHashCodeExist"
         }
@@ -112,7 +106,7 @@ Running `trunk check` tells `trunk` to do the following:
 
 ### LSP JSON
 
-`output: lsp_json` linters output issues as [Language Server Protocol](https://microsoft.github.io/language-server-protocol/specification#diagnostic) JSON.
+`output: lsp_json`은 출력 문제를 [Language Server Protocol](https://microsoft.github.io/language-server-protocol/specification#diagnostic) JSON으로 린터링합니다.
 
 ```json
 [
@@ -151,54 +145,54 @@ Running `trunk check` tells `trunk` to do the following:
 
 ### Pass/Fail Linters
 
-`output: pass_fail` linters find either:
+`output: pass_fail` 린터는 둘 중 하나를 찾습니다:
 
-- no issues in a file, indicated by exiting with `exit_code=0`, or
-- a single file-level issue in a file, whose message is the linter's `stdout`, indicated by exiting\
-  with `exit_code=1`.
+- 파일에 문제가 없거나, `exit_code=0`으로 종료하여 표시되거나, 또는
+- 파일에서 단일 파일 수준 문제를 발견하고, 그 메시지는 `stdout`으로 표시되며, exiting\로 표시됩니다.
+  로 표시됩니다.
 
-> Note: Exiting with `exit_code=1` but writing nothing to `stdout` is considered to be a linter tool failure.
+> 참고: `exit_code=1`로 종료하지만 `stdout`에 아무것도 쓰지 않으면 린터 도구 실패로 간주됩니다.
 >
-> Note: `pass_fail` linters are required to have `success_codes: [0, 1]`
+> 참고: `pass_fail` 린터에는 `success_codes: [0, 1]`
 
-### Regex
+### 정규식
 
-`output: regex` linters produce output that can be parsed with custom regular expressions and named capture groups. The regular expression is specified in the `parse_regex` field.
+`output: regex` 린터는 사용자 정의 정규식 및 명명된 캡처 그룹으로 구문 분석할 수 있는 출력을 생성합니다. 정규식은 `parse_regex` 필드에 지정됩니다.
 
-`regex` supports capturing strings from a linter output for the following named capture groups:
+`regex`는 다음과 같은 명명된 캡처 그룹에 대해 린터 출력에서 문자열 캡처를 지원합니다:
 
-- `path`: file path (required)
-- `line`: line number
-- `col`: column number
-- `severity`: one of `allow`, `deny`, `disabled`, `error`, `info`, `warning`
-- `code`: linter diagnostic code
-- `message`: description
+- `path`: 파일 경로(필수)
+- `line`: 줄 번호
+- `col`: 열 번호
+- `severity`: `allow`, `deny`, `disabled`, `error`, `info`, `warning` 중 하나
+- `code`: 린터 진단 코드
+- `message`: 설명
 
-For example, the output
+예를 들어, 출력은
 
 ```log
 .trunk/trunk.yaml:7:81: [error] line too long (82 > 80 characters) (line-length)
 ```
 
-can be parsed with the regular expression
+정규식을 사용하여 구문 분석할 수 있습니다.
 
 ```r
 ((?P<path>.*):(?P<line>\d+):(?P<col>\d+): \[(?P<severity>.*)\] (?P<message>.*) \((?P<code>.*)\))
 ```
 
-and would result in a `trunk` diagnostic that looks like this:
+입력하면 다음과 같은 `trunk` 진단이 표시됩니다:
 
 ```log
 7:81  high    line too long (82 > 80 characters)      regex-linter/line-length
 ```
 
-In the event that multiple capture groups of the same name are specified, the nonempty capture will be preferred. If there are multiple non-empty captures, a linter error will be thrown. Adjust your regular expression accordingly to match the specifics of your output.
+같은 이름의 캡처 그룹이 여러 개 지정되어 있는 경우 비어 있지 않은 캡처가 우선적으로 사용됩니다. 비어 있지 않은 캡처가 여러 개 있으면 린터 오류가 발생합니다. 출력의 특성에 맞게 정규식을 적절히 조정하세요.
 
-> Note: For additional information on building custom regular expressions, see [re2](https://github.com/google/re2/wiki/Syntax). More complicated regex may require additional escape characters in yaml configuration.
+> 참고: 사용자 지정 정규식 작성에 대한 자세한 내용은 [re2](https://github.com/google/re2/wiki/Syntax)를 참조하세요. 더 복잡한 정규식을 사용하려면 yaml 구성에 추가 이스케이프 문자가 필요할 수 있습니다.
 
 ### Arcanist
 
-You can also output JSON using the Arcanist format.
+Arcanist 형식을 사용하여 JSON을 출력할 수도 있습니다.
 
 ```json
 [
@@ -216,9 +210,9 @@ You can also output JSON using the Arcanist format.
 
 ### Formatters
 
-`output: rewrite` linters write the formatted version of a file to `stdout`; this becomes an autofix which `trunk` can prompt you to apply (which is what `trunk check` does by default) or automatically apply for you (if you `trunk check --fix` or `trunk fmt`).
+`output: rewrite` 린터는 형식이 지정된 파일 버전을 `stdout`에 씁니다; 이것은 자동 수정이 되어 `trunk`가 사용자에게 적용하라는 메시지를 표시하거나(`trunk check`가 기본적으로 수행하는 작업) 자동으로 적용할 수 있습니다(`trunk check --fix`또는 `trunk fmt`를 사용하는 경우).
 
-For example, if you wanted a linter to normalize your line endings, you could do this:
+예를 들어, 줄 끝을 정규화하기 위해 린터를 사용하려는 경우 이렇게 할 수 있습니다:
 
 ```yaml
 lint:
@@ -232,19 +226,19 @@ lint:
           success_codes: [0]
 ```
 
-Setting `formatter: true` will cause `trunk fmt` to run this linter.
+`format: true`를 설정하면 `trunk fmt`가 이 린터를 실행합니다.
 
 ## Configuration Options
 
-When defining a custom linter, `trunk` not only needs to know the output of the linter command but also details such as how to invoke it, how to specify the file to check, and more; the next few sections explain what options you use to configure these and how:
+사용자 정의 린터를 정의할 때 `trunk`는 린터 명령의 출력뿐만 아니라 이를 호출하는 방법, 확인할 파일을 지정하는 방법 등과 같은 세부 사항도 알아야 합니다. 다음 몇 섹션에서는 이를 구성하는 데 사용하는 옵션과 그 방법에 대해 설명합니다:
 
-For even more details, you can refer to [the JSON schema for `trunk.yaml`](https://static.trunk.io/pub/trunk-yaml-schema.json).
+더 자세한 내용은 [`trunk.yaml`의 JSON 스키마](https://static.trunk.io/pub/trunk-yaml-schema.json)를 참조하세요.
 
 ### Applicable filetypes
 
-To determine which linters to run on which files (i.e. compute the set of lint actions), `trunk` requires that every linter define the set of filetypes it applies to in `files`.
+어떤 파일에서 어떤 린터를 실행할지 결정하기 위해(즉, 린트 액션 집합을 계산하기 위해), `trunk`는 모든 린터가 `files`에 적용하는 파일 형식 집합을 정의해야 합니다.
 
-We have a number of pre-defined filetypes (e.g. `c++-header`, `gemspec`, `rust`; see our [configuration schema](https://static.trunk.io/pub/trunk-yaml-schema.json) for an up-to-date list), but you can also define your own filetypes. Here's how we define the `python` filetype:
+미리 정의된 여러 파일 형식(예: `c++-header`, `gemspec`, `rust`, 최신 목록은 [구성 스키마](https://static.trunk.io/pub/trunk-yaml-schema.json)를 참조)이 있지만, 사용자가 직접 파일 형식을 정의할 수도 있습니다. 다음은 `python` 파일 유형을 정의하는 방법입니다:
 
 ```yaml
 lint:
@@ -259,14 +253,14 @@ lint:
         - python3
 ```
 
-This tells `trunk` that files matching either of the following criteria should be considered `python` files:
+이것은 `trunk`에게 다음 조건 중 하나와 일치하는 파일을 `python` 파일로 간주해야 한다고 알려줍니다:
 
-- the extension is any of `.py`, `.py2`, or `.py3` (e.g. `lib.py`)
-- the shebang is any of `python` or `python3` (e.g. `#!/usr/bin/env python3`)
+- 확장자가 `.py`, `.py2` 또는 `.py3` 중 하나(예: `lib.py`).
+- 쉘방이 `python` 또는 `python3` 중 하나(예: `#!/usr/bin/env python3`).
 
 ### Command
 
-Once `trunk` has figured out which linters it will run on which files, `trunk` expands the template provided in the `run` field to determine the arguments it will invoke the linter with. Here's what that looks like for `detekt`, one of our Kotlin linters:
+`trunk`가 어떤 파일에서 어떤 린터를 실행할지 파악하면, `trunk`는 `run` 필드에 제공된 템플릿을 확장하여 린터를 호출할 인수를 결정합니다. 다음은 Kotlin 린터 중 하나인 `detekt`의 모습입니다:
 
 ```yaml
 lint:
@@ -280,35 +274,33 @@ lint:
             sarif:${tmpfile}
 ```
 
-This command template contains all the information `trunk` needs to execute `detekt` in a way where `trunk` will be able to understand `detekt`'s output.
+이 명령 템플릿에는 `trunk`가 `detekt`를 실행하는 데 필요한 모든 정보가 포함되어 있으며, `trunk`가 `detekt`의 출력을 이해할 수 있습니다.
 
-Note that some of the fields in this command template contain `${}` tokens: these tokens are why `command` is a template and are replaced at execution time with the value of that variable within the context of the lint action being executed.
+이 명령 템플릿의 일부 필드에는 `${}` 토큰이 포함되어 있습니다. 이 토큰은 `command`가 템플릿인 이유이며 실행 시 실행 중인 린트 작업의 컨텍스트 내에서 해당 변수의 값으로 대체됩니다.
 
-| Variable          | Description                                                                   |
-| ----------------- | ----------------------------------------------------------------------------- |
-| `${workspace}`    | Path to the root of the repository                                            |
-| `${target}`       | Path to the file to check, relative to `${workspace}`                         |
-| `${linter}`       | Path to the directory the linter was downloaded to                            |
-| `${runtime}`      | Path to the directory the runtime (e.g. `node`) was downloaded to             |
-| `${upstream-ref}` | Upstream git commit that is being used to calculate new/existing/fixed issues |
-| `${plugin}`       | Path to the root of the plugin's repository                                   |
+| Variable          | Description                                                         |
+| ----------------- | ------------------------------------------------------------------- |
+| `${workspace}`    | 리포지토리의 루트 경로                                              |
+| `${target}`       | 검사할 파일의 경로(`${작업 영역}` 기준)                             |
+| `${linter}`       | 린터가 다운로드된 디렉터리의 경로입니다.                            |
+| `${runtime}`      | 런타임(예: `node`)이 다운로드된 디렉터리 경로입니다.                |
+| `${upstream-ref}` | 신규/기존/수정 이슈를 계산하는 데 사용되는 업스트림 git 커밋입니다. |
+| `${plugin}`       | 플러그인 리포지토리의 루트 경로                                     |
 
 ### Input
 
-The `target` field specifies what paths this linter will run on given an input file. It may be a\
-literal such a `.` which will run the linter on the whole repository. It also supports various\
-substitutions:
+`target` 필드는 입력 파일이 주어지면 이 린터가 실행될 경로를 지정합니다. 리터럴 `.`와 같이 전체 리포지토리에 대해 린터를 실행할 수 있습니다. 또한 다양한 대체를 지원합니다:
 
-| Variable                         | Description                                                                                                                                      |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `${file}`                        | The input file.                                                                                                                                  |
-| `${parent}`                      | The folder containing the file.                                                                                                                  |
-| `${parent_with(<name>)}`         | Walks up toward the repository root looking for the first folder containing `<name>`. If `<name>` is not found, do not run any linter.           |
-| `${root_or_parent_with(<name>)}` | Walks up toward the repository root looking for the first folder containing `<name>`. If `<name>` is not found, evaluate to the repository root. |
+| Variable                         | Description                                                                                                                           |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `${file}`                        | 입력 파일입니다.                                                                                                                      |
+| `${parent}`                      | 파일이 들어 있는 폴더입니다.                                                                                                          |
+| `${parent_with(<name>)}`         | 저장소 루트로 이동하여 `<이름>`이 포함된 첫 번째 폴더를 찾습니다. `<이름>`을 찾지 못하면 린터를 실행하지 않습니다.                    |
+| `${root_or_parent_with(<name>)}` | 리포지토리 루트를 향해 걸어 올라가 `<이름>`이 포함된 첫 번째 폴더를 찾습니다. `<이름>`을 찾을 수 없으면 리포지토리 루트로 평가합니다. |
 
-If `target` is not specified it will default to `${file}`.
+`target`이 지정되지 않으면 기본값은 `${file}`이 됩니다.
 
-This target may be referenced in the `run` field as `${target}`.
+이 대상은 `run` 필드에서 `${target}`으로 참조할 수 있습니다.
 
 ```yaml
 lint:
@@ -321,7 +313,7 @@ lint:
           run: cat ${target}
 ```
 
-or via `stdin`, by specifying `stdin: true`:
+또는 `stdin`을 통해 `stdin: true`를 지정합니다:
 
 ```yaml
 lint:
@@ -335,57 +327,55 @@ lint:
           stdin: true
 ```
 
-> Info: Linters that take their input via `stdin` may still want to know the file's path so that they can, say, generate >diagnostics with the file's path. In these cases you can still use `${target}` in `run`.
+> 정보: `stdin`을 통해 입력을 받는 린터는 파일 경로로 진단을 생성하기 위해 여전히 파일 경로를 알고 싶어할 수 있습니다. 이런 경우에도 `run`에서 `${target}`을 사용할 수 있습니다.
 
 ### Output
 
-The output format that `trunk` expects from a linter is determined by its [`type`](./#linter-types).
+`trunk`가 린터에서 기대하는 출력 형식은 [`linter-types`](. /#linter-types)에 의해 결정됩니다.
 
-**`stdout`, `stderr` or `tmp_file`**
+**`STDOUT`, `STDERR` 또는 `TMP_FILE`**
 
-`trunk` generally expects a linter to output its findings to `stdout`, but does support other output mechanisms:
+`trunk`는 일반적으로 `stdout`에 결과를 출력하는 것을 기대하지만, 다른 출력 메커니즘도 지원합니다:
 
-| `read_output_from` | Description                                                                       |
-| ------------------ | --------------------------------------------------------------------------------- |
-| `stdout`           | Standard output.                                                                  |
-| `stderr`           | Standard error.                                                                   |
-| `tmp_file`         | If `${tmpfile}` was specified in `command`, the path of the created `${tmpfile}`. |
+| `read_output_from` | Description                                                                |
+| ------------------ | -------------------------------------------------------------------------- |
+| `stdout`           | 표준 출력.                                                                 |
+| `stderr`           | 표준 에러.                                                                 |
+| `tmp_file`         | `command`에 `${tmpfile}`이 지정되었다면, 생성된 `${tmpfile}`의 경로입니다. |
 
 ### **Exit codes**
 
-Linters often use different exit codes to categorize the outcome. For instance, [`markdownlint`](https://github.com/igorshubovych/markdownlint-cli#exit-codes) uses `0` to indicate that no issues were found, `1` to indicate that the tool ran successfully but issues were found, and `2`, `3`, and `4` for tool execution failures.
+린터는 결과를 분류하기 위해 종종 다른 종료 코드를 사용합니다. 예를 들어, [`markdownlint`](https://github.com/igorshubovych/markdownlint-cli#exit-codes)는 `0`을 사용하여 문제가 발견되지 않았음을 나타내고, `1`을 사용하여 도구가 성공적으로 실행되었지만 문제가 발견되었음을 나타내며, `2`, `3`, `4`를 사용하여 도구 실행에 실패했음을 나타냅니다.
 
-`trunk` supports specifying either `success_codes` or `error_codes` for a linter:
+`trunk`는 린터에 대해 `success_codes` 또는 `error_codes` 지정을 지원합니다:
 
-- if `success_codes` are specified, `trunk` expects a successful linter invocation (which may or may\
-  not find issues) to return one of the specified `success_codes`;
-- if `error_codes` are specified, `trunk` expects a successful linter invocation to return any exit\
-  code which is _not_ one of the specified `error_codes`.
+- `success_codes`가 지정되면, `trunk`는 성공적인 린터 호출(문제를 찾거나 찾지 못할 수도 있습니다) 지정된 `success_codes` 중 하나를 반환합니다;
+- `error_codes`가 지정되면, `trunk`는 성공적인 린터 호출이 종료 코드 중 하나를 반환할 것으로 기대합니다.
 
-`markdownlint`, for example, has `success_codes: [0, 1]` in its configuration.
+예를 들어, `markdownlint`는 `success_codes: [0, 1]`가 구성에 있습니다.
 
 ### **Working directory**
 
-`run_from` determines what directory a linter command is run from.
+`run_from`은 린터 명령이 실행되는 디렉터리를 결정합니다.
 
-|                                         |                                                                                            |
-| :-------------------------------------- | :----------------------------------------------------------------------------------------- |
-| `run_from`                              | Description                                                                                |
-| `<path>` (`.` by default)               | Explicit path to run from                                                                  |
-| `${parent}`                             | Parent of the target file; e.g. would be `foo/bar` for `foo/bar/hello.txt`                 |
-| `${root_or_parent_with(<file>)}`        | Nearest parent directory containing the specified file                                     |
-| `${root_or_parent_with_dir(<dir>)}`     | Nearest parent directory containing the specified directory                                |
-| `${root_or_parent_with_regex(<regex>)}` | Nearest parent directory containing a file or directory matching specified regex           |
-| `${target_directory}`                   | Run the linter from the same directory as the target file, and change the target to be `.` |
-| `${compile_command}`                    | Run from the directory where `compile_commands.json` is located                            |
+|                                         |                                                                                  |
+| :-------------------------------------- | :------------------------------------------------------------------------------- |
+| `run_from`                              | 설명                                                                             |
+| `<path>` (`.` by default)               | 실행할 명시적 경로                                                               |
+| `${parent}`                             | 대상 파일의 상위 파일, 예: `foo/bar/hello.txt`의 경우 `foo/bar`입니다.`          |
+| `${root_or_parent_with(<file>)}`        | 지정한 파일을 포함하는 가장 가까운 상위 디렉터리                                 |
+| `${root_or_parent_with_dir(<dir>)}`     | 지정한 디렉터리를 포함하는 가장 가까운 상위 디렉터리                             |
+| `${root_or_parent_with_regex(<regex>)}` | 지정한 정규식과 일치하는 파일 또는 디렉터리를 포함하는 가장 가까운 상위 디렉터리 |
+| `${target_directory}`                   | 대상 파일과 동일한 디렉토리에서 린터를 실행하고 대상을 `.`로 변경합니다.         |
+| `${compile_command}`                    | `compile_commands.json`이 있는 디렉토리에서 실행합니다.                          |
 
 ### **Limiting concurrency**
 
-If you would like to limit the number of times trunk will invoke a linter concurrently, then you can use the `maximum_concurrency` option. For example, setting `maximum_concurrency: 1` will limit trunk from running more than one instance of the linter simultaneously.
+Trunk가 동시에 린터를 호출하는 횟수를 제한하려면 `maximum_concurrency` 옵션을 사용할 수 있습니다. 예를 들어, `maximum_concurrency: 1`을 설정하면 Trunk가 동시에 두 개 이상의 린터 인스턴스를 실행하지 못하도록 제한합니다.
 
 ### **Environment variables**
 
-`trunk` by default runs linters _without_ environment variables from the parent shell; however, most linters need at least some such variables to be set, so `trunk` allows specifying them using `environment`; for example, the `environment` for `ktlint` looks like this:
+기본적으로 `trunk`는 부모 셸의 환경 변수 _없이_ 린터를 실행합니다. 그러나 대부분의 린터는 최소한 몇 가지 환경 변수를 설정해야 하므로 `trunk`는 `environment`을 사용하여 환경 변수를 지정할 수 있습니다(예: `ktlint`의 `environment`은 다음과 같습니다):
 
 ```yaml
 lint:
@@ -399,19 +389,19 @@ lint:
         value: en_US.UTF-8
 ```
 
-Most `environment` entries are maps with `name` and `value` keys; these become `name=value` environment variables. For `PATH`, we allow specifying `list`, in which case we concatenate the entries with `:`.
+대부분의 `environment` 항목은 `name` 및 `value` 키가 있는 맵이며, 이는 `name=value` 환경 변수가 됩니다. `PATH`의 경우 `list`를 지정할 수 있으며, 이 경우 `:`로 항목을 연결합니다.
 
-We use the same template syntax for `environment` as we do for [`command`](./#command).
+`environment`에 대해서는 [`command`](./#command)에서와 동일한 템플릿 구문을 사용합니다.
 
 ## Tools
 
-You can use the `tools` section to specify trunk-configured binaries that the linter uses to run. The `tools` key should specify a list of strings referring to tool names. We have two kinds of tool dependencies - they are described in turn below. See the [Tools Configuration](./Configuration.md) page for more details on how to set up your tools.
+`tools` 섹션을 사용하여 린터가 실행하는 데 사용하는 Trunk 구성 바이너리를 지정할 수 있습니다. `tools` 키는 도구 이름을 나타내는 문자열 목록을 지정해야 합니다. 도구 종속성에는 두 가지 종류가 있으며, 아래에서 차례로 설명합니다. 도구 설정 방법에 대한 자세한 내용은 [도구 구성](./Configuration.md) 페이지를 참조하세요.
 
-This is the preferred way of defining and versioning a linter, as it also allows repo users to conveniently run the linter binary outside of the `trunk check` context.
+이 방법은 저장소 사용자가 `trunk check` 컨텍스트 외부에서 편리하게 린터 바이너리를 실행할 수 있기 때문에 린터를 정의하고 버전을 관리하는 데 선호되는 방법입니다.
 
 ### Eponymous Tool Dependencies
 
-Here is an example of where the tool matches the linter name:
+다음은 도구가 린터 이름과 일치하는 경우의 예시입니다:
 
 ```yaml
 tools:
@@ -449,11 +439,11 @@ lint:
         run: pylint --version
 ```
 
-In this case, the tool name (`pylint`) matches that of the linter, making it an _eponymous tool_. Eponymous tools need to be defined separately from the linter but implicitly enabled with the linter's version. You may explicitly enable the eponymous tool if you wish, but note that its version needs to be synced to that of the linter.
+이 경우 도구 이름(`pylint`)이 린터의 이름과 일치하므로 _eponymous tool_가 됩니다. 시조 도구는 린터와 별도로 정의해야 하지만 린터 버전에서 암시적으로 활성화해야 합니다. 원하는 경우 시조 도구를 명시적으로 활성화할 수 있지만, 그 버전은 린터의 버전과 동기화되어야 한다는 점에 유의하세요.
 
 ### Additional Tool Dependencies
 
-You can also have a scenario where a linter depends on a tool that is not identically named - an _additional tool dependency_. We give an example below:
+린터가 동일한 이름이 아닌 다른 도구에 종속되는 시나리오, 즉 _additional tool dependency_을 가질 수도 있습니다. 아래에서 예를 들어보겠습니다:
 
 ```yaml
 tools:
@@ -488,13 +478,13 @@ lint:
         run: terragrunt -version
 ```
 
-In this scenario, `terraform` is an additional tool dependency - `terragrunt` requires it to be in `$PATH`. If the tool is an additional dependency, it must be enabled explicitly and versioned independently of the linter - that is, it must be listed in the `tools.enabled` section.
+이 시나리오에서 `terraform`은 추가 도구 종속성이며, `terragrunt`는 `$PATH`에 있어야 합니다. 도구가 추가 종속 요소인 경우 명시적으로 활성화하고 린터와 독립적으로 버전을 지정해야 합니다. 즉, `tools.enabled` 섹션에 나열되어야 합니다.
 
 ### Downloads
 
-**(NOTE: This method of specifying linters is still supported, but using `tools` like specified** [**above**](./Custom%20Linters.md#tools) **is recommended going forward)**
+**(참고: 린터를 지정하는 이 방법은 계속 지원되지만, [**위**](./Custom%20Linters.md#tools)에서 지정된 대로 `tools`를 사용하는 것이 좋습니다.)**
 
-If your custom linter has a separate release process (i.e. is not committed in your repo), then you can tell `trunk` how to download it like so:
+커스텀 린터에 별도의 릴리스 프로세스가 있는 경우(즉, 리포지토리에 커밋되지 않은 경우) 다음과 같이 `trunk`에게 다운로드 방법을 알려줄 수 있습니다:
 
 ```yaml
 lint:
@@ -511,7 +501,7 @@ lint:
           cpu: x86_64
           url: https://github.com/my-org/my-repo/releases/download/${version}/lorem-linux-x86-64
     - name: ipsum-linter
-      # the default version to download; overridden by the version in `enabled`
+      # 다운로드할 기본 버전으로, `enabled`의 버전으로 재정의됩니다.
       version: 0.1.1
       downloads:
         - os: linux
@@ -534,25 +524,21 @@ lint:
     - ipsum-linter@0.1.6
 ```
 
-This tells `trunk` that, for `lorem-linter`:
+이것은 `trunk`에게 `lorem-linter`의 경우:
 
-- you want to run version `4.0.2` on `javascript` and `typescript` files,
-- it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with\
-  `4.0.2`), and
-- the download consists of a single executable binary, since `executable: true` is set;
+- `javascript` 및 `typescript` 파일에 대해 버전 `4.0.2`를 실행하고 싶다고 알려줍니다,
+- 지정된 URL(`${version}`을 `4.0.2`로 대체하여 확장)에서 macOS 및 Linux에서 사용할 수 있습니다.
+- `executable: true`가 설정되어 있으므로 다운로드는 단일 실행 바이너리로 구성됩니다;
 
-for `ipsum-linter`:
+`ipsum-linter`의 경우
 
-- you want to run version `0.1.6` on `rust` files,
-- it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with\
-  `0.1.6`), and
-- the download is a compressed archive, the linter binary is `strip_components: 2` directories deep\
-  inside the uncompressed archive, and `trunk` should automatically extract and unpack the linter\
-  from the archive.
+- `rust` 파일에서 버전 `0.1.6`을 실행하려고 합니다,
+- 지정된 URL(`${version}`을 `0.1.6`으로 대체하여 확장)에서 macOS 및 Linux에서 사용할 수 있습니다.
+- 다운로드는 압축된 아카이브이고, 린터 바이너리는 `strip_components: 2` 디렉토리에 있으며, `trunk`는 압축되지 않은 아카이브에서 린터를 자동으로 추출하고 압축을 풀어야 합니다.
 
 ### Download via package manager
 
-If your linter can be downloaded via `gem install`, `go get`, `npm install`, or `pip install`, you can specify a `runtime` and the `package` key:
+`gem install`, `go get`, `npm install` 또는 `pip install`을 통해 린터를 다운로드할 수 있는 경우 `runtime`과 `package` 키를 지정할 수 있습니다:
 
 ```yaml
 lint:
@@ -564,20 +550,20 @@ lint:
       package: fizz-buzz
 ```
 
-This will now create a hermetic directory in `~/.cache/trunk/linters/fizz-buzz` and `npm install fizz-buzz` there. You can refer to different versions of your package in `trunk.yaml` as normal, via `fizz-buzz@1.2.3`.
+이제 `~/.cache/trunk/linters/fizz-buzz`에 비공개 디렉터리가 생성되고 거기에 `npm install fizz-buzz`가 설치됩니다. 평소처럼 `trunk.yaml`에서 `fizz-buzz@1.2.3`을 통해 다른 버전의 패키지를 참조할 수 있습니다.
 
-> Note: Such downloads will use the _hermetic_ version of the specified runtime that `trunk` installs, not the one >you've installed on your machine.
+> 참고: 이러한 다운로드는 사용자 컴퓨터에 설치한 런타임이 아니라 `trunk`가 설치하는 지정된 런타임의 _hermetic_ 버전을 >사용합니다.
 
 ### `run_when`
 
-Lint sessions are always associated with exactly one of the following session types:
+Lint 세션은 항상 다음 세션 유형 중 정확히 하나에 연결됩니다:
 
-- `ci`: triggered by a `CI` run, i.e. `trunk check --ci` or when running inside the GitHub action,
-- `cli`: triggered by a human or script running `trunk check`,
-- `lsp`: triggered by VSCode, or
-- `monitor`: triggered by background linting.
+- `ci`: `CI` 실행(예: `trunk check --ci`)에 의해 트리거되거나 GitHub 작업 내부에서 실행될 때 트리거됩니다,
+- `cli`: `trunk check`를 실행하는 사람이나 스크립트에 의해 트리거됩니다,
+- `lsp`: VSCode에 의해 트리거됨, 또는
+- `monitor`: 백그라운드 린팅에 의해 트리거됩니다.
 
-You can use `run_when` to specify which session types you want to run a linter in; for example, to always disable a linter during CI:
+`run_when`을 사용하여 린터를 실행할 세션 유형을 지정할 수 있습니다(예: CI 중에 항상 린터를 비활성화하려면):
 
 ```yaml
 lint:

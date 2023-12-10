@@ -156,12 +156,8 @@ Clippy is distributed with rust itself, so specify your rust version for your cl
 
 Detekt is usually invoked through gradle, which allows specifying additional configuration in `build.gradle`. We do not yet automatically parse your Gradle scripts to infer your `detekt` configuration; instead, what we do is this:
 
-- `detekt` invokes [`detekt-cli`](https://detekt.github.io/detekt/cli.html) with the\
-  `--build-upon-default-config` flag (this appears to be\
-  [more common](https://cs.github.com/?q=%2FbuildUponDefaultConfig.*%28true%29%2F+detekt) than the\
-  alternative)
-- `detekt-explicit` invokes [`detekt-cli`](https://detekt.github.io/detekt/cli.html) without the\
-  `--build-upon-default-config` flag
+- `detekt` invokes [`detekt-cli`](https://detekt.github.io/detekt/cli.html) with the `--build-upon-default-config` flag (this appears to be [more common](https://cs.github.com/?q=%2FbuildUponDefaultConfig.*%28true%29%2F+detekt) than the alternative)
+- `detekt-explicit` invokes [`detekt-cli`](https://detekt.github.io/detekt/cli.html) without the `--build-upon-default-config` flag
 
 You will also need to provide a valid detekt config as `.detekt.yaml` (an empty `.detekt.yaml` is valid, if you don't want to configure `detekt`); if you already have a detekt config, then you can symlink it like so:
 
@@ -171,7 +167,7 @@ ln -s path/to/existing/detekt-config.yml .detekt-config.yaml
 
 To use `./gradlew detekt` to invoke Detekt, you can add `detekt-gradle@SYSTEM` to your `enabled` list. Note that since you're running Detekt via Gradle, you should also add the paths to your Detekt configurations to `direct_configs`, e.g.
 
-```gradle
+```groovy
 direct_configs: ["lib/detekt.yaml"]
 ```
 
@@ -185,7 +181,7 @@ You can easily do this by adding the `eslint-config-prettier` package and in you
 
 ```yaml
 extends:
-  # Order matters, later configs purposefully override settings from earlier configs
+  # 순서가 중요하며, 구성은 이전에 구성된 설정을 의도적으로 재정의합니다.
   - eslint:recommended
   - airbnb
   - plugin:@typescript-eslint/recommended
@@ -194,7 +190,7 @@ extends:
   - plugin:node/recommended
   - plugin:mocha/recommended
   - plugin:react/recommended
-  - prettier # this actually turns OFF all prettier rules running via eslint
+  - prettier # 이것은 실제로 eslint를 통해 실행되는 모든 prettier 규칙을 끕니다.
 ```
 
 ## Python linters (flake8, pylint, black, etc)

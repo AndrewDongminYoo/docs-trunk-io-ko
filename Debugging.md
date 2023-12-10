@@ -1,24 +1,24 @@
 # Debugging
 
-Sometimes you need to get under-the-hood to diagnose why a linter is failing on a particular file or to more easily reproduce an issue you are seeing with a tool.
+특정 파일에서 린터가 실패하는 이유를 진단하거나 도구에서 보이는 문제를 더 쉽게 재현하기 위해 자세히 살펴봐야 할 때가 있습니다.
 
 ## Analyzing Linter Failures
 
-When a linter fails, `trunk` will generate a linter failure report that contains all the information needed to understand what went wrong and why. `prettier`, for example, will fail on improperly formatted HTML; let's see what that looks like:
+린터가 실패하면 `Trunk`는 무엇이 잘못되었고 왜 실패했는지 이해하는 데 필요한 모든 정보가 포함된 린터 실패 보고서를 생성합니다. 예를 들어 `prettier`는 부적절한 형식의 HTML에서 실패합니다. 어떤 모습인지 살펴보겠습니다:
 
-```shell
+```log
 trunk/hello_world.html:0:0
  0:0  failure  prettier error (details: .trunk/out/lYa9w.yaml)  prettier
 ```
 
-This tells us that `prettier` failed when `trunk` ran it on `trunk/hello_world.html` and that we can find a full report of the invocation in `.trunk/out/lYa9w.yaml`. This report will include:
+이것은 `trunk`가 `trunk/hello_world.html`에서 `prettier`를 실행했을 때 실패했으며, 호출에 대한 전체 보고서를 `.trunk/out/lYa9w.yaml`에서 찾을 수 있다는 것을 알려줍니다. 이 보고서에는 다음이 포함됩니다:
 
-1. the command that was run,
-2. the environment (e.g. `cwd`, environment variables),
-3. the invocation's `stdout`, `stderr`, and exit code, and
-4. repro instructions.
+1. 실행된 명령,
+2. 환경(예: `cwd`, 환경 변수),
+3. 호출의 `stdout`, `stderr`, 종료 코드, 4.
+4. 명령어 재생.
 
-All of this combined is generally sufficient to fix either the file or tool to get useful results out of the linter.
+이 모든 것을 조합하면 일반적으로 파일이나 도구를 수정하여 린터에서 유용한 결과를 얻기에 충분합니다.
 
 ```yaml
 title: "prettier error"
@@ -48,29 +48,29 @@ report:
 
 ## Debugging Linter Failures in CI
 
-If linter failures occur while Trunk Check is running in CI, you'll see something like this:
+CI에서 trunk check가 실행되는 동안 린터 오류가 발생하면 다음과 같은 메시지가 표시됩니다:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-10-16 at 5.09.29 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/Screenshot 2023-10-16 at 5.09.29 PM.png" alt=""><figcaption></figcaption></figure>
 
-To debug these, you'll need get the linter failure report(s) from the Github Actions output. Click on "Details" to see a screen like this:
+이를 디버깅하려면 Github Actions 출력에서 린터 실패 보고서를 가져와야 합니다. "Details"를 클릭하면 다음과 같은 화면이 표시됩니다:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-10-16 at 5.10.39 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/Screenshot 2023-10-16 at 5.10.39 PM.png" alt=""><figcaption></figcaption></figure>
 
-Then click on "View more details on trunk-io"
+그런 다음 "트렁크-io에 대한 자세한 정보 보기"를 클릭합니다.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-10-16 at 5.11.57 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/Screenshot 2023-10-16 at 5.11.57 PM.png" alt=""><figcaption></figcaption></figure>
 
-You'll then see your check run summary. Click "\<your repo name>/pull_request" to see the CI logs, and scroll all the way to the bottom.
+그러면 검사 실행 요약이 표시됩니다. CI 로그를 보려면 "\<귀하의 리포지토리 이름>/pull_request"를 클릭하고 맨 아래로 스크롤합니다.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-10-16 at 5.12.23 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/Screenshot 2023-10-16 at 5.12.23 PM.png" alt=""><figcaption></figcaption></figure>
 
-You'll then see a list of the failures that occurred, as well as all of the linter failure reports in collapsibles. You can then follow the instructions in [Analyzing Linter Failures](https://docs.trunk.io/check/debugging#analyzing-linter-failures) to resolve the problem.
+그러면 발생한 실패 목록과 모든 린터 실패 보고서가 접을 수 있는 형태로 표시됩니다. 그런 다음 [린터 실패 분석하기](https://docs.trunk.io/check/debugging#analyzing-linter-failures)의 지침에 따라 문제를 해결할 수 있습니다.
 
 ## Actions
 
-When `trunk check` is run, a dynamic set of check actions are generated and executed in parallel. An engineer developing custom integrations may find it helpful to examine in detail exactly what `trunk check` does and sees when it runs a given tool. The output of the `check` run will include an `ACTIONS` section with a execution report for each action that was run as well as cache hit information.
+`trunk check`가 실행되면 동적 검사 작업 집합이 생성되어 병렬로 실행됩니다. 사용자 지정 통합을 개발하는 엔지니어는 `trunk check`가 특정 도구를 실행할 때 정확히 무엇을 하고 무엇을 보는지 자세히 살펴보는 것이 도움이 될 수 있습니다. `check` 실행의 출력에는 실행된 각 작업에 대한 실행 보고서와 캐시 히트 정보가 포함된 `ACTIONS` 섹션이 포함됩니다.
 
-For example, to run a report on all actions taken on hello.py:
+예를 들어 hello.py에서 수행된 모든 작업에 대한 보고서를 실행하려면 다음과 같이 하세요:
 
 ```sh
 trunk check --verbose hello.py

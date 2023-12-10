@@ -1,11 +1,31 @@
 {
-  "cSpell.words": ["Getx", "Grott", "localizely", "unsplit"],
-  "cSpell.customDictionaries": {
-    "workspace": {
-      "name": "workspace",
-      "path": "${workspaceFolder:markdowns}/.cspell/workspace.txt",
-      "addWords": true,
-      "scope": "workspace"
-    }
-  }
+  "cSpell.fixSpellingWithRenameProvider": true,
+  "cSpell.flagWords": [
+    "트렁크: Trunk",
+    "링터: 린터",
+    "보푸라기: 린터"
+  ],
+  "cSpell.words": [
+    "arcanist",
+    "Bazel",
+    "clangd",
+    "clippy",
+    "detekt",
+    "hclfmt",
+    "ktlint",
+    "localizely",
+    "mtvw",
+    "pylint",
+    "pylintrc",
+    "pyproject",
+    "reduct",
+    "rufo",
+    "sarif",
+    "SARIF",
+    "shellcheckrc",
+    "tflint",
+    "trivy",
+    "trunkio",
+    "unsplit"
+  ]
 }

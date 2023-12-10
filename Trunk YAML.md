@@ -277,14 +277,8 @@ runtimes:
 
 Notes:
 
-1. Custom linter/download/runtime configs are subject to validation - they must be fully defined -\
-   but configs that have a matching name to a built-in linter/download/runtime can have as few or\
-   many values specified as desired.
-2. Scalar values are overridden in a straightforward manner - the value specified in the override\
-   takes the place of the default, and otherwise, default values are retained.
-3. To override a sequence value in the default (ex. `environment` in the `node` runtime), it is\
-   necessary to fully specify the new sequence. This is why the `environment` override above also defines `HOME`. If you just wanted to add a new value, you would have to copy in the existing\
-   sequence to your overriding config, and add your new value to the end of the list.
-4. It is not possible to set sequences of non-zero length to zero length. For example, if the\
-   default config has `success_codes: [0]`, you may override this to `success_codes: [0, 1]`, but you cannot clear its value.
-5. Merged configurations are subject to the same validation that custom linters are - they must all have a name, type, command, and either `success_codes` or `error_codes` set.
+1. 사용자 정의 린터/다운로드/런타임 구성은 유효성 검사를 거쳐야 하며 완전히 정의되어야 하지만, 기본 제공 린터/다운로드/런타임과 이름이 일치하는 구성은 원하는 만큼 값을 적게 또는 많이 지정할 수 있습니다.
+2. 스칼라 값은 간단한 방식으로 재정의됩니다. 재정의에 지정된 값이 기본값을 대신하고, 그렇지 않으면 기본값이 유지됩니다.
+3. 기본값의 시퀀스 값을 재정의하려면(예: `node` 런타임의 `environment`), 새 시퀀스를 완전히 지정해야 합니다. 이것이 바로 위의 `environment` 재정의가 `HOME`도 정의하는 이유입니다. 새 값만 추가하려면 기존 시퀀스를 오버라이드 구성에 복사하고 새 값을 목록 끝에 추가해야 합니다.
+4. 0이 아닌 길이의 시퀀스를 0 길이로 설정할 수 없습니다. 예를 들어 기본 구성에 `success_codes: [0]`인 경우 이를 `success_codes: [0, 1]`로 재정의할 수는 있지만 값을 지울 수는 없습니다.
+5. 병합된 구성은 사용자 정의 린터와 동일한 유효성 검사가 적용되며, 모두 이름, 유형, 명령, `success_codes` 또는 `error_codes`가 설정되어 있어야 합니다.

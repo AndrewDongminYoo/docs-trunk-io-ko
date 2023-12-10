@@ -1,16 +1,16 @@
 # Creating Organization Configs
 
-To standardize Trunk configuration across an organization, you can create and publish a public plugins repository. This repo can define new linter definitions, specify enabled linters and actions, and even [export linter configs](./Import%20Export%20Linter%20Configs.md).
+조직 전체에서 Trunk Config을 표준화하기 위해 공개 Plugins Repo를 만들고 게시할 수 있습니다. 이 저장소에서는 새로운 린터 정의를 정의하고, 활성화된 린터와 작업을 지정하며, 심지어 [린터 구성 내보내기](./Import%20Export%20Linter%20Configs.md)도 할 수 있습니다.
 
-Once you've created your plugin repository, you can source it in other repositories to adopt shared configuration across your organization. For an example of how we do this in our own org, check out our [configs repo](https://github.com/trunk-io/configs).
+플러그인 리포지토리를 만든 후에는 다른 리포지토리에서 소싱하여 조직 전체에 공유 구성을 적용할 수 있습니다. 우리 조직에서 이 작업을 수행하는 방법에 대한 예는 [configs repo](https://github.com/trunk-io/configs)를 참조하세요.
 
-Note that in order to keep linters and tools up to date in your plugin configs repo, you'll need to run `trunk upgrade --apply-to=plugin.yaml` to apply [upgrades](./Upgrade.md#plugin-repos-and-user.yaml). After making a public GitHub release with your plugin changes, other dependent repos will pick up these changes automatically when running `trunk upgrade`.
+플러그인 구성 리포지토리에 있는 린터와 도구를 최신 상태로 유지하려면 `trunk 업그레이드 --apply-to=plugin.yaml`을 실행하여 [업그레이드](./Upgrade.md#플러그인-repos-and-user.yaml)를 적용해야 한다는 점에 유의하세요. 플러그인 변경 사항이 포함된 공개 GitHub 릴리스를 만든 후 다른 종속 리포지토리는 `trunk 업그레이드`를 실행할 때 이러한 변경 사항을 자동으로 선택합니다.
 
 ## Get started
 
-Let's walk through how to create a simple linter that warns about TODOs in your codebase.
+코드베이스에서 할 일에 대해 경고하는 간단한 린터를 만드는 방법을 살펴봅시다.
 
-We'll start by creating a new Git repository:
+먼저 새 Git 리포지토리를 만드는 것으로 시작하겠습니다:
 
 ```sh
 PLUGIN_PATH=~/my-first-trunk-plugin
@@ -18,7 +18,7 @@ mkdir "${PLUGIN_PATH}" && cd "${PLUGIN_PATH}"
 git init
 ```
 
-And then create a linter that can find TODOs in your codebase using `grep` and `sed`:
+그런 다음 `grep`와 `sed`를 사용하여 코드베이스에서 할 일을 찾을 수 있는 린터를 만드세요:
 
 ```sh
 cat >plugin.yaml <<EOF
@@ -37,20 +37,20 @@ lint:
 EOF
 ```
 
-Now we can turn this linter on in a repository where we have `trunk` set up:
+이제 `trunk`가 설정된 리포지토리에서 이 린터를 켤 수 있습니다:
 
 ```sh
 trunk plugins add my-first-plugin "${PLUGIN_PATH}"
 trunk check enable todo-finder
 ```
 
-And now, to demonstrate how this works, let's `trunk check` some files where we know we have TODOs:
+이제 이 기능이 어떻게 작동하는지 보여드리기 위해 할 일이 있는 파일 몇 개를 `trunk check`해 보겠습니다:
 
 ```sh
 trunk check $(git grep -li todo | head -n 10)
 ```
 
-which will show you something like this:
+다음과 같은 내용이 표시됩니다:
 
 ```log
 .eslintrc.yaml:19:0
@@ -60,18 +60,18 @@ which will show you something like this:
 
 ## Organizing your code
 
-In the example we gave above, we put the linter's source code in `plugin.yaml`, which is fine for an example, but not really great for anything more than that. We can take the `sed` command from the plugin we created earlier and push that into the shell script:
+위에서 예로 든 예제에서는 린터의 소스 코드를 `plugin.yaml`에 넣었는데, 이는 예제로는 괜찮지만 그 이상의 용도로는 적합하지 않습니다. 앞서 만든 플러그인에서 `sed` 명령을 가져와서 셸 스크립트에 넣으면 됩니다:
 
 ```sh
 #!/bin/bash
 sed -E 's/(.*):([0-9]+):(.*)/\1:\2:0: [error] Found todo in \"\3\" (found-todo)/'"
 ```
 
-> Tip: Remember to run `chmod u+x todo-finder-parser.sh` so that `trunk` can run it!
+> 팁: `trunk`가 실행할 수 있도록 `chmod u+x todo-finder-parser.sh`를 실행하는 것을 잊지 마세요!
 
-and also point the definition of `todo-finder` at it:
+실행하고 `todo-finder`의 정의를 지정하세요:
 
-```sh
+```yaml
 version: 0.1
 lint:
   definitions:
@@ -106,11 +106,11 @@ lint:
           success_codes: [0]
 ```
 
-See our documentation on [custom linters](./Custom%20Linters.md) and [custom parsers](./Custom%20Parsers.md) for more on what you can do, such as writing your parser in Javascript or Python!
+자바스크립트나 파이썬으로 구문 분석기를 작성하는 방법 등 자세한 내용은 [커스텀 린터](./Custom%20Linters.md) 및 [커스텀 파서](./Custom%20Parsers.md) 문서를 참조하세요!
 
 ## Publishing your plugin
 
-To share your plugin with the world, all you have to do is tag a release and push it to GitHub, Gitlab, or some other repository hosting service:
+플러그인을 전 세계와 공유하려면 릴리스에 태그를 지정하고 GitHub, Gitlab 또는 기타 리포지토리 호스팅 서비스에 푸시하기만 하면 됩니다:
 
 ```sh
 git add .
@@ -120,7 +120,7 @@ git remote add origin ${repo_url}
 git push origin main v0.0.0
 ```
 
-Now that it's available on the Internet, everyone else can just use your plugin by running:
+이제 인터넷에서 사용할 수 있으므로 누구나 플러그인을 실행하여 사용할 수 있습니다:
 
 ```sh
 trunk plugins add --id=their-first-plugin ${repo_url} v0.0.0
