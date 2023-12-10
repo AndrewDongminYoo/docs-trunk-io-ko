@@ -50,19 +50,19 @@ report:
 
 CI에서 trunk check가 실행되는 동안 린터 오류가 발생하면 다음과 같은 메시지가 표시됩니다:
 
-<figure><img src="../assets/Screenshot 2023-10-16 at 5.09.29 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/Screenshot 2023-10-16 at 5.09.29 PM.png" alt=""></figure>
 
 이를 디버깅하려면 Github Actions 출력에서 린터 실패 보고서를 가져와야 합니다. "Details"를 클릭하면 다음과 같은 화면이 표시됩니다:
 
-<figure><img src="../assets/Screenshot 2023-10-16 at 5.10.39 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/Screenshot 2023-10-16 at 5.10.39 PM.png" alt=""></figure>
 
 그런 다음 "트렁크-io에 대한 자세한 정보 보기"를 클릭합니다.
 
-<figure><img src="../assets/Screenshot 2023-10-16 at 5.11.57 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/Screenshot 2023-10-16 at 5.11.57 PM.png" alt=""></figure>
 
 그러면 검사 실행 요약이 표시됩니다. CI 로그를 보려면 "\<귀하의 리포지토리 이름>/pull_request"를 클릭하고 맨 아래로 스크롤합니다.
 
-<figure><img src="../assets/Screenshot 2023-10-16 at 5.12.23 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/Screenshot 2023-10-16 at 5.12.23 PM.png" alt=""></figure>
 
 그러면 발생한 실패 목록과 모든 린터 실패 보고서가 접을 수 있는 형태로 표시됩니다. 그런 다음 [린터 실패 분석하기](https://docs.trunk.io/check/debugging#analyzing-linter-failures)의 지침에 따라 문제를 해결할 수 있습니다.
 

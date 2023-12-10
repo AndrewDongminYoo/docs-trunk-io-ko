@@ -1,0 +1,7 @@
+{
+  "bracketSameLine": true,
+  "htmlWhitespaceSensitivity": "css",
+  "proseWrap": "preserve",
+  "tabWidth": 2,
+  "useTabs": false
+}
