@@ -1,0 +1,2817 @@
+<!doctype html>
+<html
+  ng-app="hub"
+  lang="en"
+  data-color-mode="auto"
+  class="useReactApp"
+>
+  <head>
+    <script src="https://cdn.readme.io/public/js/force-firefox-anchor-jump.js?1689103021861"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="readme-deploy" content="4.435.1" />
+    <meta name="readme-subdomain" content="trunkio" />
+    <meta name="readme-version" content="1.2.0" />
+    <title ng-bind="pageTitle">Overview</title>
+    <meta
+      name="description"
+      property="og:description"
+      content="Trunk Check manages, downloads, and runs dozens of linters, formatters, static analyzers, and security tools. It's also a platform to write your own custom checks and integrate them to run as part of your repo's check suite.Use it via: Trunk CLIVSCode ExtensionGitHub ActionWeb App (app.trunk.io) We ..."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="title" property="og:title" content="Overview" />
+    <meta property="og:site_name" content="trunkio" />
+    <link
+      id="favicon"
+      rel="shortcut icon"
+      href="https://files.readme.io/75de105-small-favicon-readme-64.png"
+      type="image/png"
+    />
+    <link rel="canonical" href="https://docs.trunk.io/docs/check" />
+    <!-- Lightweight jQuery replacement-->
+    <script src="https://unpkg.com/cash-dom@8.1.2/dist/cash.min.js"></script>
+    <!-- Custom CSS-->
+    <!-- (Note: this title attribute is used for Superhub style encapsulation)-->
+    <style title="rm-custom-css">
+      :root {
+        --project-color-primary: #242526;
+        --project-color-inverse: #fff;
+        --recipe-button-color: #242526;
+        --recipe-button-color-hover: #000000;
+        --recipe-button-color-active: #000000;
+        --recipe-button-color-focus: rgba(36, 37, 38, 0.25);
+        --recipe-button-color-disabled: #888b8e;
+      }
+
+      [id="enterprise"] .ReadMeUI[is="AlgoliaSearch"] {
+        --project-color-primary: #242526;
+        --project-color-inverse: #fff;
+      }
+
+      a {
+        color: #242526;
+      }
+
+      a:hover {
+        color: #000;
+      }
+
+      a.text-muted:hover {
+        color: #242526;
+      }
+
+      .btn.btn-primary {
+        background-color: #242526;
+      }
+
+      .btn.btn-primary:hover {
+        background-color: #000;
+      }
+
+      .theme-line #hub-landing-top h2 {
+        color: #242526;
+      }
+
+      #hub-landing-top .btn:hover {
+        color: #242526;
+      }
+
+      .theme-line #hub-landing-top .btn:hover {
+        color: #fff;
+      }
+
+      .theme-solid header#hub-header #header-top {
+        background-color: #242526;
+      }
+
+      .theme-solid.header-gradient header#hub-header #header-top {
+        background: linear-gradient(to bottom, #242526, #000);
+      }
+
+      .theme-solid.header-custom header#hub-header #header-top {
+        background-image: url(undefined);
+      }
+
+      .theme-line header#hub-header #header-top {
+        border-bottom-color: #242526;
+      }
+
+      .theme-line header#hub-header #header-top .btn {
+        background-color: #242526;
+      }
+
+      header#hub-header #header-top #header-logo {
+        width: 189px;
+        height: 40px;
+        margin-top: 0;
+        background-image: url(https://files.readme.io/6070550-docs-logo.svg);
+      }
+
+      html:not(.useReactApp) nav#hub-sidebar ul a:hover:not(.active) {
+        color: #242526;
+      }
+
+      html:not(.useReactApp) nav#hub-sidebar ul a.active,
+      html:not(.useReactApp) nav#hub-sidebar ul > li.subnav-expanded > a {
+        color: #fff;
+        background-color: #242526;
+      }
+
+      html:not(.useReactApp) nav#hub-sidebar ul a.active:not(.active),
+      html:not(.useReactApp)
+        nav#hub-sidebar
+        ul
+        > li.subnav-expanded
+        > a:not(.active) {
+        color: #384248;
+      }
+
+      html:not(.useReactApp) nav#hub-sidebar ul.subpages {
+        border-left-color: #242526;
+      }
+
+      html:not(.useReactApp) nav#hub-sidebar ul.subpages:after {
+        background-color: #242526 !important;
+      }
+
+      html:not(.useReactApp)
+        nav#hub-sidebar
+        ul.subpages:after
+        > li
+        > a.subpage.active {
+        color: #fff !important;
+        background-color: #242526;
+      }
+
+      #hub-subheader-parent
+        #hub-subheader
+        .hub-subheader-breadcrumbs
+        .dropdown-menu
+        a:hover {
+        background-color: #242526;
+      }
+
+      #subheader-links a.active {
+        color: #242526 !important;
+        box-shadow: inset 0 -2px 0 #242526;
+      }
+
+      #subheader-links a:hover {
+        color: #242526 !important;
+        box-shadow: inset 0 -2px 0 #242526;
+        opacity: 0.7;
+      }
+
+      .discussion .submit-vote.submit-vote-parent.voted a.submit-vote-button {
+        background-color: #242526;
+      }
+
+      section#hub-discuss .discussion a .discuss-body h4 {
+        color: #242526;
+      }
+
+      section#hub-discuss .discussion a:hover .discuss-body h4 {
+        color: #000;
+      }
+
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky {
+        border-bottom-color: #242526;
+      }
+
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky .search-box {
+        border-bottom-color: #242526;
+      }
+
+      #hub-search-results h3 em {
+        color: #242526;
+      }
+
+      .main_background,
+      .tag-item {
+        background: #242526 !important;
+      }
+
+      .main_background:hover {
+        background: #000 !important;
+      }
+
+      .main_color {
+        color: #242526 !important;
+      }
+
+      .border_bottom_main_color {
+        border-bottom: 2px solid #242526;
+      }
+
+      .main_color_hover:hover {
+        color: #242526 !important;
+      }
+
+      section#hub-discuss h1 {
+        color: #242526;
+      }
+
+      #hub-reference .hub-api .api-definition .api-try-it-out.active {
+        border-color: #242526;
+        background-color: #242526;
+      }
+
+      #hub-reference .hub-api .api-definition .api-try-it-out.active:hover {
+        background-color: #000;
+        border-color: #000;
+      }
+
+      #hub-reference .hub-api .api-definition .api-try-it-out:hover {
+        border-color: #242526;
+        color: #242526;
+      }
+
+      #hub-reference .hub-reference .logs .logs-empty .logs-login-button,
+      #hub-reference .hub-reference .logs .logs-login .logs-login-button {
+        background-color: var(--project-color-primary, #242526);
+        border-color: var(--project-color-primary, #242526);
+      }
+
+      #hub-reference .hub-reference .logs .logs-empty .logs-login-button:hover,
+      #hub-reference .hub-reference .logs .logs-login .logs-login-button:hover {
+        background-color: #000;
+        border-color: #000;
+      }
+
+      #hub-reference .hub-reference .logs .logs-empty > svg > path,
+      #hub-reference .hub-reference .logs .logs-login > svg > path {
+        fill: #242526;
+        fill: var(--project-color-primary, #242526);
+      }
+
+      #hub-reference .hub-reference .logs:last-child .logs-empty,
+      #hub-reference .hub-reference .logs:last-child .logs-login {
+        margin-bottom: 35px;
+      }
+
+      #hub-reference
+        .hub-reference
+        .hub-reference-section
+        .hub-reference-left
+        header
+        .hub-reference-edit:hover {
+        color: #242526;
+      }
+
+      .main-color-accent {
+        border-bottom: 3px solid #242526;
+        padding-bottom: 8px;
+      }
+    </style>
+    <meta name="loadedProject" content="trunkio" />
+    <script>
+      var storedColorMode =
+        `auto` === "auto"
+          ? window.localStorage.getItem("color-scheme")
+          : `auto`;
+      document
+        .querySelector("[data-color-mode]")
+        .setAttribute("data-color-mode", storedColorMode);
+    </script>
+    <script
+      id="config"
+      type="application/json"
+      data-json='{"algoliaIndex":"readme_search_v2","amplitude":"dc8065a65ef83d6ad23e37aaf014fc84","asset_url":"https://cdn.readme.io","domain":"readme.io","domainFull":"https://dash.readme.com","dashMetricsUrl":"https://m.readme.io","metricsUrl":"https://metrics.readme.io","wsMetricsUrl":"wss://m.readme.io","releaseVersion":"4.435.1","sentry":{"dsn":"https://3bbe57a973254129bcb93e47dc0cc46f@o343074.ingest.sentry.io/2052166","enabled":true,"tracesSampleRate":0},"sslGenerationService":"ssl.readmessl.com"}'
+    ></script>
+  </head>
+
+  <body
+    ng-class="{'hub-full': state.current().opts.full, 'hub-reference-parent': state.current().name.includes('reference'), 'hub-guides-parent': state.current().name.includes('docs'), 'no-sidebar': !state.current().opts.sidebar, 'hub-is-home': state.current().name == 'home' &amp;&amp; 'docs' == 'landing', 'hub-suggested-edits': suggestedEdits.isEnabled}"
+    class="toolbarCount_undefined body-none theme-solid header-solid header-bg-size-auto header-bg-pos-tl header-overlay-triangles reference-layout-row lumosity-dark"
+  >
+    <div id="ssr-top">
+      <script>
+        NG_BUNDLES = [
+          "https://cdn.readme.io/public/js/hub2.20ccaf9f61cf1c82371e.js",
+          "https://cdn.readme.io/public/js/runtime.9e78a8796bf333cd5615.js",
+          "https://cdn.readme.io/public/js/vendors.dca14c696102539401b9.js",
+        ];
+      </script>
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-PageNotFound.1ada8671884e2a5b981e.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Changelog.f581ab4fae22bfd81e28.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/Footer.ce31c64f1a0ffb7d435e.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-GraphQL.8fc6b532cde89a8333ef.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/SuperHub.a1644f83e27fbdeccb50.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Discuss.7130e638c898bc38ef51.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Logs.39a3f09bb5130903e943.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/Header.a7f5ef47a72b178081d3.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Doc-SuperHubEditor.8d807adc7b7caa95688a.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/5237.7f21212c486026b0b1af.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Landing.f7090edeae116a65ef46.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Doc.9f66037cd24025abbda9.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/3435.9200159a8fec79d971c4.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Reference.830fa91c8f7d5bbc6b96.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/7552.3d166441a10a3a97143e.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/3257.4ea744411cfbb97cf486.css"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/810.7eedddd4e68669913579.css"
+      />
+      <link
+        data-chunk="List"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/List.bbc110e8adac4cb68e83.css"
+      />
+      <link
+        data-chunk="Editor"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/Editor.d41080608e77b0050616.css"
+      />
+      <link
+        data-chunk="Page"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/Page.29330b9a37a5b2f9ae85.css"
+      />
+      <link
+        data-chunk="Page"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/5237.7f21212c486026b0b1af.css"
+      />
+      <link
+        data-chunk="routes-Discuss"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Discuss.7130e638c898bc38ef51.css"
+      />
+      <link
+        data-chunk="Post"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/Post.c1986328c6cbff2e43fb.css"
+      />
+      <link
+        data-chunk="routes-Changelog"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Changelog.f581ab4fae22bfd81e28.css"
+      />
+      <link
+        data-chunk="routes-Reference"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Reference.830fa91c8f7d5bbc6b96.css"
+      />
+      <link
+        data-chunk="routes-PageNotFound"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-PageNotFound.1ada8671884e2a5b981e.css"
+      />
+      <link
+        data-chunk="routes-Landing"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Landing.f7090edeae116a65ef46.css"
+      />
+      <link
+        data-chunk="Footer"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/Footer.ce31c64f1a0ffb7d435e.css"
+      />
+      <link
+        data-chunk="routes-Doc"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/routes-Doc.9f66037cd24025abbda9.css"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/Header.a7f5ef47a72b178081d3.css"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/3435.9200159a8fec79d971c4.css"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/7552.3d166441a10a3a97143e.css"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/3257.4ea744411cfbb97cf486.css"
+      />
+      <link
+        data-chunk="SuperHub"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/SuperHub.a1644f83e27fbdeccb50.css"
+      />
+      <link
+        data-chunk="SuperHub"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/810.7eedddd4e68669913579.css"
+      />
+      <link
+        data-chunk="main"
+        rel="preload"
+        as="style"
+        href="https://cdn.readme.io/public/hub/web/main.80ccd815d37a0e47f9f3.css"
+      />
+      <link
+        data-chunk="main"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/main.0bdebf65b08d625aeb2f.js"
+      />
+      <link
+        data-chunk="SuperHub"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/9847.4e78e9f8c71d9d23e8a1.js"
+      />
+      <link
+        data-chunk="SuperHub"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/2831.bd8378de1328575bf326.js"
+      />
+      <link
+        data-chunk="SuperHub"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/SuperHub.d6ce7b4ab1c8ecaa6ea9.js"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/7714.17456cfb867dbf0dfd22.js"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/7579.ea6e836340818db760b2.js"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/7675.426fcc3240fdad06e272.js"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/5833.f29ce2d6741bfd4a9401.js"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/4314.c40d61622219e86aef99.js"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/3257.967f311b4f934d57651f.js"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/7552.6c45e09281fbc124be4b.js"
+      />
+      <link
+        data-chunk="Header"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/Header.d96e9cd40b50ef304395.js"
+      />
+      <link
+        data-chunk="routes-Doc"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/2680.73b227dccdf2da6688d6.js"
+      />
+      <link
+        data-chunk="routes-Doc"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/6116.c8aba481e49c72e3f71b.js"
+      />
+      <link
+        data-chunk="routes-Doc"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/4184.16e87bef72ab0430603e.js"
+      />
+      <link
+        data-chunk="routes-Doc"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/6230.6c0aa24d259553bc396c.js"
+      />
+      <link
+        data-chunk="routes-Doc"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/4923.9a131223e8f8a7063149.js"
+      />
+      <link
+        data-chunk="routes-Doc"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/6683.2e39c459b33e86fd12e5.js"
+      />
+      <link
+        data-chunk="routes-Doc"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Doc.fafd6e65fd8abedee27a.js"
+      />
+      <link
+        data-chunk="Footer"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/Footer.ba5c16c8581e2191d820.js"
+      />
+      <link
+        data-chunk="core-icons-arrow-right-svg"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/core-icons-arrow-right-svg.1e7f2192b7bda6b4a5e1.js"
+      />
+      <link
+        data-chunk="routes-Landing"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/9010.4139618a98c878ee1b2e.js"
+      />
+      <link
+        data-chunk="routes-Landing"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/1730.9f51d54902f6e161ba93.js"
+      />
+      <link
+        data-chunk="routes-Landing"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/2926.4034af9b9773d4ce29be.js"
+      />
+      <link
+        data-chunk="routes-Landing"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Landing.dd6d1d7f3a9481210857.js"
+      />
+      <link
+        data-chunk="core-icons-arrow-up-right-svg"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/core-icons-arrow-up-right-svg.957c5be2eea3961b4701.js"
+      />
+      <link
+        data-chunk="routes-PageNotFound"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-PageNotFound.c08f308f699d39f4fa3b.js"
+      />
+      <link
+        data-chunk="CustomPage"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/CustomPage.9dc25d4d0248b160ff3d.js"
+      />
+      <link
+        data-chunk="routes-CustomPage"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-CustomPage.5cf0ed57308797a98bf4.js"
+      />
+      <link
+        data-chunk="routes-Reference"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/9509.3cd9f5c08cfdd002e348.js"
+      />
+      <link
+        data-chunk="routes-Reference"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/2053.9a1bcec1903de810e401.js"
+      />
+      <link
+        data-chunk="routes-Reference"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/6215.5ab80ac54d47cdd073ea.js"
+      />
+      <link
+        data-chunk="routes-Reference"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Reference.e5d29ff64042135f8132.js"
+      />
+      <link
+        data-chunk="routes-Tutorials"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Tutorials.3dd717c283aadc3a3fe3.js"
+      />
+      <link
+        data-chunk="routes-Changelog"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Changelog.62a62bf6eaf956db5c2b.js"
+      />
+      <link
+        data-chunk="Post"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/5858.e8e174469b512aca76c8.js"
+      />
+      <link
+        data-chunk="Post"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/Post.69e461925ec3caf4e3f4.js"
+      />
+      <link
+        data-chunk="core-icons-more-vertical-svg"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/core-icons-more-vertical-svg.228db57c23169aaa56d6.js"
+      />
+      <link
+        data-chunk="routes-Discuss"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/3393.d6da75f49f349ff326a6.js"
+      />
+      <link
+        data-chunk="routes-Discuss"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Discuss.b1dbc41b22c1f6bc0bf4.js"
+      />
+      <link
+        data-chunk="Page"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/1665.3273fa4556ff4f53d6c8.js"
+      />
+      <link
+        data-chunk="Page"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/1414.bdc73cf15ce3c740cc9d.js"
+      />
+      <link
+        data-chunk="Page"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/5237.d4eb0c36bda309f9d3eb.js"
+      />
+      <link
+        data-chunk="Page"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/4141.880ef02ba023cd9f8f53.js"
+      />
+      <link
+        data-chunk="Page"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/Page.1979312aae3b7c6975eb.js"
+      />
+      <link
+        data-chunk="core-icons-menu-svg"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/core-icons-menu-svg.b9a5673111bcd429344f.js"
+      />
+      <link
+        data-chunk="Editor"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/5691.d94bc36472e94ca86d34.js"
+      />
+      <link
+        data-chunk="Editor"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/Editor.b77acf9dbe7d42840cb5.js"
+      />
+      <link
+        data-chunk="core-icons-x-circle-svg"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/core-icons-x-circle-svg.1253cc725f6ab78a786d.js"
+      />
+      <link
+        data-chunk="core-icons-suggested-edits-svg"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/core-icons-suggested-edits-svg.93755393eff5d50dda67.js"
+      />
+      <link
+        data-chunk="core-icons-chevron-down-svg"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/core-icons-chevron-down-svg.09fdf86b58640880691c.js"
+      />
+      <link
+        data-chunk="List"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/List.cd286927970aef2dafa6.js"
+      />
+      <link
+        data-chunk="core-icons-trending-up-svg"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/core-icons-trending-up-svg.b09fd55fdbf98ea428b4.js"
+      />
+      <link
+        data-chunk="core-icons-callout-info-svg"
+        rel="preload"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/core-icons-callout-info-svg.991471218275384a0302.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/7714.17456cfb867dbf0dfd22.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/7579.ea6e836340818db760b2.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/7675.426fcc3240fdad06e272.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/5833.f29ce2d6741bfd4a9401.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/2680.73b227dccdf2da6688d6.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/6116.c8aba481e49c72e3f71b.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/4184.16e87bef72ab0430603e.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/6230.6c0aa24d259553bc396c.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/9509.3cd9f5c08cfdd002e348.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/2053.9a1bcec1903de810e401.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/4923.9a131223e8f8a7063149.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/6215.5ab80ac54d47cdd073ea.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/3257.967f311b4f934d57651f.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/7552.6c45e09281fbc124be4b.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/2831.bd8378de1328575bf326.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Reference.e5d29ff64042135f8132.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/6683.2e39c459b33e86fd12e5.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Doc.fafd6e65fd8abedee27a.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/9010.4139618a98c878ee1b2e.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/1730.9f51d54902f6e161ba93.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/2926.4034af9b9773d4ce29be.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Landing.dd6d1d7f3a9481210857.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-CustomPage.5cf0ed57308797a98bf4.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/1665.3273fa4556ff4f53d6c8.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/5237.d4eb0c36bda309f9d3eb.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/3393.d6da75f49f349ff326a6.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/5691.d94bc36472e94ca86d34.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Doc-SuperHubEditor.138a767814632309e0e6.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/4314.c40d61622219e86aef99.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/Header.d96e9cd40b50ef304395.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Tutorials.3dd717c283aadc3a3fe3.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/7995.cdb7f8ee3573d70af3c4.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Logs.49a274a1ea336780d4e6.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Discuss.b1dbc41b22c1f6bc0bf4.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/9847.4e78e9f8c71d9d23e8a1.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/SuperHub.d6ce7b4ab1c8ecaa6ea9.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/1491.32a06ad23e456c82bfeb.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-GraphQL.4adb1b9ebf3bad7696bb.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/Footer.ba5c16c8581e2191d820.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-Changelog.62a62bf6eaf956db5c2b.js"
+      />
+      <link
+        data-parent-chunk="main"
+        rel="prefetch"
+        as="script"
+        href="https://cdn.readme.io/public/hub/web/routes-PageNotFound.c08f308f699d39f4fa3b.js"
+      />
+      <link
+        data-chunk="main"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/main.80ccd815d37a0e47f9f3.css"
+      />
+      <link
+        data-chunk="SuperHub"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/810.7eedddd4e68669913579.css"
+      />
+      <link
+        data-chunk="SuperHub"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/SuperHub.a1644f83e27fbdeccb50.css"
+      />
+      <link
+        data-chunk="Header"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/3257.4ea744411cfbb97cf486.css"
+      />
+      <link
+        data-chunk="Header"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/7552.3d166441a10a3a97143e.css"
+      />
+      <link
+        data-chunk="Header"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/3435.9200159a8fec79d971c4.css"
+      />
+      <link
+        data-chunk="Header"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/Header.a7f5ef47a72b178081d3.css"
+      />
+      <link
+        data-chunk="routes-Doc"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/routes-Doc.9f66037cd24025abbda9.css"
+      />
+      <link
+        data-chunk="Footer"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/Footer.ce31c64f1a0ffb7d435e.css"
+      />
+      <link
+        data-chunk="routes-Landing"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/routes-Landing.f7090edeae116a65ef46.css"
+      />
+      <link
+        data-chunk="routes-PageNotFound"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/routes-PageNotFound.1ada8671884e2a5b981e.css"
+      />
+      <link
+        data-chunk="routes-Reference"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/routes-Reference.830fa91c8f7d5bbc6b96.css"
+      />
+      <link
+        data-chunk="routes-Changelog"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/routes-Changelog.f581ab4fae22bfd81e28.css"
+      />
+      <link
+        data-chunk="Post"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/Post.c1986328c6cbff2e43fb.css"
+      />
+      <link
+        data-chunk="routes-Discuss"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/routes-Discuss.7130e638c898bc38ef51.css"
+      />
+      <link
+        data-chunk="Page"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/5237.7f21212c486026b0b1af.css"
+      />
+      <link
+        data-chunk="Page"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/Page.29330b9a37a5b2f9ae85.css"
+      />
+      <link
+        data-chunk="Editor"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/Editor.d41080608e77b0050616.css"
+      />
+      <link
+        data-chunk="List"
+        rel="stylesheet"
+        href="https://cdn.readme.io/public/hub/web/List.bbc110e8adac4cb68e83.css"
+      />
+    </div>
+    <div id="ssr-main">
+      <div
+        class="App ThemeContext ThemeContext_dark"
+        style="
+          --color-primary: #242526;
+          --color-primary-inverse: #fff;
+          --color-primary-alt: #000000;
+          --color-primary-darken-10: #0b0b0c;
+          --color-primary-darken-20: #000000;
+          --color-primary-alpha-25: rgba(36, 37, 38, 0.25);
+          --color-link-primary: #242526;
+          --color-link-primary-darken-10: #0b0b0c;
+          --color-link-primary-darken-20: #000000;
+          --color-link-primary-alpha-50: rgba(36, 37, 38, 0.5);
+          --color-link-primary-alpha-25: rgba(36, 37, 38, 0.25);
+          --color-link-background: rgba(36, 37, 38, 0.09);
+          --color-link-text: #fff;
+          --color-login-link: #118cfd;
+          --color-login-link-text: #fff;
+          --color-login-link-darken-10: #0272d9;
+          --color-login-link-primary-alpha-50: rgba(17, 140, 253, 0.5);
+        "
+      >
+        <header class="Header3zzata9F_ZPQ rm-Header">
+          <div class="Header-topuTMpygDG4e1V rm-Header-top">
+            <div class="rm-Container rm-Container_flex">
+              <div style="outline: none" tabindex="-1">
+                <a
+                  href="#content"
+                  target="_self"
+                  class="Button Button_md Header-jumpTo3IWKQXmhSI5D rm-JumpTo Button_primary"
+                  >Jump to Content</a
+                >
+              </div>
+              <div class="Header-leftADQdGVqx1wqU">
+                <a
+                  class="Header-logo1Xy41PtkzbdG rm-Logo"
+                  href="/docs"
+                  target="_self"
+                  ><img
+                    alt="trunkio"
+                    class="Header-logo-img3YvV4lcGKkeb rm-Logo-img"
+                    src="https://files.readme.io/6070550-docs-logo.svg"
+                /></a>
+              </div>
+              <div
+                class="Header-leftADQdGVqx1wqU Header-left_mobile1RG-X93lx6PF"
+              >
+                <div>
+                  <div class="">
+                    <div
+                      class="Flyout95xhYIIoTKtc undefined rm-Flyout"
+                      data-testid="flyout"
+                    >
+                      <div class="MobileFlyout1hHJpUd-nYkd">
+                        <a
+                          aria-current="page"
+                          class="NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck- active"
+                          href="/docs"
+                          target="_self"
+                          ><i
+                            class="NavItem-item-anchorzz3banOxXKjr icon-guides"
+                          ></i
+                          ><span class="NavItem-textSlZuuL489uiw">Docs</span></a
+                        ><a
+                          class="NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck-"
+                          href="/recipes"
+                          target="_self"
+                          ><i
+                            class="NavItem-item-anchorzz3banOxXKjr icon-recipes"
+                          ></i
+                          ><span class="NavItem-textSlZuuL489uiw"
+                            >Recipes</span
+                          ></a
+                        ><a
+                          class="NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck-"
+                          href="https://slack.trunk.io"
+                          rel="noopener"
+                          target="_blank"
+                          to="https://slack.trunk.io"
+                          ><i
+                            class="NavItem-item-anchorzz3banOxXKjr undefined"
+                          ></i
+                          ><span class="NavItem-textSlZuuL489uiw"
+                            >Community Slack</span
+                          ></a
+                        ><a
+                          class="NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck-"
+                          href="https://changelog.trunk.io/check"
+                          rel="noopener"
+                          target="_blank"
+                          to="https://changelog.trunk.io/check"
+                          ><i
+                            class="NavItem-item-anchorzz3banOxXKjr undefined"
+                          ></i
+                          ><span class="NavItem-textSlZuuL489uiw"
+                            >Feature Requests</span
+                          ></a
+                        ><a
+                          class="NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck-"
+                          href="https://changelog.trunk.io/changelog"
+                          rel="noopener"
+                          target="_blank"
+                          to="https://changelog.trunk.io/changelog"
+                          ><i
+                            class="NavItem-item-anchorzz3banOxXKjr undefined"
+                          ></i
+                          ><span class="NavItem-textSlZuuL489uiw"
+                            >Changelog</span
+                          ></a
+                        >
+                        <hr class="MobileFlyout-divider10xf7R2X1MeW" />
+                        <a
+                          class="MobileFlyout-logo3Lq1eTlk1K76 Header-logo1Xy41PtkzbdG rm-Logo"
+                          href="/docs"
+                          target="_self"
+                          ><img
+                            alt="trunkio"
+                            class="Header-logo-img3YvV4lcGKkeb rm-Logo-img"
+                            src="https://files.readme.io/6070550-docs-logo.svg"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    aria-label="Toggle navigation menu"
+                    class="icon-menu menu3d6DYNDa3tk5"
+                    type="button"
+                  ></button>
+                </div>
+                <div class="Header-left-nav2xWPWMNHOGf_">
+                  <i class="undefined Header-left-nav-icon10glJKFwewOv"></i>
+                </div>
+              </div>
+              <div class="Header-right21PC2XTT6aMg">
+                <div
+                  class="ThemeToggle-wrapper1M_iJESXCpGR Dropdown Dropdown_closed"
+                >
+                  <div
+                    aria-haspopup="dialog"
+                    class="Dropdown-toggle"
+                    role="button"
+                  >
+                    <button
+                      aria-label="Toggle to light mode"
+                      id="ThemeToggle-button-static-id-placeholder"
+                      class="Button Button_slate_text Button_sm rm-ThemeToggle ThemeToggle2tVPbUyQbWDo Button_primary"
+                      type="button"
+                    >
+                      <svg
+                        aria-labelledby="ThemeToggle-button-static-id-placeholder"
+                        class="Icon ThemeToggle-Icon3g9ZT7pRMwCv"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>Moon (Dark Mode)</title>
+                        <path
+                          d="M19 14.79C18.8427 16.4922 18.2039 18.1144 17.1582 19.4668C16.1126 20.8192 14.7035 21.8458 13.0957 22.4265C11.4879 23.0073 9.74798 23.1181 8.0795 22.7461C6.41102 22.3741 4.88299 21.5345 3.67423 20.3258C2.46546 19.117 1.62594 17.589 1.25391 15.9205C0.881876 14.252 0.992717 12.5121 1.57346 10.9043C2.1542 9.29651 3.18083 7.88737 4.53321 6.84175C5.8856 5.79614 7.5078 5.15731 9.21 5C8.21341 6.34827 7.73385 8.00945 7.85853 9.68141C7.98322 11.3534 8.70386 12.9251 9.8894 14.1106C11.0749 15.2961 12.6466 16.0168 14.3186 16.1415C15.9906 16.2662 17.6517 15.7866 19 14.79Z"
+                        ></path>
+                        <path
+                          class="ThemeToggle-Icon-star3wweJby1gM4w"
+                          d="M18.3707 1C18.3707 3.22825 16.2282 5.37069 14 5.37069C16.2282 5.37069 18.3707 7.51313 18.3707 9.74138C18.3707 7.51313 20.5132 5.37069 22.7414 5.37069C20.5132 5.37069 18.3707 3.22825 18.3707 1Z"
+                        ></path></svg
+                      ><svg
+                        aria-labelledby="ThemeToggle-button-static-id-placeholder"
+                        class="Icon ThemeToggle-Icon3g9ZT7pRMwCv ThemeToggle-Icon_active18I2-19CkbgD"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>Sun (Light Mode)</title>
+                        <path
+                          class="ThemeToggle-Icon-ray2ab8_BwBkrTx"
+                          d="M12 1V3"
+                        ></path>
+                        <path
+                          class="ThemeToggle-Icon-ray2ab8_BwBkrTx"
+                          d="M18.36 5.64L19.78 4.22"
+                        ></path>
+                        <path
+                          class="ThemeToggle-Icon-ray2ab8_BwBkrTx"
+                          d="M21 12H23"
+                        ></path>
+                        <path
+                          class="ThemeToggle-Icon-ray2ab8_BwBkrTx"
+                          d="M18.36 18.36L19.78 19.78"
+                        ></path>
+                        <path
+                          class="ThemeToggle-Icon-ray2ab8_BwBkrTx"
+                          d="M12 21V23"
+                        ></path>
+                        <path
+                          class="ThemeToggle-Icon-ray2ab8_BwBkrTx"
+                          d="M4.22 19.78L5.64 18.36"
+                        ></path>
+                        <path
+                          class="ThemeToggle-Icon-ray2ab8_BwBkrTx"
+                          d="M1 12H3"
+                        ></path>
+                        <path
+                          class="ThemeToggle-Icon-ray2ab8_BwBkrTx"
+                          d="M4.22 4.22L5.64 5.64"
+                        ></path>
+                        <path
+                          d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="Header-searchtb6Foi0-D9Vx">
+                  <button
+                    aria-label="Search"
+                    class="rm-SearchToggle"
+                    data-symbol="⌘"
+                  >
+                    <div class="icon-search1 rm-SearchToggle-icon"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rm-Header-bottom" style="display: flex">
+            <div class="Header-bottom2eLKOFXMEmh5">
+              <div class="rm-Container rm-Container_flex">
+                <nav class="Header-leftADQdGVqx1wqU">
+                  <a
+                    aria-current="page"
+                    class="Button Button_md Button_slate_text rm-Header-bottom-link active"
+                    href="/docs"
+                    target="_self"
+                    ><i class="icon-guides"></i><span>Docs</span></a
+                  ><a
+                    class="Button Button_md Button_slate_text rm-Header-bottom-link"
+                    href="/recipes"
+                    target="_self"
+                    ><i class="icon-recipes"></i><span>Recipes</span></a
+                  ><a
+                    class="Button Button_md Button_slate_text rm-Header-bottom-link"
+                    href="https://slack.trunk.io"
+                    target="_self"
+                    to="https://slack.trunk.io"
+                    ><span>Community Slack</span></a
+                  ><a
+                    class="Button Button_md Button_slate_text rm-Header-bottom-link"
+                    href="https://changelog.trunk.io/check"
+                    target="_self"
+                    to="https://changelog.trunk.io/check"
+                    ><span>Feature Requests</span></a
+                  ><a
+                    class="Button Button_md Button_slate_text rm-Header-bottom-link"
+                    href="https://changelog.trunk.io/changelog"
+                    target="_self"
+                    to="https://changelog.trunk.io/changelog"
+                    ><span>Changelog</span></a
+                  >
+                </nav>
+                <div
+                  class="Header-searchtb6Foi0-D9Vx Header-search_featherYsmQBn55F3d9"
+                >
+                  <button
+                    aria-label="Search"
+                    class="rm-SearchToggle"
+                    data-symbol="⌘"
+                  >
+                    <div class="icon-search1 rm-SearchToggle-icon"></div>
+                    <div
+                      class="Header-search-placeholder3Vx4OmMPcjAi rm-SearchToggle-placeholder"
+                    >
+                      Search
+                    </div>
+                    <div class="rm-SearchToggle-shortcut"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hub-search-results--reactApp" id="hub-search-results">
+            <div class="hub-container">
+              <div
+                class="modal-backdrop show-modal rm-SearchModal"
+                role="button"
+                tabindex="0"
+              ></div>
+            </div>
+          </div>
+        </header>
+        <div class="rm-Guides">
+          <div class="rm-Container rm-Container_flex">
+            <nav
+              class="Nav3C5f8FcjkaHj hub-sidebar reference-redesign rm-Sidebar_guides rm-Sidebar"
+              id="hub-sidebar"
+            >
+              <section
+                class="Sidebar1t2G1ZJq-vU1 rm-Sidebar hub-sidebar-content"
+              >
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    General
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/what-is-trunk"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>What is Trunk?</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/get-started"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Get Started</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/community"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Community</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/trunk-app-for-slack"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Integration for Slack</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    CLI
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/overview"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Overview</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/install"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Install Trunk</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/initialize-trunk-in-a-git-repo"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Init in a git repo</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/compatibility"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Compatibility</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/github-codespaces"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>GitHub Codespaces</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    VS Code
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/vscode"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Overview</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    Merge
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/merge"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Overview</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/merge-getting-started"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Getting Started</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/merge-reference"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Reference</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/merge-using-the-webapp"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Using the Webapp</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/merge-integration-for-slack"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Integration for Slack</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    Check
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        aria-current="page"
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link active"
+                        target="_self"
+                        href="/docs/check"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Overview</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/check-get-started"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Get Started</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/ci"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Continuous Integration</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/check-cli"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Command Line</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/check-config"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Configuration</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/check-custom-linters"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Custom Linters</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/custom-parsers"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Custom Parsers</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/check-debugging"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Debugging</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/check-supported-linters"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Supported Linters</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/ignoring-issues"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Ignoring Issues</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/check-under-the-hood"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Under the Hood</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/check-github-integration"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>GitHub Integration</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    Actions
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/actions"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Overview</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/actions-config"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Configuration</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/actions-git-hooks"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Git Hooks</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/actions-notifications"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Notifications</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/actions-troubleshooting"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Logging and Troubleshooting</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    Runtimes
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/runtimes"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Overview</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/prevent-duplicate-runtimes"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Prevent Duplicate Runtimes</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    Plugins
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/plugins"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Overview</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/exported-configs"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Exported Configs</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    Web App
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/webapp"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Overview</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/upload-check-results"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Upload Trunk Check Results</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/github-app-permissions"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>GitHub App Permissions</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    CI DEBUGGER
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/ci-debugger"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Overview</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/ci-debugger-getting-started"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>GitHub Actions</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    Reference
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/reference-glob-path-pattern"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Glob Path Pattern</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/reference-trunk-yaml"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Trunk YAML</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/reference-user-trunk-yaml"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>User YAML</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/components"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Components</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/usage-data"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Usage Data</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                  <h3 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">
+                    Administration
+                  </h3>
+                  <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/admin-billing"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Billing</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/admin-saml"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Single Sign-On (SAML)</span></span
+                        ></a
+                      >
+                    </li>
+                    <li class="Sidebar-item23D-2Kd61_k3">
+                      <a
+                        class="Sidebar-link2Dsha-r-GKh2 childless text-wrap rm-Sidebar-link"
+                        target="_self"
+                        href="/docs/support"
+                        ><span class="Sidebar-link-textLuTE1ySm4Kqn"
+                          ><span>Support</span></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="readme-logo" id="readmeLogo">
+                  Powered by <a
+                    aria-label="ReadMe"
+                    href="https://readme.com?ref_src=hub&amp;project=trunkio"
+                    style="color: unset"
+                    ><i
+                      class="icon icon-readme"
+                      style="display: inline-block; min-width: 71px"
+                    ></i
+                  ></a>
+                </div>
+              </section>
+            </nav>
+            <article class="rm-Article" id="content">
+              <header id="content-head">
+                <div class="row clearfix">
+                  <div class="col-xs-9">
+                    <h1>Overview</h1>
+                  </div>
+                  <div class="col-xs-3">
+                    <a class="suggestEdits" href="/edit/check"
+                      ><i class="icon icon-register"></i>Suggest Edits</a
+                    >
+                  </div>
+                </div>
+              </header>
+              <div class="grid-container-fluid" id="content-container">
+                <section class="content-body grid-75">
+                  <div
+                    class="markdown-body ng-non-bindable"
+                    style="margin-left: 31px"
+                  >
+                    <p>
+                      Trunk Check manages, downloads, and runs dozens of
+                      linters, formatters, static analyzers, and security tools.
+                      It&#x27;s also a platform to write your own custom checks
+                      and integrate them to run as part of your repo&#x27;s
+                      check suite.
+                    </p>
+                    <p>Use it via:</p>
+                    <ul>
+                      <li>
+                        <a target="_self" href="/docs/overview">Trunk CLI</a>
+                      </li>
+                      <li>
+                        <a
+                          target="_self"
+                          href="https://marketplace.visualstudio.com/items?itemName=trunk.io"
+                          >VSCode Extension</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          target="_self"
+                          href="https://github.com/marketplace/actions/trunk-check"
+                          >GitHub Action</a
+                        >
+                      </li>
+                      <li>
+                        <a target="_self" href="https://app.trunk.io"
+                          >Web App (app.trunk.io)</a
+                        >
+                      </li>
+                    </ul>
+                    <p>
+                      We currently support over 75 unique linters and we are
+                      adding new and updating old linters every sprint.
+                    </p>
+                    <h2 class="heading heading-2 header-scroll" align="">
+                      <div
+                        class="heading-anchor anchor waypoint"
+                        id="hold-the-line"
+                      ></div>
+                      <div class="heading-text">
+                        <div
+                          id="section-hold-the-line"
+                          class="heading-anchor_backwardsCompatibility"
+                        ></div>
+                        Hold-the-line
+                      </div>
+                      <a
+                        aria-label="Skip link to Hold-the-line"
+                        class="heading-anchor-icon fa fa-anchor"
+                        href="#hold-the-line"
+                      ></a>
+                    </h2>
+                    <p>
+                      Trunk Check distinguishes new from existing issues, which
+                      allows you to introduce new linters and checks without any
+                      hassle.
+                    </p>
+                    <p>
+                      This is traditionally a very painful process, because
+                      running a new linter or check in your CI means that you
+                      have to either fix all existing issues, which requires a
+                      huge upfront time investment, or only run the check on
+                      modified files, which adds unpredictable overhead to PRs
+                      and discourages engineers from making simple changes like
+                      typo fixes.
+                    </p>
+                    <p>
+                      By integrating with Git, Trunk Check can hold-the-line:
+                      that is, it allows you to leave existing issues alone, and
+                      simply enforces that you never introduce <em>new</em> lint
+                      issues in a pull request.
+                    </p>
+                    <p>
+                      Formatting linters behave slightly differently under
+                      hold-the-line than other tools. Since formatters apply to
+                      entire files they will be run across the entirety of any
+                      changed file and their recommendations must be applied
+                      before landing.
+                    </p>
+                    <h3 class="heading heading-3 header-scroll" align="">
+                      <div
+                        class="heading-anchor anchor waypoint"
+                        id="a-short-story"
+                      ></div>
+                      <div class="heading-text">
+                        <div
+                          id="section-a-short-story"
+                          class="heading-anchor_backwardsCompatibility"
+                        ></div>
+                        A short story
+                      </div>
+                      <a
+                        aria-label="Skip link to A short story"
+                        class="heading-anchor-icon fa fa-anchor"
+                        href="#a-short-story"
+                      ></a>
+                    </h3>
+                    <ul>
+                      <li>
+                        <p>
+                          <button
+                            aria-label="Copy Code"
+                            class="rdmd-code-copy fa"
+                          ></button
+                          ><code
+                            class="rdmd-code lang- theme-light"
+                            data-lang=""
+                            name=""
+                            >src/adder.js</code
+                          >, which has 12 pre-existing issues, has a typo in a
+                          comment:
+                        </p>
+                        <div class="CodeTabs CodeTabs_initial theme-undefined">
+                          <div class="CodeTabs-toolbar">
+                            <button type="button">JavaScript</button>
+                          </div>
+                          <div class="CodeTabs-inner">
+                            <pre><button aria-label="Copy Code" class="rdmd-code-copy fa"></button><code class="rdmd-code lang-javascript theme-light" data-lang="javascript" name="">// Thsi method adds too numbers together
+</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Engineer sees this typo and corrects it:</p>
+                        <div class="CodeTabs CodeTabs_initial theme-undefined">
+                          <div class="CodeTabs-toolbar">
+                            <button type="button">JavaScript</button>
+                          </div>
+                          <div class="CodeTabs-inner">
+                            <pre><button aria-label="Copy Code" class="rdmd-code-copy fa"></button><code class="rdmd-code lang-javascript theme-light" data-lang="javascript" name="">// This method adds two numbers together
+</code></pre>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <p>
+                          Engineer pushes this super-simple, no-code-change Pull
+                          Request (PR)
+                        </p>
+                      </li>
+                      <li>
+                        <p>PR is checked for formatting/lint issues on CI</p>
+                      </li>
+                    </ul>
+                    <h4 class="heading heading-4 header-scroll" align="">
+                      <div
+                        class="heading-anchor anchor waypoint"
+                        id="without-trunk"
+                      ></div>
+                      <div class="heading-text">
+                        <div
+                          id="section-without-trunk"
+                          class="heading-anchor_backwardsCompatibility"
+                        ></div>
+                        Without
+                        <button
+                          aria-label="Copy Code"
+                          class="rdmd-code-copy fa"
+                        ></button
+                        ><code
+                          class="rdmd-code lang- theme-light"
+                          data-lang=""
+                          name=""
+                          >trunk</code
+                        >
+                      </div>
+                      <a
+                        aria-label="Skip link to Without "
+                        class="heading-anchor-icon fa fa-anchor"
+                        href="#without-trunk"
+                      ></a>
+                    </h4>
+                    <ul>
+                      <li>
+                        Engineer receives fail-mail and fail-slacks about their
+                        PR
+                      </li>
+                      <li>
+                        Engineer wonders what in the world could&#x27;ve failed
+                        in a PR that fixes a typo in a comment
+                      </li>
+                      <li>
+                        Engineer opens the failure notifications and starts
+                        going down the rabbit hole
+                      </li>
+                      <li>
+                        2 hours later, engineer finally understands how much
+                        work it would be to fix all the pre-existing<br />
+                        issues
+                      </li>
+                      <li>Engineer abandons PR</li>
+                      <li>
+                        Not only has a good chunk of the day been blown, but now
+                        the engineer is significantly less<br />
+                        inclined to ever do this in the future
+                      </li>
+                    </ul>
+                    <h4 class="heading heading-4 header-scroll" align="">
+                      <div
+                        class="heading-anchor anchor waypoint"
+                        id="with-trunk"
+                      ></div>
+                      <div class="heading-text">
+                        <div
+                          id="section-with-trunk"
+                          class="heading-anchor_backwardsCompatibility"
+                        ></div>
+                        With
+                        <button
+                          aria-label="Copy Code"
+                          class="rdmd-code-copy fa"
+                        ></button
+                        ><code
+                          class="rdmd-code lang- theme-light"
+                          data-lang=""
+                          name=""
+                          >trunk</code
+                        >
+                      </div>
+                      <a
+                        aria-label="Skip link to With "
+                        class="heading-anchor-icon fa fa-anchor"
+                        href="#with-trunk"
+                      ></a>
+                    </h4>
+                    <ul>
+                      <li>
+                        <button
+                          aria-label="Copy Code"
+                          class="rdmd-code-copy fa"
+                        ></button
+                        ><code
+                          class="rdmd-code lang- theme-light"
+                          data-lang=""
+                          name=""
+                          >trunk check</code
+                        >
+                        CI succeeds on their PR
+                      </li>
+                      <li>Engineer merges their PR</li>
+                    </ul>
+                    <h2 class="heading heading-2 header-scroll" align="">
+                      <div
+                        class="heading-anchor anchor waypoint"
+                        id="issue-severity"
+                      ></div>
+                      <div class="heading-text">
+                        <div
+                          id="section-issue-severity"
+                          class="heading-anchor_backwardsCompatibility"
+                        ></div>
+                        Issue severity
+                      </div>
+                      <a
+                        aria-label="Skip link to Issue severity"
+                        class="heading-anchor-icon fa fa-anchor"
+                        href="#issue-severity"
+                      ></a>
+                    </h2>
+                    <p>
+                      Trunk Check currently supports over 75 linters, each of
+                      which has it own issue severity classification system. We
+                      surface these as either Low, Medium, or High priority.
+                      This is not always a 1-to-1 translation of the
+                      linter&#x27;s natively defined severity - many have more
+                      than 3 severity levels - but we&#x27;ve found that this
+                      provides the best signal for the end user.
+                    </p>
+                    <p>
+                      By default, all issues reported by a linter are considered
+                      when evaluating if a pull request is
+                      <button
+                        aria-label="Copy Code"
+                        class="rdmd-code-copy fa"
+                      ></button
+                      ><code
+                        class="rdmd-code lang- theme-light"
+                        data-lang=""
+                        name=""
+                        >passing</code
+                      >. We have taken this approach because
+                      <button
+                        aria-label="Copy Code"
+                        class="rdmd-code-copy fa"
+                      ></button
+                      ><code
+                        class="rdmd-code lang- theme-light"
+                        data-lang=""
+                        name=""
+                        >trunk</code
+                      >
+                      is presenting a holistic view of a codebase, across all
+                      its languages and technologies, and we don&#x27;t believe
+                      <button
+                        aria-label="Copy Code"
+                        class="rdmd-code-copy fa"
+                      ></button
+                      ><code
+                        class="rdmd-code lang- theme-light"
+                        data-lang=""
+                        name=""
+                        >trunk</code
+                      >
+                      should be in the business of making severity
+                      recommendations for individual linters.
+                    </p>
+                    <p>
+                      If a linter believes an issue is worth reporting, we
+                      consider it worth blocking for. If that issue is not
+                      interesting for your repo - we suggest you completely
+                      disable that rule for that linter in its configuration.
+                    </p>
+                  </div>
+                  <div id="updated-at">
+                    <p class="DateLine">
+                      <i class="icon icon-watch"></i>Updated<!-- -->
+                      <!-- -->8 months ago<!-- -->
+                    </p>
+                  </div>
+                  <hr id="next-steps-divider" />
+                  <nav
+                    aria-label="Pagination"
+                    class="Pagination1KE9HXCXYd0E rm-Pagination"
+                  ></nav>
+                </section>
+                <section class="content-toc grid-25">
+                  <nav>
+                    <ul class="toc-list">
+                      <li>
+                        <a class="tocHeader" href="#"
+                          ><i class="icon icon-text-align-left"></i>Table of
+                          Contents</a
+                        >
+                      </li>
+                      <li class="toc-children">
+                        <ul>
+                          <li>
+                            <a href="#hold-the-line">Hold-the-line</a>
+                            <ul>
+                              <li>
+                                <a href="#a-short-story">A short story</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#issue-severity">Issue severity</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </section>
+              </div>
+              <div class="ModalWrapper" id="tutorialmodal-root"></div>
+            </article>
+          </div>
+        </div>
+        <footer class="AppFooter rm-Banners"></footer>
+        <div class="ModalWrapper" id="ChatGPT-modal"></div>
+      </div>
+    </div>
+    <div class="ng-non-bindable">
+      <script
+        id="ssr-props"
+        data-initial-props='{"baseUrl":"/","apiBaseUrl":"/","search":{"appId":"T28YKFATPY","searchApiKey":"YjZmMzc1M2M4MGNkNmZjMDNhNDBmMTc3YmU4Y2NjZDNjOWQwZDFjZjIyMjVhYzQxZTQ1NzRkYTFhNWZmM2IyOXRhZ0ZpbHRlcnM9KHByb2plY3Q6NjJkOTlkZmE0Y2UxMjQwMDJlZTA1MjIzKSwodmVyc2lvbjpub25lLHZlcnNpb246NjNjNzQwOGM5ODA3MTMwMGE0ZmQzMjYwKSwoaGlkZGVuOm5vbmUsaGlkZGVuOmZhbHNlKSwoaW5kZXg6Q3VzdG9tUGFnZSxpbmRleDpQYWdlLGluZGV4OlR1dG9yaWFsKQ==","indexName":"readme_search_v2","projectsMeta":[{"modules":{"landing":false,"docs":true,"examples":true,"reference":false,"graphql":false,"changelog":false,"discuss":false,"suggested_edits":true,"logs":false,"custompages":false,"tutorials":true},"id":"62d99dfa4ce124002ee05223","name":"trunkio","subdomain":"trunkio","subpath":"","nav_names":{"docs":"Docs","reference":"Config","changelog":"","discuss":"","tutorials":"","recipes":""}}],"UrlManager":{"options":{"parent":null,"hasOneChild":null,"project":null,"version":null,"lang":"en"},"defaults":{"child":null,"lang":"en","version":null}},"urlManagerOpts":{"lang":"en","parent":{"childrenProjects":[]},"project":{"subdomain":"trunkio"},"version":"1.2.0"}},"sidebars":{"docs":[{"_id":"63c7408c98071300a4fd322c","title":"General","slug":"general","order":0,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-08-05T13:37:45.809Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd325f","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"What is Trunk?","icon":"","type":"basic","slug":"what-is-trunk","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-12-09T04:52:30.647Z","category":"63c7408c98071300a4fd322c","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3238","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Get Started","icon":"","type":"basic","slug":"get-started","order":1,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-05T13:40:06.724Z","category":"63c7408c98071300a4fd322c","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3239","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Community","icon":"","type":"basic","slug":"community","order":2,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-05T13:42:24.087Z","category":"63c7408c98071300a4fd322c","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"64664925c646d616bc4165cc","api":{"method":"get","url":"","auth":"required","params":[]},"title":"Integration for Slack","icon":"","type":"basic","slug":"trunk-app-for-slack","order":3,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"slack-integration-1","category":"63c7408c98071300a4fd322c","createdAt":"2023-05-18T15:49:57.772Z","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c7408c98071300a4fd3233","title":"CLI","slug":"cli","order":1,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-08-15T19:04:56.683Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd3251","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Overview","icon":"","type":"basic","slug":"overview","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-15T19:23:23.743Z","category":"63c7408c98071300a4fd3233","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3252","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Install Trunk","icon":"","type":"basic","slug":"install","order":1,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-15T19:53:40.607Z","category":"63c7408c98071300a4fd3233","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3253","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Init in a git repo","icon":"","type":"basic","slug":"initialize-trunk-in-a-git-repo","order":2,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-16T17:41:40.728Z","category":"63c7408c98071300a4fd3233","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd325d","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Compatibility","icon":"","type":"basic","slug":"compatibility","order":3,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-11-07T22:29:46.535Z","category":"63c7408c98071300a4fd3233","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63ffcc409ca44702ba4045d9","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"GitHub Codespaces","icon":"","type":"basic","slug":"github-codespaces","order":4,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","category":"63c7408c98071300a4fd3233","createdAt":"2023-03-01T22:05:52.565Z","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c7408c98071300a4fd3235","title":"VS Code","slug":"vscode-1","order":2,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-09-27T19:53:39.191Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd325c","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Overview","icon":"","type":"basic","slug":"vscode","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"actions","createdAt":"2022-09-27T19:54:03.179Z","category":"63c7408c98071300a4fd3235","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c7408c98071300a4fd322e","title":"Merge","slug":"merge","order":3,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-08-05T13:37:54.587Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd324a","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Overview","icon":"","type":"basic","slug":"merge","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"check","createdAt":"2022-08-05T13:54:16.239Z","category":"63c7408c98071300a4fd322e","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3255","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Getting Started","icon":"","type":"basic","slug":"merge-getting-started","order":1,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"getting-started","createdAt":"2022-09-12T04:06:29.564Z","category":"63c7408c98071300a4fd322e","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3256","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Reference","icon":"","type":"basic","slug":"merge-reference","order":2,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"reference","createdAt":"2022-09-12T05:50:39.214Z","category":"63c7408c98071300a4fd322e","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3257","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Using the Webapp","icon":"","type":"basic","slug":"merge-using-the-webapp","order":3,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"using-the-webapp","createdAt":"2022-09-12T06:47:03.927Z","category":"63c7408c98071300a4fd322e","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3258","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Integration for Slack","icon":"","type":"basic","slug":"merge-integration-for-slack","order":4,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"integration-for-slack","createdAt":"2022-09-12T06:47:34.914Z","category":"63c7408c98071300a4fd322e","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c7408c98071300a4fd322d","title":"Check","slug":"check","order":4,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-08-05T13:37:51.594Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd3243","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Overview","icon":"","type":"basic","slug":"check","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"merge","createdAt":"2022-08-05T13:50:49.870Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3254","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Get Started","icon":"","type":"basic","slug":"check-get-started","order":1,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"checkget-started","createdAt":"2022-08-31T15:33:37.131Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3240","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Continuous Integration","icon":"","type":"basic","slug":"ci","order":2,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-05T13:49:49.086Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3241","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Command Line","icon":"","type":"basic","slug":"check-cli","order":3,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"cli","createdAt":"2022-08-05T13:50:04.015Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3242","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Configuration","icon":"","type":"basic","slug":"check-config","order":4,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"config","createdAt":"2022-08-05T13:50:18.879Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3244","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Custom Linters","icon":"","type":"basic","slug":"check-custom-linters","order":5,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"custom-linters","createdAt":"2022-08-05T13:51:13.324Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3245","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Custom Parsers","icon":"","type":"basic","slug":"custom-parsers","order":6,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-05T13:51:27.360Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3246","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Debugging","icon":"","type":"basic","slug":"check-debugging","order":7,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"debugging","createdAt":"2022-08-05T13:51:47.891Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3247","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Supported Linters","icon":"","type":"basic","slug":"check-supported-linters","order":8,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"supported-linters","createdAt":"2022-08-05T13:52:05.476Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3248","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Ignoring Issues","icon":"","type":"basic","slug":"ignoring-issues","order":9,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"supressing-issues","createdAt":"2022-08-05T13:52:19.809Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3249","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Under the Hood","icon":"","type":"basic","slug":"check-under-the-hood","order":10,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"under-the-hood","createdAt":"2022-08-05T13:52:36.749Z","category":"63c7408c98071300a4fd322d","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"647e9eb0fa85620023ae0f24","api":{"method":"get","url":"","auth":"required","params":[]},"title":"GitHub Integration","icon":"","type":"basic","slug":"check-github-integration","order":999,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"github-integration","category":"63c7408c98071300a4fd322d","createdAt":"2023-06-06T02:49:20.591Z","tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c7408c98071300a4fd322f","title":"Actions","slug":"actions","order":5,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-08-05T13:37:59.431Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd323e","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Overview","icon":"","type":"basic","slug":"actions","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"overview","createdAt":"2022-08-05T13:48:40.182Z","category":"63c7408c98071300a4fd322f","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd323b","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Configuration","icon":"","type":"basic","slug":"actions-config","order":1,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-05T13:47:37.479Z","category":"63c7408c98071300a4fd322f","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd323c","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Git Hooks","icon":"","type":"basic","slug":"actions-git-hooks","order":2,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"git-hooks","createdAt":"2022-08-05T13:47:58.606Z","category":"63c7408c98071300a4fd322f","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd323d","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Notifications","icon":"","type":"basic","slug":"actions-notifications","order":3,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"notifications","createdAt":"2022-08-05T13:48:21.266Z","category":"63c7408c98071300a4fd322f","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd323f","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Logging and Troubleshooting","icon":"","type":"basic","slug":"actions-troubleshooting","order":4,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"troubleshooting","createdAt":"2022-08-05T13:49:07.409Z","category":"63c7408c98071300a4fd322f","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c7408c98071300a4fd3234","title":"Runtimes","slug":"runtimes","order":6,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-09-22T13:21:52.136Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd325a","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Overview","icon":"","type":"basic","slug":"runtimes","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"merge","createdAt":"2022-09-22T13:23:11.842Z","category":"63c7408c98071300a4fd3234","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd325b","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Prevent Duplicate Runtimes","icon":"","type":"basic","slug":"prevent-duplicate-runtimes","order":1,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-09-22T13:45:20.921Z","category":"63c7408c98071300a4fd3234","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c7408c98071300a4fd3232","title":"Plugins","slug":"plugins","order":7,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-08-05T13:46:26.358Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd323a","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Overview","icon":"","type":"basic","slug":"plugins","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-05T13:46:43.549Z","category":"63c7408c98071300a4fd3232","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"643dd926624892002767fa62","api":{"method":"get","url":"","auth":"required","params":[]},"title":"Exported Configs","icon":"","type":"basic","slug":"exported-configs","order":1,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","parentDoc":null,"category":"63c7408c98071300a4fd3232","createdAt":"2023-04-17T23:41:26.128Z","tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c7408c98071300a4fd3231","title":"Web App","slug":"web-app","order":8,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-08-05T13:38:09.927Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd324e","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Overview","icon":"","type":"basic","slug":"webapp","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"actions","createdAt":"2022-08-05T13:57:20.672Z","category":"63c7408c98071300a4fd3231","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd324f","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Upload Trunk Check Results","icon":"","type":"basic","slug":"upload-check-results","order":2,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-08-05T13:57:42.257Z","category":"63c7408c98071300a4fd3231","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd3259","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"GitHub App Permissions","icon":"","type":"basic","slug":"github-app-permissions","order":3,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-09-12T17:05:09.212Z","category":"63c7408c98071300a4fd3231","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"647e226a03e2a40018145efb","title":"CI DEBUGGER","slug":"ci-debugger","order":9,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2023-06-05T17:59:06.530Z","__v":0,"pages":[{"_id":"647e2285a87f7a002a26b63d","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Overview","icon":"","type":"basic","slug":"ci-debugger","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"overview-copy-1","parentDoc":null,"category":"647e226a03e2a40018145efb","createdAt":"2023-06-05T17:59:33.940Z","tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"647e2fa0f2dc57007448af47","api":{"method":"get","url":"","auth":"required","params":[]},"title":"GitHub Actions","icon":"","type":"basic","slug":"ci-debugger-getting-started","order":999,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"getting-started-1","category":"647e226a03e2a40018145efb","createdAt":"2023-06-05T18:55:28.814Z","tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c7408c98071300a4fd3230","title":"Reference","slug":"reference","order":10,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2022-08-05T13:38:03.291Z","__v":0,"pages":[{"_id":"63c7408c98071300a4fd324b","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Glob Path Pattern","icon":"","type":"basic","slug":"reference-glob-path-pattern","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"glob-path-pattern","createdAt":"2022-08-05T13:55:15.206Z","category":"63c7408c98071300a4fd3230","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd324c","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Trunk YAML","icon":"","type":"basic","slug":"reference-trunk-yaml","order":1,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"trunk-yaml","createdAt":"2022-08-05T13:55:28.601Z","category":"63c7408c98071300a4fd3230","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd324d","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"User YAML","icon":"","type":"basic","slug":"reference-user-trunk-yaml","order":2,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"user-trunk-yaml","createdAt":"2022-08-05T13:56:01.108Z","category":"63c7408c98071300a4fd3230","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63c7408c98071300a4fd325e","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Components","icon":"","type":"basic","slug":"components","order":3,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","createdAt":"2022-11-07T23:22:59.135Z","category":"63c7408c98071300a4fd3230","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"63e6b42721802d0075057993","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Usage Data","icon":"","type":"basic","slug":"usage-data","order":4,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"","category":"63c7408c98071300a4fd3230","createdAt":"2023-02-10T21:16:23.549Z","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false}]},{"_id":"63c740aa289377000fc4de73","title":"Administration","slug":"administration","order":11,"reference":false,"project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","createdAt":"2023-01-18T00:43:22.721Z","__v":0,"pages":[{"_id":"63c740b95a7c3100693caf66","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Billing","icon":"","type":"basic","slug":"admin-billing","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"billing","category":"63c740aa289377000fc4de73","createdAt":"2023-01-18T00:43:37.693Z","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"64515e663f49d100296b8daa","api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"title":"Single Sign-On (SAML)","icon":"","type":"basic","slug":"admin-saml","order":1,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"saml","parentDoc":null,"category":"63c740aa289377000fc4de73","createdAt":"2023-05-02T19:03:02.363Z","tutorials":[],"children":[],"isBodyEmpty":false},{"_id":"6451a352c4647800189b8132","api":{"method":"get","url":"","auth":"required","params":[]},"title":"Support","icon":"","type":"basic","slug":"support","order":2,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"admin-support","category":"63c740aa289377000fc4de73","createdAt":"2023-05-02T23:57:06.892Z","parentDoc":null,"tutorials":[],"children":[],"isBodyEmpty":false}]}],"refs":[]},"activeDoc":"check","rdmd":{"baseUrl":"/","body":"Trunk Check manages, downloads, and runs dozens of linters, formatters, static analyzers, and security tools. It&apos;s also a platform to write your own custom checks and integrate them to run as part of your repo&apos;s check suite.\n\nUse it via:\n- [Trunk CLI](doc:overview)\n- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)\n- [GitHub Action](https://github.com/marketplace/actions/trunk-check)\n- [Web App (app.trunk.io)](https://app.trunk.io)\n\nWe currently support over 75 unique linters and we are adding new and updating old linters every sprint.\n\n## Hold-the-line\n\nTrunk Check distinguishes new from existing issues, which allows you to introduce new linters and checks without any hassle.\n\nThis is traditionally a very painful process, because running a new linter or check in your CI means that you have to either fix all existing issues, which requires a huge upfront time investment, or only run the check on modified files, which adds unpredictable overhead to PRs and discourages engineers from making simple changes like typo fixes.\n\nBy integrating with Git, Trunk Check can hold-the-line: that is, it allows you to leave existing issues alone, and simply enforces that you never introduce _new_ lint issues in a pull request.\n\nFormatting linters behave slightly differently under hold-the-line than other tools. Since formatters apply to entire files they will be run across the entirety of any changed file and their recommendations must be applied before landing.\n\n### A short story\n\n- `src/adder.js`, which has 12 pre-existing issues, has a typo in a comment:\n\n  ```javascript\n  // Thsi method adds too numbers together\n  ```\n\n- Engineer sees this typo and corrects it:\n\n  ```javascript\n  // This method adds two numbers together\n  ```\n\n- Engineer pushes this super-simple, no-code-change Pull Request (PR)\n- PR is checked for formatting/lint issues on CI\n\n#### Without `trunk`\n\n- Engineer receives fail-mail and fail-slacks about their PR\n- Engineer wonders what in the world could&apos;ve failed in a PR that fixes a typo in a comment\n- Engineer opens the failure notifications and starts going down the rabbit hole\n- 2 hours later, engineer finally understands how much work it would be to fix all the pre-existing\n  issues\n- Engineer abandons PR\n- Not only has a good chunk of the day been blown, but now the engineer is significantly less\n  inclined to ever do this in the future\n\n#### With `trunk`\n\n- `trunk check` CI succeeds on their PR\n- Engineer merges their PR\n\n## Issue severity\n\nTrunk Check currently supports over 75 linters, each of which has it own issue severity classification system. We surface these as either Low, Medium, or High priority. This is not always a 1-to-1 translation of the linter&apos;s natively defined severity - many have more than 3 severity levels - but we&apos;ve found that this provides the best signal for the end user.\n\nBy default, all issues reported by a linter are considered when evaluating if a pull request is `passing`. We have taken this approach because `trunk` is presenting a holistic view of a codebase, across all its languages and technologies, and we don&apos;t believe `trunk` should be in the business of making severity recommendations for individual linters.\n\nIf a linter believes an issue is worth reporting, we consider it worth blocking for. If that issue is not interesting for your repo - we suggest you completely disable that rule for that linter in its configuration.","opts":{"alwaysThrow":false,"compatibilityMode":false,"copyButtons":true,"correctnewlines":false,"markdownOptions":{"fences":true,"commonmark":true,"gfm":true,"ruleSpaces":false,"listItemIndent":"1","spacedTable":true,"paddedTable":true},"lazyImages":true,"normalize":true,"safeMode":false,"settings":{"position":false},"theme":"light"},"terms":[{"_id":"62fbd95a8a4d220045bfc491","term":"Trunk Launcher","definition":"The &apos;trunk&apos; command really runs the Trunk Launcher, which reads a repo&apos;s pinned version of Trunk from &apos;.trunk/trunk.yaml&apos;, then downloads, caches, and runs that version of Trunk. This ensures all users of Trunk in a repo are using the same version."}],"variables":{"user":{},"defaults":[]},"dehydrated":{"toc":"&lt;nav&gt;&lt;ul class=\"toc-list\"&gt;&lt;li&gt;&lt;a class=\"tocHeader\" href=\"#\"&gt;&lt;i class=\"icon icon-text-align-left\"&gt;&lt;/i&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;&lt;li class=\"toc-children\"&gt;&lt;ul&gt;\n&lt;li&gt;\n&lt;a href=\"#hold-the-line\"&gt;Hold-the-line&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\"#a-short-story\"&gt;A short story&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;a href=\"#issue-severity\"&gt;Issue severity&lt;/a&gt;\n&lt;/li&gt;\n&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;","body":"&lt;p&gt;Trunk Check manages, downloads, and runs dozens of linters, formatters, static analyzers, and security tools. It&amp;#x27;s also a platform to write your own custom checks and integrate them to run as part of your repo&amp;#x27;s check suite.&lt;/p&gt;\n&lt;p&gt;Use it via:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\"/docs/overview\" target=\"\" title=\"\" class=\"doc-link\" data-sidebar=\"overview\"&gt;Trunk CLI&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"https://marketplace.visualstudio.com/items?itemName=trunk.io\" target=\"\" title=\"\"&gt;VSCode Extension&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"https://github.com/marketplace/actions/trunk-check\" target=\"\" title=\"\"&gt;GitHub Action&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"https://app.trunk.io\" target=\"\" title=\"\"&gt;Web App (app.trunk.io)&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;We currently support over 75 unique linters and we are adding new and updating old linters every sprint.&lt;/p&gt;\n&lt;h2 class=\"heading heading-2 header-scroll\" align=\"\"&gt;&lt;div class=\"heading-anchor anchor waypoint\" id=\"hold-the-line\"&gt;&lt;/div&gt;&lt;div class=\"heading-text\"&gt;&lt;div id=\"section-hold-the-line\" class=\"heading-anchor_backwardsCompatibility\"&gt;&lt;/div&gt;Hold-the-line&lt;/div&gt;&lt;a aria-label=\"Skip link to Hold-the-line\" class=\"heading-anchor-icon fa fa-anchor\" href=\"#hold-the-line\"&gt;&lt;/a&gt;&lt;/h2&gt;\n&lt;p&gt;Trunk Check distinguishes new from existing issues, which allows you to introduce new linters and checks without any hassle.&lt;/p&gt;\n&lt;p&gt;This is traditionally a very painful process, because running a new linter or check in your CI means that you have to either fix all existing issues, which requires a huge upfront time investment, or only run the check on modified files, which adds unpredictable overhead to PRs and discourages engineers from making simple changes like typo fixes.&lt;/p&gt;\n&lt;p&gt;By integrating with Git, Trunk Check can hold-the-line: that is, it allows you to leave existing issues alone, and simply enforces that you never introduce &lt;em&gt;new&lt;/em&gt; lint issues in a pull request.&lt;/p&gt;\n&lt;p&gt;Formatting linters behave slightly differently under hold-the-line than other tools. Since formatters apply to entire files they will be run across the entirety of any changed file and their recommendations must be applied before landing.&lt;/p&gt;\n&lt;h3 class=\"heading heading-3 header-scroll\" align=\"\"&gt;&lt;div class=\"heading-anchor anchor waypoint\" id=\"a-short-story\"&gt;&lt;/div&gt;&lt;div class=\"heading-text\"&gt;&lt;div id=\"section-a-short-story\" class=\"heading-anchor_backwardsCompatibility\"&gt;&lt;/div&gt;A short story&lt;/div&gt;&lt;a aria-label=\"Skip link to A short story\" class=\"heading-anchor-icon fa fa-anchor\" href=\"#a-short-story\"&gt;&lt;/a&gt;&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;p&gt;&lt;button aria-label=\"Copy Code\" class=\"rdmd-code-copy fa\"&gt;&lt;/button&gt;&lt;code class=\"rdmd-code lang- theme-light\" data-lang=\"\" name=\"\"&gt;src/adder.js&lt;/code&gt;, which has 12 pre-existing issues, has a typo in a comment:&lt;/p&gt;\n&lt;div class=\"CodeTabs CodeTabs_initial theme-undefined\"&gt;&lt;div class=\"CodeTabs-toolbar\"&gt;&lt;button type=\"button\"&gt;JavaScript&lt;/button&gt;&lt;/div&gt;&lt;div class=\"CodeTabs-inner\"&gt;&lt;pre&gt;&lt;button aria-label=\"Copy Code\" class=\"rdmd-code-copy fa\"&gt;&lt;/button&gt;&lt;code class=\"rdmd-code lang-javascript theme-light\" data-lang=\"javascript\" name=\"\"&gt;// Thsi method adds too numbers together\n&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;Engineer sees this typo and corrects it:&lt;/p&gt;\n&lt;div class=\"CodeTabs CodeTabs_initial theme-undefined\"&gt;&lt;div class=\"CodeTabs-toolbar\"&gt;&lt;button type=\"button\"&gt;JavaScript&lt;/button&gt;&lt;/div&gt;&lt;div class=\"CodeTabs-inner\"&gt;&lt;pre&gt;&lt;button aria-label=\"Copy Code\" class=\"rdmd-code-copy fa\"&gt;&lt;/button&gt;&lt;code class=\"rdmd-code lang-javascript theme-light\" data-lang=\"javascript\" name=\"\"&gt;// This method adds two numbers together\n&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;Engineer pushes this super-simple, no-code-change Pull Request (PR)&lt;/p&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;PR is checked for formatting/lint issues on CI&lt;/p&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h4 class=\"heading heading-4 header-scroll\" align=\"\"&gt;&lt;div class=\"heading-anchor anchor waypoint\" id=\"without-trunk\"&gt;&lt;/div&gt;&lt;div class=\"heading-text\"&gt;&lt;div id=\"section-without-trunk\" class=\"heading-anchor_backwardsCompatibility\"&gt;&lt;/div&gt;Without &lt;button aria-label=\"Copy Code\" class=\"rdmd-code-copy fa\"&gt;&lt;/button&gt;&lt;code class=\"rdmd-code lang- theme-light\" data-lang=\"\" name=\"\"&gt;trunk&lt;/code&gt;&lt;/div&gt;&lt;a aria-label=\"Skip link to Without \" class=\"heading-anchor-icon fa fa-anchor\" href=\"#without-trunk\"&gt;&lt;/a&gt;&lt;/h4&gt;\n&lt;ul&gt;\n&lt;li&gt;Engineer receives fail-mail and fail-slacks about their PR&lt;/li&gt;\n&lt;li&gt;Engineer wonders what in the world could&amp;#x27;ve failed in a PR that fixes a typo in a comment&lt;/li&gt;\n&lt;li&gt;Engineer opens the failure notifications and starts going down the rabbit hole&lt;/li&gt;\n&lt;li&gt;2 hours later, engineer finally understands how much work it would be to fix all the pre-existing&lt;br/&gt;\nissues&lt;/li&gt;\n&lt;li&gt;Engineer abandons PR&lt;/li&gt;\n&lt;li&gt;Not only has a good chunk of the day been blown, but now the engineer is significantly less&lt;br/&gt;\ninclined to ever do this in the future&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h4 class=\"heading heading-4 header-scroll\" align=\"\"&gt;&lt;div class=\"heading-anchor anchor waypoint\" id=\"with-trunk\"&gt;&lt;/div&gt;&lt;div class=\"heading-text\"&gt;&lt;div id=\"section-with-trunk\" class=\"heading-anchor_backwardsCompatibility\"&gt;&lt;/div&gt;With &lt;button aria-label=\"Copy Code\" class=\"rdmd-code-copy fa\"&gt;&lt;/button&gt;&lt;code class=\"rdmd-code lang- theme-light\" data-lang=\"\" name=\"\"&gt;trunk&lt;/code&gt;&lt;/div&gt;&lt;a aria-label=\"Skip link to With \" class=\"heading-anchor-icon fa fa-anchor\" href=\"#with-trunk\"&gt;&lt;/a&gt;&lt;/h4&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;button aria-label=\"Copy Code\" class=\"rdmd-code-copy fa\"&gt;&lt;/button&gt;&lt;code class=\"rdmd-code lang- theme-light\" data-lang=\"\" name=\"\"&gt;trunk check&lt;/code&gt; CI succeeds on their PR&lt;/li&gt;\n&lt;li&gt;Engineer merges their PR&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2 class=\"heading heading-2 header-scroll\" align=\"\"&gt;&lt;div class=\"heading-anchor anchor waypoint\" id=\"issue-severity\"&gt;&lt;/div&gt;&lt;div class=\"heading-text\"&gt;&lt;div id=\"section-issue-severity\" class=\"heading-anchor_backwardsCompatibility\"&gt;&lt;/div&gt;Issue severity&lt;/div&gt;&lt;a aria-label=\"Skip link to Issue severity\" class=\"heading-anchor-icon fa fa-anchor\" href=\"#issue-severity\"&gt;&lt;/a&gt;&lt;/h2&gt;\n&lt;p&gt;Trunk Check currently supports over 75 linters, each of which has it own issue severity classification system. We surface these as either Low, Medium, or High priority. This is not always a 1-to-1 translation of the linter&amp;#x27;s natively defined severity - many have more than 3 severity levels - but we&amp;#x27;ve found that this provides the best signal for the end user.&lt;/p&gt;\n&lt;p&gt;By default, all issues reported by a linter are considered when evaluating if a pull request is &lt;button aria-label=\"Copy Code\" class=\"rdmd-code-copy fa\"&gt;&lt;/button&gt;&lt;code class=\"rdmd-code lang- theme-light\" data-lang=\"\" name=\"\"&gt;passing&lt;/code&gt;. We have taken this approach because &lt;button aria-label=\"Copy Code\" class=\"rdmd-code-copy fa\"&gt;&lt;/button&gt;&lt;code class=\"rdmd-code lang- theme-light\" data-lang=\"\" name=\"\"&gt;trunk&lt;/code&gt; is presenting a holistic view of a codebase, across all its languages and technologies, and we don&amp;#x27;t believe &lt;button aria-label=\"Copy Code\" class=\"rdmd-code-copy fa\"&gt;&lt;/button&gt;&lt;code class=\"rdmd-code lang- theme-light\" data-lang=\"\" name=\"\"&gt;trunk&lt;/code&gt; should be in the business of making severity recommendations for individual linters.&lt;/p&gt;\n&lt;p&gt;If a linter believes an issue is worth reporting, we consider it worth blocking for. If that issue is not interesting for your repo - we suggest you completely disable that rule for that linter in its configuration.&lt;/p&gt;"}},"doc":{"metadata":{"image":[],"title":"","description":""},"api":{"method":"get","url":"","auth":"required","results":{"codes":[{"name":"","code":"{}","language":"json","status":200},{"name":"","code":"{}","language":"json","status":400}]},"params":[]},"next":{"description":"","pages":[]},"algolia":{"recordCount":6,"publishPending":false,"updatedAt":"2023-01-18T00:45:38.230Z"},"title":"Overview","icon":"","updates":["63043203416bab001a2e9de1"],"type":"basic","slug":"check","excerpt":"","body":"Trunk Check manages, downloads, and runs dozens of linters, formatters, static analyzers, and security tools. It&apos;s also a platform to write your own custom checks and integrate them to run as part of your repo&apos;s check suite.\n\nUse it via:\n- [Trunk CLI](doc:overview)\n- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)\n- [GitHub Action](https://github.com/marketplace/actions/trunk-check)\n- [Web App (app.trunk.io)](https://app.trunk.io)\n\nWe currently support over 75 unique linters and we are adding new and updating old linters every sprint.\n\n## Hold-the-line\n\nTrunk Check distinguishes new from existing issues, which allows you to introduce new linters and checks without any hassle.\n\nThis is traditionally a very painful process, because running a new linter or check in your CI means that you have to either fix all existing issues, which requires a huge upfront time investment, or only run the check on modified files, which adds unpredictable overhead to PRs and discourages engineers from making simple changes like typo fixes.\n\nBy integrating with Git, Trunk Check can hold-the-line: that is, it allows you to leave existing issues alone, and simply enforces that you never introduce _new_ lint issues in a pull request.\n\nFormatting linters behave slightly differently under hold-the-line than other tools. Since formatters apply to entire files they will be run across the entirety of any changed file and their recommendations must be applied before landing.\n\n### A short story\n\n- `src/adder.js`, which has 12 pre-existing issues, has a typo in a comment:\n\n  ```javascript\n  // Thsi method adds too numbers together\n  ```\n\n- Engineer sees this typo and corrects it:\n\n  ```javascript\n  // This method adds two numbers together\n  ```\n\n- Engineer pushes this super-simple, no-code-change Pull Request (PR)\n- PR is checked for formatting/lint issues on CI\n\n#### Without `trunk`\n\n- Engineer receives fail-mail and fail-slacks about their PR\n- Engineer wonders what in the world could&apos;ve failed in a PR that fixes a typo in a comment\n- Engineer opens the failure notifications and starts going down the rabbit hole\n- 2 hours later, engineer finally understands how much work it would be to fix all the pre-existing\n  issues\n- Engineer abandons PR\n- Not only has a good chunk of the day been blown, but now the engineer is significantly less\n  inclined to ever do this in the future\n\n#### With `trunk`\n\n- `trunk check` CI succeeds on their PR\n- Engineer merges their PR\n\n## Issue severity\n\nTrunk Check currently supports over 75 linters, each of which has it own issue severity classification system. We surface these as either Low, Medium, or High priority. This is not always a 1-to-1 translation of the linter&apos;s natively defined severity - many have more than 3 severity levels - but we&apos;ve found that this provides the best signal for the end user.\n\nBy default, all issues reported by a linter are considered when evaluating if a pull request is `passing`. We have taken this approach because `trunk` is presenting a holistic view of a codebase, across all its languages and technologies, and we don&apos;t believe `trunk` should be in the business of making severity recommendations for individual linters.\n\nIf a linter believes an issue is worth reporting, we consider it worth blocking for. If that issue is not interesting for your repo - we suggest you completely disable that rule for that linter in its configuration.","order":0,"isReference":false,"deprecated":false,"hidden":false,"sync_unique":"","link_url":"","link_external":false,"previousSlug":"merge","slugUpdatedAt":"2022-08-09T18:18:29.193Z","revision":2,"_id":"63c7408c98071300a4fd3243","pendingAlgoliaPublish":false,"createdAt":"2022-08-05T13:50:49.870Z","updatedAt":"2022-11-05T19:27:20.724Z","user":"62e99eb3906c8101aa410d2a","category":"63c7408c98071300a4fd322d","project":"62d99dfa4ce124002ee05223","version":"63c7408c98071300a4fd3260","__v":1,"parentDoc":null,"isApi":false,"id":"63c7408c98071300a4fd3243"},"hideTOC":false,"meta":{"slug":"check","type":"docs","parent":null,"image":[],"title":"Overview","title_seo":"Overview","description":"Trunk Check manages, downloads, and runs dozens of linters, formatters, static analyzers, and security tools. It&apos;s also a platform to write your own custom checks and integrate them to run as part of your repo&apos;s check suite.Use it via: Trunk CLIVSCode ExtensionGitHub ActionWeb App (app.trunk.io) We ...","_id":"63c7408c98071300a4fd3243","hidden":false},"slugUrl":"/docs/check","config":{"algoliaIndex":"readme_search_v2","amplitude":"dc8065a65ef83d6ad23e37aaf014fc84","asset_url":"https://cdn.readme.io","domain":"readme.io","domainFull":"https://dash.readme.com","dashMetricsUrl":"https://m.readme.io","metricsUrl":"https://metrics.readme.io","wsMetricsUrl":"wss://m.readme.io","releaseVersion":"4.435.1","sentry":{"dsn":"https://3bbe57a973254129bcb93e47dc0cc46f@o343074.ingest.sentry.io/2052166","enabled":true,"tracesSampleRate":0},"sslGenerationService":"ssl.readmessl.com"},"context":{"user":{},"terms":[{"_id":"62fbd95a8a4d220045bfc491","term":"Trunk Launcher","definition":"The &apos;trunk&apos; command really runs the Trunk Launcher, which reads a repo&apos;s pinned version of Trunk from &apos;.trunk/trunk.yaml&apos;, then downloads, caches, and runs that version of Trunk. This ensures all users of Trunk in a repo are using the same version."}],"variables":{"user":{},"defaults":[]},"project":{"_id":"62d99dfa4ce124002ee05223","appearance":{"rdmd":{"callouts":{"useIconFont":false},"theme":{"background":"","border":"","markdownEdge":"","markdownFont":"","markdownFontSize":"","markdownLineHeight":"","markdownRadius":"","markdownText":"","markdownTitle":"","markdownTitleFont":"","mdCodeBackground":"","mdCodeFont":"","mdCodeRadius":"","mdCodeTabs":"","mdCodeText":"","tableEdges":"","tableHead":"","tableHeadText":"","tableRow":"","tableStripe":"","tableText":"","text":"","title":""}},"main_body":{"type":"links"},"colors":{"highlight":"","main":"#242526","main_alt":"","header_text":"","body_highlight":"","custom_login_link_color":""},"typography":{"headline":"Open+Sans:400:sans-serif","body":"Open+Sans:400:sans-serif","typekit":false,"tk_key":"","tk_headline":"","tk_body":""},"header":{"style":"solid","img":[],"img_size":"auto","img_pos":"tl"},"body":{"style":"none"},"global_landing_page":{"html":"","redirect":""},"referenceSimpleMode":true,"referenceLayout":"row","link_logo_to_url":false,"theme":"solid","overlay":"triangles","landing":true,"sticky":false,"hide_logo":false,"childrenAsPills":false,"subheaderStyle":"links","splitReferenceDocs":false,"showMetricsInReference":true,"logo":["https://files.readme.io/6070550-docs-logo.svg","docs-logo.svg",198,42,"#c1c5c8"],"loginLogo":[],"logo_white":["https://files.readme.io/1c2f0ce-WhiteLogo.svg","WhiteLogo.svg",104,102,"#fafafa"],"logo_white_use":false,"favicon":["https://files.readme.io/75de105-small-favicon-readme-64.png","favicon-readme-64.png",32,32,"#000000","https://files.readme.io/1e4846f-favicon-readme-64.png"],"stylesheet":"","stylesheet_hub2":"","stylesheet_hub3":"","javascript":"","javascript_hub2":"","html_promo":"","html_body":"","html_footer":"","html_head":"","html_footer_meta":"","html_hidelinks":false,"showVersion":false,"hideTableOfContents":false,"nextStepsLabel":"","promos":[{"extras":{"type":"buttons","buttonPrimary":"get-started","buttonSecondary":"none"},"title":"The trunkio Developer Hub","text":"Welcome to the trunkio developer hub. You&apos;ll find comprehensive guides and documentation to help you start working with trunkio as quickly as possible, as well as support if you get stuck. Let&apos;s jump right in!","_id":"62d99dfa4ce124002ee05225"}],"colorScheme":"auto","logo_large":false},"custom_domain":"docs.trunk.io","childrenProjects":[],"description":"","error404":"","first_page":"docs","flags":{"allow_hub2":false,"enterprise":false,"alwaysShowDocPublishStatus":false,"hub2":true,"migrationRun":false,"migrationSwaggerRun":false,"oauth":false,"swagger":false,"correctnewlines":false,"rdmdCompatibilityMode":false,"speedyRender":false,"allowXFrame":false,"newEditor":true,"newEditorDash":true,"reviewWorkflow":true,"oldMarkdown":false,"newMarkdownBetaProgram":true,"useReactApp":true,"disableAnonForum":false,"directGoogleToStableVersion":false,"translation":false,"staging":false,"newSearch":true,"graphql":false,"allowApiExplorerJsonEditor":false,"singleProjectEnterprise":false,"dashReact":false,"useReactGLP":false,"star":false,"allowDarkMode":false,"forceDarkMode":false,"disablePasswordlessLogin":false,"personalizedDocs":false,"myDevelopers":false,"superHub":false,"allowReusableOTPs":false,"owlbotAi":false},"fullBaseUrl":"https://docs.trunk.io/","glossaryTerms":[{"_id":"62fbd95a8a4d220045bfc491","term":"Trunk Launcher","definition":"The &apos;trunk&apos; command really runs the Trunk Launcher, which reads a repo&apos;s pinned version of Trunk from &apos;.trunk/trunk.yaml&apos;, then downloads, caches, and runs that version of Trunk. This ensures all users of Trunk in a repo are using the same version."}],"graphqlSchema":"","hasOneChild":false,"healthCheck":{"provider":"","settings":{}},"intercom_secure_emailonly":false,"intercom":"","is_active":true,"internal":"","landing_bottom":[],"metrics":{"realtime":{"dashEnabled":false,"hubEnabled":false},"monthlyLimit":0,"planLimit":2000000,"thumbsEnabled":true},"modules":{"landing":false,"docs":true,"examples":true,"reference":false,"graphql":false,"changelog":false,"discuss":false,"suggested_edits":true,"logs":false,"custompages":false,"tutorials":true},"name":"trunkio","nav_names":{"docs":"Docs","reference":"Config","changelog":"","discuss":"","tutorials":"","recipes":""},"oauth_url":"","onboardingCompleted":{"documentation":true,"appearance":false,"jwt":true,"api":false,"logs":false,"domain":false},"owlbot":{"enabled":false,"isPaying":false},"owner":"62d9961fce6e7b017dc8b303","plan":"startup2018","planOverride":"","planTrial":"startup2018","readmeScore":{"components":{"newDesign":{"enabled":true,"points":25},"reference":{"enabled":false,"points":50},"tryItNow":{"enabled":false,"points":35},"syncingOAS":{"enabled":false,"points":10},"customLogin":{"enabled":true,"points":25},"metrics":{"enabled":false,"points":40},"recipes":{"enabled":true,"points":15},"pageVoting":{"enabled":true,"points":1},"suggestedEdits":{"enabled":true,"points":10},"support":{"enabled":false,"points":5},"htmlLanding":{"enabled":false,"points":5},"guides":{"enabled":true,"points":10},"changelog":{"enabled":false,"points":5},"glossary":{"enabled":false,"points":1},"variables":{"enabled":false,"points":1},"integrations":{"enabled":false,"points":2}},"totalScore":86},"reCaptchaSiteKey":"","stable":{"_id":"63c7408c98071300a4fd3260","version":"1.2.0","version_clean":"1.2.0","codename":"","is_stable":true,"is_beta":false,"is_hidden":false,"is_deprecated":false,"categories":["62ead7c2ad214502bdf9d90b","62ead7c2ad214502bdf9d90b","62ed135aa0e43e05fb196fd3","62ed1ce95e87ff00739155e0","62ed1cfb3b7a3106e9802a95","63c7408c98071300a4fd322c","63c7408c98071300a4fd322d","63c7408c98071300a4fd322e","63c7408c98071300a4fd322f","63c7408c98071300a4fd3230","63c7408c98071300a4fd3231","62ed1ddfb830b707c39ab089","63c7408c98071300a4fd3232","62f2a40e53da9b0cf38d66bc","63c7408c98071300a4fd3233","63c7408c98071300a4fd3234","63333e89419e3c003b809600","63c7408c98071300a4fd3235","6376bf69127d9900031750e9","63c7408c98071300a4fd329e","63c740aa289377000fc4de73","647e226a03e2a40018145efb"],"project":"62d99dfa4ce124002ee05223","releaseDate":"2022-07-21T18:42:08.791Z","createdAt":"2022-07-21T18:42:08.791Z","__v":1,"forked_from":"636c4be56398c1003a15a81c"},"subdomain":"trunkio","subpath":"","topnav":{"left":[],"right":[],"bottom":[{"type":"url","text":"Community Slack","url":"https://slack.trunk.io","enabled":true},{"type":"url","text":"Feature Requests","url":"https://changelog.trunk.io/check","enabled":true},{"type":"url","text":"Changelog","url":"https://changelog.trunk.io/changelog","enabled":true}],"edited":true},"translate":{"provider":"transifex","show_widget":false,"key_public":"","key_secret":"","org_name":"","project_name":"","languages":[]},"url":"https://trunk.io","versions":[{"_id":"62fa9a7d3180a6005cbcc827","version":"0.16.1-beta","version_clean":"0.16.1-beta","codename":"","is_stable":false,"is_beta":false,"is_hidden":true,"is_deprecated":false,"categories":["62ead7c2ad214502bdf9d90b","62ead7c2ad214502bdf9d90b","62ed135aa0e43e05fb196fd3","62ed1ce95e87ff00739155e0","62ed1cfb3b7a3106e9802a95","62fa9a7d3180a6005cbcc800","62fa9a7d3180a6005cbcc801","62fa9a7d3180a6005cbcc802","62fa9a7d3180a6005cbcc803","62fa9a7d3180a6005cbcc804","62fa9a7d3180a6005cbcc805","62ed1ddfb830b707c39ab089","62fa9a7d3180a6005cbcc806","62f2a40e53da9b0cf38d66bc","62fa9a7d3180a6005cbcc807","6376bf69127d9900031750e7"],"project":"62d99dfa4ce124002ee05223","releaseDate":"2022-07-21T18:42:08.791Z","createdAt":"2022-07-21T18:42:08.791Z","__v":1,"forked_from":"62f40960373cad00215f8af2"},{"_id":"63090235d1a8d000866dff12","version":"0.17.0-beta","version_clean":"0.17.0-beta","codename":"","is_stable":false,"is_beta":false,"is_hidden":true,"is_deprecated":false,"categories":["62ead7c2ad214502bdf9d90b","62ead7c2ad214502bdf9d90b","62ed135aa0e43e05fb196fd3","62ed1ce95e87ff00739155e0","62ed1cfb3b7a3106e9802a95","63090235d1a8d000866dfeeb","63090235d1a8d000866dfeec","63090235d1a8d000866dfeed","63090235d1a8d000866dfeee","63090235d1a8d000866dfeef","63090235d1a8d000866dfef0","62ed1ddfb830b707c39ab089","63090235d1a8d000866dfef1","62f2a40e53da9b0cf38d66bc","63090235d1a8d000866dfef2","6376bf69127d9900031750e8"],"project":"62d99dfa4ce124002ee05223","releaseDate":"2022-07-21T18:42:08.791Z","createdAt":"2022-07-21T18:42:08.791Z","__v":0,"forked_from":"62fa9a7d3180a6005cbcc827"},{"_id":"632b566502717a00a4d27145","version":"0.18.0-beta","version_clean":"0.18.0-beta","codename":"","is_stable":false,"is_beta":false,"is_hidden":true,"is_deprecated":false,"categories":["62ead7c2ad214502bdf9d90b","62ead7c2ad214502bdf9d90b","62ed135aa0e43e05fb196fd3","62ed1ce95e87ff00739155e0","62ed1cfb3b7a3106e9802a95","632b566502717a00a4d27119","632b566502717a00a4d2711a","632b566502717a00a4d2711b","632b566502717a00a4d2711c","632b566502717a00a4d2711d","632b566502717a00a4d2711e","62ed1ddfb830b707c39ab089","632b566502717a00a4d2711f","62f2a40e53da9b0cf38d66bc","632b566502717a00a4d27120","632c617037ccdb08f97b3928","63333e89419e3c003b809600","633354c34e89780010cd796e","6376bf69127d9900031750ea"],"project":"62d99dfa4ce124002ee05223","releaseDate":"2022-07-21T18:42:08.791Z","createdAt":"2022-07-21T18:42:08.791Z","__v":0,"forked_from":"63090235d1a8d000866dff12"},{"_id":"6351a0d6787f820029419c45","version":"1.0.0","version_clean":"1.0.0","codename":"","is_stable":false,"is_beta":false,"is_hidden":true,"is_deprecated":false,"categories":["62ead7c2ad214502bdf9d90b","62ead7c2ad214502bdf9d90b","62ed135aa0e43e05fb196fd3","62ed1ce95e87ff00739155e0","62ed1cfb3b7a3106e9802a95","6351a0d6787f820029419c14","6351a0d6787f820029419c15","6351a0d6787f820029419c16","6351a0d6787f820029419c17","6351a0d6787f820029419c18","6351a0d6787f820029419c19","62ed1ddfb830b707c39ab089","6351a0d6787f820029419c1a","62f2a40e53da9b0cf38d66bc","6351a0d6787f820029419c1b","6351a0d6787f820029419c1c","63333e89419e3c003b809600","6351a0d6787f820029419c1d","6376bf69127d9900031750e6"],"project":"62d99dfa4ce124002ee05223","releaseDate":"2022-07-21T18:42:08.791Z","createdAt":"2022-07-21T18:42:08.791Z","__v":0,"forked_from":"632b566502717a00a4d27145"},{"_id":"636c4be56398c1003a15a81c","version":"1.1.0","version_clean":"1.1.0","codename":"","is_stable":false,"is_beta":false,"is_hidden":true,"is_deprecated":false,"categories":["62ead7c2ad214502bdf9d90b","62ead7c2ad214502bdf9d90b","62ed135aa0e43e05fb196fd3","62ed1ce95e87ff00739155e0","62ed1cfb3b7a3106e9802a95","636c4be56398c1003a15a7e9","636c4be56398c1003a15a7ea","636c4be56398c1003a15a7eb","636c4be56398c1003a15a7ec","636c4be56398c1003a15a7ed","636c4be56398c1003a15a7ee","62ed1ddfb830b707c39ab089","636c4be56398c1003a15a7ef","62f2a40e53da9b0cf38d66bc","636c4be56398c1003a15a7f0","636c4be56398c1003a15a7f1","63333e89419e3c003b809600","636c4be56398c1003a15a7f2","6376bf69127d9900031750e9"],"project":"62d99dfa4ce124002ee05223","releaseDate":"2022-07-21T18:42:08.791Z","createdAt":"2022-07-21T18:42:08.791Z","__v":0,"forked_from":"6351a0d6787f820029419c45"},{"_id":"63c7408c98071300a4fd3260","version":"1.2.0","version_clean":"1.2.0","codename":"","is_stable":true,"is_beta":false,"is_hidden":false,"is_deprecated":false,"categories":["62ead7c2ad214502bdf9d90b","62ead7c2ad214502bdf9d90b","62ed135aa0e43e05fb196fd3","62ed1ce95e87ff00739155e0","62ed1cfb3b7a3106e9802a95","63c7408c98071300a4fd322c","63c7408c98071300a4fd322d","63c7408c98071300a4fd322e","63c7408c98071300a4fd322f","63c7408c98071300a4fd3230","63c7408c98071300a4fd3231","62ed1ddfb830b707c39ab089","63c7408c98071300a4fd3232","62f2a40e53da9b0cf38d66bc","63c7408c98071300a4fd3233","63c7408c98071300a4fd3234","63333e89419e3c003b809600","63c7408c98071300a4fd3235","6376bf69127d9900031750e9","63c7408c98071300a4fd329e","63c740aa289377000fc4de73","647e226a03e2a40018145efb"],"project":"62d99dfa4ce124002ee05223","releaseDate":"2022-07-21T18:42:08.791Z","createdAt":"2022-07-21T18:42:08.791Z","__v":1,"forked_from":"636c4be56398c1003a15a81c"}],"variableDefaults":[],"webhookEnabled":false,"isHubEditable":true},"projectStore":{"data":{"allow_crawlers":"disabled","canonical_url":null,"description":null,"homepage_url":"https://trunk.io","name":"trunkio","redirects":[],"sitemap":"disabled","subdomain":"trunkio","suggested_edits":"enabled","uri":"/projects/me","custom_login":{"login_url":null,"logout_url":null},"pages":{"not_found":null},"privacy":{"view":"public","password":null},"health_check":{"provider":"none","settings":{"manual":{"status":"down","url":null},"statuspage":{"id":null}}},"integrations":{"bing":{"verify":null},"google":{"analytics":null,"site_verification":null},"heap":{"id":null},"koala":{"key":null},"localize":{"key":null},"recaptcha":{"site_key":null,"secret_key":null},"segment":{"key":null,"domain":null},"typekit":{"key":null},"zendesk":{"subdomain":null},"intercom":{"app_id":null,"secure_mode":{"key":null,"email_only":false}}},"permissions":{"appearance":{"private_label":"disabled","custom_code":{"css":"disabled","html":"enabled","js":"disabled"}}},"appearance":{"table_of_contents":"enabled","whats_next_label":null,"brand":{"primary_color":"#242526","link_color":null,"theme":"system"},"footer":{"readme_logo":"show"},"custom_code":{"css":null,"js":null,"html":{"header":null,"home_footer":null,"page_footer":null}},"markdown":{"callouts":{"icon_font":"emojis"}},"logo":{"size":"default","dark_mode":{"uri":null,"url":"https://files.readme.io/1c2f0ce-WhiteLogo.svg","name":"WhiteLogo.svg","width":104,"height":102,"color":"#fafafa","links":{"original_url":null}},"main":{"uri":null,"url":"https://files.readme.io/6070550-docs-logo.svg","name":"docs-logo.svg","width":198,"height":42,"color":"#c1c5c8","links":{"original_url":null}},"favicon":{"uri":null,"url":"https://files.readme.io/75de105-small-favicon-readme-64.png","name":"favicon-readme-64.png","width":32,"height":32,"color":"#000000","links":{"original_url":"https://files.readme.io/1e4846f-favicon-readme-64.png"}}},"navigation":{"first_page":"documentation","left":[],"logo_link":"landing_page","right":[],"sub_nav":[{"type":"link_url","title":"Community Slack","url":"https://slack.trunk.io","custom_page":null},{"type":"link_url","title":"Feature Requests","url":"https://changelog.trunk.io/check","custom_page":null},{"type":"link_url","title":"Changelog","url":"https://changelog.trunk.io/changelog","custom_page":null}],"subheader_layout":"links","version":"disabled","links":{"home":{"label":"Home","visibility":"disabled"},"guides":{"label":"Guides","alias":"Docs","visibility":"enabled"},"reference":{"label":"API Reference","alias":"Config","visibility":"disabled"},"recipes":{"label":"Recipes","alias":null,"visibility":"enabled"},"api_logs":{"label":"API Logs","visibility":"disabled"},"changelog":{"label":"Changelog","alias":null,"visibility":"disabled"},"discussions":{"label":"Discussions","alias":null,"visibility":"disabled"}}},"header":{"type":"solid","gradient_color":null,"overlay":{"fill":"auto","type":"triangles","position":"top-left","image":{"uri":null,"url":null,"name":null,"width":null,"height":null,"color":null,"links":{"original_url":null}}}}}}},"version":{"_id":"63c7408c98071300a4fd3260","version":"1.2.0","version_clean":"1.2.0","codename":"","is_stable":true,"is_beta":false,"is_hidden":false,"is_deprecated":false,"categories":["62ead7c2ad214502bdf9d90b","62ead7c2ad214502bdf9d90b","62ed135aa0e43e05fb196fd3","62ed1ce95e87ff00739155e0","62ed1cfb3b7a3106e9802a95","63c7408c98071300a4fd322c","63c7408c98071300a4fd322d","63c7408c98071300a4fd322e","63c7408c98071300a4fd322f","63c7408c98071300a4fd3230","63c7408c98071300a4fd3231","62ed1ddfb830b707c39ab089","63c7408c98071300a4fd3232","62f2a40e53da9b0cf38d66bc","63c7408c98071300a4fd3233","63c7408c98071300a4fd3234","63333e89419e3c003b809600","63c7408c98071300a4fd3235","6376bf69127d9900031750e9","63c7408c98071300a4fd329e","63c740aa289377000fc4de73","647e226a03e2a40018145efb"],"project":"62d99dfa4ce124002ee05223","releaseDate":"2022-07-21T18:42:08.791Z","createdAt":"2022-07-21T18:42:08.791Z","__v":1,"forked_from":"636c4be56398c1003a15a81c"}},"reqUrl":"/docs/check","version":{"_id":"63c7408c98071300a4fd3260","version":"1.2.0","version_clean":"1.2.0","codename":"","is_stable":true,"is_beta":false,"is_hidden":false,"is_deprecated":false,"categories":["62ead7c2ad214502bdf9d90b","62ead7c2ad214502bdf9d90b","62ed135aa0e43e05fb196fd3","62ed1ce95e87ff00739155e0","62ed1cfb3b7a3106e9802a95","63c7408c98071300a4fd322c","63c7408c98071300a4fd322d","63c7408c98071300a4fd322e","63c7408c98071300a4fd322f","63c7408c98071300a4fd3230","63c7408c98071300a4fd3231","62ed1ddfb830b707c39ab089","63c7408c98071300a4fd3232","62f2a40e53da9b0cf38d66bc","63c7408c98071300a4fd3233","63c7408c98071300a4fd3234","63333e89419e3c003b809600","63c7408c98071300a4fd3235","6376bf69127d9900031750e9","63c7408c98071300a4fd329e","63c740aa289377000fc4de73","647e226a03e2a40018145efb"],"project":"62d99dfa4ce124002ee05223","releaseDate":"2022-07-21T18:42:08.791Z","createdAt":"2022-07-21T18:42:08.791Z","__v":1,"forked_from":"636c4be56398c1003a15a81c"},"lang":"en","langFull":"Default","isDetachedProductionSite":false,"rdmdOpts":{"normalize":true,"correctnewlines":false,"compatibilityMode":false}}'
+      ></script>
+    </div>
+    <div
+      ng-class="{active:contentLoadingSection || contentLoading}"
+      class="hub-loading-indicator"
+    ></div>
+    <div id="hub-container" ng-class="{loading:contentLoadingSection}">
+      <div class="hub-container">
+        <div
+          state-container
+          ng-attr-id="{{state.current().root !== 'docs' &amp;&amp; 'react-app-content-container'}}"
+        >
+          <div id="replace-view" ng-non-bindable>
+            <meta ng-non-bindable name="meta:slug" content="check" />
+            <meta ng-non-bindable name="meta:type" content="docs" />
+            <meta ng-non-bindable name="meta:parent" />
+            <meta ng-non-bindable name="meta:image" content="" />
+            <meta ng-non-bindable name="meta:title" content="Overview" />
+            <meta ng-non-bindable name="meta:title_seo" content="Overview" />
+            <meta
+              ng-non-bindable
+              name="meta:description"
+              content="Trunk Check manages, downloads, and runs dozens of linters, formatters, static analyzers, and security tools. It's also a platform to write your own custom checks and integrate them to run as part of your repo's check suite.Use it via: Trunk CLIVSCode ExtensionGitHub ActionWeb App (app.trunk.io) We ..."
+            />
+            <meta
+              ng-non-bindable
+              name="meta:_id"
+              content="63c7408c98071300a4fd3243"
+            />
+            <meta ng-non-bindable name="meta:hidden" />
+            <div
+              ng-if="!suggestedEdits.isEnabled"
+              class="templateBlock--docs"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <script>
+      var is_hub = true;
+      var is_hub2 = true;
+      var is_hub_edit = true;
+    </script>
+    <div id="ssr-end">
+      <script id="__LOADABLE_REQUIRED_CHUNKS__" type="application/json">
+        [
+          9847, 2831, 1560, 7714, 7579, 7675, 5833, 4314, 3257, 7552, 9351,
+          2680, 6116, 4184, 6230, 4923, 6683, 3879, 9097, 7667, 9010, 1730,
+          2926, 428, 4022, 4670, 8011, 4196, 9509, 2053, 6215, 788, 7815, 5079,
+          5858, 2332, 295, 3393, 9556, 1665, 1414, 5237, 4141, 439, 4372, 5691,
+          8196, 6952, 3337, 748, 6842, 5443, 6605
+        ]
+      </script>
+      <script id="__LOADABLE_REQUIRED_CHUNKS___ext" type="application/json">
+        {
+          "namedChunks": [
+            "SuperHub",
+            "Header",
+            "routes-Doc",
+            "Footer",
+            "core-icons-arrow-right-svg",
+            "routes-Landing",
+            "core-icons-arrow-up-right-svg",
+            "routes-PageNotFound",
+            "CustomPage",
+            "routes-CustomPage",
+            "routes-Reference",
+            "routes-Tutorials",
+            "routes-Changelog",
+            "Post",
+            "core-icons-more-vertical-svg",
+            "routes-Discuss",
+            "Page",
+            "core-icons-menu-svg",
+            "Editor",
+            "core-icons-x-circle-svg",
+            "core-icons-suggested-edits-svg",
+            "core-icons-chevron-down-svg",
+            "List",
+            "core-icons-trending-up-svg",
+            "core-icons-callout-info-svg"
+          ]
+        }
+      </script>
+      <script
+        async
+        data-chunk="main"
+        src="https://cdn.readme.io/public/hub/web/main.0bdebf65b08d625aeb2f.js"
+      ></script>
+      <script
+        async
+        data-chunk="SuperHub"
+        src="https://cdn.readme.io/public/hub/web/9847.4e78e9f8c71d9d23e8a1.js"
+      ></script>
+      <script
+        async
+        data-chunk="SuperHub"
+        src="https://cdn.readme.io/public/hub/web/2831.bd8378de1328575bf326.js"
+      ></script>
+      <script
+        async
+        data-chunk="SuperHub"
+        src="https://cdn.readme.io/public/hub/web/SuperHub.d6ce7b4ab1c8ecaa6ea9.js"
+      ></script>
+      <script
+        async
+        data-chunk="Header"
+        src="https://cdn.readme.io/public/hub/web/7714.17456cfb867dbf0dfd22.js"
+      ></script>
+      <script
+        async
+        data-chunk="Header"
+        src="https://cdn.readme.io/public/hub/web/7579.ea6e836340818db760b2.js"
+      ></script>
+      <script
+        async
+        data-chunk="Header"
+        src="https://cdn.readme.io/public/hub/web/7675.426fcc3240fdad06e272.js"
+      ></script>
+      <script
+        async
+        data-chunk="Header"
+        src="https://cdn.readme.io/public/hub/web/5833.f29ce2d6741bfd4a9401.js"
+      ></script>
+      <script
+        async
+        data-chunk="Header"
+        src="https://cdn.readme.io/public/hub/web/4314.c40d61622219e86aef99.js"
+      ></script>
+      <script
+        async
+        data-chunk="Header"
+        src="https://cdn.readme.io/public/hub/web/3257.967f311b4f934d57651f.js"
+      ></script>
+      <script
+        async
+        data-chunk="Header"
+        src="https://cdn.readme.io/public/hub/web/7552.6c45e09281fbc124be4b.js"
+      ></script>
+      <script
+        async
+        data-chunk="Header"
+        src="https://cdn.readme.io/public/hub/web/Header.d96e9cd40b50ef304395.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Doc"
+        src="https://cdn.readme.io/public/hub/web/2680.73b227dccdf2da6688d6.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Doc"
+        src="https://cdn.readme.io/public/hub/web/6116.c8aba481e49c72e3f71b.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Doc"
+        src="https://cdn.readme.io/public/hub/web/4184.16e87bef72ab0430603e.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Doc"
+        src="https://cdn.readme.io/public/hub/web/6230.6c0aa24d259553bc396c.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Doc"
+        src="https://cdn.readme.io/public/hub/web/4923.9a131223e8f8a7063149.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Doc"
+        src="https://cdn.readme.io/public/hub/web/6683.2e39c459b33e86fd12e5.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Doc"
+        src="https://cdn.readme.io/public/hub/web/routes-Doc.fafd6e65fd8abedee27a.js"
+      ></script>
+      <script
+        async
+        data-chunk="Footer"
+        src="https://cdn.readme.io/public/hub/web/Footer.ba5c16c8581e2191d820.js"
+      ></script>
+      <script
+        async
+        data-chunk="core-icons-arrow-right-svg"
+        src="https://cdn.readme.io/public/hub/web/core-icons-arrow-right-svg.1e7f2192b7bda6b4a5e1.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Landing"
+        src="https://cdn.readme.io/public/hub/web/9010.4139618a98c878ee1b2e.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Landing"
+        src="https://cdn.readme.io/public/hub/web/1730.9f51d54902f6e161ba93.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Landing"
+        src="https://cdn.readme.io/public/hub/web/2926.4034af9b9773d4ce29be.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Landing"
+        src="https://cdn.readme.io/public/hub/web/routes-Landing.dd6d1d7f3a9481210857.js"
+      ></script>
+      <script
+        async
+        data-chunk="core-icons-arrow-up-right-svg"
+        src="https://cdn.readme.io/public/hub/web/core-icons-arrow-up-right-svg.957c5be2eea3961b4701.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-PageNotFound"
+        src="https://cdn.readme.io/public/hub/web/routes-PageNotFound.c08f308f699d39f4fa3b.js"
+      ></script>
+      <script
+        async
+        data-chunk="CustomPage"
+        src="https://cdn.readme.io/public/hub/web/CustomPage.9dc25d4d0248b160ff3d.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-CustomPage"
+        src="https://cdn.readme.io/public/hub/web/routes-CustomPage.5cf0ed57308797a98bf4.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Reference"
+        src="https://cdn.readme.io/public/hub/web/9509.3cd9f5c08cfdd002e348.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Reference"
+        src="https://cdn.readme.io/public/hub/web/2053.9a1bcec1903de810e401.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Reference"
+        src="https://cdn.readme.io/public/hub/web/6215.5ab80ac54d47cdd073ea.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Reference"
+        src="https://cdn.readme.io/public/hub/web/routes-Reference.e5d29ff64042135f8132.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Tutorials"
+        src="https://cdn.readme.io/public/hub/web/routes-Tutorials.3dd717c283aadc3a3fe3.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Changelog"
+        src="https://cdn.readme.io/public/hub/web/routes-Changelog.62a62bf6eaf956db5c2b.js"
+      ></script>
+      <script
+        async
+        data-chunk="Post"
+        src="https://cdn.readme.io/public/hub/web/5858.e8e174469b512aca76c8.js"
+      ></script>
+      <script
+        async
+        data-chunk="Post"
+        src="https://cdn.readme.io/public/hub/web/Post.69e461925ec3caf4e3f4.js"
+      ></script>
+      <script
+        async
+        data-chunk="core-icons-more-vertical-svg"
+        src="https://cdn.readme.io/public/hub/web/core-icons-more-vertical-svg.228db57c23169aaa56d6.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Discuss"
+        src="https://cdn.readme.io/public/hub/web/3393.d6da75f49f349ff326a6.js"
+      ></script>
+      <script
+        async
+        data-chunk="routes-Discuss"
+        src="https://cdn.readme.io/public/hub/web/routes-Discuss.b1dbc41b22c1f6bc0bf4.js"
+      ></script>
+      <script
+        async
+        data-chunk="Page"
+        src="https://cdn.readme.io/public/hub/web/1665.3273fa4556ff4f53d6c8.js"
+      ></script>
+      <script
+        async
+        data-chunk="Page"
+        src="https://cdn.readme.io/public/hub/web/1414.bdc73cf15ce3c740cc9d.js"
+      ></script>
+      <script
+        async
+        data-chunk="Page"
+        src="https://cdn.readme.io/public/hub/web/5237.d4eb0c36bda309f9d3eb.js"
+      ></script>
+      <script
+        async
+        data-chunk="Page"
+        src="https://cdn.readme.io/public/hub/web/4141.880ef02ba023cd9f8f53.js"
+      ></script>
+      <script
+        async
+        data-chunk="Page"
+        src="https://cdn.readme.io/public/hub/web/Page.1979312aae3b7c6975eb.js"
+      ></script>
+      <script
+        async
+        data-chunk="core-icons-menu-svg"
+        src="https://cdn.readme.io/public/hub/web/core-icons-menu-svg.b9a5673111bcd429344f.js"
+      ></script>
+      <script
+        async
+        data-chunk="Editor"
+        src="https://cdn.readme.io/public/hub/web/5691.d94bc36472e94ca86d34.js"
+      ></script>
+      <script
+        async
+        data-chunk="Editor"
+        src="https://cdn.readme.io/public/hub/web/Editor.b77acf9dbe7d42840cb5.js"
+      ></script>
+      <script
+        async
+        data-chunk="core-icons-x-circle-svg"
+        src="https://cdn.readme.io/public/hub/web/core-icons-x-circle-svg.1253cc725f6ab78a786d.js"
+      ></script>
+      <script
+        async
+        data-chunk="core-icons-suggested-edits-svg"
+        src="https://cdn.readme.io/public/hub/web/core-icons-suggested-edits-svg.93755393eff5d50dda67.js"
+      ></script>
+      <script
+        async
+        data-chunk="core-icons-chevron-down-svg"
+        src="https://cdn.readme.io/public/hub/web/core-icons-chevron-down-svg.09fdf86b58640880691c.js"
+      ></script>
+      <script
+        async
+        data-chunk="List"
+        src="https://cdn.readme.io/public/hub/web/List.cd286927970aef2dafa6.js"
+      ></script>
+      <script
+        async
+        data-chunk="core-icons-trending-up-svg"
+        src="https://cdn.readme.io/public/hub/web/core-icons-trending-up-svg.b09fd55fdbf98ea428b4.js"
+      ></script>
+      <script
+        async
+        data-chunk="core-icons-callout-info-svg"
+        src="https://cdn.readme.io/public/hub/web/core-icons-callout-info-svg.991471218275384a0302.js"
+      ></script>
+    </div>
+    <script
+      id="hub-me"
+      type="application/json"
+      data-json='{"loggedIn":false,"search":{"app":"T28YKFATPY","token":"YjZmMzc1M2M4MGNkNmZjMDNhNDBmMTc3YmU4Y2NjZDNjOWQwZDFjZjIyMjVhYzQxZTQ1NzRkYTFhNWZmM2IyOXRhZ0ZpbHRlcnM9KHByb2plY3Q6NjJkOTlkZmE0Y2UxMjQwMDJlZTA1MjIzKSwodmVyc2lvbjpub25lLHZlcnNpb246NjNjNzQwOGM5ODA3MTMwMGE0ZmQzMjYwKSwoaGlkZGVuOm5vbmUsaGlkZGVuOmZhbHNlKSwoaW5kZXg6Q3VzdG9tUGFnZSxpbmRleDpQYWdlLGluZGV4OlR1dG9yaWFsKQ==","filters":"tagFilters=(project:62d99dfa4ce124002ee05223),(version:none,version:63c7408c98071300a4fd3260),(hidden:none,hidden:false),(index:CustomPage,index:Page,index:Tutorial)","metaData":[{"modules":{"landing":false,"docs":true,"examples":true,"reference":false,"graphql":false,"changelog":false,"discuss":false,"suggested_edits":true,"logs":false,"custompages":false,"tutorials":true},"id":"62d99dfa4ce124002ee05223","name":"trunkio","subdomain":"trunkio","subpath":"","nav_names":{"docs":"Docs","reference":"Config","changelog":"","discuss":"","tutorials":"","recipes":""}}]}}'
+    ></script>
+    <script
+      id="readme-data-baseUrl"
+      type="application/json"
+      data-json='"/"'
+    ></script>
+    <div class="hub-footer"></div>
+  </body>
+</html>
