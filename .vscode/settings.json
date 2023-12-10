@@ -1,10 +1,6 @@
 {
   "cSpell.fixSpellingWithRenameProvider": true,
-  "cSpell.flagWords": [
-    "트렁크: Trunk",
-    "링터: 린터",
-    "보푸라기: 린터"
-  ],
+  "cSpell.flagWords": ["트렁크: Trunk", "링터: 린터", "보푸라기: 린터"],
   "cSpell.words": [
     "arcanist",
     "Bazel",
