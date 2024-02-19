@@ -25,7 +25,6 @@ As an example let's examine how we implement the `git-lfs` action in the [plugin
 
 #### Definition
 
-{% code lineNumbers="true" %}
 ```yaml
 - id: git-lfs
   display_name: Git LFS
@@ -34,7 +33,6 @@ As an example let's examine how we implement the `git-lfs` action in the [plugin
   triggers:
     - git_hooks: [post-checkout, post-commit, post-merge, pre-push]
 ```
-{% endcode %}
 
 #### Template resolution
 
@@ -76,7 +74,7 @@ trunk actions history <action-name>
 
 Which will print out the last 10 executions including timestamps of the specified action \\
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>trunk actions history for git-lfs action</p></figcaption></figure>
+<figure><img src="./image (1) (1) (1) (1).png" alt=""><figcaption><p>trunk actions history for git-lfs action</p></figcaption></figure>
 
 ### Uninstalling
 

@@ -38,11 +38,11 @@ In Parallel mode, Trunk knows which PRs are related and which are unrelated and 
 
 ## Build system integration
 
-Trunk Merge in [#parallel-mode](./#parallel-mode "mention") uses information from build systems to optimize merging code. This can be set for _**any**_** build system**, but we currently have first-class support for...
+Trunk Merge in [#parallel-mode](./#parallel-mode "mention") uses information from build systems to optimize merging code. This can be set for _**any**_ build system**, but we currently have first-class support for...
 
 ### Bazel Integration
 
-Trunk Merge has [first-class support](https://github.com/trunk-io/merge-action) for Bazel with GitHub Actions. Trunk Merge will automatically form a graph of PRs in parallel mode that mirrors the Bazel dependency graph relationship between the code changed in each PR. Testing enqueued PRs via Trunk Merge tests against _only_ other enqueued PRs with overlapping bazel dependencies. Read more about how to hook this up in the[ Impacted Targets docs](set-up-trunk-merge/impacted-targets.md).
+Trunk Merge has [first-class support](https://github.com/trunk-io/merge-action) for Bazel with GitHub Actions. Trunk Merge will automatically form a graph of PRs in parallel mode that mirrors the Bazel dependency graph relationship between the code changed in each PR. Testing enqueued PRs via Trunk Merge tests against _only_ other enqueued PRs with overlapping bazel dependencies. Read more about how to hook this up in the [Impacted Targets docs](set-up-trunk-merge/impacted-targets.md).
 
 ## Getting Started
 

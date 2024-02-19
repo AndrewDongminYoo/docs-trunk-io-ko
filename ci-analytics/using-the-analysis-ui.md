@@ -8,7 +8,7 @@ description: >-
 
 When you first select a repo in CI Analytics, you will see the **Overview** screen which contains charts and tables to give you a high-level view of the state of your CI system. The charts show the aggregate _Average Daily Jobs per Hour_, _Total CI Time_, and _Wait Time per day_ over the selected time period. You can adjust the time period using the selector just below the first chart on the left.
 
-<figure><img src="../.gitbook/assets/ci-analytics-dashboard" alt="screenshot of the CI Analytics Overview"><figcaption><p>CI Analytics Overview</p></figcaption></figure>
+<figure><img src="./ci-analytics-dashboard.png" alt="screenshot of the CI Analytics Overview"><figcaption><p>CI Analytics Overview</p></figcaption></figure>
 
 The bottom half of the dashboard shows aggregate statistics for each of your CI workflows _over the selected time period_. The columns are as follows:
 
@@ -25,7 +25,7 @@ Work can be filtered by common ranges: 7 days, 14 days, 30 days, 3 months, 6 mon
 \
 **By Branch Type**
 
-<table data-header-hidden><thead><tr><th width="137">Branches</th><th>Description</th></tr></thead><tbody><tr><td>All</td><td>Shows work with any branch filtering</td></tr><tr><td>main</td><td>Work that is performed against your main or master branch.</td></tr><tr><td>merge</td><td>Work that is performed by a merge queue service (including trunk merge and GitHub's MergeQueue)</td></tr><tr><td>pull request</td><td>Work attributable to the testing of a pull request</td></tr><tr><td><a data-footnote-ref href="#user-content-fn-1">depe</a>ndabot</td><td>Work attributable to the testing of a PR created by Dependabot</td></tr><tr><td>renovate</td><td>Work attributable to the testing of a PR created by Renovsate</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="137">Branches</th><th>Description</th></tr></thead><tbody><tr><td>All</td><td>Shows work with any branch filtering</td></tr><tr><td>main</td><td>Work that is performed against your main or master branch.</td></tr><tr><td>merge</td><td>Work that is performed by a merge queue service (including trunk merge and GitHub's MergeQueue)</td></tr><tr><td>pull request</td><td>Work attributable to the testing of a pull request</td></tr><tr><td><a data-footnote-ref href="#user-content-fn-1">dependabot</a></td><td>Work attributable to the testing of a PR created by Dependabot</td></tr><tr><td>renovate</td><td>Work attributable to the testing of a PR created by Renovsate</td></tr></tbody></table>
 
 **By Conclusion**\
 The conclusions filter allows you to look exclusively at work based on its reported termination state: success, failure, canceled, time out, skipped, etc... If you are trying to understand the performance of your CI tasks, you will likely want to filter by success. Failures can occur at any time, but the success path is a more reliable view of the expected runtime of your system.\
@@ -41,7 +41,7 @@ The top of the view shows a chart of aggregate statistics for the filtered data 
 \
 If you click on one of the data buckets or points on the graph, you can Zoom into that period of data or view the underlying runs.&#x20;
 
-<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="./image (24).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Tags**: Aggregation at the job level for GitHub workflows will implicitly shard against the 'runs-on' field of the GitHub workflow. For example, if a job was running on`ubuntu-latest` and later switched to a different runner set - a unique row will be created for each distinct runs-on match. \
@@ -51,10 +51,8 @@ When there is a name collision with different underlying tags, the unique tag wi
 
 ### Runs View
 
-<figure><img src="../.gitbook/assets/runs-view-table.png" alt="screenshot of the Runs View"><figcaption><p>Runs View</p></figcaption></figure>
+<figure><img src="./runs-view-table.png" alt="screenshot of the Runs View"><figcaption><p>Runs View</p></figcaption></figure>
 
 The **Runs View** allows you to explore the underlying data from an aggregated view. Each row represented a single execution, including its Start time, run time, waiting time, and conclusion. \
 \
 Where available, the rows will include the Pull Request associated with this work, the commit it ran against, links to the associated logs, and the specific machine that the job ran on.
-
-[^1]: 

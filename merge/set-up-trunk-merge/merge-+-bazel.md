@@ -14,11 +14,11 @@ Connect your GitHub repository with Trunk and set up Trunk Merge with [the stand
 
 Next [enable Parallel Mode](../configuration.md) in the Trunk Merge UI.
 
-<figure><img src="../../.gitbook/assets/enable-parallel-mode" alt="screenshot of Trunk Merge configuration screen"><figcaption><p>Enabling Parallel Mode</p></figcaption></figure>
+<figure><img src="./enable-parallel-mode.png" alt="screenshot of Trunk Merge configuration screen"><figcaption><p>Enabling Parallel Mode</p></figcaption></figure>
 
 ### Set Up the Github Action
 
-Trunk provides a [Merge GitHub action](https://github.com/trunk-io/merge-action) (workflow) that leverages Bazel to take care of generating the required[ impacted targets](impacted-targets.md) and uploading them to Merge, taking care of the heavy work for using Parallel mode. In order for GitHub to communicate with Trunk Merge, it needs to be able to authenticate from the GitHub Action instance to the Trunk web application using your **Trunk Organization API Token**.
+Trunk provides a [Merge GitHub action](https://github.com/trunk-io/merge-action) (workflow) that leverages Bazel to take care of generating the required [impacted targets](impacted-targets.md) and uploading them to Merge, taking care of the heavy work for using Parallel mode. In order for GitHub to communicate with Trunk Merge, it needs to be able to authenticate from the GitHub Action instance to the Trunk web application using your **Trunk Organization API Token**.
 
 #### Get your Organization API Token
 
@@ -59,4 +59,3 @@ jobs:
 If your Bazel setup is not in the root of your repo then you can add `bazel-workspace-path: your_workspace_path` just below the `trunk-token`. Commit the new workflow back to your repo. to make it active.&#x20;
 
 Now you can [submit a new pull request and test it](broken-reference). **Success!**
-

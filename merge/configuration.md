@@ -15,7 +15,7 @@ layout:
 
 # Parallel Mode
 
-## Single / Parallel Mode <a href="#single-parallel-mode" id="single-parallel-mode"></a>
+## Single / Parallel Mode
 
 Merge can support two different modes - `Single` and `Parallel` mode. The mode affects how PRs are enqueued when they enter the queue and what is required for a PR to begin testing.
 
@@ -31,7 +31,7 @@ For example, the following PRs:
 
 would be split into two different queues in `Parallel` mode
 
-<figure><img src="../.gitbook/assets/image (19).png" alt="" width="332"><figcaption></figcaption></figure>
+<figure><img src="./image (19).png" alt="" width="332"><figcaption></figcaption></figure>
 
 #### Single Mode
 
@@ -39,7 +39,7 @@ In this mode, PRs will always be queued directly behind one another in a first-i
 
 For example, the above 3 PRs would look like this in the Merge Queue in `Single` mode
 
-<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="./image (20).png" alt=""><figcaption></figcaption></figure>
 
 #### Switching Modes
 
@@ -47,5 +47,5 @@ Merge can be swapped between `Single` and `Parallel` mode at any time. If there 
 
 Switching modes can be done from the `Merge Queue Mode` section of the `Settings > Repositories > repo name > Merge` panel
 
-<figure><img src="../.gitbook/assets/enable-parallel-mode" alt=""><figcaption><p>enabling parallel mode</p></figcaption></figure>
+<figure><img src="./set-up-trunk-merge/enable-parallel-mode.png" alt=""><figcaption><p>enabling parallel mode</p></figcaption></figure>
 

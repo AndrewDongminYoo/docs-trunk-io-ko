@@ -10,7 +10,7 @@ Sign up at [app.trunk.io](https://app.trunk.io/), create a Trunk organization, a
 
 Select the repository you would like to use and click **Get Started.**
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="./image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Set Up Trunk Merge
 
@@ -20,7 +20,7 @@ Go to the Merge tab. You will see the "Set Up Trunk Merge" page. From there, you
 2. The [number](set-up-trunk-merge/advanced-settings.md#concurrency) of Pull Requests that Merge can test at the same time.
 3. The [mode](configuration.md#single-parallel-mode) that Trunk Merge Queues will start in.
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="414"><figcaption></figcaption></figure>
+<figure><img src="./image.png" alt="" width="414"><figcaption></figcaption></figure>
 
 ### Define Required Status Checks For Testing
 
@@ -96,7 +96,7 @@ Now trigger Trunk Merge to process this PR using either a comment on the PR  in 
 {% tab title="GitHub Pull Request View" %}
 Comment `/trunk merge` on a pull request
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="./image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Trunk CLI" %}
