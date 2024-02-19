@@ -2,7 +2,7 @@
 
 #### Email
 
-Please email [support@trunk.io](mailto:support@trunk.io) for any questions you might have. We aim to respond to all inquiries withn 24 hours.
+Please email [support@trunk.io](mailto:support@trunk.io) for any questions you might have. We aim to respond to all inquiries within 24 hours.
 
 #### Slack
 

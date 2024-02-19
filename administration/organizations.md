@@ -39,5 +39,5 @@ Trunk Organizations are how you organize your repositories and your collaborator
    1. You can invite users individually by clicking the `+` button in the "Team Members" section.\
       This will allow you to invite a set of members by specifying their email accounts. These users\
       won't be automatically added to your Trunk Organization, instead they will receive an email to\
-      opt-in to the Organiation. These users must create a Trunk account to be able to accept the\
+      opt-in to the Organization. These users must create a Trunk account to be able to accept the\
       email invitation.

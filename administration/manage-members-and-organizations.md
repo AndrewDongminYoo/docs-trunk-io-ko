@@ -2,7 +2,7 @@
 
 The Trunk App is available at [app.trunk.io](https://app.trunk.io/). This is where you can view the health of your repositories, browse issues detected by `trunk check`, and manage your `merge` service (currently in limited beta).
 
-#### Creating a Trunk Organization <a href="#creating-a-trunk-organization" id="creating-a-trunk-organization"></a>
+#### Creating a Trunk Organization
 
 Trunk Organizations are how you organize your repositories and your collaborators on app.trunk.io. You'll need to create a Trunk Organization to get started with any of the Trunk services.
 
@@ -14,7 +14,7 @@ Trunk Organizations are how you organize your repositories and your collaborator
    Names do not need to be unique, but the organization slug does. The slug and the name do not need\
    to match. You can change the name at any time, but the slug cannot be updated.
 
-#### Adding your Github Repositories to your Trunk Organization (optional) <a href="#adding-your-github-repositories-to-your-trunk-organization-optional" id="adding-your-github-repositories-to-your-trunk-organization-optional"></a>
+#### Adding your Github Repositories to your Trunk Organization (optional)
 
 1. Create or log in to your Trunk account at [app.trunk.io](https://app.trunk.io/).
 2. Navigate to the organization to which you'd like to add your Github repositories using the\
@@ -27,7 +27,7 @@ Trunk Organizations are how you organize your repositories and your collaborator
       [app.trunk.io](https://app.trunk.io/) and Trunk can import your Github repository\
       data.
 
-#### Inviting teammates to your Trunk Organization <a href="#inviting-teammates-to-your-trunk-organization" id="inviting-teammates-to-your-trunk-organization"></a>
+#### Inviting teammates to your Trunk Organization
 
 1. Navigate to Settings → Team Members.
 2. Adding teammates by email domain.
@@ -39,5 +39,5 @@ Trunk Organizations are how you organize your repositories and your collaborator
    1. You can invite users individually by clicking the `+` button in the "Team Members" section.\
       This will allow you to invite a set of members by specifying their email accounts. These users\
       won't be automatically added to your Trunk Organization, instead they will receive an email to\
-      opt-in to the Organiation. These users must create a Trunk account to be able to accept the\
+      opt-in to the Organization. These users must create a Trunk account to be able to accept the\
       email invitation.
