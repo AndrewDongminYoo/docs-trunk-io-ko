@@ -55,7 +55,7 @@ On the next Trunk command (like check or fmt), it will update your shell RC file
 
 After reloading your shell, whenever you're inside your repo at the command line, you can just run shims installed by `trunk tools` directly by name.
 
-N.B. There is a known incompatibility with direnv when using PATH\_ADD. To use our hooks, remove PATH\_ADD from your .envrc and add them to your Trunk config as such:
+N.B. There is a known incompatibility with direnv when using PATH_ADD. To use our hooks, remove PATH_ADD from your .envrc and add them to your Trunk config as such:
 
 ```yaml
 version: 0.1

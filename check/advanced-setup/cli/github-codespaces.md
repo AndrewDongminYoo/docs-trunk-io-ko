@@ -38,7 +38,7 @@ You can then [configure pre-builds](https://docs.github.com/en/codespaces/prebui
 
 ## Installing the Trunk Extension
 
-If you are using the Trunk feature, we will automatically install the Trunk extension on your behalf. Note: We highly recommend turning off auto-save in your VSCode settings in your codespace (or to a longer timeout). Saving files triggers the extension to re-lint, which can quickly overload the extension for anything but the fastest linters. The auto-save setting is detailed [here](https://code.visualstudio.com/docs/editor/codebasics#\_save-auto-save).
+If you are using the Trunk feature, we will automatically install the Trunk extension on your behalf. Note: We highly recommend turning off auto-save in your VSCode settings in your codespace (or to a longer timeout). Saving files triggers the extension to re-lint, which can quickly overload the extension for anything but the fastest linters. The auto-save setting is detailed [here](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save).
 
 Otherwise, You can add `trunk` to your list of extensions in `devcontainer.json` -
 

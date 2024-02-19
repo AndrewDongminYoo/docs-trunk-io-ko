@@ -12,7 +12,7 @@ By default, Trunk will try to automatically initialize itself in single-player m
 
 If Trunk has not initialized itself in single-player mode, then you will need to initialize it manually, either by pressing the 'Initialize Trunk' button in the Trunk side panel:
 
-![initialize trunk](https://static.trunk.io/assets/vscode\_init\_trunk.png)
+![initialize trunk](https://static.trunk.io/assets/vscode_init_trunk.png)
 
 or via the command line: just install the CLI and run `trunk init` in your repo.
 
@@ -32,11 +32,11 @@ We believe that everything in your repository not only can be, but also should b
 
 On the side bar to the left you'll see the Trunk icon, which you can use to open the side panel to view issues. By default, issues are populated for every file you open as well as any modified files.
 
-![side panel](https://static.trunk.io/assets/vscode\_side\_panel.png)
+![side panel](https://static.trunk.io/assets/vscode_side_panel.png)
 
 Trunk also shows Trunk Check Issues in a panel in the File Explorer, but you can hide it if you wish:
 
-![hide explorer panel](https://static.trunk.io/assets/vscode\_hide\_explorer\_panel.jpg)
+![hide explorer panel](https://static.trunk.io/assets/vscode_hide_explorer_panel.jpg)
 
 #### Single-player Mode
 
@@ -56,9 +56,9 @@ or click on the notification to "Share trunk config", which will commit `.trunk/
 
 Check out how to [install the CLI](../advanced-setup/cli/install-trunk.md), [set it up in CI](../check-cloud-ci-integration/get-started/github-integration.md), [ignore issues](../configuration/ignoring-issues.md), and set up [Custom Linters](../configuration/custom-linters/).
 
-![linter code docs](https://static.trunk.io/assets/vscode\_doc\_links.png)
+![linter code docs](https://static.trunk.io/assets/vscode_doc_links.png)
 
-![trunk-ignore](https://static.trunk.io/assets/vscode\_ignore\_issue.gif)
+![trunk-ignore](https://static.trunk.io/assets/vscode_ignore_issue.gif)
 
 ### Configuration
 

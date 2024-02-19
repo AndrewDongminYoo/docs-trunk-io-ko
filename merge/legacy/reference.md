@@ -12,7 +12,7 @@ Users can submit pull requests to Merge in two ways: using the Trunk CLI or via 
 
 To submit a pull request to Merge with the Trunk CLI, a user must first be logged in. Run `trunk login` and follow the prompts to log in. After logging in, pull requests can be submitted by PR number: `trunk merge {pr-number}`.
 
-![](https://files.readme.io/3ba842c-Screen\_Shot\_2022-09-11\_at\_10.43.28\_PM.png)
+![](https://files.readme.io/3ba842c-Screen_Shot_2022-09-11_at_10.43.28_PM.png)
 
 ### Submitting via a comment in the GitHub pull request UI
 
@@ -65,7 +65,7 @@ In order to merge a pull request, the test branch created by Merge must be passi
 
 Merge monitors [GitHub's branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#about-branch-protection-rules) and doesn't push a test branch for a pull request until it has passed all rules and is mergeable. You can find more information about why a pull request hasn't entered the queue by clicking on it in the Merge UI at [app.trunk.io](https://app.trunk.io).
 
-![](https://files.readme.io/a2ccbf1-Screen\_Shot\_2022-09-11\_at\_11.15.15\_PM.png)
+![](https://files.readme.io/a2ccbf1-Screen_Shot_2022-09-11_at_11.15.15_PM.png)
 
 Most repository maintainers will want to use the GitHub branch protection settings to limit who can merge pull requests. By restricting who can merge to admins and the Github Trunk App, you can prevent contributors from circumventing Merge and merging code directly. Merge does account for admins needing to merge pull requests directly, effectively skipping Merge entirely. If a pull request is submitted without using Trunk Merge, the service will restart tests on all pull requests with the updated target branch.
 

@@ -67,7 +67,7 @@ Then click on "View more details on trunk-io"
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-10-16 at 5.11.57 PM.png" alt=""><figcaption></figcaption></figure>
 
-You'll then see your check run summary. Click "\<your repo name>/pull\_request" to see the CI logs, and scroll all the way to the bottom.
+You'll then see your check run summary. Click "\<your repo name>/pull_request" to see the CI logs, and scroll all the way to the bottom.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-10-16 at 5.12.23 PM.png" alt=""><figcaption></figcaption></figure>
 

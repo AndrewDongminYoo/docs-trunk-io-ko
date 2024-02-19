@@ -64,7 +64,7 @@ trunk check enable <linter>
 | YAML            | [prettier](https://github.com/prettier/prettier#readme), [semgrep](https://github.com/returntocorp/semgrep#readme), [yamllint](https://github.com/adrienverge/yamllint#readme)                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 1. Support for Detekt is under active development; see our [docs](https://docs.trunk.io/docs/check-supported-linters#detekt) for more details.
-2. [Module inspection](https://github.com/terraform-linters/tflint/blob/master/docs/user-guide/module-inspection.md), [deep checking](https://github.com/terraform-linters/tflint-ruleset-aws/blob/master/docs/deep\_checking.md), and setting variables are not currently supported.
+2. [Module inspection](https://github.com/terraform-linters/tflint/blob/master/docs/user-guide/module-inspection.md), [deep checking](https://github.com/terraform-linters/tflint-ruleset-aws/blob/master/docs/deep_checking.md), and setting variables are not currently supported.
 
 ### Linter-specific Configuration
 

@@ -24,7 +24,7 @@ Sign up at [app.trunk.io](https://app.trunk.io), create a Trunk organization, an
 
 ### Ensure that PRs are free of issues
 
-Check out [this example](https://github.com/trunk-io/plugins/pull/424/checks?check\_run\_id=15730277425) in our `plugins` repository!
+Check out [this example](https://github.com/trunk-io/plugins/pull/424/checks?check_run_id=15730277425) in our `plugins` repository!
 
 <div data-full-width="true">
 

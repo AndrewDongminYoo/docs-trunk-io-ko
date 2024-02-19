@@ -30,7 +30,7 @@ In order for the CI Debugger to communicate with the trunk web app, it needs to 
 
 Here is an a Buildkite workflow. Replace the three values in the example with the ones specific to your setup.
 
-Here the TRUNK\_TOKEN is pasted directly. In a real environment, it should be managed as a [secret](https://buildkite.com/docs/pipelines/secrets).
+Here the TRUNK_TOKEN is pasted directly. In a real environment, it should be managed as a [secret](https://buildkite.com/docs/pipelines/secrets).
 
 {% code overflow="wrap" %}
 ```yaml

@@ -30,7 +30,7 @@ In order for the CI Debugger to communicate with the trunk web app, it needs to 
 
 Here is an example GitLab workflow. Replace the three values in the example with the ones specific to your setup.
 
-Here the TRUNK\_TOKEN is pasted directly. In a real environment, it should be managed as a secret.
+Here the TRUNK_TOKEN is pasted directly. In a real environment, it should be managed as a secret.
 
 {% code overflow="wrap" %}
 ```yaml
