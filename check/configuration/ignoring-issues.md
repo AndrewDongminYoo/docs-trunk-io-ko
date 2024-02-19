@@ -56,6 +56,7 @@ If you need to suppress issues from multiple linters, `trunk-ignore` supports th
 struct FooBar {
   // trunk-ignore(clang-tidy): ISSUE-914 explains why the `void *` type is needed
   // trunk-ignore(gitleaks,my-custom-linter/do-not-hardcode-passwords): see ISSUE-915
+  // cSpell:ignore Pzqod
   void *super_secret_password = (void *)("915dr~S$Pzqod~oR*CrQ$/SQ@hbtQBked:CL@z!y]");
 };
 ```
