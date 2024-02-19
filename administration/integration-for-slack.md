@@ -16,18 +16,8 @@ To receive notifications and/or interact with Trunk from Slack, an admin needs t
 
 Now that you've connected your Slack account with Trunk, you will choose the type of notifications you want to receive from Trunk in Slack. You can manage your repository notifications under your repo settings.
 
-{% tabs %}
-{% tab title="trunk merge" %}
-
 <figure><img src="./MergeOptions.png" alt=""><figcaption><p>Configure notifications for <code>trunk merge</code></p></figcaption></figure>
-{% endtab %}
-
-{% tab title="trunk check" %}
-
 <figure><img src="./CheckOptions.png" alt=""><figcaption><p>Configure notifications for <code>trunk check</code></p></figcaption></figure>
-{% endtab %}
-{% endtabs %}
-
 ## Set your user-level notification preferences
 
 To set your individual user Slack notifications go to Settings > Account > Connect

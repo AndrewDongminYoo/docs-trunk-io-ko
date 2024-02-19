@@ -23,5 +23,3 @@ Total CI time shows the aggregate CI time for this pull request, across all upda
 Pipelines that run significantly faster or slower than their baseline will be highlighted here. This highlights potential regressions caused by the pull request and also celebrates efforts that improve CI performance.
 
 ### Getting Started
-
-{% @supademo/embed demoId="HBFQ1vFqJhg529jjWK1Ep" url="https://app.supademo.com/demo/HBFQ1vFqJhg529jjWK1Ep" %}

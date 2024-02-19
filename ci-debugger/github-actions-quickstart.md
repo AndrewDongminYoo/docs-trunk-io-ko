@@ -18,17 +18,11 @@ To use the CI Debugger, you must first create a trunk organization. See this [do
 
 ### Create a breakpoint in the trunk app
 
-{% @supademo/embed demoId="PEuiLCcC1etLxXgcOf-cu" url="https://app.supademo.com/demo/PEuiLCcC1etLxXgcOf-cu" %}
-
 ### Setup your Organization API Token
 
 In order for the CI Debugger to communicate with the trunk web app, it needs to be able to authenticate from the GitHub Action instance to the trunk web application.
 
-{% @supademo/embed demoId="LPJsDyJYAsyvUabvkphHK" url="https://app.supademo.com/demo/LPJsDyJYAsyvUabvkphHK" %}
-
 ### Store your Organization Token as a GitHub Secret
-
-{% @supademo/embed demoId="2UWXR9ccwhP4ng5-orZPG" url="https://app.supademo.com/demo/2UWXR9ccwhP4ng5-orZPG" %}
 
 ### Wrap one of your GitHub steps in a `trunk breakpoint`
 

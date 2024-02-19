@@ -18,21 +18,15 @@ To use the CI Debugger, you must first create a trunk organization. See this [do
 
 ### Create a breakpoint in the trunk app
 
-{% @supademo/embed demoid="PEuiLCcC1etLxXgcOf-cu" url="https://app.supademo.com/demo/PEuiLCcC1etLxXgcOf-cu" %}
-
 ### Setup your Organization API Token
 
 In order for the CI Debugger to communicate with the trunk web app, it needs to be able to authenticate from the GitHub Action instance to the trunk web application.
-
-{% @supademo/embed demoid="LPJsDyJYAsyvUabvkphHK" url="https://app.supademo.com/demo/LPJsDyJYAsyvUabvkphHK" %}
 
 ### Setup Your Jenkins Workflow
 
 Here is an example Jenkins workflow. Replace the three values in the example with the ones specific to your setup.
 
 Here the TRUNK_TOKEN is pasted directly. In a real environment, it should be managed as a secret.
-
-{% code overflow="wrap" %}
 
 ```yaml
 pipeline {
@@ -55,5 +49,3 @@ trunk breakpoint --org=<INSERT YOUR ORG NAME HERE [2]> --id=<Breakpoint Name [3]
 }
 }
 ```
-
-{% endcode %}

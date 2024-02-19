@@ -105,9 +105,7 @@ lint:
 
 Custom linters are slightly different; see [those docs](custom-linters/) to learn more.
 
-{% hint style="info" %}
 You can also ask Trunk to detect new linters and upgrade existing linters to their latest respective versions by running [`trunk upgrade check`](../advanced-setup/cli/upgrade.md).
-{% endhint %}
 
 ### Disable Linters
 

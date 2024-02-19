@@ -10,9 +10,7 @@ This guide will walk you through running Trunk Merge in your GitHub repository.
 
 Sign up at [app.trunk.io](https://app.trunk.io), create a Trunk organization, and connect it to your GitHub repositories. If your repository is already connected to your Trunk organization, this step can be skipped.
 
-{% embed url="https://app.supademo.com/edit/clooqw5kf2dfapeudipknagml" %}
 Connect your Trunk organization to GitHub
-{% endembed %}
 
 ## Set Up Trunk Merge
 
@@ -77,8 +75,6 @@ In order for Trunk Merge to function properly:
 
 Now that you're done with setup, take it for a spin! You can submit a pull request to Trunk Merge by either commenting `/trunk merge` on the PR in GitHub or using the CLI.
 
-{% tabs %}
-{% tab title="GitHub Pull Request View" %}
 Comment `/trunk merge` on a pull request
 
 <figure><img src="../image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>

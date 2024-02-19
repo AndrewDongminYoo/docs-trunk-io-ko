@@ -18,21 +18,15 @@ To use the CI Debugger, you must first create a trunk organization. See this [do
 
 ### Create a breakpoint in the trunk app
 
-{% embed url="https://app.supademo.com/demo/PEuiLCcC1etLxXgcOf-cu" %}
-
 ### Setup your Organization API Token
 
 In order for the CI Debugger to communicate with the trunk web app, it needs to be able to authenticate from the GitHub Action instance to the trunk web application.
-
-{% embed url="https://app.supademo.com/demo/LPJsDyJYAsyvUabvkphHK" %}
 
 ### Setup Your Buildkite Workflow
 
 Here is an a Buildkite workflow. Replace the three values in the example with the ones specific to your setup.
 
 Here the TRUNK_TOKEN is pasted directly. In a real environment, it should be managed as a [secret](https://buildkite.com/docs/pipelines/secrets).
-
-{% code overflow="wrap" %}
 
 ```yaml
 steps:
@@ -47,5 +41,3 @@ steps:
     key: test
     depends_on: build
 ```
-
-{% endcode %}

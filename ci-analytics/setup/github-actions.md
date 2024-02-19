@@ -10,8 +10,6 @@ Trunk CI Analytics is compatible with all repositories hosted on GitHub.com.
 
 ## Enable CI Analytics in your Repository
 
-{% @supademo/embed demoId="Pga1cA7d0QXy-InF0WPmO" url="https://app.supademo.com/demo/Pga1cA7d0QXy-InF0WPmO" %}
-
 Once CI Analytics is enabled in the repository, Trunk will collect the previous 30 days of GitHub Actions data for the repository. Trunk will also track all new GitHub Actions runs for the repository.
 
 ## Backfilling More Data

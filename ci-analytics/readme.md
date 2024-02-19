@@ -4,8 +4,6 @@
 
 Trunk CI Analytics unifies information about CI performance, trends, and reliability. CI Analytics provides powerful dashboards that allow you to understand your CI systems' health quickly. CI Analytics gives developers the tools they need to investigate, triage, and fix performance and reliability problems that slow down your engineering teams.
 
-{% embed url="https://share.vidyard.com/watch/wwnfuxL7ETg36DJrF2RBEZ" %}
-
 ## Integrations
 
 Trunk CI Analytics integrates with the following CI providers to gather pipeline metrics that track the performance and results of your CI systems.&#x20;

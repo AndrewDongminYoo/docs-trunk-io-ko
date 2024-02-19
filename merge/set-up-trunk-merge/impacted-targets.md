@@ -22,10 +22,7 @@ Impacted Targets should be computed for every PR. The list of impacted targets s
 
 <figure><img src="./02 Branch-1 kopiera.png" alt=""><figcaption><p>From <a href="https://www.atlassian.com/git/tutorials/using-branches/git-merge">https://www.atlassian.com/git/tutorials/using-branches/git-merge</a>. In this diagram, we want to compare the merge commit and the main tip.</p></figcaption></figure>
 
-{% hint style="info" %}
 Our [reference implementation](https://github.com/trunk-io/merge-action/blob/main/src/scripts/compute_impacted_targets.sh) may be useful in guiding your implementation.
-{% endhint %}
-
 After they are computed, upload them to our services. Our HTTP POST endpoint can be found at `https://api.trunk.io:443/v1/setImpactedTargets`. We expect the following headers/body:
 
 ```ssml
@@ -55,9 +52,7 @@ BODY: {
 
 The HTTP POST must contain the `x-api-token` to prove that it is a valid request from a workflow your org controls. _Workflows which come from forked PRs most likely will not have access to the Trunk org token_ required for the HTTP POST above. In this case you should provide the **run ID** of the workflow as the `x-forked-workflow-run-id` header in place of the `x-api-token`. This ID can be obtained from [the GitHub context](https://docs.github.com/en/actions/learn-github-actions/contexts#github-context) as `${{ github.run_id }}`. Trunk Merge will verify that the ID belongs to a currently running workflow originating from a forked PR with a SHA that matches the one provided in the request and allow it through.
 
-{% hint style="info" %}
 We do not recommend using an event trigger like `pull_request_target.` This would allow workflows from forked PRs to get secrets, which is a security risk and would open your repo to attackers making forks, adding malicious code, and then running it against your repo to exfiltrate information. (see [Keeping your GitHub Actions and workflows secure](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/)).
-{% endhint %}
 
 ### Impacted Targets Generation: Bazel + GitHub Actions
 

@@ -20,10 +20,7 @@ There is an additional state, `Switching Modes`, that functions exactly like `Dr
 
 Configure how long a PR's test can run before auto-cancelling while testing in the Merge Queue. If a long-running test is detected, Merge will automatically cancel the test.
 
-{% hint style="info" %}
 If you're unsure about what timeout to set, you can use our [CI Analytics](https://trunk.io/products/ci-analytics) to analyze the runtime of your CI.
-{% endhint %}
-
 For example, assuming a timeout of 4 hours:
 
 - At 3:00, Bob submits PR 456 to the MergeQueue.
@@ -34,10 +31,7 @@ For example, assuming a timeout of 4 hours:
 
 Configure how many PRs may test in parallel. A larger number may increase throughput, since more PRs are tested in parallel, but at the expense of CI, since more jobs are running in parallel. When the queue is at capacity, PRs will still be submitted to it, but they will not begin testing until a PR leaves the queue.
 
-{% hint style="info" %}
 If your testing workload contains some flaky tests, a deeper queue (i.e. a higher concurrency) may struggle. Running Merge in Parallel mode can help with this, as it will reduce the average depth of your merge queue, since all PRs won't be queued directly behind each other.
-{% endhint %}
-
 For example, assuming a concurrency of 3:
 
 - At 12:00, Alice submits PR 1000 to the MergeQueue, and it starts testing.

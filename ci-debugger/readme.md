@@ -6,8 +6,6 @@ Trunk CI Debugger (beta invite required) is available at [app.trunk.io](https://
 
 Similar to any traditional debugger, the Trunk CI Debugger, operates on breakpoints configured through the trunk web app. Each breakpoint is tracked with a unique id and is configured through a set of conditional rules. For example, you can specify that breakpoint 'foo' always triggers when the exit code of its command is non-zero (or failing).
 
-{% embed url="https://youtube.com/watch?t=17s&v=S_l-h-qg3YA" %}
-
 ### How does it work?
 
 At its most basic - the trunk ci debugger wraps the execution of whatever command you give it. This allows the debugger to break `on_enter` before running your command and `on_exit` after your command completes. This wrapper connects to the Trunk Service to determine in real time based on the conditional rules whether to trigger a breakpoint or continue execution.

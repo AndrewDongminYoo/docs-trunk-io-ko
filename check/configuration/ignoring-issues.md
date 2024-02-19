@@ -74,9 +74,7 @@ struct FooBar {
 };
 ```
 
-{% hint style="info" %}
 `trunk-ignore-all` is not required to be the first line of a file, because we recognize that other constructs (shebangs, front matter, docstrings) may need to take precedence.
-{% endhint %}
 
 ### Ignoring all issues in a code block
 
@@ -127,9 +125,7 @@ Every entry in `ignore` defines both a set of linters and a set of paths to igno
 
 <table><thead><tr><th width="101">Key</th><th>Value</th></tr></thead><tbody><tr><td>linters</td><td>List of linters (i.e. <code>[black, eslint]</code>) or the special <code>[ALL]</code> tag</td></tr><tr><td>paths</td><td>List of <a href="../reference/glob-path-pattern.md">glob paths</a>, relative to the root of the repo, to ignore. If a path begins with a <code>!</code> then it represents an inverse ignore. This means that any file matching that glob will not be ignored, even if matched by other globs.</td></tr></tbody></table>
 
-{% hint style="info" %}
 Trunk is `git`-aware, which means it ignores `gitignore'd` files by default.
-{% endhint %}
 
 ### Known Issues
 

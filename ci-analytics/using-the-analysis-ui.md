@@ -43,11 +43,9 @@ If you click on one of the data buckets or points on the graph, you can Zoom int
 
 <figure><img src="./image (24).png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
 **Tags**: Aggregation at the job level for GitHub workflows will implicitly shard against the 'runs-on' field of the GitHub workflow. For example, if a job was running on`ubuntu-latest` and later switched to a different runner set - a unique row will be created for each distinct runs-on match. \
 \
 When there is a name collision with different underlying tags, the unique tag will be surfaced in the view. This makes it possible, for example, to compare a runner's impact on your system's performance.
-{% endhint %}
 
 ### Runs View
 

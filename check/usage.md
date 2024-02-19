@@ -10,55 +10,29 @@ The `trunk` command line tool runs locally on your developer machine, right wher
 
 Run one of the following to install the `trunk` command line tool.
 
-{% tabs %}
-{% tab title="bash" %}
-
 ```bash
 curl https://get.trunk.io -fsSL | bash
 ```
-
-{% endtab %}
-
-{% tab title="bash (no prompts)" %}
 
 ```bash
 curl https://get.trunk.io -fsSL | bash -s -- -y
 ```
 
-{% endtab %}
-
-{% tab title="brew" %}
-
 ```bash
 brew install trunk-io
 ```
-
-{% endtab %}
-
-{% tab title="npm" %}
 
 ```bash
 npm install -D @trunkio/launcher
 ```
 
-{% endtab %}
-
-{% tab title="pnpm" %}
-
 ```bash
 pnpm add -D @trunkio/launcher
 ```
 
-{% endtab %}
-
-{% tab title="yarn" %}
-
 ```bash
 yarn add -D @trunkio/launcher
 ```
-
-{% endtab %}
-{% endtabs %}
 
 ## Initialize `trunk`
 
@@ -81,9 +55,7 @@ trunk fmt         # runs all the enabled formatters and auto-applies changes
 
 You can always find this list using `trunk check --help`.
 
-{% hint style="info" %}
 Trunk is git-aware. When you run `trunk check` it will **only run on files you've modified according to git**. To run on a sampling in your repo, run: `trunk check --sample 5`
-{% endhint %}
 
 ### check
 

@@ -44,9 +44,7 @@ merge:
 
 To use GitHub branch protection instead follow GitHub's instructions for [requiring status checks](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-status-checks-before-merging).
 
-{% hint style="info" %}
 Required statuses defined in the `.trunk/trunk.yaml` file take precedence over the GitHub required status checks from branch protection, as Trunk Merge will only pull the list of required statuses from one or the other - it will not combine them. If neither is defined the merge process will fail.
-{% endhint %}
 
 ### Configure a Push Triggered Workflow For Required Status Checks
 
@@ -92,24 +90,15 @@ Try making a simple change on a branch and submit it as PR in GitHub.
 
 Now trigger Trunk Merge to process this PR using either a comment on the PR in GitHub or using the Trunk CLI.
 
-{% tabs %}
-{% tab title="GitHub Pull Request View" %}
 Comment `/trunk merge` on a pull request
 
 <figure><img src="./image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="Trunk CLI" %}
-
 ```bash
 # Authenticate with trunk service
 $ trunk login
 # Queue pull request for merge
 $ trunk merge {pr-number}
 ```
-
-{% endtab %}
-{% endtabs %}
 
 If you have any problems with merge queueing PRs, take a look at the [branch protection](set-up-trunk-merge/advanced-settings.md#branch-protection) docs.
 

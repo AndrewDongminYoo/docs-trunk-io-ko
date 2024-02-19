@@ -22,11 +22,7 @@ Trunk provides a [Merge GitHub action](https://github.com/trunk-io/merge-action)
 
 #### Get your Organization API Token
 
-{% @supademo/embed demoId="LPJsDyJYAsyvUabvkphHK" url="https://app.supademo.com/demo/LPJsDyJYAsyvUabvkphHK" %}
-
 #### Store your Organization Token as a GitHub Secret
-
-{% @supademo/embed demoId="2UWXR9ccwhP4ng5-orZPG" url="https://app.supademo.com/demo/2UWXR9ccwhP4ng5-orZPG" %}
 
 #### Add merge action with Trunk Org Token
 

@@ -18,47 +18,14 @@ Authenticate to the API with an API key using the header `x-api-token`.
 
 You can find your API token in the [Trunk App](https://app.trunk.io).
 
-{% @supademo/embed demoId="BILCaBxa05Hkol0Ck4Z-y" url="https://app.supademo.com/demo/BILCaBxa05Hkol0Ck4Z-y" %}
-
 ## Endpoints
 
-{% swagger path="/trackEvent" summary="Track Events" method="post" baseUrl="https://api.trunk.io/v1/metrics" fullWidth="true" %}
-{% swagger-description %}
 The track events endpoint uploads event data about a CI run. Each event contains a start and end timestamp, metrics, tags, and an optional parent association ID.
-{% endswagger-description %}
-
-{% swagger-parameter in="header" name="Content-Type" required="true" type="String" %}
 application/json
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="x-api-token" type="String" required="true" %}
 Trunk API Token
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="repo" type="Object" required="true" %}
 The repository in which the CI Event ran. See [repo](api.md#repo) schema.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="events" type="Array" required="true" %}
 An array of event objects. See [event](api.md#event) schema.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="x-source" type="String" required="false" %}
 Name of the uploading client
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="Events were created successfully" %}
-
-{% endswagger-response %}
-
-{% swagger-response status="400: Bad Request" description="Request body is not formed correctly" %}
-
-{% endswagger-response %}
-
-{% swagger-response status="401: Unauthorized" description="Request is not authorized" %}
-
-{% endswagger-response %}
-{% endswagger %}
 
 #### Repo
 
@@ -104,8 +71,6 @@ Sequence object properties:
 
 #### Example Request
 
-{% code fullWidth="true" %}
-
 ```bash
 curl \
     -i \
@@ -114,95 +79,93 @@ curl \
 -H "x-source: curl-sample" \
     -H "x-api-token: {REDACTED}" \
     -d '{
-	"repo": {
-		"host": "github.com",
-		"owner": "trunk-io",
-		"name": "jenkins-plugin"
-	},
-	"events": [{
-			"id": "fba555ee-90ce-42ca-a60c-38d200e9290e",
-			"chainId": "b0ea8b0d-6574-4421-a63b-56f04eab9738",
-			"createdAt": 1694616487000,
-			"finishedAt": 1694615487000,
-			"conclusion": "SUCCESS",
-			"sequence": {
-				"platform": "Jenkins",
-				"kind": "pipeline",
-				"key": "test-pipeline",
-				"name": "Trying out a test pipeline",
-				"payload": {
-					"tags": [{
-						"k": "label",
-						"v": "self-hosted"
-					}]
-				}
-			},
-			"payload": {
-				"metrics": [{
-						"k": "duration_ms",
-						"v": 1000
-					},
-					{
-						"k": "api_latency",
-						"v": 500
-					}
-				],
-				"tags": [{
-						"k": "branch",
-						"v": "merge-PR-1"
-					},
-					{
-						"k": "sha",
-						"v": "88962a71bcfa92e5950670fc7e3f2b9f8d993b87"
-					}
-				]
-			}
-		},
-		{
-			"id": "test-workflow-a-1",
-			"chainId": "test-workflow-a-1",
-			"createdAt": 1694616487000,
-			"finishedAt": 1694615487000,
-			"conclusion": "SUCCESS",
-			"parent": {
-				"eventId": "fba555ee-90ce-42ca-a60c-38d200e9290e",
-				"chainId": "b0ea8b0d-6574-4421-a63b-56f04eab9738"
-			},
-			"sequence": {
-				"platform": "Jenkins",
-				"kind": "nested-pipeline",
-				"key": "test-pipeline/nested-pipeline",
-				"name": "Trying out a test nested pipeline",
-				"payload": {
-					"tags": [{
-						"k": "label",
-						"v": "self-hosted"
-					}]
-				}
-			},
-			"payload": {
-				"metrics": [{
-						"k": "duration_ms",
-						"v": 1000
-					},
-					{
-						"k": "api_latency",
-						"v": 500
-					}
-				],
-				"tags": [{
-						"k": "branch",
-						"v": "merge-PR-1"
-					},
-					{
-						"k": "sha",
-						"v": "88962a71bcfa92e5950670fc7e3f2b9f8d993b87"
-					}
-				]
-			}
-		}
-	]
+    "repo": {
+        "host": "github.com",
+        "owner": "trunk-io",
+        "name": "jenkins-plugin"
+    },
+    "events": [{
+            "id": "fba555ee-90ce-42ca-a60c-38d200e9290e",
+            "chainId": "b0ea8b0d-6574-4421-a63b-56f04eab9738",
+            "createdAt": 1694616487000,
+            "finishedAt": 1694615487000,
+            "conclusion": "SUCCESS",
+            "sequence": {
+                "platform": "Jenkins",
+                "kind": "pipeline",
+                "key": "test-pipeline",
+                "name": "Trying out a test pipeline",
+                "payload": {
+                    "tags": [{
+                        "k": "label",
+                        "v": "self-hosted"
+                    }]
+                }
+            },
+            "payload": {
+                "metrics": [{
+                        "k": "duration_ms",
+                        "v": 1000
+                    },
+                    {
+                        "k": "api_latency",
+                        "v": 500
+                    }
+                ],
+                "tags": [{
+                        "k": "branch",
+                        "v": "merge-PR-1"
+                    },
+                    {
+                        "k": "sha",
+                        "v": "88962a71bcfa92e5950670fc7e3f2b9f8d993b87"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "test-workflow-a-1",
+            "chainId": "test-workflow-a-1",
+            "createdAt": 1694616487000,
+            "finishedAt": 1694615487000,
+            "conclusion": "SUCCESS",
+            "parent": {
+                "eventId": "fba555ee-90ce-42ca-a60c-38d200e9290e",
+                "chainId": "b0ea8b0d-6574-4421-a63b-56f04eab9738"
+            },
+            "sequence": {
+                "platform": "Jenkins",
+                "kind": "nested-pipeline",
+                "key": "test-pipeline/nested-pipeline",
+                "name": "Trying out a test nested pipeline",
+                "payload": {
+                    "tags": [{
+                        "k": "label",
+                        "v": "self-hosted"
+                    }]
+                }
+            },
+            "payload": {
+                "metrics": [{
+                        "k": "duration_ms",
+                        "v": 1000
+                    },
+                    {
+                        "k": "api_latency",
+                        "v": 500
+                    }
+                ],
+                "tags": [{
+                        "k": "branch",
+                        "v": "merge-PR-1"
+                    },
+                    {
+                        "k": "sha",
+                        "v": "88962a71bcfa92e5950670fc7e3f2b9f8d993b87"
+                    }
+                ]
+            }
+        }
+    ]
 }'
 ```
-
-{% endcode %}

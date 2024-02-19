@@ -8,55 +8,29 @@ description: Learn more about the Trunk CLI
 
 To use `trunk` locally, install via:
 
-{% tabs %}
-{% tab title="bash" %}
-
 ```bash
 curl https://get.trunk.io -fsSL | bash
 ```
-
-{% endtab %}
-
-{% tab title="bash (no prompts)" %}
 
 ```bash
 curl https://get.trunk.io -fsSL | bash -s -- -y
 ```
 
-{% endtab %}
-
-{% tab title="brew" %}
-
 ```bash
 brew install trunk-io
 ```
-
-{% endtab %}
-
-{% tab title="npm" %}
 
 ```bash
 npm install -D @trunkio/launcher
 ```
 
-{% endtab %}
-
-{% tab title="pnpm" %}
-
 ```bash
 pnpm add -D @trunkio/launcher
 ```
 
-{% endtab %}
-
-{% tab title="yarn" %}
-
 ```bash
 yarn add -D @trunkio/launcher
 ```
-
-{% endtab %}
-{% endtabs %}
 
 ### What can it do?
 

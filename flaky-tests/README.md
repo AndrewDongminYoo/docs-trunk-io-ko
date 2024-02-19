@@ -1,8 +1,6 @@
 # Flaky Tests
 
-{% hint style="warning" %}
 Flaky Tests is available by invite only. Please [**contact**](https://trunk.io/about) us if you would like to try the product early.
-{% endhint %}
 
 ## Monitoring Flaky Tests
 
