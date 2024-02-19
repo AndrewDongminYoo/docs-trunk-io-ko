@@ -30,21 +30,21 @@ For example, consider a team of 19 that owns many repositories. Assume that they
 
 For the first billing cycle, their invoice would look something like this:
 
-![](https://files.readme.io/63bc876-Screen_Shot_2023-01-17_at_8.01.43_PM.png)
+![ ](https://files.readme.io/63bc876-Screen_Shot_2023-01-17_at_8.01.43_PM.png)
 
 At the beginning of the next billing cycle, they have exceeded their [free tier usage](billing.md#free-plans-and-trials) of CI Analytics. In that case, we would see three invoice line items; one for Merge, one for Check, and another for CI Analytics. The quantity per product would also be reflected with the [latest user counts](billing.md#calculating-user-counts).
 
 ### Free Plans and Trials
 
-**Free Plans**
+#### **Free Plans**
 
 Trunk offers a free plan to experiment with each of our products. Each product has a free-tier limit; after exceeding this limit, the product is automatically added to any ongoing subscription, and will be billed on the next cycle. If there is no ongoing subscription, we prompt you to upgrade to a paying subscription.
 
 For example, this user is already paying for 19 users for Check and Merge, but was not paying for CI Analytics. On the next billing cycle, the user will start to be charged for CI Analytics.
 
-![](https://files.readme.io/f12daf8-Screen_Shot_2023-01-17_at_8.04.29_PM.png)
+![ ](https://files.readme.io/f12daf8-Screen_Shot_2023-01-17_at_8.04.29_PM.png)
 
-**Free Tier Limits**
+#### **Free Tier Limits**
 
 Similar to \[calculating user counts]../administration/billing.md#calculating-user-counts), our free tier limits are calculated based on a 30 day rolling window.
 
@@ -56,7 +56,7 @@ Similar to \[calculating user counts]../administration/billing.md#calculating-us
 
 CI Analytics is calculated slightly differently; we ingest 14 days of data for free.
 
-**Trials**
+#### **Trials**
 
 Trunk offers you to trial products, either standalone or alongside a paying subscription. To enable a trial, please contact [sales@trunk.io](mailto:sales@trunk.io). At the end of a trial, the product will be automatically added to any ongoing paying subscription; to extend or cancel the trial, please contact [sales@trunk.io](mailto:sales@trunk.io).
 
@@ -64,7 +64,7 @@ Trunk offers you to trial products, either standalone or alongside a paying subs
 
 You can edit your payment details by navigating to Settings > Billing, and clicking on the pencil icon of the credit card. Trunk accepts both Credit Card and ACH; if you have a different preferred payment method, please contact us at sales@trunk.io
 
-![](https://files.readme.io/d7adf4f-Screen_Shot_2023-01-17_at_8.08.17_PM.png)
+![ ](https://files.readme.io/d7adf4f-Screen_Shot_2023-01-17_at_8.08.17_PM.png)
 
 ### Cancelling a Plan
 

@@ -12,39 +12,51 @@ Run one of the following to install the `trunk` command line tool.
 
 {% tabs %}
 {% tab title="bash" %}
+
 ```bash
 curl https://get.trunk.io -fsSL | bash
 ```
+
 {% endtab %}
 
 {% tab title="bash (no prompts)" %}
+
 ```bash
 curl https://get.trunk.io -fsSL | bash -s -- -y
 ```
+
 {% endtab %}
 
 {% tab title="brew" %}
+
 ```bash
 brew install trunk-io
 ```
+
 {% endtab %}
 
 {% tab title="npm" %}
+
 ```bash
 npm install -D @trunkio/launcher
 ```
+
 {% endtab %}
 
 {% tab title="pnpm" %}
+
 ```bash
 pnpm add -D @trunkio/launcher
 ```
+
 {% endtab %}
 
 {% tab title="yarn" %}
+
 ```bash
 yarn add -D @trunkio/launcher
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -149,4 +161,3 @@ trunk upgrade
 ```
 
 `trunk upgrade` will also recommend new tools that have become applicable since the last time your repository was scanned. This can be a result of using new technologies in your repository or trunk itself adding support for more tools. If you don't like a particular recommendation you can run `trunk check disable <linter>` to teach trunk not to recommend it.
-

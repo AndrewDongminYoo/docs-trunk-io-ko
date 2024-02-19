@@ -10,18 +10,18 @@ Trunk Check's linter integrations are fully configurable. This means that you ca
 
 Running `trunk check` tells `trunk` to do the following:
 
-* compute the set of modified files (by comparing the current working tree and `upstream-ref`,\
+- compute the set of modified files (by comparing the current working tree and `upstream-ref`,\
   usually your `main` or `master` branch)
-* compute the set of lint actions to run based on the modified files
-  * each enabled linter is invoked once per [applicable modified file](./#applicable-filetypes); for\
+- compute the set of lint actions to run based on the modified files
+  - each enabled linter is invoked once per [applicable modified file](./#applicable-filetypes); for\
     example, if `pylint` and `flake8` are enabled, they will both be run on every modified `python` file but not on any modified `markdown` files
-  * every lint action also will have a corresponding _upstream_ lint action (i.e. the linter will\
+  - every lint action also will have a corresponding _upstream_ lint action (i.e. the linter will\
     also be run on the upstream version of the file, so that we can determine which issues already\
     exist in your repository)
-* [download](./#making-installs-hermetic) and install any newly enabled linters/formatters
-* execute uncached lint actions
-* parse linter [outputs](./#output-types) into configurable output types
-* determine which lint issues are new, existing, or fixed
+- [download](./#making-installs-hermetic) and install any newly enabled linters/formatters
+- execute uncached lint actions
+- parse linter [outputs](./#output-types) into configurable output types
+- determine which lint issues are new, existing, or fixed
 
 ### [Output Types](output-types.md)
 
@@ -84,8 +84,8 @@ lint:
 
 This tells Trunk that files matching either of the following criteria should be considered `python` files:
 
-* the extension is any of `.py`, `.py2`, or `.py3` (e.g. `lib.py`)
-* the shebang is any of `python` or `python3` (e.g. `#!/usr/bin/env python3`)
+- the extension is any of `.py`, `.py2`, or `.py3` (e.g. `lib.py`)
+- the shebang is any of `python` or `python3` (e.g. `#!/usr/bin/env python3`)
 
 #### Command
 
@@ -182,8 +182,8 @@ Linters often use different exit codes to categorize the outcome. For instance, 
 
 Trunk supports specifying either `success_codes` or `error_codes` for a linter:
 
-* if `success_codes` are specified, Trunk expects a successful linter invocation (which may or may not find issues) to return one of the specified `success_codes`;
-* if `error_codes` are specified, Trunk expects a successful linter invocation to return any exit\
+- if `success_codes` are specified, Trunk expects a successful linter invocation (which may or may not find issues) to return one of the specified `success_codes`;
+- if `error_codes` are specified, Trunk expects a successful linter invocation to return any exit\
   code which is _not_ one of the specified `error_codes`.
 
 `markdownlint`, for example, has `success_codes: [0, 1]` in its configuration.
@@ -353,17 +353,17 @@ lint:
 
 This tells Trunk that, for `lorem-linter`:
 
-* you want to run version `4.0.2` on `javascript` and `typescript` files,
-* it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with\
+- you want to run version `4.0.2` on `javascript` and `typescript` files,
+- it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with\
   `4.0.2`), and
-* the download consists of a single executable binary, since `executable: true` is set;
+- the download consists of a single executable binary, since `executable: true` is set;
 
 for `ipsum-linter`:
 
-* you want to run version `0.1.6` on `rust` files,
-* it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with\
+- you want to run version `0.1.6` on `rust` files,
+- it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with\
   `0.1.6`), and
-* the download is a compressed archive, the linter binary is `strip_components: 2` directories deep\
+- the download is a compressed archive, the linter binary is `strip_components: 2` directories deep\
   inside the uncompressed archive, and `trunk` should automatically extract and unpack the linter\
   from the archive.
 
@@ -389,10 +389,10 @@ This will now create a hermetic directory in `~/.cache/trunk/linters/fizz-buzz` 
 
 Lint sessions are always associated with exactly one of the following session types:
 
-* `ci`: triggered by a `CI` run, i.e. `trunk check --ci` or when running inside the GitHub action,
-* `cli`: triggered by a human or script running `trunk check`,
-* `lsp`: triggered by VSCode, or
-* `monitor`: triggered by background linting.
+- `ci`: triggered by a `CI` run, i.e. `trunk check --ci` or when running inside the GitHub action,
+- `cli`: triggered by a human or script running `trunk check`,
+- `lsp`: triggered by VSCode, or
+- `monitor`: triggered by background linting.
 
 You can use `run_when` to specify which session types you want to run a linter in; for example, to always disable a linter during CI:
 

@@ -14,8 +14,8 @@ Linters usually operate only on source code and have no awareness of your commit
 
 Constantly re-running linters on all source code, the default mode of operation for most linters, is very time-consuming and gets frustrating fast when you know that you've only modified a few functions in these files, but the linters are re-linting all these other hundreds of files that you haven't modified. `trunk check` caches results so that you don't have to wait for linter work that's already been done, which is a surprisingly difficult thing to do:
 
-* We need to guarantee that results are _reproducible_, which we achieve by sandboxing linter runs, similar to how Google's [Bazel](https://bazel.build/) project sandboxes compiler actions.
-* We need to intelligently invalidate/ignore cache entries: if `fileA` is modified and check results for `fileB` depend on the contents of `fileA`, then check results for `fileB` from prior to `fileA`'s modification cannot be reused. We solve this by keying cache entries on the linter configuration, the actual linter target file, and all dependencies of said target file.
+- We need to guarantee that results are _reproducible_, which we achieve by sandboxing linter runs, similar to how Google's [Bazel](https://bazel.build/) project sandboxes compiler actions.
+- We need to intelligently invalidate/ignore cache entries: if `fileA` is modified and check results for `fileB` depend on the contents of `fileA`, then check results for `fileB` from prior to `fileA`'s modification cannot be reused. We solve this by keying cache entries on the linter configuration, the actual linter target file, and all dependencies of said target file.
 
 ### Performance
 

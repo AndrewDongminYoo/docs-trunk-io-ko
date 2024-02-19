@@ -20,19 +20,18 @@ lint:
           success_codes: [0, 1]
           read_output_from: stdout
           parser:
-            run:
-              "sed -E 's/(.*):([0-9]+):(.*)/\\1:\\2:0: [error] Found todo in \"\\3\" (found-todo)/'"
+            run: "sed -E 's/(.*):([0-9]+):(.*)/\\1:\\2:0: [error] Found todo in \"\\3\" (found-todo)/'"
 ```
 
 The execution model that `trunk` follows for a parser is that it will:
 
-* execute the linter's `run` field, asserting that either:
-  * the linter's exit code is in `success_codes`, or
-  * the linter's exit code is not in `error_codes`;
-* execute `parser.run`,
-  * with the `read_output_from` of the linter execution fed to `parser.run` as `stdin`,
-  * assert that the exit code of the parser is 0, and then
-* use `output` to determine how it should parse the parser's `stdout`.
+- execute the linter's `run` field, asserting that either:
+  - the linter's exit code is in `success_codes`, or
+  - the linter's exit code is not in `error_codes`;
+- execute `parser.run`,
+  - with the `read_output_from` of the linter execution fed to `parser.run` as `stdin`,
+  - assert that the exit code of the parser is 0, and then
+- use `output` to determine how it should parse the parser's `stdout`.
 
 Note that you can also set `parser.runtime` to [`node`](custom-parsers.md#node) or [`python`](custom-parsers.md#python) so that you can write your parser in Javascript or Python instead, if you so prefer! You can find plenty examples of python parsers in our [plugins repo](https://github.com/trunk-io/plugins).
 

@@ -7,15 +7,15 @@ description: Configuration to avoid duplicate runtimes
 If you would like to avoid having two copies of a specific runtime; For example, the system-managed version, and the Trunk-managed version, then you can always format your `trunk.yaml` file accordingly.
 
 ```yaml
-runtimes: 
-  enabled: 
+runtimes:
+  enabled:
     - go@x.y.z
 
 # or
 runtimes:
   enabled:
     - go@>=x.y.z
-  definitions: 
+  definitions:
     - type: go
       system_version: allowed
 ```

@@ -48,9 +48,9 @@ If you want to override a repo-wide setting just for your Windows machine, you c
 
 We intend to bring full feature support to Windows for Trunk. Currently, the following features are supported:
 
-* [Trunk Check](../../)
-* Non-interactive [Trunk Actions](../actions/) and [git-hooks](../actions/git-hooks.md)
-* [VSCode](../../ide-integration/vs-code.md)
+- [Trunk Check](../../)
+- Non-interactive [Trunk Actions](../actions/) and [git-hooks](../actions/git-hooks.md)
+- [VSCode](../../ide-integration/vs-code.md)
 
 ### Unsupported Linters (as of Plugins v1.2.0)
 

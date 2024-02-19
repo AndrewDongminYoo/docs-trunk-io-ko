@@ -4,13 +4,13 @@
 
 Your CI machine needs to have the following tools installed:
 
-* Bash,
-* Curl
+- Bash,
+- Curl
 
 You will need to have ports open for:
 
-* api.trunk.io:443
-* api.trunk.io:8443
+- api.trunk.io:443
+- api.trunk.io:8443
 
 ### Create a trunk organization
 
@@ -33,6 +33,7 @@ Here is an a Buildkite workflow. Replace the three values in the example with th
 Here the TRUNK_TOKEN is pasted directly. In a real environment, it should be managed as a [secret](https://buildkite.com/docs/pipelines/secrets).
 
 {% code overflow="wrap" %}
+
 ```yaml
 steps:
   - label: "Installing Trunk"
@@ -46,4 +47,5 @@ steps:
     key: test
     depends_on: build
 ```
+
 {% endcode %}

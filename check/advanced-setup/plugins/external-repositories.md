@@ -56,7 +56,7 @@ trunk check $(git grep -li todo | head -n 10)
 
 which will show you something like this:
 
-```
+```log
 .eslintrc.yaml:19:0
   19:0  high  Found todo in "  # TODO(chris): Figure out why this causes a massive slowdown ... .trunk/dev-out/O1F.txt  local.todo-finder/found-todo
  101:0  high  Found todo in "  node/no-unpublished-import: off # TODO: do we want this?"                                local.todo-finder/found-todo

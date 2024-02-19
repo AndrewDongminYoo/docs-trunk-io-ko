@@ -1,5 +1,5 @@
 ---
-description: 'Meta-linter for over 100 code checking tools: CLI, IDE, and on the web.'
+description: "Meta-linter for over 100 code checking tools: CLI, IDE, and on the web."
 ---
 
 # Check
@@ -10,12 +10,12 @@ description: 'Meta-linter for over 100 code checking tools: CLI, IDE, and on the
 
 Check handles:
 
-* Autoformatting code, config files, IaC, and more
-* Linting
-* Static Analysis
-* Optimizing images
-* Flagging leaked secrets
-* Flagging open-source dependencies with vulnerabilities
+- Autoformatting code, config files, IaC, and more
+- Linting
+- Static Analysis
+- Optimizing images
+- Flagging leaked secrets
+- Flagging open-source dependencies with vulnerabilities
 
 ## What problems does Trunk Check solve?
 
@@ -57,14 +57,14 @@ PR iterations kill productivity. Every time a dev updates a PR, even trivially, 
 
 ## Standout Features
 
-* does everything from formatting, to linting, to security checking, to optimizing images
-* config-as-code (`.trunk/trunk.yaml`)
-* caching
-* pre-existing issue detection
-* a daemon & language server
-* [githooks management](advanced-setup/actions/git-hooks.md)
-* cli available ([docs](advanced-setup/cli/))
-* a [web app](https://app.trunk.io/) for repo stats and slack notifications
+- does everything from formatting, to linting, to security checking, to optimizing images
+- config-as-code (`.trunk/trunk.yaml`)
+- caching
+- pre-existing issue detection
+- a daemon & language server
+- [githooks management](advanced-setup/actions/git-hooks.md)
+- cli available ([docs](advanced-setup/cli/))
+- a [web app](https://app.trunk.io/) for repo stats and slack notifications
 
 ## I run a large eng org. Why should I use Check?
 

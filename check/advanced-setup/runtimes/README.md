@@ -8,7 +8,7 @@ Trunk makes it easy for you to run tools (such as linters and actions) because, 
 
 Importantly, just like how Trunk by design requires you to version your tools, i.e. specify which version of `golangci-lint` and `rubocop` is enabled in your repository at a given commit, Trunk also versions your runtimes. This means that you can stop asking questions like "wait, which version of Go are you using?" and "how do I choose a Ruby version to install on this new Jenkins runner?"; instead, all you have to do is look at the `runtimes` section in your `.trunk/trunk.yaml`, and you know which version of which runtime Trunk will use for a tool at any given moment:
 
-```
+```yaml
 runtimes:
   enabled:
     - go@1.18.3

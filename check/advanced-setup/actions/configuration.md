@@ -105,11 +105,11 @@ nid: my-action
 or equivalently:
 
 ```yaml
- id: my-action
- triggers:
-    # run every 2 hours
-    - schedule:
-        cron: "0 0 */2 * * ?"
+id: my-action
+triggers:
+  # run every 2 hours
+  - schedule:
+      cron: "0 0 */2 * * ?"
 ```
 
 #### File-based triggers

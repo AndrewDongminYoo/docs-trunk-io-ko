@@ -8,26 +8,26 @@ description: Common reference points about Trunk Merge
 
 We offer a few mechanisms for submitting a PR for to the Merge Graph:
 
-* Posting a GitHub comment `/trunk merge` on a pull request.
-* Ticking the checkbox in the Trunk comment on a pull request.
-* Clicking the "Retry" button on the WebApp.
-* Using the `trunk` CLI:
+- Posting a GitHub comment `/trunk merge` on a pull request.
+- Ticking the checkbox in the Trunk comment on a pull request.
+- Clicking the "Retry" button on the WebApp.
+- Using the `trunk` CLI:
 
-```
+```sh
 trunk login
 trunk merge <pr-number>
 ```
 
 We offer similar commands for cancellation.
 
-* Posting a GitHub comment `/trunk cancel` on a pull request.
-* Cancellation from the WebApp:
+- Posting a GitHub comment `/trunk cancel` on a pull request.
+- Cancellation from the WebApp:
 
 <figure><img src="./image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
-* Using the `trunk` CLI:
+- Using the `trunk` CLI:
 
-```
+```sh
 trunk login
 trunk merge cancel <pr-number>
 ```

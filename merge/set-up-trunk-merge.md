@@ -32,12 +32,12 @@ Trunk needs to know which _status checks_ must pass while testing pull requests 
 To specify using the `.trunk/trunk.yaml` file, set the `merge.required_statuses` to the name(s) of the [GitHub status checks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks) or [jobs](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#jobs) that must pass:
 
 ```yaml
-version: 0.1 
+version: 0.1
 cli:
   version: 1.16.0
-merge: 
+merge:
   required_statuses:
-    - Trunk Check 
+    - Trunk Check
     - Unit tests & test coverage
     # Add more required statuses here
 ```
@@ -81,7 +81,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-    # Add more steps here..    
+    # Add more steps here..
 ```
 
 Now you are ready to submit your first PR. Let's go!
@@ -90,7 +90,7 @@ Now you are ready to submit your first PR. Let's go!
 
 Try making a simple change on a branch and submit it as PR in GitHub.
 
-Now trigger Trunk Merge to process this PR using either a comment on the PR  in GitHub or using the Trunk CLI.
+Now trigger Trunk Merge to process this PR using either a comment on the PR in GitHub or using the Trunk CLI.
 
 {% tabs %}
 {% tab title="GitHub Pull Request View" %}
@@ -100,12 +100,14 @@ Comment `/trunk merge` on a pull request
 {% endtab %}
 
 {% tab title="Trunk CLI" %}
+
 ```bash
 # Authenticate with trunk service
 $ trunk login
 # Queue pull request for merge
 $ trunk merge {pr-number}
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -115,10 +117,10 @@ If you have any problems with merge queueing PRs, take a look at the [branch pro
 
 Once a PR is submitted to the Merge queue, it will start as _Not Ready_ until all of the required conditions to submit it are met. Once ready, the Merge Queue will pick it up and run the tests. Once the tests pass, the PR may still need to wait for upstream PRs in the queue to finish their testing. Once the remaining upstream PRs are complete, the PR will be merged and then removed from the Merge Queue. If a PR fails or is canceled then it will go to the failed or canceled state. Read more about [PR States](reference.md#pr-states).
 
-## Success!
+## Success
 
 Now Trunk Merge is setup with your repo. Whenever a PR is pushed to your merge branch it will be safely tested and automatically merged when all tests pass, regardless of the order they were pushed in.
 
 ### Next Steps
 
-You can configure [parallel mode](configuration.md) for potential performance gains, read how to [cancel pull requests](reference.md#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](set-up-trunk-merge/integration-for-slack.md).  If you are using Bazel you may want to [further customize](set-up-trunk-merge/merge-+-bazel.md) it for parallel mode.
+You can configure [parallel mode](configuration.md) for potential performance gains, read how to [cancel pull requests](reference.md#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](set-up-trunk-merge/integration-for-slack.md). If you are using Bazel you may want to [further customize](set-up-trunk-merge/merge-+-bazel.md) it for parallel mode.

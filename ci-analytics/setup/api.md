@@ -105,6 +105,7 @@ Sequence object properties:
 #### Example Request
 
 {% code fullWidth="true" %}
+
 ```bash
 curl \
     -i \
@@ -203,4 +204,5 @@ curl \
 	]
 }'
 ```
+
 {% endcode %}

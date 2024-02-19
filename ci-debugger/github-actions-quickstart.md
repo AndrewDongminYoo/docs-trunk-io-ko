@@ -4,13 +4,13 @@
 
 Your CI machine needs to have the following tools installed:
 
-* Bash,
-* Curl
+- Bash,
+- Curl
 
 You will need to have ports open for:
 
-* api.trunk.io:443
-* api.trunk.io:8443
+- api.trunk.io:443
+- api.trunk.io:8443
 
 ### Create a trunk organization
 

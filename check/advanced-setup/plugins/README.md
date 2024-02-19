@@ -32,19 +32,19 @@ The root `plugin.yaml` file may also have a `required_trunk_version` field which
 
 To add a plugin from GitHub:
 
-```
+```sh
 trunk plugins add https://github.com/trunk-io/plugins --id=trunk
 ```
 
 To add a plugin from GitHub at a specific version:
 
-```
+```sh
 trunk plugins add https://github.com/trunk-io/plugins v1.2.6 --id=trunk
 ```
 
 To add a plugin from a local repository:
 
-```
+```sh
 trunk plugins add /home/user/self/hello-world --id=hello-world
 ```
 

@@ -6,12 +6,9 @@ With the Trunk app for Slack, you can easily get notifications from all of your 
 
 To receive notifications and/or interact with Trunk from Slack, an admin needs to add Trunk to your organization's Slack workspace. To do this:
 
-1. Navigate to [https://app.trunk.io](https://app.trunk.io). Select the repo you would like to Manage. Click "Settings" > "Connect"\\
+1. Navigate to [https://app.trunk.io](https://app.trunk.io). Select the repo you would like to Manage. Click "Settings" > "Connect" <figure><img src="https://files.readme.io/14d4355-image.png" alt=""><figcaption></figcaption></figure>
 
-    <figure><img src="https://files.readme.io/14d4355-image.png" alt=""><figcaption></figcaption></figure>
-2. This will open a window where you can sign in to your Slack team.
-
-    <figure><img src="./PermissinoPage.png" alt="" width="375"><figcaption></figcaption></figure>
+2. This will open a window where you can sign in to your Slack team. <figure><img src="./PermissinoPage.png" alt="" width="375"><figcaption></figcaption></figure>
 
 3. Once you press "Allow," Trunk will connect to your Slack automatically and begin pushing updates to the channel you have selected.
 
@@ -21,10 +18,12 @@ Now that you've connected your Slack account with Trunk, you will choose the typ
 
 {% tabs %}
 {% tab title="trunk merge" %}
+
 <figure><img src="./MergeOptions.png" alt=""><figcaption><p>Configure notifications for <code>trunk merge</code></p></figcaption></figure>
 {% endtab %}
 
 {% tab title="trunk check" %}
+
 <figure><img src="./CheckOptions.png" alt=""><figcaption><p>Configure notifications for <code>trunk check</code></p></figcaption></figure>
 {% endtab %}
 {% endtabs %}

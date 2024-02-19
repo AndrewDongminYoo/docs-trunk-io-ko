@@ -35,11 +35,11 @@ Starting with CLI version `1.18.0`, you can do so by running `trunk shellhooks i
 
 Supported shells:
 
-* bash
-* zsh
-* tcsh
-* fish
-* elvish
+- bash
+- zsh
+- tcsh
+- fish
+- elvish
 
 For organization that want to require the use of the hooks, they can add to the config file:
 

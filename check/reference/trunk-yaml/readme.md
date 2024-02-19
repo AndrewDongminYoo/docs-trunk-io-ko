@@ -6,7 +6,7 @@ description: trunk.yaml specification
 
 Trunk is controlled by the `.trunk/trunk.yaml` file in your repository.
 
-```
+```log
 /your_repo
 ├── .trunk
 │   └── trunk.yaml
@@ -98,9 +98,9 @@ In addition to specifying `version`, `cli` allows you to specify default command
 
 Some examples using the configuration above:
 
-* `trunk check` resolves to `trunk check -y --monitor=true`
-* `trunk check -n` resolves to `trunk check -n --monitor=true`
-* `trunk fmt` resolves to `trunk fmt -y --monitor=true`
+- `trunk check` resolves to `trunk check -y --monitor=true`
+- `trunk check -n` resolves to `trunk check -n --monitor=true`
+- `trunk fmt` resolves to `trunk fmt -y --monitor=true`
 
 ## `repo`
 

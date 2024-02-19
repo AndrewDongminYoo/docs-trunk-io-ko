@@ -33,8 +33,7 @@ report:
       HOME: /home/horton
       PATH: /home/horton/.cache/trunk/linters/node/16.14.2/bin:/home/horton/.cache/trunk/linters/prettier/2.3.2-368f87d0e434ae207c0a3622371f91cc/node_modules/.bin
     run_from: /tmp/trunk-Bi6hWP
-    rerun:
-      env -i -C /tmp/trunk-Bi6hWP HOME=/home/horton
+    rerun: env -i -C /tmp/trunk-Bi6hWP HOME=/home/horton
       PATH=/home/horton/.cache/trunk/linters/node/16.14.2/bin:/home/horton/.cache/trunk/linters/prettier/2.3.2-368f87d0e434ae207c0a3622371f91cc/node_modules/.bin
       /home/horton/.cache/trunk/linters/prettier/2.3.2-368f87d0e434ae207c0a3622371f91cc/node_modules/.bin/prettier
       --stdin-filepath trunk/hello_world.html

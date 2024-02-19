@@ -4,13 +4,13 @@
 
 Your CI machine needs to have the following tools installed:
 
-* Bash,
-* Curl
+- Bash,
+- Curl
 
 You will need to have ports open for:
 
-* api.trunk.io:443
-* api.trunk.io:8443
+- api.trunk.io:443
+- api.trunk.io:8443
 
 ### Create a trunk organization
 
@@ -33,12 +33,13 @@ Here is an example GitLab workflow. Replace the three values in the example with
 Here the TRUNK_TOKEN is pasted directly. In a real environment, it should be managed as a secret.
 
 {% code overflow="wrap" %}
+
 ```yaml
-stages:          # List of stages for jobs, and their order of execution
+stages: # List of stages for jobs, and their order of execution
   - test
 
-unit-test-job:   # This job runs in the test stage.
-  stage: test    # It only starts when the job in the build stage completes successfully.
+unit-test-job: # This job runs in the test stage.
+  stage: test # It only starts when the job in the build stage completes successfully.
   variables:
     TRUNK_TOKEN: <INSERT YOUR TRUNK TOKEN HERE [1]>
   script:
@@ -49,4 +50,5 @@ unit-test-job:   # This job runs in the test stage.
     - trunk breakpoint --org=<INSERT YOUR ORG NAME HERE [2]> --id=<Breakpoint Name [3]> -- /bin/false
     - echo "Done"
 ```
+
 {% endcode %}

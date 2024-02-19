@@ -18,6 +18,6 @@ The launcher can be installed on a machine (`/usr/local/bin`) or committed in yo
 
 As needed `trunk` will download and cache components onto a machine for use. The cache will contain the `trunk` binary itself (including multiple versions as needed by the machine), the linters/actions enabled in trunk-managed repositories, and the requisite runtimes needed to run those tools. The location of the Trunk cache is user configurable and honors the following environment variables:
 
-* `$TRUNK_CACHE`
-* `$XDG_CACHE_HOME/trunk`
-* `$HOME/.cache/trunk`
+- `$TRUNK_CACHE`
+- `$XDG_CACHE_HOME/trunk`
+- `$HOME/.cache/trunk`

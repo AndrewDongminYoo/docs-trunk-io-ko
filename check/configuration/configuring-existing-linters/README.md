@@ -59,7 +59,7 @@ Trunk will build needed compilation pre-requisites before invoking `clang-tidy` 
 
 You can generate a local compilation database by running `trunk generate-compile-commands`.
 
-**Finding the bazel binary**
+##### **Finding the bazel binary**
 
 Trunk will search for the bazel binary in two ways.
 
@@ -96,11 +96,11 @@ Clippy is distributed with rust itself, so specify your rust version for your cl
 
 Detekt is usually invoked through gradle, which allows specifying additional configuration in `build.gradle`. We do not yet automatically parse your Gradle scripts to infer your `detekt` configuration; instead, what we do is this:
 
-* `detekt` invokes [`detekt-cli`](https://detekt.github.io/detekt/cli.html) with the\
+- `detekt` invokes [`detekt-cli`](https://detekt.github.io/detekt/cli.html) with the\
   `--build-upon-default-config` flag (this appears to be\
-  [more common](https://cs.github.com/?q=%2FbuildUponDefaultConfig.\*%28true%29%2F+detekt) than the\
+  [more common](https://cs.github.com/?q=%2FbuildUponDefaultConfig.*%28true%29%2F+detekt) than the\
   alternative)
-* `detekt-explicit` invokes [`detekt-cli`](https://detekt.github.io/detekt/cli.html) without the\
+- `detekt-explicit` invokes [`detekt-cli`](https://detekt.github.io/detekt/cli.html) without the\
   `--build-upon-default-config` flag
 
 You will also need to provide a valid detekt config as `.detekt.yaml` (an empty `.detekt.yaml` is valid, if you don't want to configure `detekt`); if you already have a detekt config, then you can symlink it like so:

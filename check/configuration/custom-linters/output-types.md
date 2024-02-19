@@ -99,8 +99,8 @@ Trunk supports several different generic output types. If your linter doesn't co
 
 `output: pass_fail` linters find either:
 
-* no issues in a file, indicated by exiting with `exit_code=0`, or
-* a single file-level issue in a file, whose message is the linter's `stdout`, indicated by exiting\
+- no issues in a file, indicated by exiting with `exit_code=0`, or
+- a single file-level issue in a file, whose message is the linter's `stdout`, indicated by exiting\
   with `exit_code=1`.
 
 > Note: Exiting with `exit_code=1` but writing nothing to `stdout` is considered to be a linter tool failure.
@@ -113,28 +113,28 @@ Trunk supports several different generic output types. If your linter doesn't co
 
 `regex` supports capturing strings from a linter output for the following named capture groups:
 
-* `path`: file path (required)
-* `line`: line number
-* `col`: column number
-* `severity`: one of `allow`, `deny`, `disabled`, `error`, `info`, `warning`
-* `code`: linter diagnostic code
-* `message`: description
+- `path`: file path (required)
+- `line`: line number
+- `col`: column number
+- `severity`: one of `allow`, `deny`, `disabled`, `error`, `info`, `warning`
+- `code`: linter diagnostic code
+- `message`: description
 
 For example, the output
 
-```
+```log
 .trunk/trunk.yaml:7:81: [error] line too long (82 > 80 characters) (line-length)
 ```
 
 can be parsed with the regular expression
 
-```
+```regex
 ((?P<path>.*):(?P<line>\d+):(?P<col>\d+): \[(?P<severity>.*)\] (?P<message>.*) \((?P<code>.*)\))
 ```
 
 and would result in a `trunk` diagnostic that looks like this:
 
-```
+```log
 7:81  high    line too long (82 > 80 characters)      regex-linter/line-length
 ```
 

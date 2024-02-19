@@ -20,8 +20,8 @@ Path patterns in Trunk configuration are always relative to the repo root. Every
 
 Some examples:
 
-* `bar` non-recursively matches every file in the directory `bar/`, including `bar/hello.cpp`, `bar/h.cpp`, and `bar/h.zip`, but not `bar/zap/hi.png`
-* `foo/bar.txt` matches only a single file named `bar.txt` in the `foo` subdirectory
-* `foo/*.txt` matches every file in the foo subdirectory that ends with `.txt`
-* `bar/h*.c*` matches every files in the bar subdirectory that starts with an `h` and also contains the substring `.c`, including `bar/hello.cpp` and `bar/h.cpp`, but not `bar/h.zip`
-* `bar/**` recursively matches every file in the directory `bar`, including `bar/hello.cp` as well as `bar/zap/hi.png`
+- `bar` non-recursively matches every file in the directory `bar/`, including `bar/hello.cpp`, `bar/h.cpp`, and `bar/h.zip`, but not `bar/zap/hi.png`
+- `foo/bar.txt` matches only a single file named `bar.txt` in the `foo` subdirectory
+- `foo/*.txt` matches every file in the foo subdirectory that ends with `.txt`
+- `bar/h*.c*` matches every files in the bar subdirectory that starts with an `h` and also contains the substring `.c`, including `bar/hello.cpp` and `bar/h.cpp`, but not `bar/h.zip`
+- `bar/**` recursively matches every file in the directory `bar`, including `bar/hello.cp` as well as `bar/zap/hi.png`

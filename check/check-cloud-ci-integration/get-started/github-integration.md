@@ -15,8 +15,8 @@ If you don't use GitHub, we recommend you check out the [Continuous Integration]
 
 Trunk Check's GitHub integrations rely on the following:
 
-* An installation of the Trunk.io GitHub app in your GitHub organization, and
-* A `.trunk` repository in your GitHub organization.
+- An installation of the Trunk.io GitHub app in your GitHub organization, and
+- A `.trunk` repository in your GitHub organization.
 
 ### What is a `.trunk` repository?
 
@@ -26,8 +26,8 @@ Your `.trunk` repository must be added to your Trunk GitHub app installation. Yo
 
 To find Check issues in your repositories and pull requests, we dispatch GitHub Actions workflows in your `.trunk` repository, which check out your repositories and pull requests and then run `trunk check` in them. This strategy allows you to:
 
-* start using Trunk Check in all your repositories without any configuration, and
-* be in full control over the environment where we analyze your code, since we're running on your GitHub Actions runners.
+- start using Trunk Check in all your repositories without any configuration, and
+- be in full control over the environment where we analyze your code, since we're running on your GitHub Actions runners.
 
 > 🚧 `.trunk` should have private visibility
 >
@@ -71,8 +71,8 @@ Trunk Check can scan your repository for Check issues on a daily cadence, upload
 
 This allows you to build confidence in the code health of your repositories:
 
-* You will be alerted quickly in a Heartbleed-type event, giving you assurances about whether or not a newly discovered vulnerability affects any of your repositories, and
-* You can monitor how many Check issues exist in each of your repositories and make data-driven decisions about prioritizing efforts to reduce tech debt
+- You will be alerted quickly in a Heartbleed-type event, giving you assurances about whether or not a newly discovered vulnerability affects any of your repositories, and
+- You can monitor how many Check issues exist in each of your repositories and make data-driven decisions about prioritizing efforts to reduce tech debt
 
 If you don't want Trunk Check to scan your repository on a daily cadence or notify you, you can turn it off in [your repository's settings](https://app.trunk.io).
 
@@ -90,7 +90,7 @@ runs:
     - name: Build required trunk check inputs
       shell: bash
       run: bazel build ... --build_tag_filters=pre-lint
-      
+
     - name: Install eslint dependencies
       shell: bash
       run: npm install

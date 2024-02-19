@@ -10,13 +10,13 @@ description: >-
 
 Your machine needs to have the following tools installed:
 
-* Bash,
-* Curl
+- Bash,
+- Curl
 
 You will need to have ports open for:
 
-* api.trunk.io:443
-* api.trunk.io:8443
+- api.trunk.io:443
+- api.trunk.io:8443
 
 ### Create a trunk organization
 
@@ -39,9 +39,11 @@ Here is an example command of running the debugger directly from any command lin
 In this example we are downloading the trunk tool and then running the '/bin/false' command which will immediately fail and trigger a breakpoint.
 
 {% code overflow="wrap" %}
+
 ```yaml
 curl https://get.trunk.io -fsSL | bash -s -- -y
 export TRUNK_TOKEN=<Insert your API key [1]>
 trunk breakpoint --org=<INSERT YOUR ORG NAME HERE [2]> --id=<Breakpoint Name [3]> -- /bin/false
 ```
+
 {% endcode %}

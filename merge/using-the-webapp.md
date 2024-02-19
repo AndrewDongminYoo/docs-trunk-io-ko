@@ -52,11 +52,11 @@ A tabulated view of all the items that have failed in the Merge Queue, e.g. due 
 
 ## Manually Restarting Failed PRs
 
-Trunk Merge will automatically restart failed PRs when in can under certain conditions (see PR states).  Since the restart is usually from a failed PR being removed form the queue, other PRs behind it will also be restarted. If you want to manually restart a PR, you can restart it _**in place**_ using the **Restart tests** option of the PR dropdown (labeled "...")
+Trunk Merge will automatically restart failed PRs when in can under certain conditions (see PR states). Since the restart is usually from a failed PR being removed form the queue, other PRs behind it will also be restarted. If you want to manually restart a PR, you can restart it _**in place**_ using the **Restart tests** option of the PR dropdown (labeled "...")
 
 <figure><img src="./pr-restart-menu.png" alt=""><figcaption><p>PR actions menu</p></figcaption></figure>
 
-There are a couple of reasons you might want to manually restart a PR. First, if a PR ends up in the PENDING_FAILURE state because of something transient like a CI runner disconnecting or flakey tests,  you can restart the PR right away instead of waiting for an PRs in front of it to pass or fail.&#x20;
+There are a couple of reasons you might want to manually restart a PR. First, if a PR ends up in the PENDING_FAILURE state because of something transient like a CI runner disconnecting or flakey tests, you can restart the PR right away instead of waiting for an PRs in front of it to pass or fail.&#x20;
 
 Another reason to restart a PR is if the proper tests don't get kicked off due to a failure in the CI system. For example, if GitHub has an outage and is not triggering workflows or actions properly.&#x20;
 

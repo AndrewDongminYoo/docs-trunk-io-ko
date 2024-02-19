@@ -4,6 +4,8 @@ description: >-
   files.
 ---
 
+<!-- trunk-disable(trunk) -->
+
 # Ignoring Issues and Files
 
 ## Ignoring parts of a file
@@ -93,7 +95,7 @@ struct FooBar {
 
 The syntax of a trunk-ignore directive is as follows:
 
-```
+```pseudo
 <trunk-ignore>      ::= <trunk-ignore-type> "(" <check-ids> ")" <optional-comment>
 <trunk-ignore-type> ::= "trunk-ignore" | "trunk-ignore-begin" | "trunk-ignore-end" | "trunk-ignore-all"
 <check-ids>         ::= <check-id> <optional-check-id>
@@ -116,6 +118,8 @@ lint:
         - src/generated/**
         # Except for files ending in .foo
         - !src/generated/**/*.foo # Test data
+
+
         - test/test_data
 ```
 
@@ -131,6 +135,6 @@ Trunk is `git`-aware, which means it ignores `gitignore'd` files by default.
 
 `trunk-ignore` does not currently support:
 
-* suppressing findings on lines 0 or 1 using inline/block directives
+- suppressing findings on lines 0 or 1 using inline/block directives
 
 If you need any of these to be supported, or you have another edge case, please reach out to us on the [Trunk community slack](https://slack.trunk.io).

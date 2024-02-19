@@ -14,7 +14,7 @@ First, check the Trunk UI where it shows what Trunk is waiting on before putting
 
 Next, if something on that page doesn't look right (for example, it says that GitHub is still checking the merge-ability of the PR), comment `/trunk merge` again in the PR.
 
-## My PR is constantly failing when it starts testing because of "GitHub errors".
+## My PR is constantly failing when it starts testing because of "GitHub errors"
 
 Most likely you have a branch protection rule that is affecting Merge branches. For example, the wild card rule `*/*` applies to `trunk-merge/...`. The Trunk GitHub app does not have admin privileges, so it fails to do some actions on protected branches. To resolve, you must remove this rule or reach out to Trunk on our community Slack if that is not possible.
 

@@ -229,23 +229,17 @@ lint:
       max_file_size: 2097152 # Bytes
 ```
 
-
-
 ### Timeout
 
 Each linter has a default timeout of 10 minutes. If its execution takes longer than this amount of time, Trunk Check will terminate the process and return an error to the user.
 
 To override the timeout for a specific linter, specify a `run_timeout` in its definition:
 
-```
+```yaml
 lint:
-    definitions:
+  definitions:
     - name: clang-tidy
       run_timeout: 5m
 ```
 
 The `run_timeout` value can be specified in seconds (`s`), minutes (`m`), or hours (`h`).
-
-
-
-##

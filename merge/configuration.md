@@ -25,9 +25,9 @@ In this mode, Trunk Merge will dynamically create new merge queues for PRs that 
 
 For example, the following PRs:
 
-* PR 1 with impacted target list `[src/protos/]`
-* PR 2 with impacted target list `[src/user_service/, src/protos/]`
-* PR 3 with impacted target list `[docs/]`
+- PR 1 with impacted target list `[src/protos/]`
+- PR 2 with impacted target list `[src/user_service/, src/protos/]`
+- PR 3 with impacted target list `[docs/]`
 
 would be split into two different queues in `Parallel` mode
 
@@ -48,4 +48,3 @@ Merge can be swapped between `Single` and `Parallel` mode at any time. If there 
 Switching modes can be done from the `Merge Queue Mode` section of the `Settings > Repositories > repo name > Merge` panel
 
 <figure><img src="./set-up-trunk-merge/enable-parallel-mode.png" alt=""><figcaption><p>enabling parallel mode</p></figcaption></figure>
-

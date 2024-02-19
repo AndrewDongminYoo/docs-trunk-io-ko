@@ -42,7 +42,7 @@ See more about our [supported linters here](https://docs.trunk.io/check/supporte
 If you aren’t seeing any issues the likely cause is that your local repo is clean. By default Trunk Check only processes new changes to your codebase (read about [hold-the-line](https://docs.trunk.io/check/under-the-hood)). To scan older changes try running:
 
 ```sh
-trunk check --samples=5 
+trunk check --samples=5
 ```
 
 to look at a sampling of each linter's issues for 5 random files
@@ -103,13 +103,13 @@ HTL works even within files! Check only processes changed lines in a file, not t
 
 If you specifically want to work on older files you can do that by running `trunk check` directly on that file
 
-```
+```sh
 trunk check foo.file
 ```
 
 or
 
-```
+```sh
 trunk check --all
 ```
 
@@ -131,7 +131,7 @@ Sometimes Trunk Check says there is some `Incorrect formatting` in your images. 
 
 Trunk Check uses hermetically versioned tools, which means it downloads a separate copy of the tools and runtime for each tool version. Over time, as tools are upgraded, this can leave a lot of unnecessary files in the cache directory. Trunk is working on a way to automatically remove unneeded files from the cache. In the meantime you can safely clear your cache with
 
-```
+```sh
 trunk cache clean --all
 ```
 
@@ -143,11 +143,11 @@ then run `trunk install` again in your repos.
 
 <summary>How can I expand the number of tools I use with Trunk?</summary>
 
-Trunk supports over 100 different linters, checkers, and other tools;  and we are always adding more! Some tools are easier to configure than others, and we enable many of them out-of-the-box. You can read more about specific linter setup [here](https://docs.trunk.io/check/supported-linters). Trunk is intended to be the one-stop-shop for running all of your linters.
+Trunk supports over 100 different linters, checkers, and other tools; and we are always adding more! Some tools are easier to configure than others, and we enable many of them out-of-the-box. You can read more about specific linter setup [here](https://docs.trunk.io/check/supported-linters). Trunk is intended to be the one-stop-shop for running all of your linters.
 
 To see a list of currently available linters run
 
-```
+```sh
 trunk check list
 ```
 
@@ -171,7 +171,7 @@ Some of the tools that Trunk installs use direct downloads and others use runtim
 
 You can use a different version of a runtime by changing its version in the enabled section of your `.trunk/trunk.yaml` file in the `runtimes` section.
 
-```
+```yaml
 runtimes:
   enabled:
     - node@18.12.1
@@ -180,7 +180,7 @@ runtimes:
 
 If you want to pin the version of a runtime that a particular tool uses, you can do that with an `!` after the version number in your `trunk.yaml`.
 
-```
+```yaml
 lint:
   enabled:
     - pylint@2.17.5!
@@ -225,7 +225,7 @@ lint:
     - name: bar
       extensions: [bar]
 ...
-      
+
   definitions:
     - name: foo-linter
         files:
@@ -239,7 +239,7 @@ lint:
 
 <summary>How can I disable trunk on commit for just me,  but keep it on for the rest of my team?</summary>
 
-If you prefer to never run Trunk on commit and push you can disable it just for you.  Edit or create the `.trunk/user.yaml` file and change the `actions.disabled` section to look like this:
+If you prefer to never run Trunk on commit and push you can disable it just for you. Edit or create the `.trunk/user.yaml` file and change the `actions.disabled` section to look like this:
 
 ```yaml
 version: 0.1
@@ -247,7 +247,6 @@ actions:
   disabled:
     - trunk-check-pre-push
     - trunk-fmt-pre-commit
-  
 ```
 
 This will disable the checks for just the current user. The `.trunk/user.yaml` file is specifically gitignored but will be loaded locally if present.
@@ -266,9 +265,9 @@ Each linter integrated with Trunk Check has a default timeout of 10 minutes to p
 
 To adjust the timeout duration for a specific linter, you can modify its `run_timeout` setting in your configuration. For example:
 
-```
+```yaml
 lint:
-    definitions:
+  definitions:
     - name: clang-tidy
       run_timeout: 5m
 ```
@@ -279,7 +278,7 @@ Timeouts can be specified using `s` for seconds, `m` for minutes, or `h` for hou
 
 Certain files, particularly those that are auto-generated, may not require linting and can significantly extend the duration of checks. To exclude these from being checked, use the `ignore` key in your configuration:
 
-```
+```yaml
 lint:
   ignore:
     - linters: [ALL]
@@ -288,6 +287,8 @@ lint:
         - src/generated/**
         # Except for files ending in .foo
         - !src/generated/**/*.foo # Test data
+
+
         - test/test_data
 ```
 
