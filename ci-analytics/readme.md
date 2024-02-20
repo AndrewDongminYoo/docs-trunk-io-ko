@@ -10,11 +10,11 @@ Trunk CI Analytics integrates with the following CI providers to gather pipeline
 
 | Provider       | Image                    | Document                                     |
 | :------------- | :----------------------- | :------------------------------------------- |
-| GitHub Actions | ![ ](./Github.png) | [github-actions.md](setup/github-actions.md) |
-| **Jenkins**    | ![ ](./Jenkins.png) | [jenkins.md](setup/jenkins.md)               |
-| Buildkite      | ![ ](./Buildkite.png) | [api.md](setup/api.md)                       |
-| CircleCI       | ![ ](./CIrcleCI.png) | [api.md](setup/api.md)                       |
-| API            | ![ ](./API.png) | [api.md](setup/api.md)                       |
+| GitHub Actions | ![ ](./github.png) | [github-actions.md](setup/github-actions.md) |
+| **Jenkins**    | ![ ](./jenkins.png) | [jenkins.md](setup/jenkins.md)               |
+| Buildkite      | ![ ](./build-kite.png) | [api.md](setup/api.md)                       |
+| CircleCI       | ![ ](./circle-ci.png) | [api.md](setup/api.md)                       |
+| API            | ![ ](./api.png) | [api.md](setup/api.md)                       |
 
 Don't see your CI Provider listed here? Please contact our community slack at [slack.trunk.io](https://slack.trunk.io) or support at [support@trunk.io](mailto:support@trunk.io), and we'll add it.
 

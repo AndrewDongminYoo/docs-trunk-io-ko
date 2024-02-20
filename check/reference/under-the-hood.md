@@ -25,7 +25,7 @@ Caching is currently enabled for about half the linters/formatters. Since Trunk 
 
 If you pass `--verbose` flag when running check you can see which results were pulled from cache.
 
-<figure><img src="./SCR-20230811-mtvw.png" alt=""><figcaption><p>trunk check --verbose output</p></figcaption></figure>
+<figure><img src="./verbose-output.png" alt=""><figcaption><p>trunk check --verbose output</p></figcaption></figure>
 
 ## Discarding Invalidated Results
 
@@ -42,7 +42,7 @@ By default `check` will run concurrent jobs using up to half the available cores
 ## Memory Utilization
 
 `check` does not current support a mechanism to throttle back jobs based on the memory consumption of concurrently runs jobs. In order to throttle memory utilization you can lower the\
-[`--jobs`](../usage.md#options) count to indirectly reduct system load.
+[`--jobs`](../usage.md#options) count to indirectly reduce system load.
 
 ## Daemon
 

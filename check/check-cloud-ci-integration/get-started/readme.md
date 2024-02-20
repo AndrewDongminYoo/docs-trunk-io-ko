@@ -22,13 +22,13 @@ Check out [this example](https://github.com/trunk-io/plugins/pull/424/checks?che
 
 <div data-full-width="true">
 
-<figure><img src="./image (16).png" alt=""><figcaption><p>Trunk Check identifying a security issue in one of Trunk's own repositories</p></figcaption></figure>
+<figure><img src="./trunk-report.png" alt=""><figcaption><p>Trunk Check identifying a security issue in one of Trunk's own repositories</p></figcaption></figure>
 
 </div>
 
 ### Explore issues in your repository
 
-<figure><img src="./Screenshot 2023-08-23 173119.png" alt=""><figcaption><p>Trunk Check showing all the issues present in trunk-demo1/sass</p></figcaption></figure>
+<figure><img src="./trunk-demo.png" alt=""><figcaption><p>Trunk Check showing all the issues present in trunk-demo1/sass</p></figcaption></figure>
 
 ### Get Slack notifications about new issues in your repository
 
@@ -36,7 +36,7 @@ Not only do our daily scans allow you to browse and triage the issues in your re
 
 <div data-full-width="true">
 
-<figure><img src="./Screenshot 2023-08-23 173252.png" alt=""><figcaption><p>Slack notification showing newly discovered issues with rustls-webpki in trunk-io/trunk</p></figcaption></figure>
+<figure><img src="./trunk-slack.png" alt=""><figcaption><p>Slack notification showing newly discovered issues with rustls-webpki in trunk-io/trunk</p></figcaption></figure>
 
 </div>
 

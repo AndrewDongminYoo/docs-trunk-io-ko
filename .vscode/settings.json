@@ -10,7 +10,9 @@
     "oxipng",
     "pylint",
     "pylintrc",
+    "sarif",
     "shellcheckrc",
+    "ssml",
     "trunkio"
   ],
   "editor.copyWithSyntaxHighlighting": false

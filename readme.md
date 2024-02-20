@@ -10,7 +10,7 @@ This repository is the official repo for [docs.trunk.io][docs]. If you see any m
 
 If you see any mistakes or any improvements that can be made, we'd love your contributions! Just fork the repo and open a PR with your changes. While you're browsing [docs.trunk.io][docs], you can get to the GitHub source for that page via the `...` menu → `Edit on GitHub`:
 
-![Screenshot 2023-11-29 at 11 37 32 AM](https://github.com/trunk-io/docs/assets/3904462/ce706890-84c3-44c7-9e5f-9bc85aaca99f)
+![Trunk CI Analytics - Edit on GitHub](https://github.com/trunk-io/docs/assets/3904462/ce706890-84c3-44c7-9e5f-9bc85aaca99f)
 
 ## Feedback, Advice, and Help
 

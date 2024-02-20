@@ -37,7 +37,7 @@ The trunk [plugins](https://github.com/trunk-io/plugins) repo ships with a colle
 trunk actions list
 ```
 
-<figure><img src="./image (8).png" alt=""><figcaption><p>List of actions reported by <code>trunk actions list</code></p></figcaption></figure>
+<figure><img src="./actions-list.png" alt=""><figcaption><p>List of actions reported by <code>trunk actions list</code></p></figcaption></figure>
 
 ### Enable/Disable Actions
 
