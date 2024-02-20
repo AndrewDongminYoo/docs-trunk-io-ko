@@ -18,7 +18,13 @@ plugins:
       ref: v1.2.6
 ```
 
-<table><thead><tr><th width="174">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>id</code></td><td>unique identifier for this repository</td></tr><tr><td><code>uri</code></td><td>address used to clone the target repository</td></tr><tr><td><code>ref</code></td><td>commit id or tag to checkout</td></tr><tr><td><code>local</code></td><td>path to local (on-disk) repository. Takes precedence over uri/ref if defined</td></tr><tr><td><code>import_to_global</code> (default: <code>true</code>)</td><td>import content into the global namespace. If set to false actions and linters defined in the plugin must be referenced by <code>&#x3C;plugin_id>.&#x3C;name></code></td></tr></tbody></table>
+| Field                                | Description                                                                                                                                    |
+| :----------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                                 | unique identifier for this repository                                                                                                          |
+| `uri`                                | address used to clone the target repository                                                                                                    |
+| `ref`                                | commit id or tag to checkout                                                                                                                   |
+| `local`                              | path to local (on-disk) repository. Takes precedence over uri/ref if defined                                                                   |
+| `import_to_global` (default: `true`) | import content into the global namespace. If set to false actions and linters defined in the plugin must be referenced by `<plugin_id>.<name>` |
 
 ### Plugin capabilities
 

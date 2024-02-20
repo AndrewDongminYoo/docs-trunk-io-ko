@@ -34,7 +34,11 @@ You can then execute trunk as `.\trunk.ps1`.
 
 Trunk only supports Windows with the following versions and above:
 
-<table><thead><tr><th width="112.33333333333331">Tool</th><th width="397">Where to Modify</th><th>Minimum Required Version</th></tr></thead><tbody><tr><td>CLI</td><td><code>cli</code> <code>version</code> in <code>.trunk/trunk.yaml</code></td><td><code>1.13.0</code></td></tr><tr><td>Plugins</td><td><code>ref</code> for the <code>trunk</code> plugin in <code>.trunk/trunk.yaml</code></td><td><code>v1.0.0</code></td></tr><tr><td>VSCode</td><td>Reload VSCode to update</td><td><code>3.4.4</code></td></tr></tbody></table>
+| Tool    | Where to Modify                                     | Minimum Required Version |
+| :------ | :-------------------------------------------------- | :----------------------- |
+| CLI     | `cli` `version` in `.trunk/trunk.yaml`              | `1.13.0`                 |
+| Plugins | `ref` for the `trunk` plugin in `.trunk/trunk.yaml` | `v1.0.0`                 |
+| VSCode  | Reload VSCode to update                             | `3.4.4`                  |
 
 You will also need to install [C and C++ runtime libraries](https://aka.ms/vs/17/release/vc_redist.x64.exe) in order to run some linters.
 
@@ -56,4 +60,20 @@ We intend to bring full feature support to Windows for Trunk. Currently, the fol
 
 Trunk runs most linters on all platforms. However, some linters are not yet supported on Windows. For a full list of all linters, see our [Plugins repo](https://github.com/trunk-io/plugins).
 
-<table data-full-width="false"><thead><tr><th>Linter</th><th>Plans for Support</th></tr></thead><tbody><tr><td>ansible-lint</td><td>Only supported on WSL</td></tr><tr><td>clang-format</td><td>Long-term plans for LLVM linter support</td></tr><tr><td>clang-tidy</td><td>Long-term plans for LLVM linter support</td></tr><tr><td>detekt-gradle</td><td>Long-term plans for support</td></tr><tr><td>include-what-you-use</td><td>Long-term plans for LLVM linter support</td></tr><tr><td>nixpkgs-fmt</td><td>Long-term plans for support</td></tr><tr><td>perlcritic</td><td>No immediate plans for support</td></tr><tr><td>perltidy</td><td>No immediate plans for support</td></tr><tr><td>scalafmt</td><td>No download available for Windows</td></tr><tr><td>semgrep</td><td>No download available for Windows</td></tr><tr><td>shellcheck</td><td>No download available for Windows</td></tr><tr><td>stringslint</td><td>Only supported on MacOS</td></tr><tr><td>swiftformat</td><td>Only supported on MacOS</td></tr><tr><td>swiftlint</td><td>Only supported on MacOS</td></tr><tr><td>taplo</td><td>No download available for Windows</td></tr></tbody></table>
+| Linter               | Plans for Support                       |
+| :------------------- | :-------------------------------------- |
+| ansible-lint         | Only supported on WSL                   |
+| clang-format         | Long-term plans for LLVM linter support |
+| clang-tidy           | Long-term plans for LLVM linter support |
+| detekt-gradle        | Long-term plans for support             |
+| include-what-you-use | Long-term plans for LLVM linter support |
+| nixpkgs-fmt          | Long-term plans for support             |
+| perlcritic           | No immediate plans for support          |
+| perltidy             | No immediate plans for support          |
+| scalafmt             | No download available for Windows       |
+| semgrep              | No download available for Windows       |
+| shellcheck           | No download available for Windows       |
+| stringslint          | Only supported on MacOS                 |
+| swiftformat          | Only supported on MacOS                 |
+| swiftlint            | Only supported on MacOS                 |
+| taplo                | No download available for Windows       |

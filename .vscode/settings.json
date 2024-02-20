@@ -12,5 +12,6 @@
     "pylintrc",
     "shellcheckrc",
     "trunkio"
-  ]
+  ],
+  "editor.copyWithSyntaxHighlighting": false
 }

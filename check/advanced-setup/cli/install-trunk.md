@@ -73,7 +73,10 @@ To uninstall the Trunk VS Code extension, do so as you would any extension ([doc
 
 You can directly download the `trunk` binary. _We don't recommend this mode of operation because your ability to version the tool through_ `trunk.yaml` _will not function when launching_ `trunk` _directly from a downloaded binary._ Regardless you can bypass the launcher support by downloading the prebuilt binaries here:
 
-<table><thead><tr><th width="178">variable</th><th>options</th></tr></thead><tbody><tr><td>version</td><td>the semver of the binary you want to download</td></tr><tr><td>platform</td><td>'darwin', 'linux'</td></tr></tbody></table>
+| variable | options                                       |
+| :------- | :-------------------------------------------- |
+| version  | the semver of the binary you want to download |
+| platform | 'darwin', 'linux'                             |
 
 ```bash
 # for example https://trunk.io/releases/1.0.0/trunk-1.0.0-linux-x86_64.tar.gz

@@ -27,7 +27,14 @@ Running `trunk check` tells `trunk` to do the following:
 
 Trunk currently supports the following types of additional/proprietary linters:
 
-<table data-header-hidden><thead><tr><th width="173.33333333333331"></th><th width="131" align="center"></th><th></th></tr></thead><tbody><tr><td>Linter Type</td><td align="center">Autofix<br>support</td><td>Description</td></tr><tr><td><a href="output-types.md#sarif"><code>sarif</code></a></td><td align="center">✓</td><td>Produces diagnostics as <a href="https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html">Static Analysis Results Interchange Format</a> JSON.</td></tr><tr><td><a href="output-types.md#lsp-json"><code>lsp_json</code></a></td><td align="center"></td><td>Produces diagnostics as <a href="https://microsoft.github.io/language-server-protocol/">Language Server Protocol</a> JSON.</td></tr><tr><td><a href="output-types.md#pass-fail-linters"><code>pass_fail</code></a></td><td align="center"></td><td>Writes a single file-level diagnostic to <code>stdout</code>.</td></tr><tr><td><a href="output-types.md#regex"><code>regex</code></a></td><td align="center"></td><td>Produces diagnostics using a custom regex format.</td></tr><tr><td><a href="output-types.md#arcanist"><code>arcanist</code></a></td><td align="center">✓</td><td>Produces diagnostics as Arcanist JSON.</td></tr><tr><td><a href="output-types.md#formatters"><code>rewrite</code></a></td><td align="center">✓</td><td>Writes the formatted version of a file to <code>stdout</code>.</td></tr></tbody></table>
+| Linter Type                                      | Autofixsupport | Description                                                                                                                              |
+| :----------------------------------------------- | :------------: | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| [`sarif`](output-types.md#sarif)                 |       ✓        | Produces diagnostics as [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) JSON. |
+| [`lsp_json`](output-types.md#lsp-json)           |                | Produces diagnostics as [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) JSON.                          |
+| [`pass_fail`](output-types.md#pass-fail-linters) |                | Writes a single file-level diagnostic to `stdout`.                                                                                       |
+| [`regex`](output-types.md#regex)                 |                | Produces diagnostics using a custom regex format.                                                                                        |
+| [`arcanist`](output-types.md#arcanist)           |       ✓        | Produces diagnostics as Arcanist JSON.                                                                                                   |
+| [`rewrite`](output-types.md#formatters)          |       ✓        | Writes the formatted version of a file to `stdout`.                                                                                      |
 
 If your linter produces a different output type, you can also write a [parser](custom-parsers.md) to transform the linter's output into something Trunk can understand.
 
@@ -192,7 +199,17 @@ Trunk supports specifying either `success_codes` or `error_codes` for a linter:
 
 `run_from` determines what directory a linter command is run from.
 
-<table data-header-hidden><thead><tr><th width="415"></th><th></th></tr></thead><tbody><tr><td><code>run_from</code></td><td>Description</td></tr><tr><td><code>&#x3C;path></code> (<code>.</code> by default)</td><td>Explicit path to run from</td></tr><tr><td><code>${parent}</code></td><td>Parent of the target file; e.g. would be <code>foo/bar</code> for <code>foo/bar/hello.txt</code></td></tr><tr><td><code>${root_or_parent_with(&#x3C;file>)}</code></td><td>Nearest parent directory containing the specified file</td></tr><tr><td><code>${root_or_parent_with_dir(&#x3C;dir>)}</code></td><td>Nearest parent directory containing the specified directory</td></tr><tr><td><code>${root_or_parent_with_regex(&#x3C;regex>)}</code></td><td>Nearest parent directory containing a file or directory matching specified regex</td></tr><tr><td><code>${root_or_parent_with_direct_config}</code></td><td>Nearest parent directory containing a file from <code>direct_configs</code></td></tr><tr><td><code>${root_or_parent_with_any_config}</code></td><td>Nearest parent directory containing a file from <code>affects_cache</code> or <code>direct_configs</code></td></tr><tr><td><code>${target_directory}</code></td><td>Run the linter from the same directory as the target file, and change the target to be <code>.</code></td></tr><tr><td><code>${compile_command}</code></td><td>Run from the directory where <code>compile_commands.json</code> is located</td></tr></tbody></table>
+| `run_from`                              | Description                                                                                |
+| :-------------------------------------- | :----------------------------------------------------------------------------------------- |
+| `<path>` (`.` by default)               | Explicit path to run from                                                                  |
+| `${parent}`                             | Parent of the target file; e.g. would be `foo/bar` for `foo/bar/hello.txt`                 |
+| `${root_or_parent_with(<file>)}`        | Nearest parent directory containing the specified file                                     |
+| `${root_or_parent_with_dir(<dir>)}`     | Nearest parent directory containing the specified directory                                |
+| `${root_or_parent_with_regex(<regex>)}` | Nearest parent directory containing a file or directory matching specified regex           |
+| `${root_or_parent_with_direct_config}`  | Nearest parent directory containing a file from `direct_configs`                           |
+| `${root_or_parent_with_any_config}`     | Nearest parent directory containing a file from `affects_cache` or `direct_configs`        |
+| `${target_directory}`                   | Run the linter from the same directory as the target file, and change the target to be `.` |
+| `${compile_command}`                    | Run from the directory where `compile_commands.json` is located                            |
 
 #### **Limiting concurrency**
 

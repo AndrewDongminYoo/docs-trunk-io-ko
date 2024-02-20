@@ -36,7 +36,12 @@ Like with actions and linters, we have a (versioned) `enabled` section and a `di
 
 Each tool definition shares a set of attributes:
 
-<table><thead><tr><th width="237">Field</th><th></th></tr></thead><tbody><tr><td><code>name</code></td><td>The name of the tool. Must be unique.</td></tr><tr><td><code>known_good_version</code></td><td>The default version to initialize the tool at (required).</td></tr><tr><td><code>shims</code></td><td>A list of binaries exposed by the tool. Each of these will correspond to one identically named executable installed in <code>.trunk/tools.</code>In the most common case, there is exactly one shim matching the name of the tool. We'll discuss other cases below.</td></tr><tr><td><code>environment</code></td><td>You can specify an environment for the tool. We provide the <code>${tool}</code> template argument that resolves to the installation directory of the tool. By default, we prepend this to <code>$PATH</code> within the shim script, so this is used to locate the binary. For legacy reasons, <code>${linter}</code> also resolves to this directory.</td></tr></tbody></table>
+| Field                |                                                                                                                                                                                                                                                                                                                        |
+| :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`               | The name of the tool. Must be unique.                                                                                                                                                                                                                                                                                  |
+| `known_good_version` | The default version to initialize the tool at (required).                                                                                                                                                                                                                                                              |
+| `shims`              | A list of binaries exposed by the tool. Each of these will correspond to one identically named executable installed in `.trunk/tools`. In the most common case, there is exactly one shim matching the name of the tool. We'll discuss other cases below.                                                               |
+| `environment`        | You can specify an environment for the tool. We provide the `${tool}` template argument that resolves to the installation directory of the tool. By default, we prepend this to `$PATH` within the shim script, so this is used to locate the binary. For legacy reasons, `${linter}` also resolves to this directory. |
 
 > Note: If the tool has a `runtime` attribute, the runtime's environment is merged in to its environment (discussed in the examples below).
 
@@ -106,7 +111,7 @@ tools:
       shims: [mypy]
       known_good_version: 0.931
       extra_packages:
-      	- types-six@1.16.21
+        - types-six@1.16.21
         - types-request
 ```
 

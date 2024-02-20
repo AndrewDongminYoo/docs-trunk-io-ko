@@ -12,7 +12,11 @@ We offer some knobs and dials when configuring Merge. All of the following setti
 
 You can change the state of your Merge Queue, which will affect behavior around PRs entering the queue and merging. PRs will always continue testing no matter what state the Merge Queue is in. Below are the possible different states:
 
-<table><thead><tr><th width="149">State</th><th>Will PRs Enter the Queue?</th><th>Will PRs Merge After Testing?</th></tr></thead><tbody><tr><td><code>Running</code></td><td>Yes <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Yes <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><code>Paused</code></td><td>No <span data-gb-custom-inline data-tag="emoji" data-code="274c">❌</span></td><td>No <span data-gb-custom-inline data-tag="emoji" data-code="274c">❌</span></td></tr><tr><td><code>Draining</code></td><td>No <span data-gb-custom-inline data-tag="emoji" data-code="274c">❌</span></td><td>Yes <span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr></tbody></table>
+| State      | Will PRs Enter the Queue? | Will PRs Merge After Testing? |
+| :--------- | :------------------------ | :---------------------------- |
+| `Running`  | Yes ✅                     | Yes ✅                         |
+| `Paused`   | No ❌                      | No ❌                          |
+| `Draining` | No ❌                      | Yes ✅                         |
 
 There is an additional state, `Switching Modes`, that functions exactly like `Draining`. The Merge Queue enters this state when you switch the mode of the queue while PRs are still testing.
 

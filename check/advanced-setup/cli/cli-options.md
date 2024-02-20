@@ -6,7 +6,18 @@ description: Trunk Check detailed command line options
 
 ## Options
 
-<table><thead><tr><th width="238">options</th><th></th></tr></thead><tbody><tr><td><code>--all</code></td><td>Run on all the files in the repository. Useful if trying to assess a new linter in the system, or to find and fix pre-existing issues</td></tr><tr><td><code>--fix</code></td><td>Auto-apply all suggested fixes</td></tr><tr><td><code>--no-fix</code></td><td>Surface, but do not prompt for autofixes</td></tr><tr><td><code>--filter</code></td><td>List of comma-separated linters to run. Specify <code>--filter=-linter</code> to disable a linter.</td></tr><tr><td><code>--sample=N</code></td><td>Run check on a <a href="cli-options.md#sample">sampling</a> of all files in the repo</td></tr><tr><td><code>--ci</code></td><td>Run in <a href="../../check-cloud-ci-integration/continuous-integration/">Continuous Integration mode</a></td></tr><tr><td><code>--no-progress</code></td><td>Do not show progress while running</td></tr><tr><td><code>--ci-progress</code></td><td>Only show progress every 30s while running (useful for CI jobs). Implied by <code>--ci</code>.</td></tr><tr><td><code>--jobs</code></td><td>number of concurrent jobs (does not affect background linting)</td></tr><tr><td><code>--help</code></td><td>Output help information</td></tr></tbody></table>
+| options         |                                                                                                                                       |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
+| `--all`         | Run on all the files in the repository. Useful if trying to assess a new linter in the system, or to find and fix pre-existing issues |
+| `--fix`         | Auto-apply all suggested fixes                                                                                                        |
+| `--no-fix`      | Surface, but do not prompt for autofixes                                                                                              |
+| `--filter`      | List of comma-separated linters to run. Specify `--filter=-linter` to disable a linter.                                               |
+| `--sample=N`    | Run check on a [sampling](cli-options.md#sample) of all files in the repo                                                             |
+| `--ci`          | Run in [Continuous Integration mode](../../check-cloud-ci-integration/continuous-integration/)                                        |
+| `--no-progress` | Do not show progress while running                                                                                                    |
+| `--ci-progress` | Only show progress every 30s while running (useful for CI jobs). Implied by `--ci`.                                                   |
+| `--jobs`        | number of concurrent jobs (does not affect background linting)                                                                        |
+| `--help`        | Output help information                                                                                                               |
 
 ## Advanced Trunk Check Features
 

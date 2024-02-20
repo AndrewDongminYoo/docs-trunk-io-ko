@@ -12,11 +12,22 @@ The most common Trunk Actions are provided out of the box with trunk, and are tr
 
 There are several different types of Trunk Actions, based on when they are triggered:
 
-<table><thead><tr><th width="186">Trigger</th><th>Description</th></tr></thead><tbody><tr><td>time-based</td><td>run on a schedule (once per hour, once per day, once per week)</td></tr><tr><td>file modification</td><td>run whenever a file or directory in your repo changes.</td></tr><tr><td><a href="git-hooks.md">githooks</a></td><td>run whenever a listed githook event fires (e.g. pre-commit, on-push)</td></tr><tr><td>manual</td><td><code>trunk run &#x3C;action-name></code></td></tr></tbody></table>
+| Trigger                  | Description                                                          |
+| :----------------------- | :------------------------------------------------------------------- |
+| time-based               | run on a schedule (once per hour, once per day, once per week)       |
+| file modification        | run whenever a file or directory in your repo changes.               |
+| [githooks](git-hooks.md) | run whenever a listed githook event fires (e.g. pre-commit, on-push) |
+| manual                   | `trunk run <action-name>`                                            |
 
 ### **Command Line**
 
-<table><thead><tr><th width="276.757174392936">trunk actions &#x3C;command></th><th>Description</th></tr></thead><tbody><tr><td><code>list</code></td><td>list all available actions in the repository</td></tr><tr><td><code>history &#x3C;action-name></code></td><td>print the history for execution of the provided action</td></tr><tr><td><code>enable &#x3C;action-name></code></td><td>enable the provided action</td></tr><tr><td><code>disable &#x3C;action-name></code></td><td>disable the provided action</td></tr><tr><td><code>run &#x3C;action-name></code></td><td>manually trigger the provided action<br>alias: <code>trunk run &#x3C;action-name></code></td></tr></tbody></table>
+| trunk actions <command> | Description                                                          |
+| :---------------------- | :------------------------------------------------------------------- |
+| `list`                  | list all available actions in the repository                         |
+| `history <action-name>` | print the history for execution of the provided action               |
+| `enable <action-name>`  | enable the provided action                                           |
+| `disable <action-name>` | disable the provided action                                          |
+| `run <action-name>`     | manually trigger the provided actionalias: `trunk run <action-name>` |
 
 ### Discovering Actions
 

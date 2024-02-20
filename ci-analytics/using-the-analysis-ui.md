@@ -12,20 +12,36 @@ When you first select a repo in CI Analytics, you will see the **Overview** scre
 
 The bottom half of the dashboard shows aggregate statistics for each of your CI workflows _over the selected time period_. The columns are as follows:
 
-<table><thead><tr><th width="181">Column</th><th>Description</th></tr></thead><tbody><tr><td>Workflows</td><td>Name of the workflow, a link to the <code>yaml</code> file on GitHub defining the workflow, and a link to view all of the runs for that workflow.</td></tr><tr><td>Run history</td><td>Chart for the last 60 runs of the workflow. Hover over a bar in the chart to see details</td></tr><tr><td>Failure Rate</td><td>How often the workflow failed during the selected time period.</td></tr><tr><td>P50 Duration</td><td>Average (50th percentile) duration of the workflow during the selected time period. This shows the time of the <em>typical</em> run.</td></tr><tr><td>P95 Duration</td><td>95th percentile duration of the workflow during the selected time period. This shows the time of the <em>outlier</em> runs that took longer than usual.</td></tr><tr><td>Total Duration</td><td>Total amount of time these runs took all together, often correlated with your server costs.</td></tr><tr><td>Total Runs</td><td>Total number of runs performed (both successful and failed) during the selected time period.</td></tr></tbody></table>
+| Column         | Description                                                                                                                                      |
+| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Workflows      | Name of the workflow, a link to the `yaml` file on GitHub defining the workflow, and a link to view all of the runs for that workflow.           |
+| Run history    | Chart for the last 60 runs of the workflow. Hover over a bar in the chart to see details                                                         |
+| Failure Rate   | How often the workflow failed during the selected time period.                                                                                   |
+| P50 Duration   | Average (50th percentile) duration of the workflow during the selected time period. This shows the time of the _typical_ run.                    |
+| P95 Duration   | 95th percentile duration of the workflow during the selected time period. This shows the time of the _outlier_ runs that took longer than usual. |
+| Total Duration | Total amount of time these runs took all together, often correlated with your server costs.                                                      |
+| Total Runs     | Total number of runs performed (both successful and failed) during the selected time period.                                                     |
 
 ### Filtering and sorting your data
 
-Your data in CI Analytics is aggregated in the following hierarchy - Workflow -> Jobs -> Steps. At each level of the data hierarchy, you see an aggregation of the underlying runs that match your selected filter. At any time, you can dive into the underlying data by selecting `View runs` which will show the [**Runs View**](using-the-analysis-ui.md#runs-view) for that dataset. \
-\
-The set of runs that are being aggregated and presented can be filtered by the following criteria:\
-\
-**By Date**\
-Work can be filtered by common ranges: 7 days, 14 days, 30 days, 3 months, 6 months, and any custom date range. Date filters can be applied in the date selector in the nav bar or by hovering over a data point in the chart and selecting `Zoom In`\
-\
-**By Branch Type**
+Your data in CI Analytics is aggregated in the following hierarchy - Workflow -> Jobs -> Steps. At each level of the data hierarchy, you see an aggregation of the underlying runs that match your selected filter. At any time, you can dive into the underlying data by selecting `View runs` which will show the [**Runs View**](using-the-analysis-ui.md#runs-view) for that dataset.
 
-<table data-header-hidden><thead><tr><th width="137">Branches</th><th>Description</th></tr></thead><tbody><tr><td>All</td><td>Shows work with any branch filtering</td></tr><tr><td>main</td><td>Work that is performed against your main or master branch.</td></tr><tr><td>merge</td><td>Work that is performed by a merge queue service (including trunk merge and GitHub's MergeQueue)</td></tr><tr><td>pull request</td><td>Work attributable to the testing of a pull request</td></tr><tr><td><a data-footnote-ref href="#user-content-fn-1">dependabot</a></td><td>Work attributable to the testing of a PR created by Dependabot</td></tr><tr><td>renovate</td><td>Work attributable to the testing of a PR created by Renovsate</td></tr></tbody></table>
+The set of runs that are being aggregated and presented can be filtered by the following criteria:
+
+#### By Date
+
+Work can be filtered by common ranges: 7 days, 14 days, 30 days, 3 months, 6 months, and any custom date range. Date filters can be applied in the date selector in the nav bar or by hovering over a data point in the chart and selecting `Zoom In`.
+
+#### By Branch Type
+
+| Branches     | Description                                                                                     |
+| :----------- | :---------------------------------------------------------------------------------------------- |
+| All          | Shows work with any branch filtering                                                            |
+| main         | Work that is performed against your main or master branch.                                      |
+| merge        | Work that is performed by a merge queue service (including trunk merge and GitHub's MergeQueue) |
+| pull request | Work attributable to the testing of a pull request                                              |
+| dependabot   | Work attributable to the testing of a PR created by Dependabot                                  |
+| renovate     | Work attributable to the testing of a PR created by Renovsate                                   |
 
 **By Conclusion**\
 The conclusions filter allows you to look exclusively at work based on its reported termination state: success, failure, canceled, time out, skipped, etc... If you are trying to understand the performance of your CI tasks, you will likely want to filter by success. Failures can occur at any time, but the success path is a more reliable view of the expected runtime of your system.\
