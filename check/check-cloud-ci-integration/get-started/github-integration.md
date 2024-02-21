@@ -7,7 +7,7 @@ description: >-
 
 # How It Works
 
-If you don't use GitHub, we recommend you check out the [Continuous Integration](../continuous-integration/) guide.
+If you don't use GitHub, we recommend you check out the [Continuous Integration](../continuous-integration/readme.md) guide.
 
 ## How it works
 

@@ -4,7 +4,7 @@ description: enabling and writing your own actions
 
 # Configuration
 
-Actions are defined and enabled in the `actions` section of [`trunk.yaml`](../../reference/trunk-yaml/).
+Actions are defined and enabled in the `actions` section of [`trunk.yaml`](../../reference/trunk-yaml/readme.md).
 
 Here is an example of the actions section of `trunk.yaml`. If you are curious what your resolved configuration for actions looks like, run `trunk config print`.
 

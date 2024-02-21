@@ -8,7 +8,7 @@ description: How to set up Clang Tidy to work with Trunk Check
 
 ### Installing Clang-Tidy with Trunk
 
-1. Install [Trunk Check](../../) in your project if you haven’t already.
+1. Install [Trunk Check](../../readme.md) in your project if you haven’t already.
 2. Enable clang-tidy with `trunk check enable clang-tidy`
 3. Run `trunk check`
 

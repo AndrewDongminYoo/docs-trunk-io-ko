@@ -6,7 +6,7 @@ description: "Meta-linter for over 100 code checking tools: CLI, IDE, and on the
 
 ## What is Trunk Check?
 
-**Trunk Check** runs 100+ idiomatic code-checking tools for every language and technology, locally ([CLI](./advanced-setup/cli/), [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)), on CI ([CI](./check-cloud-ci-integration/), [GitHub Bot](./check-cloud-ci-integration/get-started/)), and in our [web app](https://app.trunk.io). You're probably already running a few of these tools (ESLint, Prettier, etc), but Trunk Check adds valuable features to let you integrate with CI and PRs, run them faster, upgrade them easier, integrate them with CI and PRs, version them better, and much more.
+**Trunk Check** runs 100+ idiomatic code-checking tools for every language and technology, locally ([CLI](./advanced-setup/cli/readme.md), [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)), on CI ([CI](./advanced-setup/cli/readme.md), [GitHub Bot](./advanced-setup/cli/readme.md)), and in our [web app](https://app.trunk.io). You're probably already running a few of these tools (ESLint, Prettier, etc), but Trunk Check adds valuable features to let you integrate with CI and PRs, run them faster, upgrade them easier, integrate them with CI and PRs, version them better, and much more.
 
 Check handles:
 
@@ -51,7 +51,7 @@ Trunk Check has a daemon that checks code as you modify files in your repo, runs
 
 PR iterations kill productivity. Every time a dev updates a PR, even trivially, they have to context switch, break out of flow, reviewers also context switch to look at it, and that's not to mention the CI time to run a new suite of jobs.
 
-`trunk check` shows the _same_ results locally and [on CI](./check-cloud-ci-integration/). It can optionally also function as a[git-hooks.md](./advanced-setup/actions/git-hooks.md "mention") manager to reject `git push`es unless they're passing `trunk check`.
+`trunk check` shows the _same_ results locally and [on CI](./check-cloud-ci-integration/readme.md). It can optionally also function as a[git-hooks.md](./advanced-setup/actions/git-hooks.md "mention") manager to reject `git push`es unless they're passing `trunk check`.
 
 </details>
 
@@ -63,7 +63,7 @@ PR iterations kill productivity. Every time a dev updates a PR, even trivially, 
 - pre-existing issue detection
 - a daemon & language server
 - [githooks management](./advanced-setup/actions/git-hooks.md)
-- cli available ([docs](./advanced-setup/cli/))
+- cli available ([docs](./advanced-setup/cli/readme.md))
 - a [web app](https://app.trunk.io/) for repo stats and slack notifications
 
 ## I run a large eng org. Why should I use Check?

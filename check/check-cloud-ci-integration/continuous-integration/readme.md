@@ -17,7 +17,7 @@ layout:
 
 # GitLab and other CI Integration
 
-If you use GitHub, we recommend you follow the [GitHub Integration](../get-started/) guide.
+If you use GitHub, we recommend you follow the [GitHub Integration](../get-started/readme.md) guide.
 `trunk check --ci` will work on any CI provider.
 
 You may also want to specify `--upstream` if, for example, your PRs are not merged into your default branch, but into a `develop` branch.

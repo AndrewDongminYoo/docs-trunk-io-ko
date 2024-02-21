@@ -68,4 +68,4 @@ trunk check enable <linter>
 
 ### Linter-specific Configuration
 
-Some linters require a bit more modification to properly set up. See [Configuring Existing Linters](./configuring-existing-linters/) for more info.
+Some linters require a bit more modification to properly set up. See [Configuring Existing Linters](./configuring-existing-linters/readme.md) for more info.
