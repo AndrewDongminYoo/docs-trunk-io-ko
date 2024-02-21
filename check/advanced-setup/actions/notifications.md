@@ -62,6 +62,7 @@ triggers:
 `trunk upgrade --notify` produces a notification that looks like this:
 
 ```yaml
+# cSpell:ignore mupdates
 notifications:
   - commands:
       - run: trunk upgrade

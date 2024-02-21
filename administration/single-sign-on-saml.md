@@ -10,8 +10,8 @@ Configuring SAML (Security Assertion Markup Language) for your Trunk account let
 
 #### Prerequisites
 
-- Trunk Enterpise Account with SAML enabled on the account. If SAML is not enabled for your organization in Trunk please reach out to support@trunk.io to enable it.
-- An Identitiy Provider (IdP) that support SAML 2.0 protocols.
+- Trunk Enterprise Account with SAML enabled on the account. If SAML is not enabled for your organization in Trunk please reach out to support@trunk.io to enable it.
+- An Identity Provider (IdP) that support SAML 2.0 protocols.
 
 #### Configuring SAML
 

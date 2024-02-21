@@ -4,8 +4,6 @@ description: >-
   files.
 ---
 
-<!-- trunk-disable(trunk) -->
-
 # Ignoring Issues and Files
 
 ## Ignoring parts of a file
