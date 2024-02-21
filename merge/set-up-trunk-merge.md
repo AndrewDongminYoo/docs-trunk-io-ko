@@ -17,7 +17,7 @@ Select the repository you would like to use and click **Get Started.**
 Go to the Merge tab. You will see the "Set Up Trunk Merge" page. From there, you can specify:
 
 1. The name of the branch that Trunk Merge should help manage merging PRs into.
-2. The [number](set-up-trunk-merge/advanced-settings.md#concurrency) of Pull Requests that Merge can test at the same time.
+2. The [number](./set-up-trunk-merge/advanced-settings.md#concurrency) of Pull Requests that Merge can test at the same time.
 3. The [mode](configuration.md#single-parallel-mode) that Trunk Merge Queues will start in.
 
 <figure><img src="./merge-setup.png" alt="" width="414"></figure>
@@ -100,7 +100,7 @@ $ trunk login
 $ trunk merge {pr-number}
 ```
 
-If you have any problems with merge queueing PRs, take a look at the [branch protection](set-up-trunk-merge/advanced-settings.md#branch-protection) docs.
+If you have any problems with merge queueing PRs, take a look at the [branch protection](./set-up-trunk-merge/advanced-settings.md#branch-protection) docs.
 
 ### Pull Request Processing
 
@@ -112,4 +112,4 @@ Now Trunk Merge is setup with your repo. Whenever a PR is pushed to your merge b
 
 ### Next Steps
 
-You can configure [parallel mode](configuration.md) for potential performance gains, read how to [cancel pull requests](reference.md#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](set-up-trunk-merge/integration-for-slack.md). If you are using Bazel you may want to [further customize](set-up-trunk-merge/merge-+-bazel.md) it for parallel mode.
+You can configure [parallel mode](configuration.md) for potential performance gains, read how to [cancel pull requests](reference.md#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](./set-up-trunk-merge/integration-for-slack.md). If you are using Bazel you may want to [further customize](./set-up-trunk-merge/merge-+-bazel.md) it for parallel mode.

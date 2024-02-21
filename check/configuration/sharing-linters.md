@@ -10,7 +10,7 @@ Linters are automatically shared with all developers for a repository using the 
 
 ## Per User Config
 
-If you wish to customize a linter for just one developer (say, disable a slow linter on a slow machine), you can create a per-user config in the `.trunk/user.yaml` file, which should \*not\* be committed to the repo. See the [User YAML guide](../reference/user-yaml.md) for more details.
+If you wish to customize a linter for just one developer (say, disable a slow linter on a slow machine), you can create a per-user config in the `.trunk/user.yaml` file, which should *not* be committed to the repo. See the [User YAML guide](../reference/user-yaml.md) for more details.
 
 ## Multiple Repos
 

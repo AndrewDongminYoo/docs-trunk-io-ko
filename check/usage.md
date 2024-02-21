@@ -4,7 +4,7 @@ description: How to install the Trunk CLI to check your code in less than 60 sec
 
 # Getting Started
 
-The `trunk` command line tool runs locally on your developer machine, right where your code is. Later, you can automatically scan your repo using the [Trunk Check webapp](check-cloud-ci-integration/). Trunk Check will automatically keep tools up to date, suggest standard tools for your project type (eg: `clang-format` for C++, `eslint` for JS/TS), and pin versions in `trunk.yaml` to ensure Trunk Check is reproducible.
+The `trunk` command line tool runs locally on your developer machine, right where your code is. Later, you can automatically scan your repo using the [Trunk Check webapp](./check-cloud-ci-integration/). Trunk Check will automatically keep tools up to date, suggest standard tools for your project type (eg: `clang-format` for C++, `eslint` for JS/TS), and pin versions in `trunk.yaml` to ensure Trunk Check is reproducible.
 
 ## Install the CLI
 
@@ -42,7 +42,7 @@ From the root of a git repo, run:
 trunk init
 ```
 
-This will scan your repository and create a `.trunk/trunk.yaml` that enables all the linters, formatters, and security analyzers that [Trunk Check](./) recommends. For more details, see [here](advanced-setup/cli/init-in-a-git-repo.md).
+This will scan your repository and create a `.trunk/trunk.yaml` that enables all the linters, formatters, and security analyzers that [Trunk Check](./) recommends. For more details, see [here](./advanced-setup/cli/init-in-a-git-repo.md).
 
 ## Basic Usage
 
@@ -112,11 +112,11 @@ trunk check disable <linter name>
 
 ## CI Setup
 
-Once you have Trunk Check configured on your local machine, you can set up the Trunk Check webapp to automatically run checks whenever your CI system builds and runs tests. See [Continuous Integration Setup](check-cloud-ci-integration/) for more information.
+Once you have Trunk Check configured on your local machine, you can set up the Trunk Check webapp to automatically run checks whenever your CI system builds and runs tests. See [Continuous Integration Setup](./check-cloud-ci-integration/) for more information.
 
 ## Hold the Line
 
-By default Trunk Check will _Hold The Line_, meaning it will only run against new changes in your codebase, not old ones. For more see [Hold the Line](configuration/hold-the-line.md).
+By default Trunk Check will _Hold The Line_, meaning it will only run against new changes in your codebase, not old ones. For more see [Hold the Line](./configuration/hold-the-line.md).
 
 ## Ignoring Issues
 
@@ -129,7 +129,7 @@ struct FooBar {
 };
 ```
 
-The comment should contain the name of the linter you want to ignore the following line, in this case `clang-tidy` For more complex ignore commands, see [Ignoring Issues](configuration/ignoring-issues.md).
+The comment should contain the name of the linter you want to ignore the following line, in this case `clang-tidy` For more complex ignore commands, see [Ignoring Issues](./configuration/ignoring-issues.md).
 
 ## Upgrading
 

@@ -99,7 +99,7 @@ Ruff and Black are another example of a linter/formatter pair that can collide w
 
 **Hold The Line** (HTL) is the principle that Trunk Check will _only run on new changes_ in your codebase, rather than every file in the whole repo. This allows you to use Check to improve your codebase **incrementally** rather than having to address all of the issues at once. HTL also runs checks much faster than scanning the entire codebase would.
 
-HTL works even within files! Check only processes changed lines in a file, not the entire file. More [on how Hold the Line works](configuration/hold-the-line.md).
+HTL works even within files! Check only processes changed lines in a file, not the entire file. More [on how Hold the Line works](./configuration/hold-the-line.md).
 
 If you specifically want to work on older files you can do that by running `trunk check` directly on that file
 
@@ -272,7 +272,7 @@ lint:
       run_timeout: 5m
 ```
 
-Timeouts can be specified using `s` for seconds, `m` for minutes, or `h` for hours, allowing you to tailor the behavior to your project's needs. More on [linter timeouts](configuration/#timeout).
+Timeouts can be specified using `s` for seconds, `m` for minutes, or `h` for hours, allowing you to tailor the behavior to your project's needs. More on [linter timeouts](./configuration/#timeout).
 
 #### Ignoring Files
 
@@ -292,6 +292,6 @@ lint:
         - test/test_data
 ```
 
-This approach lets you specify which linters to ignore for particular paths, optimizing the check process and focusing on relevant files. [More details on ignoring files](configuration/ignoring-issues.md#ignoring-all-issues-formatting-in-a-file).
+This approach lets you specify which linters to ignore for particular paths, optimizing the check process and focusing on relevant files. [More details on ignoring files](./configuration/ignoring-issues.md#ignoring-all-issues-formatting-in-a-file).
 
 </details>

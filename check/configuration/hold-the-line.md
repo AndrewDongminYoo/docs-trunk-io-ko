@@ -16,7 +16,7 @@ _Hold the Line_ simplifies integrating a linter into your workflow by comparing 
 
 _Hold The Line_ **works at the line level** of your source code. For example, if a single line has multiple pre-existing issues and a new linter is added which reports the new issue, then Trunk Check will report just the new issue and not the previous ones.
 
-_**Hold the Line**_\*\* is built into Trunk Check itself.\*\* This means existing linters that do not support line by line functionality will still work with _Hold the Line_. Also, when making a custom linter you do not need to do anything special to support _Hold the Line_. It just works!
+_**Hold the Line**_ is built into Trunk Check itself. This means existing linters that do not support line by line functionality will still work with _Hold the Line_. Also, when making a custom linter you do not need to do anything special to support _Hold the Line_. It just works!
 
 ## How can I disable or customize Hold the Line?
 
