@@ -14,7 +14,7 @@ You will need to have ports open for:
 
 ### Create a trunk organization
 
-To use the CI Debugger, you must first create a trunk organization. See this [document](broken-reference) for detailed instructions.
+To use the CI Debugger, you must first create a trunk organization. See this [document](../administration/organizations.md) for detailed instructions.
 
 ### Create a breakpoint in the trunk app
 
@@ -28,24 +28,26 @@ Here is an example Jenkins workflow. Replace the three values in the example wit
 
 Here the TRUNK_TOKEN is pasted directly. In a real environment, it should be managed as a secret.
 
-```yaml
+```groovy
 pipeline {
-environment {
-TRUNK_TOKEN = '<INSERT YOUR TRUNK TOKEN HERE [1]>'
-}
-stages {
-stage('Install Trunk') {
-steps {
-echo "Installing Trunk"
-curl https://get.trunk.io -fsSL | bash -s -- -y
-}
-}
-stage('Test') {
-steps {
-echo "Testing"
-trunk breakpoint --org=<INSERT YOUR ORG NAME HERE [2]> --id=<Breakpoint Name [3]> -- /bin/false
-}
-}
-}
+    environment {
+        TRUNK_TOKEN = '<INSERT YOUR TRUNK TOKEN HERE [1]>'
+    }
+
+    stages {
+        stage('Install Trunk') {
+            steps {
+                echo "Installing Trunk"
+                curl 'https://get.trunk.io' -fsSL | bash -s -- -y
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Testing"
+                trunk breakpoint--org =<INSERT YOUR ORG NAME HERE [2]> --id=<Breakpoint Name [3] > --/bin/false
+            }
+        }
+    }
 }
 ```

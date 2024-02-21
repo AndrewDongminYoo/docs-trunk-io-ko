@@ -26,7 +26,7 @@ Trunk provides a [Merge GitHub action](https://github.com/trunk-io/merge-action)
 
 #### Add merge action with Trunk Org Token
 
-Now add the [`trunk-io/merge-action`](https://github.com/trunk-io/merge-action) action in a new workflow in your repo under `.github/workflows` (eg: `.github/workflows/uploaded_impacted_targets.yaml` )&#x20;
+Now add the [`trunk-io/merge-action`](https://github.com/trunk-io/merge-action) action in a new workflow in your repo under `.github/workflows` (eg: `.github/workflows/uploaded_impacted_targets.yaml` )
 
 ```yaml
 name: Upload Impacted Targets
@@ -52,6 +52,6 @@ jobs:
           trunk-token: ${{ secrets.TRUNK_ORG_API_TOKEN }}
 ```
 
-If your Bazel setup is not in the root of your repo then you can add `bazel-workspace-path: your_workspace_path` just below the `trunk-token`. Commit the new workflow back to your repo. to make it active.&#x20;
+If your Bazel setup is not in the root of your repo then you can add `bazel-workspace-path: your_workspace_path` just below the `trunk-token`. Commit the new workflow back to your repo. to make it active.
 
-Now you can [submit a new pull request and test it](broken-reference). **Success!**
+Now you can [submit a new pull request and test it](../set-up-trunk-merge.md#submit-pull-requests). **Success!**
