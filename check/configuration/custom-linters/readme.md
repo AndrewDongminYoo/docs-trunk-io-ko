@@ -23,20 +23,20 @@ Running `trunk check` tells `trunk` to do the following:
 - parse linter [outputs](./#output-types) into configurable output types
 - determine which lint issues are new, existing, or fixed
 
-### [Output Types](output-types.md)
+### [Output Types](./output-types.md)
 
 Trunk currently supports the following types of additional/proprietary linters:
 
-| Linter Type                                      | Autofixsupport | Description                                                                                                                              |
-| :----------------------------------------------- | :------------: | :--------------------------------------------------------------------------------------------------------------------------------------- |
-| [`sarif`](output-types.md#sarif)                 |       ✓        | Produces diagnostics as [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) JSON. |
-| [`lsp_json`](output-types.md#lsp-json)           |                | Produces diagnostics as [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) JSON.                          |
-| [`pass_fail`](output-types.md#pass-fail-linters) |                | Writes a single file-level diagnostic to `stdout`.                                                                                       |
-| [`regex`](output-types.md#regex)                 |                | Produces diagnostics using a custom regex format.                                                                                        |
-| [`arcanist`](output-types.md#arcanist)           |       ✓        | Produces diagnostics as Arcanist JSON.                                                                                                   |
-| [`rewrite`](output-types.md#formatters)          |       ✓        | Writes the formatted version of a file to `stdout`.                                                                                      |
+| Linter Type                                        | Autofixsupport | Description                                                                                                                              |
+| :------------------------------------------------- | :------------: | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| [`sarif`](./output-types.md#sarif)                 |       ✓        | Produces diagnostics as [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) JSON. |
+| [`lsp_json`](./output-types.md#lsp-json)           |                | Produces diagnostics as [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) JSON.                          |
+| [`pass_fail`](./output-types.md#pass-fail-linters) |                | Writes a single file-level diagnostic to `stdout`.                                                                                       |
+| [`regex`](./output-types.md#regex)                 |                | Produces diagnostics using a custom regex format.                                                                                        |
+| [`arcanist`](./output-types.md#arcanist)           |       ✓        | Produces diagnostics as Arcanist JSON.                                                                                                   |
+| [`rewrite`](./output-types.md#formatters)          |       ✓        | Writes the formatted version of a file to `stdout`.                                                                                      |
 
-If your linter produces a different output type, you can also write a [parser](custom-parsers.md) to transform the linter's output into something Trunk can understand.
+If your linter produces a different output type, you can also write a [parser](./custom-parsers.md) to transform the linter's output into something Trunk can understand.
 
 To set up a custom linter, add it to `trunk.yaml` under `lint.definitions` and enable it:
 

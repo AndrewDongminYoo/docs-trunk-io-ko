@@ -4,7 +4,7 @@ description: Custom Linters should output one of several output formats.
 
 # Output Types
 
-Trunk supports several different generic output types. If your linter doesn't conform well to any of these specifications, you can also write a [custom parser](custom-parsers.md).
+Trunk supports several different generic output types. If your linter doesn't conform well to any of these specifications, you can also write a [custom parser](./custom-parsers.md).
 
 #### SARIF
 

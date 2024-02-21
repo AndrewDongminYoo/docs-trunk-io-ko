@@ -18,7 +18,7 @@ Next [enable Parallel Mode](../configuration.md) in the Trunk Merge UI.
 
 ### Set Up the Github Action
 
-Trunk provides a [Merge GitHub action](https://github.com/trunk-io/merge-action) (workflow) that leverages Bazel to take care of generating the required [impacted targets](impacted-targets.md) and uploading them to Merge, taking care of the heavy work for using Parallel mode. In order for GitHub to communicate with Trunk Merge, it needs to be able to authenticate from the GitHub Action instance to the Trunk web application using your **Trunk Organization API Token**.
+Trunk provides a [Merge GitHub action](https://github.com/trunk-io/merge-action) (workflow) that leverages Bazel to take care of generating the required [impacted targets](./impacted-targets.md) and uploading them to Merge, taking care of the heavy work for using Parallel mode. In order for GitHub to communicate with Trunk Merge, it needs to be able to authenticate from the GitHub Action instance to the Trunk web application using your **Trunk Organization API Token**.
 
 #### Get your Organization API Token
 

@@ -12,7 +12,7 @@ description: Trunk Check detailed command line options
 | `--fix`         | Auto-apply all suggested fixes                                                                                                        |
 | `--no-fix`      | Surface, but do not prompt for autofixes                                                                                              |
 | `--filter`      | List of comma-separated linters to run. Specify `--filter=-linter` to disable a linter.                                               |
-| `--sample=N`    | Run check on a [sampling](cli-options.md#sample) of all files in the repo                                                             |
+| `--sample=N`    | Run check on a [sampling](./cli-options.md#sample) of all files in the repo                                                           |
 | `--ci`          | Run in [Continuous Integration mode](../../check-cloud-ci-integration/continuous-integration/)                                        |
 | `--no-progress` | Do not show progress while running                                                                                                    |
 | `--ci-progress` | Only show progress every 30s while running (useful for CI jobs). Implied by `--ci`.                                                   |

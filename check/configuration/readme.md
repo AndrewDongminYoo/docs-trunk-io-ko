@@ -4,7 +4,7 @@ description: Overview of Trunk Check's supported linters and configuration
 
 # Linters
 
-Trunk Check supports over [100 different linters](supported-linters.md) and formatters out of the box. The configurations for `trunk check` and `trunk fmt` are governed by the `lint` section of the [`trunk.yaml`](../reference/trunk-yaml/#cli)file stored in the `.trunk` directory of your git repo. Here's an example of what a fully-featured `lint` section looks like:
+Trunk Check supports over [100 different linters](./supported-linters.md) and formatters out of the box. The configurations for `trunk check` and `trunk fmt` are governed by the `lint` section of the [`trunk.yaml`](../reference/trunk-yaml/#cli)file stored in the `.trunk` directory of your git repo. Here's an example of what a fully-featured `lint` section looks like:
 
 ```yaml
 lint:
@@ -166,7 +166,7 @@ struct FooBar {
 
 This tells Trunk that the `clang-tidy` linter found a `modernize-use-nullptr` issue on the highlighted line and that Trunk should suppress this linter issue.
 
-For full details please see the [Ignoring Issues and Files](ignoring-issues.md) page.
+For full details please see the [Ignoring Issues and Files](./ignoring-issues.md) page.
 
 ### Blocking Thresholds
 

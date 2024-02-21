@@ -4,7 +4,7 @@ description: Using Trunk Check within your favorite IDE
 
 # IDE Integration
 
-Trunk Check supports direct integration with [VS Code](vs-code.md) and [Neovim](neovim-plugin.md) using Trunk supported plugins. If you are interested in Trunk supporting additional IDEs, please contact us.
+Trunk Check supports direct integration with [VS Code](./vs-code.md) and [Neovim](./vs-code.md) using Trunk supported plugins. If you are interested in Trunk supporting additional IDEs, please contact us.
 
-- [VS Code plugin](vs-code.md)
-- [Neovim Plugin](neovim-plugin.md)
+- [VS Code plugin](./vs-code.md)
+- [Neovim Plugin](./neovim-plugin.md)

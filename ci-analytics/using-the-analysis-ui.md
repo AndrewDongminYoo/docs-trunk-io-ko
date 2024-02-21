@@ -24,7 +24,7 @@ The bottom half of the dashboard shows aggregate statistics for each of your CI 
 
 ### Filtering and sorting your data
 
-Your data in CI Analytics is aggregated in the following hierarchy - Workflow -> Jobs -> Steps. At each level of the data hierarchy, you see an aggregation of the underlying runs that match your selected filter. At any time, you can dive into the underlying data by selecting `View runs` which will show the [**Runs View**](using-the-analysis-ui.md#runs-view) for that dataset.
+Your data in CI Analytics is aggregated in the following hierarchy - Workflow -> Jobs -> Steps. At each level of the data hierarchy, you see an aggregation of the underlying runs that match your selected filter. At any time, you can dive into the underlying data by selecting `View runs` which will show the [**Runs View**](./using-the-analysis-ui.md#runs-view) for that dataset.
 
 The set of runs that are being aggregated and presented can be filtered by the following criteria:
 

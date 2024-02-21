@@ -74,7 +74,7 @@ Run all applicable formatters as configured in `trunk.yaml`. `trunk fmt` is shor
 | `--fix`      | Auto-apply all suggested fixes                                                                                                        |
 | `--no-fix`   | Surface, but do not prompt for autofixes                                                                                              |
 | `--filter`   | List of comma-separated linters to run. Specify `--filter=-linter` to disable a linter.                                               |
-| `--sample=N` | Run check on a [sampling](usage.md#sample) of all files in the repo                                                                   |
+| `--sample=N` | Run check on a [sampling](./usage.md#sample) of all files in the repo                                                                 |
 | `--help`     | Output help information                                                                                                               |
 
 ### Recipes

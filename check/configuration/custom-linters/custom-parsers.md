@@ -33,7 +33,7 @@ The execution model that `trunk` follows for a parser is that it will:
   - assert that the exit code of the parser is 0, and then
 - use `output` to determine how it should parse the parser's `stdout`.
 
-Note that you can also set `parser.runtime` to [`node`](custom-parsers.md#node) or [`python`](custom-parsers.md#python) so that you can write your parser in Javascript or Python instead, if you so prefer! You can find plenty examples of python parsers in our [plugins repo](https://github.com/trunk-io/plugins).
+Note that you can also set `parser.runtime` to [`node`](./custom-parsers.md#node) or [`python`](./custom-parsers.md#python) so that you can write your parser in Javascript or Python instead, if you so prefer! You can find plenty examples of python parsers in our [plugins repo](https://github.com/trunk-io/plugins).
 
 ### Node
 

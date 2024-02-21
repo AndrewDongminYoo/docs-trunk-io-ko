@@ -36,7 +36,7 @@ You can configure a GitHub workflow to automatically create PRs with the latest 
 
 When running locally, Trunk automatically checks for upgrades in the background on a regular cadence. You'll see notifications for these upgrades appear in the VSCode Extension or at the end of a `trunk check` run. To stop seeing these notifications, you can run `trunk actions disable trunk-upgrade-available`.
 
-When running in [single-player mode](init-in-a-git-repo.md#single-player-mode), Trunk will automatically upgrade itself in the background and stay up to date.
+When running in [single-player mode](./init-in-a-git-repo.md#single-player-mode), Trunk will automatically upgrade itself in the background and stay up to date.
 
 ### Pinning Versions
 

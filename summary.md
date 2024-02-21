@@ -1,6 +1,6 @@
 # Table of contents
 
-- [Welcome](welcome.md)
+- [Welcome](./welcome.md)
 - [Check](./check/readme.md)
   - [Overview](./check/readme.md)
   - [Getting Started](./check/usage.md)

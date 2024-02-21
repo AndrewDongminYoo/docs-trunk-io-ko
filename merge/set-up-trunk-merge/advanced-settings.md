@@ -14,9 +14,9 @@ You can change the state of your Merge Queue, which will affect behavior around 
 
 | State      | Will PRs Enter the Queue? | Will PRs Merge After Testing? |
 | :--------- | :------------------------ | :---------------------------- |
-| `Running`  | Yes ✅                     | Yes ✅                         |
-| `Paused`   | No ❌                      | No ❌                          |
-| `Draining` | No ❌                      | Yes ✅                         |
+| `Running`  | Yes ✅                    | Yes ✅                        |
+| `Paused`   | No ❌                     | No ❌                         |
+| `Draining` | No ❌                     | Yes ✅                        |
 
 There is an additional state, `Switching Modes`, that functions exactly like `Draining`. The Merge Queue enters this state when you switch the mode of the queue while PRs are still testing.
 

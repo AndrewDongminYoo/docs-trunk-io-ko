@@ -18,7 +18,7 @@ Go to the Merge tab. You will see the "Set Up Trunk Merge" page. From there, you
 
 1. The name of the branch that Trunk Merge should help manage merging PRs into.
 2. The [number](./set-up-trunk-merge/advanced-settings.md#concurrency) of Pull Requests that Merge can test at the same time.
-3. The [mode](configuration.md#single-parallel-mode) that Trunk Merge Queues will start in.
+3. The [mode](./configuration.md#single-parallel-mode) that Trunk Merge Queues will start in.
 
 <figure><img src="./merge-setup.png" alt="" width="414"></figure>
 
@@ -104,7 +104,7 @@ If you have any problems with merge queueing PRs, take a look at the [branch pro
 
 ### Pull Request Processing
 
-Once a PR is submitted to the Merge queue, it will start as _Not Ready_ until all of the required conditions to submit it are met. Once ready, the Merge Queue will pick it up and run the tests. Once the tests pass, the PR may still need to wait for upstream PRs in the queue to finish their testing. Once the remaining upstream PRs are complete, the PR will be merged and then removed from the Merge Queue. If a PR fails or is canceled then it will go to the failed or canceled state. Read more about [PR States](reference.md#pr-states).
+Once a PR is submitted to the Merge queue, it will start as _Not Ready_ until all of the required conditions to submit it are met. Once ready, the Merge Queue will pick it up and run the tests. Once the tests pass, the PR may still need to wait for upstream PRs in the queue to finish their testing. Once the remaining upstream PRs are complete, the PR will be merged and then removed from the Merge Queue. If a PR fails or is canceled then it will go to the failed or canceled state. Read more about [PR States](./reference.md#pr-states).
 
 ## Success
 
@@ -112,4 +112,4 @@ Now Trunk Merge is setup with your repo. Whenever a PR is pushed to your merge b
 
 ### Next Steps
 
-You can configure [parallel mode](configuration.md) for potential performance gains, read how to [cancel pull requests](reference.md#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](./set-up-trunk-merge/integration-for-slack.md). If you are using Bazel you may want to [further customize](./set-up-trunk-merge/merge-+-bazel.md) it for parallel mode.
+You can configure [parallel mode](./configuration.md) for potential performance gains, read how to [cancel pull requests](./configuration.md#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](./set-up-trunk-merge/integration-for-slack.md). If you are using Bazel you may want to [further customize](./set-up-trunk-merge/merge-+-bazel.md) it for parallel mode.

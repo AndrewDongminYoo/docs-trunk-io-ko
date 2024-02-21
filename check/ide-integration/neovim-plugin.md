@@ -24,22 +24,22 @@ Using the [lazy.nvim](https://github.com/folke/lazy.nvim#readme) plugin manager:
 
 ```lua
 require("lazy").setup({
-	{
-		"trunk-io/neovim-trunk",
-		lazy = false,
-		-- optionally pin a version
-		tag = "v0.1.0",
-		-- these are optional config arguments (defaults shown)
-		config = {
-			-- trunkPath = "trunk",
-			-- lspArgs = {},
-			-- formatOnSave = true,
+    {
+        "trunk-io/neovim-trunk",
+        lazy = false,
+        -- optionally pin a version
+        tag = "v0.1.0",
+        -- these are optional config arguments (defaults shown)
+        config = {
+            -- trunkPath = "trunk",
+            -- lspArgs = {},
+            -- formatOnSave = true,
                         -- formatOnSaveTimeout = 10, -- seconds
-			-- logLevel = "info"
-		},
-		main = "trunk",
-		dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"}
-	}
+            -- logLevel = "info"
+        },
+        main = "trunk",
+        dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"}
+    }
 })
 ```
 
@@ -47,7 +47,7 @@ For other plugin managers and installation methods, see our [Neovim Plugin repo]
 
 ### Features
 
-The Neovim Plugin is designed to mirror the [VSCode extension](vs-code.md). Supported features include:
+The Neovim Plugin is designed to mirror the [VSCode extension](./vs-code.md). Supported features include:
 
 - Provide inline diagnostics and auto-fixes
 - Format files on save

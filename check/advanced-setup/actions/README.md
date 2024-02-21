@@ -12,12 +12,12 @@ The most common Trunk Actions are provided out of the box with trunk, and are tr
 
 There are several different types of Trunk Actions, based on when they are triggered:
 
-| Trigger                  | Description                                                          |
-| :----------------------- | :------------------------------------------------------------------- |
-| time-based               | run on a schedule (once per hour, once per day, once per week)       |
-| file modification        | run whenever a file or directory in your repo changes.               |
-| [githooks](git-hooks.md) | run whenever a listed githook event fires (e.g. pre-commit, on-push) |
-| manual                   | `trunk run <action-name>`                                            |
+| Trigger                    | Description                                                          |
+| :------------------------- | :------------------------------------------------------------------- |
+| time-based                 | run on a schedule (once per hour, once per day, once per week)       |
+| file modification          | run whenever a file or directory in your repo changes.               |
+| [githooks](./git-hooks.md) | run whenever a listed githook event fires (e.g. pre-commit, on-push) |
+| manual                     | `trunk run <action-name>`                                            |
 
 ### **Command Line**
 

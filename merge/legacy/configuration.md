@@ -12,7 +12,7 @@ You can pause / resume your MergeQueue. A paused merge queue will not accept any
 
 ### Timeout for Tests to Start
 
-Configure how long a PR should wait for tests to start before auto-cancelling. The MergeQueue creates a test branch for every PR in the queue. CI should be configured to run tests when that branch is created: see [getting started](getting-started.md) for some examples. However, CI can have transient failures, and tests may not start. Trunk will cancel any PRs that have requested tests to start, but have not yet heard back from CI.
+Configure how long a PR should wait for tests to start before auto-cancelling. The MergeQueue creates a test branch for every PR in the queue. CI should be configured to run tests when that branch is created: see [getting started](./getting-started.md) for some examples. However, CI can have transient failures, and tests may not start. Trunk will cancel any PRs that have requested tests to start, but have not yet heard back from CI.
 
 For example, assuming a timeout of one hour:
 
