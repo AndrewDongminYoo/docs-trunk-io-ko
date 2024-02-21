@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "arcanist",
     "bazel",
     "bazelisk",
     "clangd",
@@ -7,13 +8,18 @@
     "detekt",
     "devex",
     "golangci",
+    "hclfmt",
+    "ktlint",
     "nvim",
     "oxipng",
     "pylint",
     "pylintrc",
+    "pyproject",
+    "rufo",
     "sarif",
     "shellcheckrc",
     "ssml",
+    "tflint",
     "trunkio"
   ],
   "editor.copyWithSyntaxHighlighting": false
