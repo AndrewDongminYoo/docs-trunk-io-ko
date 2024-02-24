@@ -31,7 +31,7 @@ For example, the following PRs:
 
 would be split into two different queues in `Parallel` mode
 
-<figure><img src="./merge-flow-parallel.png" alt="" width="332"></figure>
+![" width="332](./merge-flow-parallel.png)
 
 #### Single Mode
 
@@ -39,7 +39,7 @@ In this mode, PRs will always be queued directly behind one another in a first-i
 
 For example, the above 3 PRs would look like this in the Merge Queue in `Single` mode
 
-<figure><img src="./merge-flow-single.png" alt=""></figure>
+![ ](./merge-flow-single.png)
 
 #### Switching Modes
 

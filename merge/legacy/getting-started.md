@@ -77,7 +77,7 @@ Now that you're done with setup, take it for a spin! You can submit a pull reque
 
 Comment `/trunk merge` on a pull request
 
-<figure><img src="../merge-comment-call.png" alt=""></figure>
+![ ](../merge-comment-call.png)
 
 ```bash
 # Authenticate with trunk service
