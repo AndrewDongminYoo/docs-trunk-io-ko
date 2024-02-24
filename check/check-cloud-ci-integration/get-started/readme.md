@@ -42,6 +42,6 @@ Not only do our daily scans allow you to browse and triage the issues in your re
 
 ## Learn more
 
-[Read the documentation about our GitHub integration to learn more.](./github-integration.md)
+[Read the documentation about our GitHub integration to learn more.](github-integration.md)
 
 If you don't host your source code on GitHub, we recommend setting [up Trunk locally](../../usage.md#ci-setup).

@@ -14,7 +14,7 @@ After you have Merge set up and running in your repository you can set up Slack 
 
 After you have Merge set up and running in your repository, you can set up your integration with Slack in Settings > Repositories > the specific repository with the Merge Queue.
 
-![ ](./enable-parallel-mode.png)
+![ ](enable-parallel-mode.png)
 
 Click "**Connect**" to install the Trunk Slack application and receive Merge notifications in a specific channel. Once you have authorized the app to post to a channel, you will be redirected to your settings page.
 
@@ -24,7 +24,7 @@ To have notifications for **PRs you authored** regardless of what Merge Queue th
 
 Note: For user specific notifications you **must** have your GitHub account connected to your Slack account. The button to do this is in the `Settings > Account > Link GitHub Account` section.
 
-![ ](./link-github-account.png)
+![ ](link-github-account.png)
 
 ## Configuring Your Integration with Slack
 

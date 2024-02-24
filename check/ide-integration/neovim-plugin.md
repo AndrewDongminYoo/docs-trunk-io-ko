@@ -47,7 +47,7 @@ For other plugin managers and installation methods, see our [Neovim Plugin repo]
 
 ### Features
 
-The Neovim Plugin is designed to mirror the [VSCode extension](./vs-code.md). Supported features include:
+The Neovim Plugin is designed to mirror the [VSCode extension](vs-code.md). Supported features include:
 
 - Provide inline diagnostics and auto-fixes
 - Format files on save

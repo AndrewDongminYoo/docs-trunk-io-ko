@@ -24,7 +24,7 @@ The bottom half of the dashboard shows aggregate statistics for each of your CI 
 
 ### Filtering and sorting your data
 
-Your data in CI Analytics is aggregated in the following hierarchy - Workflow -> Jobs -> Steps. At each level of the data hierarchy, you see an aggregation of the underlying runs that match your selected filter. At any time, you can dive into the underlying data by selecting `View runs` which will show the [**Runs View**](./using-the-analysis-ui.md#runs-view) for that dataset.
+Your data in CI Analytics is aggregated in the following hierarchy - Workflow -> Jobs -> Steps. At each level of the data hierarchy, you see an aggregation of the underlying runs that match your selected filter. At any time, you can dive into the underlying data by selecting `View runs` which will show the [**Runs View**](using-the-analysis-ui.md#runs-view) for that dataset.
 
 The set of runs that are being aggregated and presented can be filtered by the following criteria:
 
@@ -57,7 +57,7 @@ The top of the view shows a chart of aggregate statistics for the filtered data 
 \
 If you click on one of the data buckets or points on the graph, you can Zoom into that period of data or view the underlying runs.&#x20;
 
-![ ](./ci-analytics-pull-request.png)
+![ ](ci-analytics-pull-request.png)
 
 **Tags**: Aggregation at the job level for GitHub workflows will implicitly shard against the 'runs-on' field of the GitHub workflow. For example, if a job was running on`ubuntu-latest` and later switched to a different runner set - a unique row will be created for each distinct runs-on match. \
 \

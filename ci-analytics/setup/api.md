@@ -23,8 +23,8 @@ You can find your API token in the [Trunk App](https://app.trunk.io).
 The track events endpoint uploads event data about a CI run. Each event contains a start and end timestamp, metrics, tags, and an optional parent association ID.
 application/json
 Trunk API Token
-The repository in which the CI Event ran. See [repo](./api.md#repo) schema.
-An array of event objects. See [event](./api.md#event) schema.
+The repository in which the CI Event ran. See [repo](api.md#repo) schema.
+An array of event objects. See [event](api.md#event) schema.
 Name of the uploading client
 
 #### Repo
@@ -51,16 +51,16 @@ For example, the repository `https://github.com/trunk-io/jenkins-plugin` would b
 
 Event object properties
 
-| Property     | Description                                                                                                       | Required   | Type     |
-| :----------- | :---------------------------------------------------------------------------------------------------------------- | :--------- | :------- |
-| `id`         | A unique identifier for this event                                                                                | `Required` | `String` |
-| `chainId`    | The root event id. `chainId` is used to group all events that were part of the same run.                          | `Required` | `String` |
-| `parent`     | The parent event. Not required if this event has no parent.                                                       | `Optional` | `Object` |
-| `createdAt`  | The millisecond epoch marking the start of this event                                                             | `Required` | `Number` |
-| `finishedAt` | The millisecond epoch marking the end of this event                                                               | `Optional` | `Number` |
-| `conclusion` | `"SUCCESS" \|FAILURE" \|"CANCELLED" \|"TIMED_OUT" \|"SKIPPED"`                                                    | `Optional` | `String` |
-| `payload`    | An object containing metrics and tags. See [payload](./api.md#payload) schema.                                    | `Optional` | `Object` |
-| `sequence`   | Describes the workflow, pipeline, or job, etc. that this event is from. See [sequence](./api.md#sequence) schema. | `Optional` | `Object` |
+| Property     | Description                                                                                                     | Required   | Type     |
+| :----------- | :-------------------------------------------------------------------------------------------------------------- | :--------- | :------- |
+| `id`         | A unique identifier for this event                                                                              | `Required` | `String` |
+| `chainId`    | The root event id. `chainId` is used to group all events that were part of the same run.                        | `Required` | `String` |
+| `parent`     | The parent event. Not required if this event has no parent.                                                     | `Optional` | `Object` |
+| `createdAt`  | The millisecond epoch marking the start of this event                                                           | `Required` | `Number` |
+| `finishedAt` | The millisecond epoch marking the end of this event                                                             | `Optional` | `Number` |
+| `conclusion` | `"SUCCESS" \|FAILURE" \|"CANCELLED" \|"TIMED_OUT" \|"SKIPPED"`                                                  | `Optional` | `String` |
+| `payload`    | An object containing metrics and tags. See [payload](api.md#payload) schema.                                    | `Optional` | `Object` |
+| `sequence`   | Describes the workflow, pipeline, or job, etc. that this event is from. See [sequence](api.md#sequence) schema. | `Optional` | `Object` |
 
 #### Parent
 
@@ -86,13 +86,13 @@ A sequence describes the CI pipeline, job, workflow, etc. Events are grouped und
 
 Sequence object properties:
 
-| Property   | Description                                                                                                            | Required   | Type     | Examples                     |
-| :--------- | :--------------------------------------------------------------------------------------------------------------------- | :--------- | :------- | :--------------------------- |
-| `platform` | The string name of the CI platform. Must be `snake_case`.                                                              | `Required` | `String` | `jenkins`, `trunk_merge`.    |
-| `kind`     | The type of the sequence.                                                                                              | `Required` | `String` | `job`, `workflow`            |
-| `key`      | An identifier for this `sequence`. Must be unique within the `repo` and < 128 characters.                              | `Required` | `String` | `my-global-uuid`             |
-| `name`     | The name of this `sequence`. These will appear as top-level entries in your CI Analytics dashboards.                   | `Required` | `String` | `Integration Tests [linux]`. |
-| `payload`  | The tags for this sequence. See [payload](./api.md#payload) schema. (note: metrics are not supported for a `sequence`) | `Required` | `Object` | `{metrics: [],tags: []}`     |
+| Property   | Description                                                                                                          | Required   | Type     | Examples                     |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- | :--------- | :------- | :--------------------------- |
+| `platform` | The string name of the CI platform. Must be `snake_case`.                                                            | `Required` | `String` | `jenkins`, `trunk_merge`.    |
+| `kind`     | The type of the sequence.                                                                                            | `Required` | `String` | `job`, `workflow`            |
+| `key`      | An identifier for this `sequence`. Must be unique within the `repo` and < 128 characters.                            | `Required` | `String` | `my-global-uuid`             |
+| `name`     | The name of this `sequence`. These will appear as top-level entries in your CI Analytics dashboards.                 | `Required` | `String` | `Integration Tests [linux]`. |
+| `payload`  | The tags for this sequence. See [payload](api.md#payload) schema. (note: metrics are not supported for a `sequence`) | `Required` | `Object` | `{metrics: [],tags: []}`     |
 
 #### Example Request
 

@@ -54,19 +54,19 @@ report:
 
 If linter failures occur while Trunk Check is running in CI, you'll see something like this:
 
-![ ](./trunk-app-ci-failed.png)
+![ ](trunk-app-ci-failed.png)
 
 To debug these, you'll need get the linter failure report(s) from the Github Actions output. Click on "Details" to see a screen like this:
 
-![ ](./trunk-app-ci-failed-detail.png)
+![ ](trunk-app-ci-failed-detail.png)
 
 Then click on "View more details on trunk-io"
 
-![ ](./trunk-github-failed.png)
+![ ](trunk-github-failed.png)
 
 You'll then see your check run summary. Click "\<your repo name>/pull_request" to see the CI logs, and scroll all the way to the bottom.
 
-![ ](./trunk-github-failed-detail.png)
+![ ](trunk-github-failed-detail.png)
 
 You'll then see a list of the failures that occurred, as well as all of the linter failure reports in collapsibles. You can then follow the instructions in [Analyzing Linter Failures](https://docs.trunk.io/check/debugging#analyzing-linter-failures) to resolve the problem.
 

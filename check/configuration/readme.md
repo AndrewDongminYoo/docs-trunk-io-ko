@@ -4,7 +4,7 @@ description: Overview of Trunk Check's supported linters and configuration
 
 # Linters
 
-Trunk Check supports over [100 different linters](./supported-linters.md) and formatters out of the box. The configurations for `trunk check` and `trunk fmt` are governed by the `lint` section of the [`trunk.yaml`](../reference/trunk-yaml/#cli)file stored in the `.trunk` directory of your git repo. Here's an example of what a fully-featured `lint` section looks like:
+Trunk Check supports over [100 different linters](supported-linters.md) and formatters out of the box. The configurations for `trunk check` and `trunk fmt` are governed by the `lint` section of the [`trunk.yaml`](../reference/trunk-yaml/#cli)file stored in the `.trunk` directory of your git repo. Here's an example of what a fully-featured `lint` section looks like:
 
 ```yaml
 lint:
@@ -71,13 +71,13 @@ In sampling mode, Trunk may run multiple linters on a single file, and may not r
 
 Most linters offer some form of configuration. **Trunk uses the native configuration setup of all the tools it runs**. No need to learn a new config language or hunt for specific ways to tune a linter inside trunk. Whether it's `clang-tidy`, `eslint`, or any other linter, all the documentation you'll find online about it is still applicable. We're proud to stand on the shoulders of giants and believe that the open source communities building these tools know best how they should work. Our goal is simply to make it as easy as possible for you to adopt these tools.
 
-To configure **what** a linter does, you will continue to use the linter's own config files. Check out our [configs](https://github.com/trunk-io/configs) repository for always-up-to-date linter configs and some tips on how to structure your linters and repo. Check out our [docs](./configuring-existing-linters/readme.md) on linter-specific tips. To configure **how** Trunk runs a linter, read on.
+To configure **what** a linter does, you will continue to use the linter's own config files. Check out our [configs](https://github.com/trunk-io/configs) repository for always-up-to-date linter configs and some tips on how to structure your linters and repo. Check out our [docs](configuring-existing-linters/readme.md) on linter-specific tips. To configure **how** Trunk runs a linter, read on.
 
 #### Moving linter configs
 
 If you'd like, Trunk also supports migrating any linter configurations from the root of your repository into a `.trunk/configs` folder. These config files will be symlinked in during any `trunk check` run. Note that if you're using an IDE Extension like clangd with an LSP that relies on those configs being in the root, you will need to create an additional symlink from the hidden config to the workspace root.
 
-If you find that you want to tweak how Trunk runs a given linter, you may want to consult the documentation on [overriding defaults](../reference/trunk-yaml/#overriding-defaults) and [the various linter settings](./custom-linters/readme.md); for example, hold-the-line is enabled by default for most linters, but can be disabled like so:
+If you find that you want to tweak how Trunk runs a given linter, you may want to consult the documentation on [overriding defaults](../reference/trunk-yaml/#overriding-defaults) and [the various linter settings](custom-linters/readme.md); for example, hold-the-line is enabled by default for most linters, but can be disabled like so:
 
 ```yaml
 lint:
@@ -107,7 +107,7 @@ lint:
     - hadolint@2.6.0
 ```
 
-Custom linters are slightly different; see [those docs](./custom-linters/readme.md) to learn more.
+Custom linters are slightly different; see [those docs](custom-linters/readme.md) to learn more.
 
 You can also ask Trunk to detect new linters and upgrade existing linters to their latest respective versions by running [`trunk upgrade check`](../advanced-setup/cli/upgrade.md).
 
@@ -144,7 +144,7 @@ By default Trunk will install hermetic versions of runtimes required by the lint
 
 By default Check will ignore issues in files which are listed in the `.gitignore` file.&#x20;
 
-If you want to ignore groups of files, such as generated code, you can do that with the [`lint.ignore`](./#ignoring-files) section of your `.trunk/trunk.yaml` file. ex:
+If you want to ignore groups of files, such as generated code, you can do that with the [`lint.ignore`](#ignoring-issues-and-files) section of your `.trunk/trunk.yaml` file. ex:
 
 ```yaml
 lint:
@@ -166,7 +166,7 @@ struct FooBar {
 
 This tells Trunk that the `clang-tidy` linter found a `modernize-use-nullptr` issue on the highlighted line and that Trunk should suppress this linter issue.
 
-For full details please see the [Ignoring Issues and Files](./ignoring-issues.md) page.
+For full details please see the [Ignoring Issues and Files](ignoring-issues.md) page.
 
 ### Blocking Thresholds
 

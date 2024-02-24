@@ -130,7 +130,7 @@ In this case `my-action` will execute if either `foo.txt` is edited (or created)
 
 #### Git hooks
 
-You can also configure Trunk to manage your git hooks. More detail is provided on this in our [git hooks reference](./git-hooks.md).
+You can also configure Trunk to manage your git hooks. More detail is provided on this in our [git hooks reference](git-hooks.md).
 
 ### Interactivity
 

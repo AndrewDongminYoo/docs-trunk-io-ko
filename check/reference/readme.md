@@ -16,7 +16,7 @@ layout:
 
 |                       |                                      |       |                                                                           |
 | :-------------------- | :----------------------------------- | :---- | :------------------------------------------------------------------------ |
-| Trunk YAML            | ![TrunkYaml.svg](../TrunkYaml.svg)   | false | [trunk-yaml](./trunk-yaml/readme.md)                                      |
+| Trunk YAML            | ![TrunkYaml.svg](../TrunkYaml.svg)   | false | [trunk-yaml](trunk-yaml/readme.md)                                        |
 | User YAML             | ![UserYaml.svg](../UserYaml.svg)     | false | user-yaml.md                                                              |
 | Integration for Slack | ![Slack.svg](../Slack.svg)           | false | [integration-for-slack.md](../../administration/integration-for-slack.md) |
 | VS Code               | ![VSCode.svg](../VSCode.svg)         | false | [vs-code.md](../ide-integration/vs-code.md)                               |

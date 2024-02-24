@@ -10,6 +10,6 @@ The upload feature of Trunk Check will upload all of the issues found by Trunk t
 
 To run Trunk Check automatically you must setup the [Trunk Check web app](https://app.trunk.io/) to connect to your CI system.
 
-If you are using GitHub see the [GitHub Integration Guide](./get-started/readme.md).&#x20;
+If you are using GitHub see the [GitHub Integration Guide](get-started/readme.md).&#x20;
 
-If you are using GitLab or another CI system, see the [GitLab and other CI Integration Guide](./continuous-integration/readme.md).
+If you are using GitLab or another CI system, see the [GitLab and other CI Integration Guide](continuous-integration/readme.md).

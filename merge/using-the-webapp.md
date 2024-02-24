@@ -32,9 +32,9 @@ The PR Details panel has a dropdown menu (labeled "**..."**) with actions. From 
 
 1. Remove a PR from the queue. If the PR is "Not Ready", then it will cancel it, preventing it from going into the queue until it is re-queued. If the PR is currently in the queue, it will be removed from the queue, which will restart all PRs that depended on it
 2. Re-queue a PR if it is currently not in the queue
-3. Download any impacted targets that have been [uploaded](./set-up-trunk-merge/impacted-targets.md#generating-impacted-targets) for the PR (uploading impacted targets is only required for [Parallel](./configuration.md#parallel-mode) mode, but this option will still show regardless of mode if impacted targets have been uploaded for the PR)
+3. Download any impacted targets that have been [uploaded](set-up-trunk-merge/impacted-targets.md#generating-impacted-targets) for the PR (uploading impacted targets is only required for [Parallel](configuration.md#parallel-mode) mode, but this option will still show regardless of mode if impacted targets have been uploaded for the PR)
 
-![ ](./merge-report-remove.png)
+![ ](merge-report-remove.png)
 
 The "Remove from queue" action will remove the PR from the merge queue. If the PR is "Not Ready", then it will cancel it, preventing it from going into the queue until it is re-queued. If the PR is currently in the queue, it will be removed from the queue, which will restart all PRs that depended on it:
 
@@ -42,13 +42,13 @@ The "Remove from queue" action will remove the PR from the merge queue. If the P
 
 A PR details page will display a complete history of a PR - state transitions, associated test runs, a visual of what's currently in the Merge Queue, etc. The same dropdown menu described above (labeled "...") is on this page as well.
 
-![ ](./merge-item-timeline.png)
+![ ](merge-item-timeline.png)
 
 ## Failures
 
 A tabulated view of all the items that have failed in the Merge Queue, e.g. due to testing.
 
-![ ](./merge-failures.png)
+![ ](merge-failures.png)
 
 ## Manually Restarting Failed PRs
 
@@ -64,6 +64,6 @@ Another reason to restart a PR is if the proper tests don't get kicked off due t
 
 The view of all current PRs being tested by Trunk Merge and their respective queues. Each node shown is a pull request, and each edge indicates that the pull request is testing with the item above and depends on it. All edges point towards the target branch; as items merge, the affected queues restructure. If running in `Single` mode, the this will be a single line showing the testing and merging process.
 
-![ ](./merge-flow-graph.png)
+![ ](merge-flow-graph.png)
 
 You can click on any shown PR to navigate to the details page for that PR.

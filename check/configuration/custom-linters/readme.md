@@ -13,30 +13,30 @@ Running `trunk check` tells `trunk` to do the following:
 - compute the set of modified files (by comparing the current working tree and `upstream-ref`,\
   usually your `main` or `master` branch)
 - compute the set of lint actions to run based on the modified files
-  - each enabled linter is invoked once per [applicable modified file](./#applicable-filetypes); for\
+  - each enabled linter is invoked once per [applicable modified file](#applicable-filetypes); for\
     example, if `pylint` and `flake8` are enabled, they will both be run on every modified `python` file but not on any modified `markdown` files
   - every lint action also will have a corresponding _upstream_ lint action (i.e. the linter will\
     also be run on the upstream version of the file, so that we can determine which issues already\
     exist in your repository)
-- [download](./#making-installs-hermetic) and install any newly enabled linters/formatters
+- [download](#hermetic-installs) and install any newly enabled linters/formatters
 - execute uncached lint actions
-- parse linter [outputs](./#output-types) into configurable output types
+- parse linter [outputs](#output-types) into configurable output types
 - determine which lint issues are new, existing, or fixed
 
-### [Output Types](./output-types.md)
+### [Output Types](output-types.md)
 
 Trunk currently supports the following types of additional/proprietary linters:
 
-| Linter Type                                        | Autofixsupport | Description                                                                                                                              |
-| :------------------------------------------------- | :------------: | :--------------------------------------------------------------------------------------------------------------------------------------- |
-| [`sarif`](./output-types.md#sarif)                 |       ✓        | Produces diagnostics as [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) JSON. |
-| [`lsp_json`](./output-types.md#lsp-json)           |                | Produces diagnostics as [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) JSON.                          |
-| [`pass_fail`](./output-types.md#pass-fail-linters) |                | Writes a single file-level diagnostic to `stdout`.                                                                                       |
-| [`regex`](./output-types.md#regex)                 |                | Produces diagnostics using a custom regex format.                                                                                        |
-| [`arcanist`](./output-types.md#arcanist)           |       ✓        | Produces diagnostics as Arcanist JSON.                                                                                                   |
-| [`rewrite`](./output-types.md#formatters)          |       ✓        | Writes the formatted version of a file to `stdout`.                                                                                      |
+| Linter Type                                      | Autofixsupport | Description                                                                                                                              |
+| :----------------------------------------------- | :------------: | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| [`sarif`](output-types.md#sarif)                 |       ✓        | Produces diagnostics as [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) JSON. |
+| [`lsp_json`](output-types.md#lsp-json)           |                | Produces diagnostics as [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) JSON.                          |
+| [`pass_fail`](output-types.md#pass-fail-linters) |                | Writes a single file-level diagnostic to `stdout`.                                                                                       |
+| [`regex`](output-types.md#regex)                 |                | Produces diagnostics using a custom regex format.                                                                                        |
+| [`arcanist`](output-types.md#arcanist)           |       ✓        | Produces diagnostics as Arcanist JSON.                                                                                                   |
+| [`rewrite`](output-types.md#formatters)          |       ✓        | Writes the formatted version of a file to `stdout`.                                                                                      |
 
-If your linter produces a different output type, you can also write a [parser](./custom-parsers.md) to transform the linter's output into something Trunk can understand.
+If your linter produces a different output type, you can also write a [parser](custom-parsers.md) to transform the linter's output into something Trunk can understand.
 
 To set up a custom linter, add it to `trunk.yaml` under `lint.definitions` and enable it:
 
@@ -62,7 +62,7 @@ Every custom linter must specify a name, the types of files it will run on, at l
 
 > Info: Entries in `enabled` must specify both a linter name and a version. If you commit your linter into your repository, you should simply use `@SYSTEM`, which will run the linter with your shell's\
 > `PATH`. If you have a versioned release pipeline for your linter, though, you'll want to define your\
-> custom linter using a [`download`](./#downloads) and specify the download version to use.
+> custom linter using a [`download`](#downloads) and specify the download version to use.
 
 ### Configuration Options
 
@@ -171,7 +171,7 @@ lint:
 
 #### Output
 
-The output format that Trunk expects from a linter is determined by its [`output`](./#output) type.
+The output format that Trunk expects from a linter is determined by its [`output`](#output) type.
 
 **`stdout`, `stderr` or `tmp_file`**
 
@@ -233,7 +233,7 @@ lint:
 
 Most `environment` entries are maps with `name` and `value` keys; these become `name=value` environment variables. For `PATH`, we allow specifying `list`, in which case we concatenate the entries with `:`.
 
-We use the same template syntax for `environment` as we do for [`command`](./#command).
+We use the same template syntax for `environment` as we do for [`command`](#command).
 
 ### Hermetic Installs
 
@@ -324,7 +324,7 @@ In this scenario, `terraform` is an additional tool dependency - `terragrunt` re
 
 #### Downloads
 
-**(NOTE: This method of specifying linters is still supported, but using `tools` like specified** [**above**](./#tools) **is recommended going forward. Tools support referencing downloads from the top-level `downloads` section)**
+**(NOTE: This method of specifying linters is still supported, but using `tools` like specified** [**above**](#additional-tool-dependencies) **is recommended going forward. Tools support referencing downloads from the top-level `downloads` section)**
 
 If your custom linter has a separate release process (i.e. is not committed in your repo), then you can tell Trunk how to download it like so:
 

@@ -8,7 +8,7 @@ To receive notifications and/or interact with Trunk from Slack, an admin needs t
 
 1. Navigate to [https://app.trunk.io](https://app.trunk.io). Select the repo you would like to Manage. Click "Settings" > "Connect" <figure><img src="https://files.readme.io/14d4355-image.png" alt=""></figure>
 
-2. This will open a window where you can sign in to your Slack team. ![" width="375](./slack-permission.png)
+2. This will open a window where you can sign in to your Slack team. ![" width="375](slack-permission.png)
 
 3. Once you press "Allow," Trunk will connect to your Slack automatically and begin pushing updates to the channel you have selected.
 

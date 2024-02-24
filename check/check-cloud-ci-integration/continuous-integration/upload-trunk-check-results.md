@@ -11,7 +11,7 @@ In order to keep the data up-to-date, you should upload Trunk Check results regu
 
 ### Running `trunk check --upload`
 
-Before running `trunk check --upload` you must have [connected your Github repository to your Trunk account](./upload-trunk-check-results.md).
+Before running `trunk check --upload` you must have [connected your Github repository to your Trunk account](upload-trunk-check-results.md).
 
 #### CI Setup for nightly uploads
 

@@ -24,7 +24,7 @@ On Day 91, the user count would be two. We consider days 2 thru 91 (inclusive), 
 
 ### Calculating an Invoice
 
-At the end of every billing cycle, Trunk calculates what the next invoice should be. Trunk determines which products are billing eligible, then charges you for the number of users using that product. A product is billing eligible if you are already paying for that product, or if you have exceeded your [free tier usage limits](./billing.md#free-plans-and-trials) . See our section on [calculating user counts](./billing.md#calculating-user-counts) to determine how much we charge per product.
+At the end of every billing cycle, Trunk calculates what the next invoice should be. Trunk determines which products are billing eligible, then charges you for the number of users using that product. A product is billing eligible if you are already paying for that product, or if you have exceeded your [free tier usage limits](billing.md#free-plans-and-trials) . See our section on [calculating user counts](billing.md#calculating-user-counts) to determine how much we charge per product.
 
 For example, consider a team of 19 that owns many repositories. Assume that they are currently paying for Merge and Check, but are trying out CI Analytics.
 
@@ -32,7 +32,7 @@ For the first billing cycle, their invoice would look something like this:
 
 ![ ](https://files.readme.io/63bc876-Screen_Shot_2023-01-17_at_8.01.43_PM.png)
 
-At the beginning of the next billing cycle, they have exceeded their [free tier usage](./billing.md#free-plans-and-trials) of CI Analytics. In that case, we would see three invoice line items; one for Merge, one for Check, and another for CI Analytics. The quantity per product would also be reflected with the [latest user counts](./billing.md#calculating-user-counts).
+At the beginning of the next billing cycle, they have exceeded their [free tier usage](billing.md#free-plans-and-trials) of CI Analytics. In that case, we would see three invoice line items; one for Merge, one for Check, and another for CI Analytics. The quantity per product would also be reflected with the [latest user counts](billing.md#calculating-user-counts).
 
 ### Free Plans and Trials
 
@@ -68,7 +68,7 @@ You can edit your payment details by navigating to Settings > Billing, and click
 
 ### Cancelling a Plan
 
-You can cancel an active Trunk subscription by navigating to Settings > Billing and clicking the “Cancel Subscription” button. Your plan will transition back into the [free tier](./billing.md#free-plans-and-trials); if you want to re-enable this plan, please contact us at sales@trunk.io.
+You can cancel an active Trunk subscription by navigating to Settings > Billing and clicking the “Cancel Subscription” button. Your plan will transition back into the [free tier](billing.md#free-plans-and-trials); if you want to re-enable this plan, please contact us at sales@trunk.io.
 
 > 🚧
 >

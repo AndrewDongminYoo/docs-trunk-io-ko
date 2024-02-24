@@ -6,7 +6,7 @@ description: "Meta-linter for over 100 code checking tools: CLI, IDE, and on the
 
 ## What is Trunk Check?
 
-**Trunk Check** runs 100+ idiomatic code-checking tools for every language and technology, locally ([CLI](./advanced-setup/cli/readme.md), [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)), on CI ([CI](./advanced-setup/cli/readme.md), [GitHub Bot](./advanced-setup/cli/readme.md)), and in our [web app](https://app.trunk.io). You're probably already running a few of these tools (ESLint, Prettier, etc), but Trunk Check adds valuable features to let you integrate with CI and PRs, run them faster, upgrade them easier, integrate them with CI and PRs, version them better, and much more.
+**Trunk Check** runs 100+ idiomatic code-checking tools for every language and technology, locally ([CLI](advanced-setup/cli/readme.md), [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)), on CI ([CI](advanced-setup/cli/readme.md), [GitHub Bot](advanced-setup/cli/readme.md)), and in our [web app](https://app.trunk.io). You're probably already running a few of these tools (ESLint, Prettier, etc), but Trunk Check adds valuable features to let you integrate with CI and PRs, run them faster, upgrade them easier, integrate them with CI and PRs, version them better, and much more.
 
 Check handles:
 
@@ -23,7 +23,7 @@ Check handles:
 
 <summary>If I turn on a new rule or code-checking tool, how do I handle the zillion existing issues in my repo?</summary>
 
-'[Hold the line](./reference/under-the-hood.md#hold-the-line)' is a Trunk Check feature that works for _all_ tools Trunk Check runs. It detects which issues are preexisting or not, in a sophisticated way (we correctly handle the cases in which you modify one line of code and it causes new issues downstream of that). By default, we only call _new_ issues "blocking issues" for the purposes of gating PRs and running `trunk check` locally.
+'[Hold the line](reference/under-the-hood.md#hold-the-line)' is a Trunk Check feature that works for _all_ tools Trunk Check runs. It detects which issues are preexisting or not, in a sophisticated way (we correctly handle the cases in which you modify one line of code and it causes new issues downstream of that). By default, we only call _new_ issues "blocking issues" for the purposes of gating PRs and running `trunk check` locally.
 
 This is the #1 feature driving why large companies purchase Trunk Check licenses. Without this, turning on a new linting rule may counter-intuitively _increase_ your tech debt. This typically happens because you force every modified file to be clean of errors in pull requests. In real life, this means devs optimize for touching as few files as possible to avoid cleaning up all the issues they didn't affect. Things like renaming a class or function across many files will never be done, because a simple find+replace turns into an effort of fixing a hundred lint issues just to merge it. Plus, fixing unrelated issues to your changes is just a poor separation of responsibilities for pull requests.
 
@@ -51,7 +51,7 @@ Trunk Check has a daemon that checks code as you modify files in your repo, runs
 
 PR iterations kill productivity. Every time a dev updates a PR, even trivially, they have to context switch, break out of flow, reviewers also context switch to look at it, and that's not to mention the CI time to run a new suite of jobs.
 
-`trunk check` shows the _same_ results locally and [on CI](./check-cloud-ci-integration/readme.md). It can optionally also function as a[git-hooks.md](./advanced-setup/actions/git-hooks.md "mention") manager to reject `git push`es unless they're passing `trunk check`.
+`trunk check` shows the _same_ results locally and [on CI](check-cloud-ci-integration/readme.md). It can optionally also function as a[git-hooks.md](advanced-setup/actions/git-hooks.md "mention") manager to reject `git push`es unless they're passing `trunk check`.
 
 </details>
 
@@ -62,8 +62,8 @@ PR iterations kill productivity. Every time a dev updates a PR, even trivially, 
 - caching
 - pre-existing issue detection
 - a daemon & language server
-- [githooks management](./advanced-setup/actions/git-hooks.md)
-- cli available ([docs](./advanced-setup/cli/readme.md))
+- [githooks management](advanced-setup/actions/git-hooks.md)
+- cli available ([docs](advanced-setup/cli/readme.md))
 - a [web app](https://app.trunk.io/) for repo stats and slack notifications
 
 ## I run a large eng org. Why should I use Check?
@@ -74,7 +74,7 @@ This feature is critical for eng orgs because it allows you to start leveling up
 
 ## Supported Linters, Formatters, and Security Tools
 
-We support over 100 different linters and formatters, and we're adding new integrations every release. Check out our full list of [Supported Linters](./configuration/supported-linters.md). Stop by on [Slack](https://slack.trunk.io) and let us know what you'd like next! All tool integrations are open-source [here](https://github.com/trunk-io/plugins).Enable the following tools:
+We support over 100 different linters and formatters, and we're adding new integrations every release. Check out our full list of [Supported Linters](configuration/supported-linters.md). Stop by on [Slack](https://slack.trunk.io) and let us know what you'd like next! All tool integrations are open-source [here](https://github.com/trunk-io/plugins).Enable the following tools:
 
 ```bash
 trunk check enable <linter>
@@ -85,7 +85,7 @@ trunk check enable <linter>
 
 ## How it works
 
-Trunk downloads everything it needs to run on demand and caches it in `~/.cache/trunk`. We run linters in parallel, in the background, and function as a [language server](https://microsoft.github.io/language-server-protocol) to show results inline in VSCode via the [Trunk VSCode Extension](./#install-the-vscode-extension).
+Trunk downloads everything it needs to run on demand and caches it in `~/.cache/trunk`. We run linters in parallel, in the background, and function as a [language server](https://microsoft.github.io/language-server-protocol) to show results inline in VSCode via the [Trunk VSCode Extension](#install-the-vscode-extension).
 
 ## Install the VSCode Extension
 
@@ -99,4 +99,4 @@ If you run VSCode you can also install the [trunk VSCode extension](vscode:exten
 trunk check
 ```
 
-Note: if you have not modified any files, `trunk check` will not check anything. See the [Getting Started guide](./usage.md) for more info on basic `trunk` usage.
+Note: if you have not modified any files, `trunk check` will not check anything. See the [Getting Started guide](usage.md) for more info on basic `trunk` usage.
