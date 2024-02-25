@@ -34,15 +34,11 @@ You'll need to create a Trunk Organization to get started with any of the Trunk 
 2. Adding teammates by email domain.
 
    1. You can auto-add teammates by email domain by adding your team's email domain in the "Team Domains" section.
-
       This will automatically add any existing and future Trunk users with an email in your domain to your Organization.
-
       This will not send invitations to any users to confirm being added.
 
 3. Adding teammates by email.
-
-   1. You can invite users individually by clicking the `+` button in the "Team Members" section. This will allow you to invite a set of members by specifying their email accounts.
-
+   1. You can invite users individually by clicking the `+` button in the "Team Members" section.
+      This will allow you to invite a set of members by specifying their email accounts.
       These users won't be automatically added to your Trunk Organization, instead they will receive an email to opt-in to the Organization.
-
       These users must create a Trunk account to be able to accept the email invitation.

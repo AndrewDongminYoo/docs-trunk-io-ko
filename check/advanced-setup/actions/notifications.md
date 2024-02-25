@@ -8,7 +8,9 @@ description: >-
 
 ### Defining actions that produce notifications
 
-Typically, whatever actions write to stdout is stored in the log file and perhaps shown to the user. However, actions can also produce structured output if `output_type` is set on the Action Definition to be `notification_v1`.
+Typically, whatever actions write to stdout is stored in the log file and perhaps shown to the user.
+
+However, actions can also produce structured output if `output_type` is set on the Action Definition to be `notification_v1`.
 
 In this case, the action should print yaml to output with the following structure:
 
@@ -32,7 +34,9 @@ Some notes:
 1. The ID can be whatever you want it to, but generally should be made to match the action ID.
 2. You may emit multiple notifications per action.
 3. `icon` and `commands` are used to control notifications display in VSCode.
-4. High priority notifications are immediately shown to the user in terminal. Low priority notifications are only shown every 24 hours (These are configurable).
+4. High priority notifications are immediately shown to the user in terminal.
+
+Low priority notifications are only shown every 24 hours (These are configurable).
 
 ### Deleting notifications
 
@@ -48,7 +52,11 @@ If actions produce a notification that is reflective of a current state or somet
 
 We illustrate the cycle of actions managing their own notifications with the following example.
 
-Consider the built-in action for `trunk upgrade` - a command that upgrades trunk and a repo's enabled linters to their most recent versions. We'd like to notify the user of new upgrades once a day. Thus our `trunk-upgrade-available` action definition looks like this:
+Consider the built-in action for `trunk upgrade` - a command that upgrades trunk and a repo's enabled linters to their most recent versions.
+
+We'd like to notify the user of new upgrades once a day.
+
+Thus our `trunk-upgrade-available` action definition looks like this:
 
 ```yaml
 id: trunk-upgrade-available
@@ -79,4 +87,12 @@ If there are no upgrades available, `trunk upgrade --notify` will produce:
 notifications_to_delete: [trunk-upgrade-available]
 ```
 
-So in this scenario, the `trunk-upgrade-available` action runs in the background periodically and produces a notification. The user takes action by running `trunk upgrade`. Since `trunk upgrade` modifies `.trunk/trunk.yaml`, this will again trigger the `trunk-upgrade-available` action (due to the file trigger). Since there is nothing else to upgrade, `trunk upgrade --notify` will produce output telling Trunk to delete its notification. Now, the user is no longer shown a notification about available upgrades!
+So in this scenario, the `trunk-upgrade-available` action runs in the background periodically and produces a notification.
+
+The user takes action by running `trunk upgrade`.
+
+Since `trunk upgrade` modifies `.trunk/trunk.yaml`, this will again trigger the `trunk-upgrade-available` action (due to the file trigger).
+
+Since there is nothing else to upgrade, `trunk upgrade --notify` will produce output telling Trunk to delete its notification.
+
+Now, the user is no longer shown a notification about available upgrades!

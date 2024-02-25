@@ -14,7 +14,9 @@ You will need to have ports open for:
 
 ### Create a trunk organization
 
-To use the CI Debugger, you must first create a trunk organization. See this [document](../administration/organizations.md) for detailed instructions.
+To use the CI Debugger, you must first create a trunk organization.
+
+See this [document](../administration/organizations.md) for detailed instructions.
 
 ### Create a breakpoint in the trunk app
 
@@ -26,7 +28,9 @@ In order for the CI Debugger to communicate with the trunk web app, it needs to 
 
 ### Wrap one of your GitHub steps in a `trunk breakpoint`
 
-Now for the magic 🪄. Open an existing GitHub Action and wrap one of your existing steps with a `trunk breakpoint` like this [(example here)](https://github.com/trunk-io/debugger-demo/blob/main/.github/workflows/pr.yml):
+Now for the magic 🪄.
+
+Open an existing GitHub Action and wrap one of your existing steps with a `trunk breakpoint` like this [(example here)](https://github.com/trunk-io/debugger-demo/blob/main/.github/workflows/pr.yml):
 
 ```yaml
 name: Pull Request

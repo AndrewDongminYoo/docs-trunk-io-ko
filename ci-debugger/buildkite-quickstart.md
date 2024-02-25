@@ -14,7 +14,9 @@ You will need to have ports open for:
 
 ### Create a trunk organization
 
-To use the CI Debugger, you must first create a trunk organization. See this [document](../administration/organizations.md) for detailed instructions.
+To use the CI Debugger, you must first create a trunk organization.
+
+See this [document](../administration/organizations.md) for detailed instructions.
 
 ### Create a breakpoint in the trunk app
 
@@ -24,9 +26,13 @@ In order for the CI Debugger to communicate with the trunk web app, it needs to 
 
 ### Setup Your Buildkite Workflow
 
-Here is an a Buildkite workflow. Replace the three values in the example with the ones specific to your setup.
+Here is an a Buildkite workflow.
 
-Here the TRUNK_TOKEN is pasted directly. In a real environment, it should be managed as a [secret](https://buildkite.com/docs/pipelines/secrets).
+Replace the three values in the example with the ones specific to your setup.
+
+Here the TRUNK_TOKEN is pasted directly.
+
+In a real environment, it should be managed as a [secret](https://buildkite.com/docs/pipelines/secrets).
 
 ```yaml
 steps:

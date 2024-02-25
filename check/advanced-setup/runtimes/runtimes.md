@@ -4,9 +4,13 @@ description: Managing Runtimes (Pythong, NodeJS, etc) with Trunk Check
 
 # Runtimes
 
-Trunk makes it easy for you to run tools (such as linters and actions) because, under the hood, Trunk actually downloads everything a given tool depends on, and then executes said tool in the context of its dependencies. In other words, you can run tools like `golangci-lint` and `rubocop` without wasting hours figuring out how to install the right Go and Ruby versions on your machine, because Trunk will install a `go` and `ruby` runtime for those tools to depend on.
+Trunk makes it easy for you to run tools (such as linters and actions) because, under the hood, Trunk actually downloads everything a given tool depends on, and then executes said tool in the context of its dependencies.
 
-Importantly, just like how Trunk by design requires you to version your tools, i.e. specify which version of `golangci-lint` and `rubocop` is enabled in your repository at a given commit, Trunk also versions your runtimes. This means that you can stop asking questions like "wait, which version of Go are you using?" and "how do I choose a Ruby version to install on this new Jenkins runner?"; instead, all you have to do is look at the `runtimes` section in your `.trunk/trunk.yaml`, and you know which version of which runtime Trunk will use for a tool at any given moment:
+In other words, you can run tools like `golangci-lint` and `rubocop` without wasting hours figuring out how to install the right Go and Ruby versions on your machine, because Trunk will install a `go` and `ruby` runtime for those tools to depend on.
+
+Importantly, just like how Trunk by design requires you to version your tools, i.e. specify which version of `golangci-lint` and `rubocop` is enabled in your repository at a given commit, Trunk also versions your runtimes.
+
+This means that you can stop asking questions like "wait, which version of Go are you using?" and "how do I choose a Ruby version to install on this new Jenkins runner?"; instead, all you have to do is look at the `runtimes` section in your `.trunk/trunk.yaml`, and you know which version of which runtime Trunk will use for a tool at any given moment:
 
 ```yaml
 runtimes:
@@ -19,7 +23,9 @@ runtimes:
 
 ## How does this work?
 
-Runtimes are defined by a combination of configuration and native code inside Trunk itself. Let's walk through an example, `prettier`:
+Runtimes are defined by a combination of configuration and native code inside Trunk itself.
+
+Let's walk through an example, `prettier`:
 
 ```yaml
 lint:

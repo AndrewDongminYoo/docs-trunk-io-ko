@@ -12,11 +12,15 @@ After you have Merge set up and running in your repository, you can set up your 
 
 ![ ](https://files.readme.io/9fd48c3-Screen_Shot_2022-09-13_at_2.19.48_PM.png)
 
-Click "Connect" to install the Trunk Slack application and receive Merge notifications in a specific channel. Once you have authorized the app to post to a channel, you will be redirected to your settings page.
+Click "Connect" to install the Trunk Slack application and receive Merge notifications in a specific channel.
+
+Once you have authorized the app to post to a channel, you will be redirected to your settings page.
 
 ## Configuring Your Integration with Slack
 
-After you have connected to a Slack channel, you can select which notifications you would like to receive. By default, all Merge notifications are enabled.
+After you have connected to a Slack channel, you can select which notifications you would like to receive.
+
+By default, all Merge notifications are enabled.
 
 ![ ](https://files.readme.io/8171abe-Screen_Shot_2022-09-13_at_2.47.00_PM.png)
 

@@ -4,7 +4,13 @@ description: Custom linter configuration overview
 
 # Custom Linters
 
-Trunk Check's linter integrations are fully configurable. This means that you can easily tune existing linters or leverage our caching and [hold-the-line](../../reference/under-the-hood.md#hold-the-line) solution with your own custom linters. Let's walk through the steps of setting up your own linter. For a full walkthrough, see our [blog](https://trunk.io/blog/integrating-your-own-custom-tools-with-trunk-check).
+Trunk Check's linter integrations are fully configurable.
+
+This means that you can easily tune existing linters or leverage our caching and [hold-the-line](../../reference/under-the-hood.md#hold-the-line) solution with your own custom linters.
+
+Let's walk through the steps of setting up your own linter.
+
+For a full walkthrough, see our [blog](https://trunk.io/blog/integrating-your-own-custom-tools-with-trunk-check).
 
 ### Execution Model
 
@@ -12,8 +18,12 @@ Running `trunk check` tells `trunk` to do the following:
 
 - compute the set of modified files (by comparing the current working tree and `upstream-ref`, usually your `main` or `master` branch)
 - compute the set of lint actions to run based on the modified files
+
   - each enabled linter is invoked once per [applicable modified file](#applicable-filetypes); for example, if `pylint` and `flake8` are enabled, they will both be run on every modified `python` file but not on any modified `markdown` files
-  - every lint action also will have a corresponding _upstream_ lint action (i.e. the linter will also be run on the upstream version of the file, so that we can determine which issues already exist in your repository)
+  - every lint action also will have a corresponding _upstream_ lint action (i.e.
+
+  the linter will also be run on the upstream version of the file, so that we can determine which issues already exist in your repository)
+
 - [download](#hermetic-installs) and install any newly enabled linters/formatters
 - execute uncached lint actions
 - parse linter [outputs](#output-types) into configurable output types
@@ -56,7 +66,11 @@ The `@SYSTEM` is a special identifier that indicates that we will forward the `P
 
 Every custom linter must specify a name, the types of files it will run on, at least one command, and `success_codes` or `error_codes`.
 
-> Info: Entries in `enabled` must specify both a linter name and a version. If you commit your linter into your repository, you should simply use `@SYSTEM`, which will run the linter with your shell's > `PATH`. If you have a versioned release pipeline for your linter, though, you'll want to define your > custom linter using a [`download`](#downloads) and specify the download version to use.
+> Info: Entries in `enabled` must specify both a linter name and a version.
+
+If you commit your linter into your repository, you should simply use `@SYSTEM`, which will run the linter with your shell's > `PATH`.
+
+If you have a versioned release pipeline for your linter, though, you'll want to define your > custom linter using a [`download`](#downloads) and specify the download version to use.
 
 ### Configuration Options
 
@@ -66,9 +80,13 @@ For even more details, you can refer to [the JSON schema for `trunk.yaml`](https
 
 #### Applicable filetypes
 
-To determine which linters to run on which files (i.e. compute the set of lint actions), Trunk requires that every linter define the set of filetypes it applies to in `files`.
+To determine which linters to run on which files (i.e.
 
-We have a number of pre-defined filetypes (e.g. `c++-header`, `gemspec`, `rust`; see our [plugins repo](https://github.com/trunk-io/plugins/blob/main/linters/plugin.yaml) for an up-to-date list), but you can also define your own filetypes. Here's how we define the `python` filetype:
+compute the set of lint actions), Trunk requires that every linter define the set of filetypes it applies to in `files`.
+
+We have a number of pre-defined filetypes (e.g. `c++-header`, `gemspec`, `rust`; see our [plugins repo](https://github.com/trunk-io/plugins/blob/main/linters/plugin.yaml) for an up-to-date list), but you can also define your own filetypes.
+
+Here's how we define the `python` filetype:
 
 ```yaml
 lint:
@@ -90,7 +108,9 @@ This tells Trunk that files matching either of the following criteria should be 
 
 #### Command
 
-Once Trunk has figured out which linters it will run on which files, Trunk expands the template provided in the `run` field to determine the arguments it will invoke the linter with. Here's what that looks like for `detekt`, one of our Kotlin linters:
+Once Trunk has figured out which linters it will run on which files, Trunk expands the template provided in the `run` field to determine the arguments it will invoke the linter with.
+
+Here's what that looks like for `detekt`, one of our Kotlin linters:
 
 ```yaml
 lint:
@@ -119,7 +139,11 @@ Note that some of the fields in this command template contain `${}` tokens: thes
 
 #### Input
 
-The `target` field specifies what paths this linter will run on given an input file. It may be a literal such a `.` which will run the linter on the whole repository. It also supports various substitutions:
+The `target` field specifies what paths this linter will run on given an input file.
+
+It may be a literal such a `.` which will run the linter on the whole repository.
+
+It also supports various substitutions:
 
 | Variable                         | Description                                                                                                                                      |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -159,7 +183,9 @@ lint:
           stdin: true
 ```
 
-> Note: Linters that take their input via `stdin` may still want to know the file's path so that they can, say, generate diagnostics with the file's path. In these cases you can still use `${target}` in `run`.
+> Note: Linters that take their input via `stdin` may still want to know the file's path so that they can, say, generate diagnostics with the file's path.
+
+In these cases you can still use `${target}` in `run`.
 
 #### Output
 
@@ -177,7 +203,9 @@ The output format that Trunk expects from a linter is determined by its [`output
 
 #### **Exit codes**
 
-Linters often use different exit codes to categorize the outcome. For instance, [`markdownlint`](https://github.com/igorshubovych/markdownlint-cli#exit-codes) uses `0` to indicate that no issues were found, `1` to indicate that the tool ran successfully but issues were found, and `2`, `3`, and `4` for tool execution failures.
+Linters often use different exit codes to categorize the outcome.
+
+For instance, [`markdownlint`](https://github.com/igorshubovych/markdownlint-cli#exit-codes) uses `0` to indicate that no issues were found, `1` to indicate that the tool ran successfully but issues were found, and `2`, `3`, and `4` for tool execution failures.
 
 Trunk supports specifying either `success_codes` or `error_codes` for a linter:
 
@@ -204,7 +232,9 @@ Trunk supports specifying either `success_codes` or `error_codes` for a linter:
 
 #### **Limiting concurrency**
 
-If you would like to limit the number of times trunk will invoke a linter concurrently, then you can use the `maximum_concurrency` option. For example, setting `maximum_concurrency: 1` will limit Trunk from running more than one instance of the linter simultaneously.
+If you would like to limit the number of times trunk will invoke a linter concurrently, then you can use the `maximum_concurrency` option.
+
+For example, setting `maximum_concurrency: 1` will limit Trunk from running more than one instance of the linter simultaneously.
 
 #### **Environment variables**
 
@@ -222,13 +252,21 @@ lint:
         value: en_US.UTF-8
 ```
 
-Most `environment` entries are maps with `name` and `value` keys; these become `name=value` environment variables. For `PATH`, we allow specifying `list`, in which case we concatenate the entries with `:`.
+Most `environment` entries are maps with `name` and `value` keys; these become `name=value` environment variables.
+
+For `PATH`, we allow specifying `list`, in which case we concatenate the entries with `:`.
 
 We use the same template syntax for `environment` as we do for [`command`](#command).
 
 ### Hermetic Installs
 
-You can use the `tools` section to specify trunk-configured binaries that the linter uses to run. The `tools` key should specify a list of tool names. We have two kinds of tool dependencies - they are described in turn below. See the [Tools Configuration](../../advanced-setup/tools/configuration.md) page for more details on how to set up your tools.
+You can use the `tools` section to specify trunk-configured binaries that the linter uses to run.
+
+The `tools` key should specify a list of tool names.
+
+We have two kinds of tool dependencies - they are described in turn below.
+
+See the [Tools Configuration](../../advanced-setup/tools/configuration.md) page for more details on how to set up your tools.
 
 Using tools is the preferred way of defining and versioning a linter, as it also allows repo users to conveniently run the linter binary outside of the `trunk check` context.
 
@@ -272,11 +310,17 @@ lint:
         run: pylint --version
 ```
 
-In this case, the tool name (`pylint`) matches that of the linter, making it an _eponymous tool_. Eponymous tools need to be defined separately from the linter but implicitly enabled with the linter's version. You may explicitly enable the eponymous tool if you wish, but note that its version needs to be synced to that of the linter.
+In this case, the tool name (`pylint`) matches that of the linter, making it an _eponymous tool_.
+
+Eponymous tools need to be defined separately from the linter but implicitly enabled with the linter's version.
+
+You may explicitly enable the eponymous tool if you wish, but note that its version needs to be synced to that of the linter.
 
 #### Additional Tool Dependencies
 
-You can also have a scenario where a linter depends on a tool that is not identically named - an _additional tool dependency_. We give an example below:
+You can also have a scenario where a linter depends on a tool that is not identically named - an _additional tool dependency_.
+
+We give an example below:
 
 ```yaml
 tools:
@@ -311,13 +355,19 @@ lint:
         run: terragrunt -version
 ```
 
-In this scenario, `terraform` is an additional tool dependency - `terragrunt` requires it to be in `$PATH`. If the tool is an additional dependency, it must be enabled explicitly and versioned independently of the linter - that is, it must be listed in the `tools.enabled` section.
+In this scenario, `terraform` is an additional tool dependency - `terragrunt` requires it to be in `$PATH`.
+
+If the tool is an additional dependency, it must be enabled explicitly and versioned independently of the linter - that is, it must be listed in the `tools.enabled` section.
 
 #### Downloads
 
-**(NOTE: This method of specifying linters is still supported, but using `tools` like specified** [**above**](#additional-tool-dependencies) **is recommended going forward. Tools support referencing downloads from the top-level `downloads` section)**
+**(NOTE: This method of specifying linters is still supported, but using `tools` like specified** [**above**](#additional-tool-dependencies) **is recommended going forward.**
 
-If your custom linter has a separate release process (i.e. is not committed in your repo), then you can tell Trunk how to download it like so:
+**Tools support referencing downloads from the top-level `downloads` section)**
+
+If your custom linter has a separate release process (i.e.
+
+is not committed in your repo), then you can tell Trunk how to download it like so:
 
 ```yaml
 lint:
@@ -385,7 +435,9 @@ lint:
       package: fizz-buzz
 ```
 
-This will now create a hermetic directory in `~/.cache/trunk/linters/fizz-buzz` and `npm install fizz-buzz` there. You can refer to different versions of your package in `trunk.yaml` as normal, via `fizz-buzz@1.2.3`.
+This will now create a hermetic directory in `~/.cache/trunk/linters/fizz-buzz` and `npm install fizz-buzz` there.
+
+You can refer to different versions of your package in `trunk.yaml` as normal, via `fizz-buzz@1.2.3`.
 
 > Note: Such downloads will use the _hermetic_ version of the specified runtime that `trunk` installs, not the one >you've installed on your machine.
 

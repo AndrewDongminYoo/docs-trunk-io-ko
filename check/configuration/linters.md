@@ -238,7 +238,8 @@ Most linters will not require the use of a trigger rule.
 
 Trigger rules work on 3 principles:
 
-1. Input(s) that trigger the linters. These can be files, directories, or extended globs.
+1. Input(s) that trigger the linters.
+   These can be files, directories, or extended globs.
 2. Linter(s) to run when a triggered file is modified.
 3. Targets(s) to pass to the linters (can be files or directories).
 

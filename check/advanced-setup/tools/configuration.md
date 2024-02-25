@@ -4,7 +4,9 @@ description: Let's look at how to configure Trunk Tools.
 
 # Configuration
 
-Tools are configured in the `tools` section of [`trunk.yaml`](../../reference/trunk-yaml/trunk-yaml.md). As with other settings, you can override these values in your [User YAML](../../reference/user-yaml.md).
+Tools are configured in the `tools` section of [`trunk.yaml`](../../reference/trunk-yaml/trunk-yaml.md).
+
+As with other settings, you can override these values in your [User YAML](../../reference/user-yaml.md).
 
 ```yaml
 tools:
@@ -28,9 +30,15 @@ tools:
       shims: [gh]
 ```
 
-Like with actions and linters, we have a (versioned) `enabled` section and a `disabled` section, which can be manipulated using `trunk tools enable/disable`. There is also a list of `definitions`, which are merged across your `trunk.yaml`, `user.yaml`, as well as any plugins that you use.
+Like with actions and linters, we have a (versioned) `enabled` section and a `disabled` section, which can be manipulated using `trunk tools enable/disable`.
 
-`auto_sync` controls whether or not Trunk automatically installs your tools for you when your config changes. This defaults to `true`. Note that the daemon must be running with the monitor in order for this to function properly.
+There is also a list of `definitions`, which are merged across your `trunk.yaml`, `user.yaml`, as well as any plugins that you use.
+
+`auto_sync` controls whether or not Trunk automatically installs your tools for you when your config changes.
+
+This defaults to `true`.
+
+Note that the daemon must be running with the monitor in order for this to function properly.
 
 ### Tool definitions
 
@@ -45,11 +53,15 @@ Each tool definition shares a set of attributes:
 
 > Note: If the tool has a `runtime` attribute, the runtime's environment is merged in to its environment (discussed in the examples below).
 
-Broadly speaking, there are 3 kinds of tools - download, package, and runtime-based tools. We'll look at each one in turn:
+Broadly speaking, there are 3 kinds of tools - download, package, and runtime-based tools.
+
+We'll look at each one in turn:
 
 ### Download-based tools
 
-Download-based tools are straightforward: They reference a named download configuration in the global `downloads` section. Here is an example:
+Download-based tools are straightforward: They reference a named download configuration in the global `downloads` section.
+
+Here is an example:
 
 ```yaml
 downloads:
@@ -100,7 +112,9 @@ Note that for the downloaded archive, the binary named `gh` is inside the `bin` 
 
 ### Package-based tools
 
-Package-based tools depend on specified `package` and `runtime` attributes. Here is an example of configuring `mypy` as a tool:
+Package-based tools depend on specified `package` and `runtime` attributes.
+
+Here is an example of configuring `mypy` as a tool:
 
 ```yaml
 tools:
@@ -115,9 +129,13 @@ tools:
         - types-request
 ```
 
-`extra_packages` behaves equivalently to a package file like `requirements.txt` for Python or `package.json` for Node. They can be optionally pinned at versions.
+`extra_packages` behaves equivalently to a package file like `requirements.txt` for Python or `package.json` for Node.
 
-The version of the primary package (in this case, `mypy`) is specified in the `tools.enabled`. So to enable the `mypy` tool at `1.4.0`, list it as `- mypy@1.4.0`.
+They can be optionally pinned at versions.
+
+The version of the primary package (in this case, `mypy`) is specified in the `tools.enabled`.
+
+So to enable the `mypy` tool at `1.4.0`, list it as `- mypy@1.4.0`.
 
 If you don't want to include additional packages in the tool definition, you can instead make them explicit in the enabled section of your `.trunk/trunk.yaml` as you would for [linters](../../configuration/#installing-additional-packages), for example:
 
@@ -131,9 +149,13 @@ tools:
 
 ### Runtime-based tools
 
-Runtime-based tools are a special case that are not explicitly defined. Rather, each runtime object exposes a set of `shims` (just like `tool` definitions).
+Runtime-based tools are a special case that are not explicitly defined.
 
-If the runtime is enabled and listed in `tools.runtimes`, then shims exposed by that runtime are automatically installed in the `.trunk/tools` directory alongside those of other tools (`trunk tools enable <runtime_tool>` does that for you). Thus you can run `python`, `pip`, etc as `trunk`-managed tools.
+Rather, each runtime object exposes a set of `shims` (just like `tool` definitions).
+
+If the runtime is enabled and listed in `tools.runtimes`, then shims exposed by that runtime are automatically installed in the `.trunk/tools` directory alongside those of other tools (`trunk tools enable <runtime_tool>` does that for you).
+
+Thus you can run `python`, `pip`, etc as `trunk`-managed tools.
 
 Example:
 
@@ -143,4 +165,6 @@ tools:
     - python
 ```
 
-If this is disruptive to your workflow, simply remove the runtime's name `(go, node, python,...)` from `tools.runtimes` section or run `trunk tools disable <runtime_name>` which will handle it for you. Runtimes cannot be enabled or versioned via the `tools.enabled` section, however, and runtimes must be enabled in the `runtimes` section to be available to have their shims installed.
+If this is disruptive to your workflow, simply remove the runtime's name `(go, node, python,...)` from `tools.runtimes` section or run `trunk tools disable <runtime_name>` which will handle it for you.
+
+Runtimes cannot be enabled or versioned via the `tools.enabled` section, however, and runtimes must be enabled in the `runtimes` section to be available to have their shims installed.

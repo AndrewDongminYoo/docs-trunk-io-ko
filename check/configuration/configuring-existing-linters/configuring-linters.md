@@ -139,9 +139,9 @@ ln -s path/to/existing/detekt-config.yml .detekt-config.yaml
 
 To use `./gradlew detekt` to invoke Detekt, you can add `detekt-gradle@SYSTEM` to your `enabled` list.
 
-Note that since you're running Detekt via Gradle, you should also add the paths to your Detekt configurations to `direct_configs`, e.g.
+Note that since you're running Detekt via Gradle, you should also add the paths to your Detekt configurations to `direct_configs`, For Example:
 
-```gradle
+```groovy
 direct_configs: ["lib/detekt.yaml"]
 ```
 
@@ -151,7 +151,9 @@ Most ESLint users use a number of plugins, custom parsers, etc.
 
 Trunk has the ability to turn sandboxing and caching on or off for each linter, and we've turned it off for ESLint so it can use your repo's installed packages for ESLint plugins and other required ESLint packages.
 
-Trunk does control the ESLint version itself, but otherwise ESLint looks for all plugins, configs, etc. based on the path of source file its linting. **This all means you do need to have `npm/yarn install`'d in your repo as a prerequisite before running ESLint via trunk**.
+Trunk does control the ESLint version itself, but otherwise ESLint looks for all plugins, configs, etc. based on the path of source file its linting.
+
+**This all means you do need to have `npm/yarn install`'d in your repo as a prerequisite before running ESLint via trunk**.
 
 We recommend you disable all Prettier rules in your ESLint config and let Trunk run Prettier automatically on your files.
 

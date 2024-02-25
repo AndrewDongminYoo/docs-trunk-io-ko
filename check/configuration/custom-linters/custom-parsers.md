@@ -6,7 +6,9 @@ description: Existing tools can be run as-is using a custom parser.
 
 If you have a command or utility that you want to run pretty much as-is, but trunk doesn't natively understand how to parse it, you can inject your own custom parser to translate its output into a format that Trunk does understand!
 
-For example, let's say that we want to use `grep` as a linter, but we want to add more context to the matches. We could define a custom linter like so:
+For example, let's say that we want to use `grep` as a linter, but we want to add more context to the matches.
+
+We could define a custom linter like so:
 
 ```yaml
 lint:
@@ -55,17 +57,20 @@ lint:
 
 ```javascript
 #!/usr/bin/env node
-'use strict';
-let readline = require('readline');
+"use strict";
+let readline = require("readline");
 let rl = readline.createInterface({ input: process.stdin });
 
-rl.on('line', function(line){
+rl.on("line", function (line) {
   let match = line.match(/(.*):([0-9]+):(.*)/);
 
   if (match) {
     let [_, path, line_number, line_contents] = match;
-    console.log(`${path}:${line_number}:0: [error] Found todo in "${line_contents}" (found-todo)`);
+    console.log(
+      `${path}:${line_number}:0: [error] Found todo in "${line_contents}" (found-todo)`,
+    );
   }
+});
 ```
 
 Remember to run `chmod u+x todo-finder-parser.js` so that `trunk` can run it!

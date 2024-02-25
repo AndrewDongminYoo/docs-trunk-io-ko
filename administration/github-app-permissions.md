@@ -16,23 +16,35 @@ Trunk uses this permission to read the results of workflow and job runs, and to 
 
 This permission includes read-only access to repository settings, teams, and collaborators.
 
-Trunk uses this permission to access a repository’s branch protection rules. Trunk and cannot edit any administration settings on your GitHub organization or repository.
+Trunk uses this permission to access a repository’s branch protection rules.
+
+Trunk and cannot edit any administration settings on your GitHub organization or repository.
 
 ## Checks (Read and write)
 
 This permission includes access to checks on code (such as GitHub actions and other integrations like BuildKite, CircleCI).
 
-Trunk uses this permission to examine the status of your commits, branches, and pull requests. Trunk uses this information to determine when pull requests are ready to merge. Trunk also uses this permission to post the results of code analysis.
+Trunk uses this permission to examine the status of your commits, branches, and pull requests.
+
+Trunk uses this information to determine when pull requests are ready to merge.
+
+Trunk also uses this permission to post the results of code analysis.
 
 ## Commit statuses (Read-only)
 
-This permission includes access to statuses on code. Some CI providers use this integration with GitHub to post the results of a job run.
+This permission includes access to statuses on code.
 
-Trunk uses this permission to examine the status of your commits, branches, and pull requests. Trunk uses this information to determine when pull requests are ready to merge.
+Some CI providers use this integration with GitHub to post the results of a job run.
+
+Trunk uses this permission to examine the status of your commits, branches, and pull requests.
+
+Trunk uses this information to determine when pull requests are ready to merge.
 
 ## Code contents (Read and write)
 
-This permission includes access to repository contents, commits, branches, downloads, releases, and merges. Trunk uses this permission to download the trunk.yaml configuration file if you’ve added it to your repository
+This permission includes access to repository contents, commits, branches, downloads, releases, and merges.
+
+Trunk uses this permission to download the trunk.yaml configuration file if you’ve added it to your repository
 
 Trunk also uses write permissions to create, update, and delete the branches created and managed by Merge.
 

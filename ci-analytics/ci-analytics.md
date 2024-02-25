@@ -2,7 +2,11 @@
 
 ## Overview
 
-Trunk CI Analytics unifies information about CI performance, trends, and reliability. CI Analytics provides powerful dashboards that allow you to understand your CI systems' health quickly. CI Analytics gives developers the tools they need to investigate, triage, and fix performance and reliability problems that slow down your engineering teams.
+Trunk CI Analytics unifies information about CI performance, trends, and reliability.
+
+CI Analytics provides powerful dashboards that allow you to understand your CI systems' health quickly.
+
+CI Analytics gives developers the tools they need to investigate, triage, and fix performance and reliability problems that slow down your engineering teams.
 
 ## Integrations
 
@@ -20,4 +24,6 @@ Don't see your CI Provider listed here? Please contact our community slack at [s
 
 ## Get Started
 
-Choose an integration above and follow the steps to connect your CI metrics to Trunk CI Analytics. Then, start exploring details about your pipelines using the dashboards at [app.trunk.io](https://app.trunk.io).
+Choose an integration above and follow the steps to connect your CI metrics to Trunk CI Analytics.
+
+Then, start exploring details about your pipelines using the dashboards at [app.trunk.io](https://app.trunk.io).

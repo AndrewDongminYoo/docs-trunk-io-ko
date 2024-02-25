@@ -52,7 +52,9 @@ The following special variables are made available for template resolution when 
 interactive: true
 ```
 
-Setting `interactive` to true will allow your githook action to be run from an interactive terminal. This enables you to write more complicated hooks to react to user input.
+Setting `interactive` to true will allow your githook action to be run from an interactive terminal.
+
+This enables you to write more complicated hooks to react to user input.
 
 #### Testing a `githook` action
 
@@ -62,7 +64,9 @@ The following command will simulate a githook event and execute all of the enabl
 trunk git-hooks callback <hook> -- <args>
 ```
 
-Alternatively, once an action is enabled you can call `git` and debug with the actual `git` provided data. This is sometimes easier since some git parameters point to txt files etc...and fabricating those formats through manual testing can be tricky.
+Alternatively, once an action is enabled you can call `git` and debug with the actual `git` provided data.
+
+This is sometimes easier since some git parameters point to txt files etc...and fabricating those formats through manual testing can be tricky.
 
 #### Debugging a `githook` action
 
@@ -86,7 +90,11 @@ git config --unset core.hooksPath
 
 ### Trunk Announce
 
-Does your commit carry some important information to share with the rest of your organization? Now you can easily share it with the rest of the org by including `/trunk announce` at the beginning of one of the lines of your commit message (if your org squashes commit messages, you should put it in your PR description). Any additional text on that line will form an optional title, and the remaining text of the commit message will form the commit body (both are optional, but either a title or body is required). These will then be displayed to other users when they pull or rebase.
+Does your commit carry some important information to share with the rest of your organization? Now you can easily share it with the rest of the org by including `/trunk announce` at the beginning of one of the lines of your commit message (if your org squashes commit messages, you should put it in your PR description).
+
+Any additional text on that line will form an optional title, and the remaining text of the commit message will form the commit body (both are optional, but either a title or body is required).
+
+These will then be displayed to other users when they pull or rebase.
 
 If you want to see what your announcement would look like locally, just create a commit with the desired message and then run `trunk show-announcements since HEAD~1` (`trunk show-announcements since <ref>` will show all trunk announcements since the provided ref).
 

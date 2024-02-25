@@ -15,7 +15,9 @@ trunk/hello_world.html:0:0
  0:0  failure  prettier error (details: .trunk/out/lYa9w.yaml)  prettier
 ```
 
-This tells us that `prettier` failed when Trunk ran it on `trunk/hello_world.html` and that we can find a full report of the invocation in `.trunk/out/lYa9w.yaml`. This report will include:
+This tells us that `prettier` failed when Trunk ran it on `trunk/hello_world.html` and that we can find a full report of the invocation in `.trunk/out/lYa9w.yaml`.
+
+This report will include:
 
 1. the command that was run,
 2. the environment (e.g. `cwd`, environment variables),
@@ -64,15 +66,23 @@ Then click on "View more details on trunk-io"
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Ft5WA0B08S8J9ljmriuT6%2FScreenshot%202023-10-16%20at%205.11.57%20PM.png?alt=media&token=e2b7b6ca-a199-43b4-9256-65158d1bca62)
 
-You'll then see your check run summary. Click "\<your repo name>/pull_request" to see the CI logs, and scroll all the way to the bottom.
+You'll then see your check run summary.
+
+Click "\<your repo name>/pull_request" to see the CI logs, and scroll all the way to the bottom.
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FTYEWhxDGuAZnaPlermKy%2FScreenshot%202023-10-16%20at%205.12.23%20PM.png?alt=media&token=c324966e-8d6d-43b4-ade6-9c5019495281)
 
-You'll then see a list of the failures that occurred, as well as all of the linter failure reports in collapsibles. You can then follow the instructions in [Analyzing Linter Failures](https://docs.trunk.io/check/debugging#analyzing-linter-failures) to resolve the problem.
+You'll then see a list of the failures that occurred, as well as all of the linter failure reports in collapsibles.
+
+You can then follow the instructions in [Analyzing Linter Failures](https://docs.trunk.io/check/debugging#analyzing-linter-failures) to resolve the problem.
 
 ### Actions
 
-When `trunk check` is run, a dynamic set of check actions are generated and executed in parallel. An engineer developing custom integrations may find it helpful to examine in detail exactly what `trunk check` does and sees when it runs a given tool. The output of the `check` run will include an `ACTIONS` section with a execution report for each action that was run as well as cache hit information.
+When `trunk check` is run, a dynamic set of check actions are generated and executed in parallel.
+
+An engineer developing custom integrations may find it helpful to examine in detail exactly what `trunk check` does and sees when it runs a given tool.
+
+The output of the `check` run will include an `ACTIONS` section with a execution report for each action that was run as well as cache hit information.
 
 For example, to run a report on all actions taken on hello.py:
 

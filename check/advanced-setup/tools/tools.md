@@ -27,11 +27,19 @@ trunk tools list
 
 ### Running Tools
 
-Trunk installs your enabled tools into the `.trunk/tools` directory. Each tool exposes a list of **shims** (these may or may not be identically named to the tool - most typically a tool has one shim matching the name of the tool). Each shim is installed into the `.trunk/tools` directory.
+Trunk installs your enabled tools into the `.trunk/tools` directory.
 
-You can run your tools by referring to the path `<path-to-workspace>/.trunk/tools/<shim-name>` but this is unwieldy. We highly recommend using our shell hooks to manage your PATH.
+Each tool exposes a list of **shims** (these may or may not be identically named to the tool - most typically a tool has one shim matching the name of the tool).
 
-Starting with CLI version `1.18.0`, you can do so by running `trunk shellhooks install`, which will install the Trunk hooks to the config file of your $SHELL. You can also run `trunk shellhooks install <shell_name>` to install a specific shell hook.
+Each shim is installed into the `.trunk/tools` directory.
+
+You can run your tools by referring to the path `<path-to-workspace>/.trunk/tools/<shim-name>` but this is unwieldy.
+
+We highly recommend using our shell hooks to manage your PATH.
+
+Starting with CLI version `1.18.0`, you can do so by running `trunk shellhooks install`, which will install the Trunk hooks to the config file of your $SHELL.
+
+You can also run `trunk shellhooks install <shell_name>` to install a specific shell hook.
 
 Supported shells:
 
@@ -55,7 +63,9 @@ On the next Trunk command (like check or fmt), it will update your shell RC file
 
 After reloading your shell, whenever you're inside your repo at the command line, you can just run shims installed by `trunk tools` directly by name.
 
-N.B. There is a known incompatibility with direnv when using PATH_ADD. To use our hooks, remove PATH_ADD from your .envrc and add them to your Trunk config as such:
+N.B. There is a known incompatibility with direnv when using PATH_ADD.
+
+To use our hooks, remove PATH_ADD from your .envrc and add them to your Trunk config as such:
 
 ```yaml
 version: 0.1
@@ -69,4 +79,6 @@ Paths can either be absolute, or relative to the workspace using the special `${
 
 ### Troubleshooting Linters
 
-Tools enable you to run your linter binaries on the command line independent of `trunk check` and test and troubleshoot your integrations more easily. Read about [custom linters and hermetic installs](../../configuration/custom-linters#hermetic-installs) for more info.
+Tools enable you to run your linter binaries on the command line independent of `trunk check` and test and troubleshoot your integrations more easily.
+
+Read about [custom linters and hermetic installs](../../configuration/custom-linters#hermetic-installs) for more info.

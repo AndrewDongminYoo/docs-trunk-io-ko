@@ -6,7 +6,11 @@ description: Operating System compatibility list
 
 ## Linux
 
-Trunk will run on most Linux flavors, including Ubuntu, Arch, and others. We do require glibc version 2.19 or later. Alpine Linux is not supported.
+Trunk will run on most Linux flavors, including Ubuntu, Arch, and others.
+
+We do require glibc version 2.19 or later.
+
+Alpine Linux is not supported.
 
 ## macOS
 

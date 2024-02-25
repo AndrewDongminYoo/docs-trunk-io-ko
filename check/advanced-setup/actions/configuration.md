@@ -6,7 +6,9 @@ description: enabling and writing your own actions
 
 Actions are defined and enabled in the `actions` section of [`trunk.yaml`](../../reference/trunk-yaml/trunk-yaml.md).
 
-Here is an example of the actions section of `trunk.yaml`. If you are curious what your resolved configuration for actions looks like, run `trunk config print`.
+Here is an example of the actions section of `trunk.yaml`.
+
+If you are curious what your resolved configuration for actions looks like, run `trunk config print`.
 
 ```yaml
 actions:
@@ -48,15 +50,23 @@ The command will implicitly run relative to your workspace, but you can also spe
 
 #### Runtime management
 
-We sandbox action executions and allow you to control the runtime. You can do this by specifying a `runtime` and `packages_file`.
+We sandbox action executions and allow you to control the runtime.
 
-You can specify one of our built-in runtimes (`node`, `python`, ...) or a system runtime that you define. See the [runtimes documentation](../../reference/trunk-yaml/#runtimes) for more information.
+You can do this by specifying a `runtime` and `packages_file`.
+
+You can specify one of our built-in runtimes (`node`, `python`, ...) or a system runtime that you define.
+
+See the [runtimes documentation](../../reference/trunk-yaml/#runtimes) for more information.
 
 For the `python` and `node` runtimes, we additionally provide the ability to install a requirements file like `requirements.txt` or `package.json`.
 
 ### Triggers
 
-You may run an action manually by running `trunk run <action_id> <args>` or `trunk actions run <action_id> <args>`. However, you can also provide a set of triggers so that actions run in response to some event. They are documented below.
+You may run an action manually by running `trunk run <action_id> <args>` or `trunk actions run <action_id> <args>`.
+
+However, you can also provide a set of triggers so that actions run in response to some event.
+
+They are documented below.
 
 #### Time-based triggers
 
@@ -70,9 +80,13 @@ triggers:
   - schedule: 1d
 ```
 
-The `schedule` entry should be in the Duration format specified [here](https://pkg.go.dev/time#ParseDuration). The action will be run once per `duration`.
+The `schedule` entry should be in the Duration format specified [here](https://pkg.go.dev/time#ParseDuration).
 
-This is a short-hand for specifying schedule as an object. You can also write:
+The action will be run once per `duration`.
+
+This is a short-hand for specifying schedule as an object.
+
+You can also write:
 
 ```yaml
 id: my-action
@@ -130,8 +144,12 @@ In this case `my-action` will execute if either `foo.txt` is edited (or created)
 
 #### Git hooks
 
-You can also configure Trunk to manage your git hooks. More detail is provided on this in our [git hooks reference](git-hooks.md).
+You can also configure Trunk to manage your git hooks.
+
+More detail is provided on this in our [git hooks reference](git-hooks.md).
 
 ### Interactivity
 
-Actions can read from `stdin` if they are marked as interactive (define `interactive: true` on the action). Note: this feature is only available for git hooks and manually run actions - since file-triggered and scheduled actions run in the background, you cannot interact with their execution.
+Actions can read from `stdin` if they are marked as interactive (define `interactive: true` on the action).
+
+Note: this feature is only available for git hooks and manually run actions - since file-triggered and scheduled actions run in the background, you cannot interact with their execution.

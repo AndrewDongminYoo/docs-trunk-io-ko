@@ -1,7 +1,7 @@
 ---
 description: >-
-  You can think of Trunk Actions as IFTTT for your repository. An action is a
-  command that is run when a specified trigger occurs.
+  You can think of Trunk Actions as IFTTT for your repository.
+  An action is a command that is run when a specified trigger occurs.
 ---
 
 # Actions
@@ -31,7 +31,9 @@ There are several different types of Trunk Actions, based on when they are trigg
 
 ### Discovering Actions
 
-The trunk [plugins](https://github.com/trunk-io/plugins) repo ships with a collection of actions that can help supercharge your repository and provide examples of how to write your own actions. To see a list of actions that you can enable in your repo run:
+The trunk [plugins](https://github.com/trunk-io/plugins) repo ships with a collection of actions that can help supercharge your repository and provide examples of how to write your own actions.
+
+To see a list of actions that you can enable in your repo run:
 
 ```bash
 trunk actions list
@@ -41,7 +43,11 @@ trunk actions list
 
 ### Enable/Disable Actions
 
-Trunk only runs actions listed in the `enabled` section of your `trunk.yaml`. Some built-in actions are enabled by default and can be disabled explicitly by adding them to the disabled list. You can always run `trunk actions list` to check the enabled status of an action.
+Trunk only runs actions listed in the `enabled` section of your `trunk.yaml`.
+
+Some built-in actions are enabled by default and can be disabled explicitly by adding them to the disabled list.
+
+You can always run `trunk actions list` to check the enabled status of an action.
 
 ```yaml
 actions:

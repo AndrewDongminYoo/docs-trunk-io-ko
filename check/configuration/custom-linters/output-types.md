@@ -4,7 +4,9 @@ description: Custom Linters should output one of several output formats.
 
 # Output Types
 
-Trunk supports several different generic output types. If your linter doesn't conform well to any of these specifications, you can also write a [custom parser](custom-parsers.md).
+Trunk supports several different generic output types.
+
+If your linter doesn't conform well to any of these specifications, you can also write a [custom parser](custom-parsers.md).
 
 #### SARIF
 
@@ -108,7 +110,9 @@ Trunk supports several different generic output types. If your linter doesn't co
 
 #### Regex
 
-`output: regex` linters produce output that can be parsed with custom regular expressions and named capture groups. The regular expression is specified in the `parse_regex` field.
+`output: regex` linters produce output that can be parsed with custom regular expressions and named capture groups.
+
+The regular expression is specified in the `parse_regex` field.
 
 `regex` supports capturing strings from a linter output for the following named capture groups:
 
@@ -137,9 +141,15 @@ and would result in a `trunk` diagnostic that looks like this:
 7:81  high    line too long (82 > 80 characters)      regex-linter/line-length
 ```
 
-In the event that multiple capture groups of the same name are specified, the nonempty capture will be preferred. If there are multiple non-empty captures, a linter error will be thrown. Adjust your regular expression accordingly to match the specifics of your output.
+In the event that multiple capture groups of the same name are specified, the nonempty capture will be preferred.
 
-> Note: For additional information on building custom regular expressions, see [re2](https://github.com/google/re2/wiki/Syntax). More complicated regex may require additional escape characters in yaml configuration.
+If there are multiple non-empty captures, a linter error will be thrown.
+
+Adjust your regular expression accordingly to match the specifics of your output.
+
+> Note: For additional information on building custom regular expressions, see [re2](https://github.com/google/re2/wiki/Syntax).
+
+More complicated regex may require additional escape characters in yaml configuration.
 
 #### Arcanist
 

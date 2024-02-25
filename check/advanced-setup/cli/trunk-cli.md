@@ -51,8 +51,14 @@ Whether you aim to use [Trunk Check](../../check.md), [Trunk Merge](../../../mer
 trunk init
 ```
 
-Note: for an extra layer of security you can optionally run `trunk init --lock` instead of `trunk init` which adds sha256s of the trunk cli to the trunk config file. This is then used by the Trunk Launcher when it downloads the `trunk` binary.
+Note: for an extra layer of security you can optionally run `trunk init --lock` instead of `trunk init` which adds sha256s of the trunk cli to the trunk config file.
 
-`init` scans the files in your repo and generates a `.trunk/trunk.yaml` configuration file tailored to your repo (it may also generate linter-specific config files, such as `.shellcheckrc`). The scan will identify all the particular languages and technologies you use and automatically configure the correct set of linters / formatters to run.
+This is then used by the Trunk Launcher when it downloads the `trunk` binary.
 
-If you only want to use [Trunk Merge](../../../merge/merge.md), you can safely ignore the linter setup, or even strip enabled linters from `.trunk/trunk.yaml`. You will additionally need to login to use [Trunk Merge](../../../merge/merge.md) via `trunk login`.
+`init` scans the files in your repo and generates a `.trunk/trunk.yaml` configuration file tailored to your repo (it may also generate linter-specific config files, such as `.shellcheckrc`).
+
+The scan will identify all the particular languages and technologies you use and automatically configure the correct set of linters / formatters to run.
+
+If you only want to use [Trunk Merge](../../../merge/merge.md), you can safely ignore the linter setup, or even strip enabled linters from `.trunk/trunk.yaml`.
+
+You will additionally need to login to use [Trunk Merge](../../../merge/merge.md) via `trunk login`.

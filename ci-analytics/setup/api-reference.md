@@ -6,7 +6,13 @@ description: Integrate with Trunk CI Analytics using the API
 
 ## REST API Overview
 
-The Trunk CI Analytics API aims to give you access to instrument any CI or build system. The API is an HTTP REST API. The API uses status codes to indicate the success or failure of requests, returns JSON from all requests, and uses standard HTTP response codes. Use the Trunk CI Analytics API to access Trunk CI Analytics programmatically.
+The Trunk CI Analytics API aims to give you access to instrument any CI or build system.
+
+The API is an HTTP REST API.
+
+The API uses status codes to indicate the success or failure of requests, returns JSON from all requests, and uses standard HTTP response codes.
+
+Use the Trunk CI Analytics API to access Trunk CI Analytics programmatically.
 
 The current version of the Trunk CI Analytics API is v1.
 
@@ -20,11 +26,22 @@ You can find your API token in the [Trunk App](https://app.trunk.io).
 
 ## Endpoints
 
-The track events endpoint uploads event data about a CI run. Each event contains a start and end timestamp, metrics, tags, and an optional parent association ID.
+The track events endpoint uploads event data about a CI run.
+
+Each event contains a start and end timestamp, metrics, tags, and an optional parent association ID.
+
 application/json
+
 Trunk API Token
-The repository in which the CI Event ran. See [repo](api.md#repo) schema.
-An array of event objects. See [event](api.md#event) schema.
+
+The repository in which the CI Event ran.
+
+See [repo](api.md#repo) schema.
+
+An array of event objects.
+
+See [event](api.md#event) schema.
+
 Name of the uploading client
 
 #### Repo
@@ -82,7 +99,9 @@ Payload object properties:
 
 #### Sequence
 
-A sequence describes the CI pipeline, job, workflow, etc. Events are grouped under sequences using the `sequenceKey`.
+A sequence describes the CI pipeline, job, workflow, etc.
+
+Events are grouped under sequences using the `sequenceKey`.
 
 Sequence object properties:
 
