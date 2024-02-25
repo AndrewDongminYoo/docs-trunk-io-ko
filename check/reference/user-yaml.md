@@ -14,4 +14,4 @@ Be mindful that `.trunk/user.yaml` takes precedence over `.trunk/trunk.yaml`, so
 
 ## Identity Config
 
-Trunk also saves a user config in `$HOME/.cache/trunk/user.yaml`. This is auto-generated in order to manage [anonymous usage data](usage-data.md) and persist login sessions.
+Trunk also saves a user config in `$HOME/.cache/trunk/user.yaml`. This is auto-generated in order to manage [anonymous usage data](telemetry.md) and persist login sessions.

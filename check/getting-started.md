@@ -129,7 +129,7 @@ struct FooBar {
 };
 ```
 
-The comment should contain the name of the linter you want to ignore the following line, in this case `clang-tidy` For more complex ignore commands, see [Ignoring Issues](configuration/ignoring-issues.md).
+The comment should contain the name of the linter you want to ignore the following line, in this case `clang-tidy` For more complex ignore commands, see [Ignoring Issues](configuration/ignoring-issues-and-files.md).
 
 ## Upgrading
 

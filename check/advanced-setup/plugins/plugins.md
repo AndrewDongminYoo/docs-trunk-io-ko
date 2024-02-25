@@ -30,7 +30,7 @@ plugins:
 
 Any configuration used in `trunk.yaml` can also be used in a plugin repository, with [some exceptions](#excluded-fields). A plugin repository must have one root level `plugin.yaml` and can have any number of other `plugin.yaml` files in other subdirectories. These configuration files are then merged into one composite plugin configuration.
 
-The most common use for a plugin repository is to define custom linters, actions, or tools. But they can also be used to define a common set of shared tools across an organization. For more info, see [organization configs](external-repositories.md).
+The most common use for a plugin repository is to define custom linters, actions, or tools. But they can also be used to define a common set of shared tools across an organization. For more info, see [organization configs](creating-organization-configs.md).
 
 The root `plugin.yaml` file may also have a `required_trunk_version` field which governs compatibility when [upgrading](../cli/upgrade.md) between CLI versions.
 

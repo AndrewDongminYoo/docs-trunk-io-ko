@@ -2,7 +2,7 @@
 description: How to set up Trunk Merge for your project
 ---
 
-# Setup
+# Set Up Trunk Merge
 
 ### Connect your Trunk Organization to GitHub
 
@@ -18,7 +18,7 @@ Go to the Merge tab. You will see the "Set Up Trunk Merge" page. From there, you
 
 1. The name of the branch that Trunk Merge should help manage merging PRs into.
 2. The [number](set-up-trunk-merge/advanced-settings.md#concurrency) of Pull Requests that Merge can test at the same time.
-3. The [mode](perallel-mode.md#single-parallel-mode) that Trunk Merge Queues will start in.
+3. The [mode](parallel-mode.md#single-parallel-mode) that Trunk Merge Queues will start in.
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fceeh6VUbrAgRSaMPIZv0%2Fimage.png?alt=media&token=a4835ef9-542d-4c81-9229-17c74309a046)
 
@@ -113,4 +113,4 @@ Now Trunk Merge is setup with your repo. Whenever a PR is pushed to your merge b
 
 ### Next Steps
 
-You can configure [parallel mode](perallel-mode.md) for potential performance gains, read how to [cancel pull requests](perallel-mode.md#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](set-up-trunk-merge/integration-for-slack.md). If you are using Bazel you may want to [further customize](set-up-trunk-merge/parallel-mode-with-bazel.md) it for parallel mode.
+You can configure [parallel mode](parallel-mode.md) for potential performance gains, read how to [cancel pull requests](parallel-mode.md#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](set-up-trunk-merge/integration-for-slack.md). If you are using Bazel you may want to [further customize](set-up-trunk-merge/parallel-mode-with-bazel.md) it for parallel mode.

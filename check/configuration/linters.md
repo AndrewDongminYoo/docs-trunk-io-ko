@@ -166,7 +166,7 @@ struct FooBar {
 
 This tells Trunk that the `clang-tidy` linter found a `modernize-use-nullptr` issue on the highlighted line and that Trunk should suppress this linter issue.
 
-For full details please see the [Ignoring Issues and Files](ignoring-issues.md) page.
+For full details please see the [Ignoring Issues and Files](ignoring-issues-and-files.md) page.
 
 ### Blocking Thresholds
 

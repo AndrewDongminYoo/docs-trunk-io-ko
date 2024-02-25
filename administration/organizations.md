@@ -1,4 +1,4 @@
-# Overview
+# Organizations
 
 The Trunk App is available at [app.trunk.io](https://app.trunk.io). This is where you can view the health of your repositories, browse issues detected by `trunk check`, and manage your `merge` service (currently in limited beta).
 

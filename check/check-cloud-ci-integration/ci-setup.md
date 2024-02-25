@@ -12,4 +12,4 @@ To run Trunk Check automatically you must setup the [Trunk Check web app](https:
 
 If you are using GitHub see the [GitHub Integration Guide](get-started/github-integration.md).&#x20;
 
-If you are using GitLab or another CI system, see the [GitLab and other CI Integration Guide](continuous-integration/continous-integration.md).
+If you are using GitLab or another CI system, see the [GitLab and other CI Integration Guide](continuous-integration/gitlab-and-other-ci-integration.md).

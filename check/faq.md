@@ -292,6 +292,6 @@ lint:
         - test/test_data
 ```
 
-This approach lets you specify which linters to ignore for particular paths, optimizing the check process and focusing on relevant files. [More details on ignoring files](configuration/ignoring-issues.md#ignoring-all-issues-formatting-in-a-file).
+This approach lets you specify which linters to ignore for particular paths, optimizing the check process and focusing on relevant files. [More details on ignoring files](configuration/ignoring-issues-and-files.md#ignoring-all-issues-formatting-in-a-file).
 
 </details>
