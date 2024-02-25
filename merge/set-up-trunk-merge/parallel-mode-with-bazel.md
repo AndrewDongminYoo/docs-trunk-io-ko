@@ -4,7 +4,7 @@ description: When using Bazel, Trunk Merge can create parallel merge queues for 
 
 # Parallel Mode with Bazel
 
-Leveraging [parallel mode](./..#single-mode-vs.-parallel-mode) for Trunk Merge is easy for Bazel enabled repos because Bazel already knows the structure of your code and can automatically generate a dependency graph. Merge can use this information in parallel mode to run your CI tests more efficiently; eliminating checks when Bazel already knows they cannot conflict.
+Leveraging [parallel mode](../merge.md#single-mode-vs-parallel-mode) for Trunk Merge is easy for Bazel enabled repos because Bazel already knows the structure of your code and can automatically generate a dependency graph. Merge can use this information in parallel mode to run your CI tests more efficiently; eliminating checks when Bazel already knows they cannot conflict.
 
 ### Setup Trunk Merge
 

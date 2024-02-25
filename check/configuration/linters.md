@@ -170,7 +170,7 @@ For full details please see the [Ignoring Issues and Files](ignoring-issues-and-
 
 ### Blocking Thresholds
 
-All [issue severities](./..#issue-severity) are considered blocking by default. In cases where you might want to slowly try out a new linter, we provide a mechanism to set specific thresholds for each linter.
+All issue severities are considered blocking by default. In cases where you might want to slowly try out a new linter, we provide a mechanism to set specific thresholds for each linter.
 
 ```yaml
 lint:
