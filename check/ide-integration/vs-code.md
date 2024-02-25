@@ -8,7 +8,9 @@ Trunk Check is available as a [VSCode extension](https://marketplace.visualstudi
 
 ### Get Started
 
-By default, Trunk will try to automatically initialize itself in single-player mode. This means that it'll create a Trunk configuration that is hidden from git, which allows you to try it out [without Trunk's versioning powers](vs-code.md#single-player-mode).
+By default, Trunk will try to automatically initialize itself in single-player mode.
+
+This means that it'll create a Trunk configuration that is hidden from git, which allows you to try it out [without Trunk's versioning powers](vs-code.md#single-player-mode).
 
 If Trunk has not initialized itself in single-player mode, then you will need to initialize it manually, either by pressing the 'Initialize Trunk' button in the Trunk side panel:
 
@@ -26,11 +28,15 @@ or via the command line: just install the CLI and run `trunk init` in your repo.
 
 Trunk will suggest tools that will supercharge your development, from `actionlint`, for your GitHub Actions, to`sql-formatter` and `sqlfluff` for your SQL, to`yamllint`, for your YAML files.
 
-We believe that everything in your repository not only can be, but also should be, automatically formatted and automatically linted. We also recognize that a big part of this is making it easy for our users to discover tools that are newly applicable to them, so when Trunk is initialized, we turn on as much as we can, and then periodically follow up with suggestions for new tools.
+We believe that everything in your repository not only can be, but also should be, automatically formatted and automatically linted.
+
+We also recognize that a big part of this is making it easy for our users to discover tools that are newly applicable to them, so when Trunk is initialized, we turn on as much as we can, and then periodically follow up with suggestions for new tools.
 
 #### Seamless user experience
 
-On the side bar to the left you'll see the Trunk icon, which you can use to open the side panel to view issues. By default, issues are populated for every file you open as well as any modified files.
+On the side bar to the left you'll see the Trunk icon, which you can use to open the side panel to view issues.
+
+By default, issues are populated for every file you open as well as any modified files.
 
 ![side panel](https://static.trunk.io/assets/vscode_side_panel.png)
 

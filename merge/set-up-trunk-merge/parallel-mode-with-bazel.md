@@ -4,7 +4,9 @@ description: When using Bazel, Trunk Merge can create parallel merge queues for 
 
 # Parallel Mode with Bazel
 
-Leveraging [parallel mode](../merge.md#single-mode-vs-parallel-mode) for Trunk Merge is easy for Bazel enabled repos because Bazel already knows the structure of your code and can automatically generate a dependency graph. Merge can use this information in parallel mode to run your CI tests more efficiently; eliminating checks when Bazel already knows they cannot conflict.
+Leveraging [parallel mode](../merge.md#single-mode-vs-parallel-mode) for Trunk Merge is easy for Bazel enabled repos because Bazel already knows the structure of your code and can automatically generate a dependency graph.
+
+Merge can use this information in parallel mode to run your CI tests more efficiently; eliminating checks when Bazel already knows they cannot conflict.
 
 ### Setup Trunk Merge
 
@@ -18,7 +20,9 @@ Next [enable Parallel Mode](../parallel-mode.md) in the Trunk Merge UI.
 
 ### Set Up the Github Action
 
-Trunk provides a [Merge GitHub action](https://github.com/trunk-io/merge-action) (workflow) that leverages Bazel to take care of generating the required [impacted targets](impacted-targets.md) and uploading them to Merge, taking care of the heavy work for using Parallel mode. In order for GitHub to communicate with Trunk Merge, it needs to be able to authenticate from the GitHub Action instance to the Trunk web application using your **Trunk Organization API Token**.
+Trunk provides a [Merge GitHub action](https://github.com/trunk-io/merge-action) (workflow) that leverages Bazel to take care of generating the required [impacted targets](impacted-targets.md) and uploading them to Merge, taking care of the heavy work for using Parallel mode.
+
+In order for GitHub to communicate with Trunk Merge, it needs to be able to authenticate from the GitHub Action instance to the Trunk web application using your **Trunk Organization API Token**.
 
 #### Get your Organization API Token
 
@@ -52,6 +56,8 @@ jobs:
           trunk-token: ${{ secrets.TRUNK_ORG_API_TOKEN }}
 ```
 
-If your Bazel setup is not in the root of your repo then you can add `bazel-workspace-path: your_workspace_path` just below the `trunk-token`. Commit the new workflow back to your repo. to make it active.
+If your Bazel setup is not in the root of your repo then you can add `bazel-workspace-path: your_workspace_path` just below the `trunk-token`.
+
+Commit the new workflow back to your repository to make it active.
 
 Now you can [submit a new pull request and test it](../set-up-trunk-merge.md#submit-pull-requests). **Success!**

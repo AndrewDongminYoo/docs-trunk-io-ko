@@ -56,4 +56,4 @@ We do not recommend using an event trigger like `pull_request_target.` This woul
 
 ### Impacted Targets Generation: Bazel + GitHub Actions
 
-For Bazel specific instructions, see [the Bazel guide](parallel-mode-with-bazel.md).&#x20;
+For Bazel specific instructions, see [the Bazel guide](parallel-mode-with-bazel.md).

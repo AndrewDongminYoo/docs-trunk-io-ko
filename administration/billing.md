@@ -16,10 +16,14 @@ For example, consider Alice, Bob, and Charlie are all in the same organization, 
 | ---------------------------------- | -------------------------------- | ------------------------------------ |
 | Alice commits code to `abc/repo1`. | Bob commits code to `abc/repo2`. | Charlie commits code to `abc/repo1`. |
 
-On Day 30, the user count would be 1: just Alice.\
-On Day 40, the user count would be two: Alice and Bob, since the same organization owns both private repos.\
-On Day 50, the user count would be three: Alice, Bob, and Charlie.\
-On Day 90, the user count would be three. We consider days 1 thru 90 (inclusive), which includes Alice's, Bob's, and Charlie's commits.\
+On Day 30, the user count would be 1: just Alice.
+
+On Day 40, the user count would be two: Alice and Bob, since the same organization owns both private repos.
+
+On Day 50, the user count would be three: Alice, Bob, and Charlie.
+
+On Day 90, the user count would be three. We consider days 1 thru 90 (inclusive), which includes Alice's, Bob's, and Charlie's commits.
+
 On Day 91, the user count would be two. We consider days 2 thru 91 (inclusive), which only includes Bob's and Charlie's commits.
 
 ### Calculating an Invoice

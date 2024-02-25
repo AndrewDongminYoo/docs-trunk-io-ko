@@ -21,7 +21,8 @@ If you use GitHub, we recommend you follow the [GitHub Integration](../get-start
 `trunk check --ci` will work on any CI provider.
 
 You may also want to specify `--upstream` if, for example, your PRs are not merged into your default branch, but into a `develop` branch.
-Gitlab performs a shallow clone by default which limits trunk's ability to detect the upstream commit to compute changes from. This is easily solved by simply fetching your main branch before running `trunk`:
+Gitlab performs a shallow clone by default which limits trunk's ability to detect the upstream commit to compute changes from.
+This is easily solved by simply fetching your main branch before running `trunk`:
 
 ```bash
 git fetch origin main
@@ -33,7 +34,8 @@ If your default branch is named something else (e.g. `master`), you should `fetc
 ## Caching and Persistence
 
 - Trunk caches the version of `trunk` itself, linters, formatters, and lint results, in `~/.cache/trunk`
-- If your build machines are persistent, make sure this directory is not wiped out between CI jobs for best performance. If Trunk has to re-download every linter for every job because this directory is wiped out, it will be very slow.
+- If your build machines are persistent, make sure this directory is not wiped out between CI jobs for best performance.
+  If Trunk has to re-download every linter for every job because this directory is wiped out, it will be very slow.
 - If your build machines are ephemeral, there are a few options for caching:
   - CI systems have support for caching between CI jobs on ephemeral runners:
     - [GitHub Actions](https://github.com/actions/cache)

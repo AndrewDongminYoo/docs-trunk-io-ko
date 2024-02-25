@@ -30,10 +30,10 @@ By default Trunk will query [Bazel](https://bazel.build/) for compile commands u
 
 ### Working with other build systems
 
-Trunk Check currently works only with the CMake and Bazel build systems. If there is another build system you would like Check to work with, please let us know.&#x20;
+Trunk Check currently works only with the CMake and Bazel build systems. If there is another build system you would like Check to work with, please let us know.
 
 ### See also
 
-Trunk Check also supports [Clang Format](https://docs.trunk.io/check/configuration/configuring-existing-linters#clang-format), a code formatter & beautifier for C/C++ code.&#x20;
+Trunk Check also supports [Clang Format](https://docs.trunk.io/check/configuration/configuring-existing-linters#clang-format), a code formatter & beautifier for C/C++ code.
 
 [Other linters](../supported-linters.md) supported by Trunk Check.

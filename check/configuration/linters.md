@@ -4,7 +4,11 @@ description: Overview of Trunk Check's supported linters and configuration
 
 # Linters
 
-Trunk Check supports over [100 different linters](supported-linters.md) and formatters out of the box. The configurations for `trunk check` and `trunk fmt` are governed by the `lint` section of the [`trunk.yaml`](../reference/trunk-yaml#cli)file stored in the `.trunk` directory of your git repo. Here's an example of what a fully-featured `lint` section looks like:
+Trunk Check supports over [100 different linters](supported-linters.md) and formatters out of the box.
+
+The configurations for `trunk check` and `trunk fmt` are governed by the `lint` section of the [`trunk.yaml`](../reference/trunk-yaml#cli)file stored in the `.trunk` directory of your git repo.
+
+Here's an example of what a fully-featured `lint` section looks like:
 
 ```yaml
 lint:
@@ -57,7 +61,13 @@ lint:
 
 ### Test your config changes
 
-Normally when you run `trunk check` or `trunk fmt` it runs only on files you've changed. We've made it easy to test how a linter will behave in your repo. As you're tuning your linter configuration simply run check with the `--sample` flag. When sampling, Trunk will find applicable files for the linters you've enabled and show you how the linter will behave against a sampling of inputs.
+Normally when you run `trunk check` or `trunk fmt` it runs only on files you've changed.
+
+We've made it easy to test how a linter will behave in your repo.
+
+As you're tuning your linter configuration simply run check with the `--sample` flag.
+
+When sampling, Trunk will find applicable files for the linters you've enabled and show you how the linter will behave against a sampling of inputs.
 
 | Sample                         | Command                                  |
 | :----------------------------- | :--------------------------------------- |
@@ -69,13 +79,31 @@ In sampling mode, Trunk may run multiple linters on a single file, and may not r
 
 ### Tuning your linters
 
-Most linters offer some form of configuration. **Trunk uses the native configuration setup of all the tools it runs**. No need to learn a new config language or hunt for specific ways to tune a linter inside trunk. Whether it's `clang-tidy`, `eslint`, or any other linter, all the documentation you'll find online about it is still applicable. We're proud to stand on the shoulders of giants and believe that the open source communities building these tools know best how they should work. Our goal is simply to make it as easy as possible for you to adopt these tools.
+Most linters offer some form of configuration. **Trunk uses the native configuration setup of all the tools it runs**.
 
-To configure **what** a linter does, you will continue to use the linter's own config files. Check out our [configs](https://github.com/trunk-io/configs) repository for always-up-to-date linter configs and some tips on how to structure your linters and repo. Check out our [docs](configuring-existing-linters/readme.md) on linter-specific tips. To configure **how** Trunk runs a linter, read on.
+No need to learn a new config language or hunt for specific ways to tune a linter inside trunk.
+
+Whether it's `clang-tidy`, `eslint`, or any other linter, all the documentation you'll find online about it is still applicable.
+
+We're proud to stand on the shoulders of giants and believe that the open source communities building these tools know best how they should work.
+
+Our goal is simply to make it as easy as possible for you to adopt these tools.
+
+To configure **what** a linter does, you will continue to use the linter's own config files.
+
+Check out our [configs](https://github.com/trunk-io/configs) repository for always-up-to-date linter configs and some tips on how to structure your linters and repo.
+
+Check out our [docs](configuring-existing-linters/configuring-linters.md) on linter-specific tips.
+
+To configure **how** Trunk runs a linter, read on.
 
 #### Moving linter configs
 
-If you'd like, Trunk also supports migrating any linter configurations from the root of your repository into a `.trunk/configs` folder. These config files will be symlinked in during any `trunk check` run. Note that if you're using an IDE Extension like clangd with an LSP that relies on those configs being in the root, you will need to create an additional symlink from the hidden config to the workspace root.
+If you'd like, Trunk also supports migrating any linter configurations from the root of your repository into a `.trunk/configs` folder.
+
+These config files will be symlinked in during any `trunk check` run.
+
+Note that if you're using an IDE Extension like clangd with an LSP that relies on those configs being in the root, you will need to create an additional symlink from the hidden config to the workspace root.
 
 If you find that you want to tweak how Trunk runs a given linter, you may want to consult the documentation on [overriding defaults](../reference/trunk-yaml#overriding-defaults) and [the various linter settings](custom-linters/custom-linters.md); for example, hold-the-line is enabled by default for most linters, but can be disabled like so:
 
@@ -113,7 +141,9 @@ You can also ask Trunk to detect new linters and upgrade existing linters to the
 
 ### Disable Linters
 
-Trunk will continuously monitor your repository and make recommendations of additional new tools to run on your codebase. You can tell trunk not to recommend a specific linter by adding it to the disabled list.
+Trunk will continuously monitor your repository and make recommendations of additional new tools to run on your codebase.
+
+You can tell trunk not to recommend a specific linter by adding it to the disabled list.
 
 ```yaml
 lint:
@@ -125,7 +155,11 @@ lint:
 
 ### Installing additional packages
 
-We support installing additional packages along with your linter. For example, Pylint supports adding plugins which are installable as pip packages. For example, if you want to run the plugin `pylint-django` as part of your setup, you need to tell Trunk to install the package:
+We support installing additional packages along with your linter.
+
+For example, Pylint supports adding plugins which are installable as pip packages.
+
+For example, if you want to run the plugin `pylint-django` as part of your setup, you need to tell Trunk to install the package:
 
 ```yaml
 lint:
@@ -138,11 +172,13 @@ lint:
 
 #### Runtime versioning
 
-By default Trunk will install hermetic versions of runtimes required by the linters you have chosen. If you need to peg to a specific runtime version or you want to use the version installed on your system, consult the [runtimes documentation](../reference/trunk-yaml#runtimes).
+By default Trunk will install hermetic versions of runtimes required by the linters you have chosen.
+
+If you need to peg to a specific runtime version or you want to use the version installed on your system, consult the [runtimes documentation](../reference/trunk-yaml#runtimes).
 
 ### Ignoring Issues and Files
 
-By default Check will ignore issues in files which are listed in the `.gitignore` file.&#x20;
+By default Check will ignore issues in files which are listed in the `.gitignore` file.
 
 If you want to ignore groups of files, such as generated code, you can do that with the [`lint.ignore`](#ignoring-issues-and-files) section of your `.trunk/trunk.yaml` file. ex:
 
@@ -170,7 +206,9 @@ For full details please see the [Ignoring Issues and Files](ignoring-issues-and-
 
 ### Blocking Thresholds
 
-All issue severities are considered blocking by default. In cases where you might want to slowly try out a new linter, we provide a mechanism to set specific thresholds for each linter.
+All issue severities are considered blocking by default.
+
+In cases where you might want to slowly try out a new linter, we provide a mechanism to set specific thresholds for each linter.
 
 ```yaml
 lint:
@@ -179,7 +217,9 @@ lint:
       level: high
 ```
 
-Every entry in `threshold` defines a set of linters and the severity threshold that is considered blocking. In this example, we're saying that only `high` lint issues should be considered blocking for `clang-tidy`.
+Every entry in `threshold` defines a set of linters and the severity threshold that is considered blocking.
+
+In this example, we're saying that only `high` lint issues should be considered blocking for `clang-tidy`.
 
 | Key     | Value                                                                                                                                                  |
 | :------ | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -188,7 +228,13 @@ Every entry in `threshold` defines a set of linters and the severity threshold t
 
 ### Trigger rules
 
-Some linters do not operate on individual files. Instead you must lint your entire repo at once. The way this is handled in trunk is to set up a trigger rule. Most linters will not require the use of a trigger rule.
+Some linters do not operate on individual files.
+
+Instead you must lint your entire repo at once.
+
+The way this is handled in trunk is to set up a trigger rule.
+
+Most linters will not require the use of a trigger rule.
 
 Trigger rules work on 3 principles:
 
@@ -218,7 +264,9 @@ You may use `.` as a target to run on the entire repo instead of an isolated dir
 
 ### File Size
 
-By default, Trunk only lints files up to 4 MiB in size. To override this globally, specify a `default_max_file_size` in `lint`:
+By default, Trunk only lints files up to 4 MiB in size.
+
+To override this globally, specify a `default_max_file_size` in `lint`:
 
 ```yaml
 lint:
@@ -236,7 +284,9 @@ lint:
 
 ### Timeout
 
-Each linter has a default timeout of 10 minutes. If its execution takes longer than this amount of time, Trunk Check will terminate the process and return an error to the user.
+Each linter has a default timeout of 10 minutes.
+
+If its execution takes longer than this amount of time, Trunk Check will terminate the process and return an error to the user.
 
 To override the timeout for a specific linter, specify a `run_timeout` in its definition:
 

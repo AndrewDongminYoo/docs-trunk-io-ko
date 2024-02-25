@@ -32,7 +32,7 @@ Trunk is a developer experience (DevEx) toolkit that enables you to ship code qu
 
 | Name                  | Description                                                                  | Link                                                  |
 | :-------------------- | :--------------------------------------------------------------------------- | :---------------------------------------------------- |
-| **CLI**               | Use the Trunk CLI to check your code for issues and automate local workflows | [CLI](check/advanced-setup/cli/readme.md)             |
+| **CLI**               | Use the Trunk CLI to check your code for issues and automate local workflows | [CLI](check/advanced-setup/cli/trunk-cli.md)          |
 | **VS Code Extension** | Get Trunk code checking results inline in VS Code                            | [VS Code Extension](check/ide-integration/vs-code.md) |
 | **Web App**           | Access dashboards and analytics for all of Trunk's tools                     | [Web App](https://app.trunk.io)                       |
 

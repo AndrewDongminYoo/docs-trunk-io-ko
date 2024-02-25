@@ -30,8 +30,8 @@ In order for the CI Debugger to communicate with the trunk web app, it needs to 
 
 ### Setup Your Buildkite Workflow
 
-Here is an example command of running the debugger directly from any command line. Replace the three values in the example with the ones specific to your setup.\
-\
+Here is an example command of running the debugger directly from any command line. Replace the three values in the example with the ones specific to your setup.
+
 In this example we are downloading the trunk tool and then running the '/bin/false' command which will immediately fail and trigger a breakpoint.
 
 ```yaml

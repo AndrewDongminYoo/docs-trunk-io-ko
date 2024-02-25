@@ -8,7 +8,7 @@ The Trunk web app has a UI for inspecting the status of pull requests or your qu
 
 ## Queue Overview
 
-The queue overview shows you which pull requests are currently in flight. \\
+The queue overview shows you which pull requests are currently in flight.
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-6a896ce2ab561f3190b58ef54d81ad79fd58fa3b%2Fimage.png?alt=media)
 
@@ -22,7 +22,7 @@ Pull requests that fail to merge, or are canceled, do not show in the Queue Over
 
 ## Pull Request Details
 
-Clicking on a pull request in the queue overview will open a sidebar pane with relevant details for the status of that pull request.\\
+Clicking on a pull request in the queue overview will open a sidebar pane with relevant details for the status of that pull request.
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-55b3f4715ab26891dc1cbfbda7ac7101ea8c24a3%2Fimage.png?alt=media)
 

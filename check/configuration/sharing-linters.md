@@ -14,4 +14,4 @@ If you wish to customize a linter for just one developer (say, disable a slow li
 
 ## Multiple Repos
 
-If you wish to share linters between different repos, you can either copy the config manually, or create a shared Plugin repo. This is a set of configuration and code that is imported into the `plugins` section of a project's `./trunk/trunk.yaml` See the [Plugins guide](../advanced-setup/plugins/readme.md) for more details.
+If you wish to share linters between different repos, you can either copy the config manually, or create a shared Plugin repo. This is a set of configuration and code that is imported into the `plugins` section of a project's `./trunk/trunk.yaml` See the [Plugins guide](../advanced-setup/plugins/plugins.md) for more details.

@@ -68,7 +68,6 @@ jobs:
         continue-on-error: true
 ```
 
-&#x20;\
 The uploader action uploads the following data from your workflow:
 
 1. All files matching provided glob patterns (absolute or relative to the repository root).

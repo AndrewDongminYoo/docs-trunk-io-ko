@@ -8,7 +8,9 @@ description: >-
 
 ## Ignoring parts of a file
 
-Sometimes we want to deliberately tell a linter that, yes, I know what I'm doing, and yes, in any other situation I should _not_ do this, but in this specific case it's fine. Maybe there's a dummy private key you're using for a test stack, or fixing the lint issue will actually make your code less readable: whatever it is, you now need to figure out how to suppress a given lint issue.
+Sometimes we want to deliberately tell a linter that, yes, I know what I'm doing, and yes, in any other situation I should _not_ do this, but in this specific case it's fine.
+
+Maybe there's a dummy private key you're using for a test stack, or fixing the lint issue will actually make your code less readable: whatever it is, you now need to figure out how to suppress a given lint issue.
 
 Trunk provides a simple, standardized mechanism to do this, saving you from having to look up the linter-specific syntax for doing so:
 
@@ -104,7 +106,9 @@ The syntax of a trunk-ignore directive is as follows:
 
 ## Ignoring Multiple Files
 
-Some files are never meant to be checked, such as generated code. To ignore them, use the `ignore` key to your `.trunk/trunk.yaml` file:
+Some files are never meant to be checked, such as generated code.
+
+To ignore them, use the `ignore` key to your `.trunk/trunk.yaml` file:
 
 ```yaml
 lint:

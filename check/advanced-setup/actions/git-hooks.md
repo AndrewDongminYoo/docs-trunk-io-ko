@@ -72,7 +72,7 @@ You can observe the actions that are triggered by a `git` event by calling:
 trunk actions history <action-name>
 ```
 
-Which will print out the last 10 executions including timestamps of the specified action \\
+Which will print out the last 10 executions including timestamps of the specified action.
 
 <figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-b2ac6b9eada59ae61c9a61c5b1fc3de95c4fbeee%2Fimage.png?alt=media" alt=""><figcaption><p>trunk actions history for git-lfs action</p></figcaption></figure>
 

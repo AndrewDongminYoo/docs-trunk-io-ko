@@ -34,7 +34,17 @@ trunk merge cancel <pr-number>
 
 ## Pull Request Processing
 
-Once a PR is submitted to the merge queue it goes through several states. First it starts as _Not Ready_ until all of the required conditions to submit it are met. Once ready, the PR moves to the _Pending_ state, waiting for a Merge Queue to pick it up, and then enters the _Testing_ state. Once the tests pass the PR may still need to wait for upstream PRs. Once any upstream PRs are complete the PR will be merged and then removed from the Merge Queue. If a PR fails or is canceled then it will go to the failed or canceled state.
+Once a PR is submitted to the merge queue it goes through several states.
+
+First it starts as _Not Ready_ until all of the required conditions to submit it are met.
+
+Once ready, the PR moves to the _Pending_ state, waiting for a Merge Queue to pick it up, and then enters the _Testing_ state.
+
+Once the tests pass the PR may still need to wait for upstream PRs.
+
+Once any upstream PRs are complete the PR will be merged and then removed from the Merge Queue.
+
+If a PR fails or is canceled then it will go to the failed or canceled state.
 
 ## PR States
 

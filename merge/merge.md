@@ -16,7 +16,8 @@ Merge queues automate PR merges into your repo's main branch, ensuring incompati
 
 #### The problem they solve
 
-Merge queues make sure your `main` branch is never broken ('broken', meaning: a service is not functioning correctly, your app segfaults, there are compilation errors, a unit test is failing, or anything else is going wrong).\
+Merge queues make sure your `main` branch is never broken ('broken', meaning: a service is not functioning correctly, your app segfaults, there are compilation errors, a unit test is failing, or anything else is going wrong).
+
 There are two common ways `main` branches "break":
 
 1. A PR was branched off of on an old commit of `main`, and when merged into `main` it no longer functions with the latest state of the repo.

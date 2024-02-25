@@ -37,15 +37,15 @@ yarn add -D @trunkio/launcher
 The Trunk CLI can be used for:
 
 - [Trunk Check](../../check.md): a pluggable superlinter with a builtin language server and pre-existing issue detection
-- [Trunk Tools:](../tools/readme.md) hermetic runtime and CLI tool manager
-- [Trunk Actions](../actions/readme.md): local workflow automation and githooks manager
+- [Trunk Tools:](../tools/tools.md) hermetic runtime and CLI tool manager
+- [Trunk Actions](../actions/actions.md): local workflow automation and githooks manager
 - [Trunk Merge](../../../merge/merge.md): a merge queue to make merging code in github safer and easier
 
-[Trunk Check](../../check.md) and [Trunk Actions](../actions/readme.md) can be used entirely locally without depending on hosted services or even having a Trunk account
+[Trunk Check](../../check.md) and [Trunk Actions](../actions/actions.md) can be used entirely locally without depending on hosted services or even having a Trunk account
 
 ### Initialize Trunk in your repo
 
-Whether you aim to use [Trunk Check](../../check.md), [Trunk Merge](../../../merge/merge.md), [Trunk Actions](../actions/readme.md), or all of the above, the first step is to initialize Trunk in your git repo:
+Whether you aim to use [Trunk Check](../../check.md), [Trunk Merge](../../../merge/merge.md), [Trunk Actions](../actions/actions.md), or all of the above, the first step is to initialize Trunk in your git repo:
 
 ```bash
 trunk init

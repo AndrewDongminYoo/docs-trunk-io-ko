@@ -43,30 +43,32 @@ Work can be filtered by common ranges: 7 days, 14 days, 30 days, 3 months, 6 mon
 | dependabot   | Work attributable to the testing of a PR created by Dependabot                                  |
 | renovate     | Work attributable to the testing of a PR created by Renovsate                                   |
 
-**By Conclusion**\
-The conclusions filter allows you to look exclusively at work based on its reported termination state: success, failure, canceled, time out, skipped, etc... If you are trying to understand the performance of your CI tasks, you will likely want to filter by success. Failures can occur at any time, but the success path is a more reliable view of the expected runtime of your system.\
-\
-**By Name**\
+#### By Conclusion
+
+The conclusions filter allows you to look exclusively at work based on its reported termination state: success, failure, canceled, time out, skipped, etc... If you are trying to understand the performance of your CI tasks, you will likely want to filter by success. Failures can occur at any time, but the success path is a more reliable view of the expected runtime of your system.
+
+#### By Name
+
 You can filter your data by _name_ (workflow, job, step) in the search box at the bottom-right of the chart view.
 
 ### Exploring your data by Workflow / Job / Step
 
-From the Analytics Overview, you can dive into the hierarchy of your CI data. At each level of the hierarchy, you will see aggregated performance information and can dive deeper into the contents. \
-\
-The top of the view shows a chart of aggregate statistics for the filtered data set. You can customize this view to bucketize this data by week/day/hour as applicable. Hovering over points in the chart will show details for that time slice. \
-\
-If you click on one of the data buckets or points on the graph, you can Zoom into that period of data or view the underlying runs.&#x20;
+From the Analytics Overview, you can dive into the hierarchy of your CI data. At each level of the hierarchy, you will see aggregated performance information and can dive deeper into the contents.
+
+The top of the view shows a chart of aggregate statistics for the filtered data set. You can customize this view to bucketize this data by week/day/hour as applicable. Hovering over points in the chart will show details for that time slice.
+
+If you click on one of the data buckets or points on the graph, you can Zoom into that period of data or view the underlying runs.
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FmSdPeURwY7zOovtL75TB%2Fimage.png?alt=media&token=a900eec9-32ad-467a-8b60-a4db8efcfa3c)
 
-**Tags**: Aggregation at the job level for GitHub workflows will implicitly shard against the 'runs-on' field of the GitHub workflow. For example, if a job was running on`ubuntu-latest` and later switched to a different runner set - a unique row will be created for each distinct runs-on match. \
-\
+**Tags**: Aggregation at the job level for GitHub workflows will implicitly shard against the 'runs-on' field of the GitHub workflow. For example, if a job was running on`ubuntu-latest` and later switched to a different runner set - a unique row will be created for each distinct runs-on match.
+
 When there is a name collision with different underlying tags, the unique tag will be surfaced in the view. This makes it possible, for example, to compare a runner's impact on your system's performance.
 
 ### Runs View
 
 <figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FM55RhAz7PDrRUsRymuEL%2Fworkflow-jobs-steps-list.png?alt=media&token=f413c5b0-e444-467a-a514-33b8152ea92e" alt="screenshot of the Runs View"><figcaption><p>Runs View</p></figcaption></figure>
 
-The **Runs View** allows you to explore the underlying data from an aggregated view. Each row represented a single execution, including its Start time, run time, waiting time, and conclusion. \
-\
+The **Runs View** allows you to explore the underlying data from an aggregated view. Each row represented a single execution, including its Start time, run time, waiting time, and conclusion.
+
 Where available, the rows will include the Pull Request associated with this work, the commit it ran against, links to the associated logs, and the specific machine that the job ran on.

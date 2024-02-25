@@ -100,8 +100,7 @@ Trunk supports several different generic output types. If your linter doesn't co
 `output: pass_fail` linters find either:
 
 - no issues in a file, indicated by exiting with `exit_code=0`, or
-- a single file-level issue in a file, whose message is the linter's `stdout`, indicated by exiting\
-  with `exit_code=1`.
+- a single file-level issue in a file, whose message is the linter's `stdout`, indicated by exiting with `exit_code=1`.
 
 > Note: Exiting with `exit_code=1` but writing nothing to `stdout` is considered to be a linter tool failure.
 >

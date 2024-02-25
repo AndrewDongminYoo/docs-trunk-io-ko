@@ -49,9 +49,13 @@ trunk check --all --filter=-clang-tidy,-shellcheck
 
 #### --sample
 
-`--sample=N` will attempt to run every enabled linter against the requested number of files. The goal of the `sample` flag is to test the setup of the linters in your repository as well as any specific configuration they might honor.
+`--sample=N` will attempt to run every enabled linter against the requested number of files.
 
-The sample command will attempt to run each linter N times, but may run fewer if not enough applicable files exist in your set of files to lint. `--sample=N` can be combined with any other set of options for `trunk check`.
+The goal of the `sample` flag is to test the setup of the linters in your repository as well as any specific configuration they might honor.
+
+The sample command will attempt to run each linter N times, but may run fewer if not enough applicable files exist in your set of files to lint.
+
+`--sample=N` can be combined with any other set of options for `trunk check`.
 
 For example, to run `prettier` against 10 different prettier supported files:
 

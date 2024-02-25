@@ -1,6 +1,6 @@
 # Setup
 
-Trunk CI Analytics integrates with the following CI providers to gather pipeline metrics that track the performance and results of your CI systems.&#x20;
+Trunk CI Analytics integrates with the following CI providers to gather pipeline metrics that track the performance and results of your CI systems.
 
 | Name           | Image                                                                                                                                                                                                                                                                                                                                     | Link                                |
 | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------- |

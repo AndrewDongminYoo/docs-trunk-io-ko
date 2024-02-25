@@ -29,9 +29,9 @@ Connect your Trunk organization to GitHub
        # Add more required statuses here
    ```
 
-3. Ensure the checks and jobs in `merge.required_statuses` from `.trunk/trunk.yaml` specified in step 2 run whenever Trunk Merge tests a PR. Trunk Merge creates branches with the prefix `trunk-merge/` in order to tests PRs, so this means configuring your CI provider to run them whenever a branch with that prefix is pushed to.\
-   \
-   For GitHub Actions, that'll mean setting up a `push`-triggered workflow, filtered to `trunk-merge/**` branches, like so:\\
+3. Ensure the checks and jobs in `merge.required_statuses` from `.trunk/trunk.yaml` specified in step 2 run whenever Trunk Merge tests a PR. Trunk Merge creates branches with the prefix `trunk-merge/` in order to tests PRs, so this means configuring your CI provider to run them whenever a branch with that prefix is pushed to.
+
+   For GitHub Actions, that'll mean setting up a `push`-triggered workflow, filtered to `trunk-merge/**` branches, like so:
 
    ```yaml
    name: Run Required Checks

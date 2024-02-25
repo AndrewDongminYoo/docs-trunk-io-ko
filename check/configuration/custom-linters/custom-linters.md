@@ -10,14 +10,10 @@ Trunk Check's linter integrations are fully configurable. This means that you ca
 
 Running `trunk check` tells `trunk` to do the following:
 
-- compute the set of modified files (by comparing the current working tree and `upstream-ref`,\
-  usually your `main` or `master` branch)
+- compute the set of modified files (by comparing the current working tree and `upstream-ref`, usually your `main` or `master` branch)
 - compute the set of lint actions to run based on the modified files
-  - each enabled linter is invoked once per [applicable modified file](#applicable-filetypes); for\
-    example, if `pylint` and `flake8` are enabled, they will both be run on every modified `python` file but not on any modified `markdown` files
-  - every lint action also will have a corresponding _upstream_ lint action (i.e. the linter will\
-    also be run on the upstream version of the file, so that we can determine which issues already\
-    exist in your repository)
+  - each enabled linter is invoked once per [applicable modified file](#applicable-filetypes); for example, if `pylint` and `flake8` are enabled, they will both be run on every modified `python` file but not on any modified `markdown` files
+  - every lint action also will have a corresponding _upstream_ lint action (i.e. the linter will also be run on the upstream version of the file, so that we can determine which issues already exist in your repository)
 - [download](#hermetic-installs) and install any newly enabled linters/formatters
 - execute uncached lint actions
 - parse linter [outputs](#output-types) into configurable output types
@@ -60,9 +56,7 @@ The `@SYSTEM` is a special identifier that indicates that we will forward the `P
 
 Every custom linter must specify a name, the types of files it will run on, at least one command, and `success_codes` or `error_codes`.
 
-> Info: Entries in `enabled` must specify both a linter name and a version. If you commit your linter into your repository, you should simply use `@SYSTEM`, which will run the linter with your shell's\
-> `PATH`. If you have a versioned release pipeline for your linter, though, you'll want to define your\
-> custom linter using a [`download`](#downloads) and specify the download version to use.
+> Info: Entries in `enabled` must specify both a linter name and a version. If you commit your linter into your repository, you should simply use `@SYSTEM`, which will run the linter with your shell's > `PATH`. If you have a versioned release pipeline for your linter, though, you'll want to define your > custom linter using a [`download`](#downloads) and specify the download version to use.
 
 ### Configuration Options
 
@@ -125,9 +119,7 @@ Note that some of the fields in this command template contain `${}` tokens: thes
 
 #### Input
 
-The `target` field specifies what paths this linter will run on given an input file. It may be a\
-literal such a `.` which will run the linter on the whole repository. It also supports various\
-substitutions:
+The `target` field specifies what paths this linter will run on given an input file. It may be a literal such a `.` which will run the linter on the whole repository. It also supports various substitutions:
 
 | Variable                         | Description                                                                                                                                      |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -190,8 +182,7 @@ Linters often use different exit codes to categorize the outcome. For instance, 
 Trunk supports specifying either `success_codes` or `error_codes` for a linter:
 
 - if `success_codes` are specified, Trunk expects a successful linter invocation (which may or may not find issues) to return one of the specified `success_codes`;
-- if `error_codes` are specified, Trunk expects a successful linter invocation to return any exit\
-  code which is _not_ one of the specified `error_codes`.
+- if `error_codes` are specified, Trunk expects a successful linter invocation to return any exit code which is _not_ one of the specified `error_codes`.
 
 `markdownlint`, for example, has `success_codes: [0, 1]` in its configuration.
 
@@ -371,18 +362,14 @@ lint:
 This tells Trunk that, for `lorem-linter`:
 
 - you want to run version `4.0.2` on `javascript` and `typescript` files,
-- it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with\
-  `4.0.2`), and
+- it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with `4.0.2`), and
 - the download consists of a single executable binary, since `executable: true` is set;
 
 for `ipsum-linter`:
 
 - you want to run version `0.1.6` on `rust` files,
-- it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with\
-  `0.1.6`), and
-- the download is a compressed archive, the linter binary is `strip_components: 2` directories deep\
-  inside the uncompressed archive, and `trunk` should automatically extract and unpack the linter\
-  from the archive.
+- it is available for macOS and Linux at the specified URLs (expanded by replacing `${version}` with `0.1.6`), and
+- the download is a compressed archive, the linter binary is `strip_components: 2` directories deep inside the uncompressed archive, and `trunk` should automatically extract and unpack the linter from the archive.
 
 #### Download via package manager
 

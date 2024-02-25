@@ -6,8 +6,8 @@ description: Integrate with Trunk CI Analytics using the API
 
 ## REST API Overview
 
-The Trunk CI Analytics API aims to give you access to instrument any CI or build system. The API is an HTTP REST API. The API uses status codes to indicate the success or failure of requests, returns JSON from all requests, and uses standard HTTP response codes. Use the Trunk CI Analytics API to access Trunk CI Analytics programmatically.\
-\
+The Trunk CI Analytics API aims to give you access to instrument any CI or build system. The API is an HTTP REST API. The API uses status codes to indicate the success or failure of requests, returns JSON from all requests, and uses standard HTTP response codes. Use the Trunk CI Analytics API to access Trunk CI Analytics programmatically.
+
 The current version of the Trunk CI Analytics API is v1.
 
 ## Getting Started
@@ -37,7 +37,7 @@ Repo object properties:
 | `owner`  | The owner of this repository                                                             | <code>Required</code> |
 | `name`   | The name of this repository                                                              | <code>Required</code> |
 
-For example, the repository `https://github.com/trunk-io/jenkins-plugin` would be&#x20;
+For example, the repository `https://github.com/trunk-io/jenkins-plugin` would be
 
 ```json
 {

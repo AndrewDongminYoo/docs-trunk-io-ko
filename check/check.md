@@ -6,7 +6,7 @@ description: "Meta-linter for over 100 code checking tools: CLI, IDE, and on the
 
 ## What is Trunk Check?
 
-**Trunk Check** runs 100+ idiomatic code-checking tools for every language and technology, locally ([CLI](advanced-setup/cli/readme.md), [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)), on CI ([CI](advanced-setup/cli/readme.md), [GitHub Bot](advanced-setup/cli/readme.md)), and in our [web app](https://app.trunk.io). You're probably already running a few of these tools (ESLint, Prettier, etc), but Trunk Check adds valuable features to let you integrate with CI and PRs, run them faster, upgrade them easier, integrate them with CI and PRs, version them better, and much more.
+**Trunk Check** runs 100+ idiomatic code-checking tools for every language and technology, locally ([CLI](advanced-setup/cli/trunk-cli.md), [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)), on CI ([CI](advanced-setup/cli/trunk-cli.md), [GitHub Bot](advanced-setup/cli/trunk-cli.md)), and in our [web app](https://app.trunk.io). You're probably already running a few of these tools (ESLint, Prettier, etc), but Trunk Check adds valuable features to let you integrate with CI and PRs, run them faster, upgrade them easier, integrate them with CI and PRs, version them better, and much more.
 
 Check handles:
 
@@ -63,7 +63,7 @@ PR iterations kill productivity. Every time a dev updates a PR, even trivially, 
 - pre-existing issue detection
 - a daemon & language server
 - [githooks management](advanced-setup/actions/git-hooks.md)
-- cli available ([docs](advanced-setup/cli/readme.md))
+- cli available ([docs](advanced-setup/cli/trunk-cli.md))
 - a [web app](https://app.trunk.io/) for repo stats and slack notifications
 
 ## I run a large eng org. Why should I use Check?

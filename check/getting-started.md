@@ -4,7 +4,11 @@ description: How to install the Trunk CLI to check your code in less than 60 sec
 
 # Getting Started
 
-The `trunk` command line tool runs locally on your developer machine, right where your code is. Later, you can automatically scan your repo using the [Trunk Check webapp](check-cloud-ci-integration/ci-setup.md). Trunk Check will automatically keep tools up to date, suggest standard tools for your project type (eg: `clang-format` for C++, `eslint` for JS/TS), and pin versions in `trunk.yaml` to ensure Trunk Check is reproducible.
+The `trunk` command line tool runs locally on your developer machine, right where your code is.
+
+Later, you can automatically scan your repo using the [Trunk Check webapp](check-cloud-ci-integration/ci-setup.md).
+
+Trunk Check will automatically keep tools up to date, suggest standard tools for your project type (eg: `clang-format` for C++, `eslint` for JS/TS), and pin versions in `trunk.yaml` to ensure Trunk Check is reproducible.
 
 ## Install the CLI
 
@@ -42,7 +46,9 @@ From the root of a git repo, run:
 trunk init
 ```
 
-This will scan your repository and create a `.trunk/trunk.yaml` that enables all the linters, formatters, and security analyzers that [Trunk Check](check.md) recommends. For more details, see [here](advanced-setup/cli/init-in-a-git-repo.md).
+This will scan your repository and create a `.trunk/trunk.yaml` that enables all the linters, formatters, and security analyzers that [Trunk Check](check.md) recommends.
+
+For more details, see [here](advanced-setup/cli/init-in-a-git-repo.md).
 
 ## Basic Usage
 
@@ -55,16 +61,21 @@ trunk fmt         # runs all the enabled formatters and auto-applies changes
 
 You can always find this list using `trunk check --help`.
 
-Trunk is git-aware. When you run `trunk check` it will **only run on files you've modified according to git**. To run on a sampling in your repo, run: `trunk check --sample 5`
+Trunk is git-aware.
+
+When you run `trunk check` it will **only run on files you've modified according to git**.
+
+To run on a sampling in your repo, run: `trunk check --sample 5`
 
 ### check
 
-`trunk check` runs linters & formatters on your changed files, prompting you to apply fixes. Without additional args, `trunk check` will run all applicable linters on all files changed in the current branch.
+`trunk check` runs linters & formatters on your changed files, prompting you to apply fixes.
+
+Without additional args, `trunk check` will run all applicable linters on all files changed in the current branch.
 
 ### fmt
 
-Run all applicable formatters as configured in `trunk.yaml`. `trunk fmt` is short-hand for running\
-`trunk check` with a `--fix --filter` set to all formatters enabled in your repository.
+Run all applicable formatters as configured in `trunk.yaml`. `trunk fmt` is short-hand for running `trunk check` with a `--fix --filter` set to all formatters enabled in your repository.
 
 ## Options
 
@@ -112,11 +123,15 @@ trunk check disable <linter name>
 
 ## CI Setup
 
-Once you have Trunk Check configured on your local machine, you can set up the Trunk Check webapp to automatically run checks whenever your CI system builds and runs tests. See [Continuous Integration Setup](check-cloud-ci-integration/ci-setup.md) for more information.
+Once you have Trunk Check configured on your local machine, you can set up the Trunk Check webapp to automatically run checks whenever your CI system builds and runs tests.
+
+See [Continuous Integration Setup](check-cloud-ci-integration/ci-setup.md) for more information.
 
 ## Hold the Line
 
-By default Trunk Check will _Hold The Line_, meaning it will only run against new changes in your codebase, not old ones. For more see [Hold the Line](configuration/hold-the-line.md).
+By default Trunk Check will _Hold The Line_, meaning it will only run against new changes in your codebase, not old ones.
+
+For more see [Hold the Line](configuration/hold-the-line.md).
 
 ## Ignoring Issues
 
@@ -133,10 +148,18 @@ The comment should contain the name of the linter you want to ignore the followi
 
 ## Upgrading
 
-`trunk upgrade` will upgrade the Trunk CLI, along with all plugins and linters in your `trunk.yaml`. We highly recommend running on the latest validated versions of tools as updates will frequently include important security fixes and additional valuable checks. Trunk only auto-suggests linter upgrades to versions that we have tested and support, so you may see a slight lag time when a new linter version is released.
+`trunk upgrade` will upgrade the Trunk CLI, along with all plugins and linters in your `trunk.yaml`.
+
+We highly recommend running on the latest validated versions of tools as updates will frequently include important security fixes and additional valuable checks.
+
+Trunk only auto-suggests linter upgrades to versions that we have tested and support, so you may see a slight lag time when a new linter version is released.
 
 ```sh
 trunk upgrade
 ```
 
-`trunk upgrade` will also recommend new tools that have become applicable since the last time your repository was scanned. This can be a result of using new technologies in your repository or trunk itself adding support for more tools. If you don't like a particular recommendation you can run `trunk check disable <linter>` to teach trunk not to recommend it.
+`trunk upgrade` will also recommend new tools that have become applicable since the last time your repository was scanned.
+
+This can be a result of using new technologies in your repository or trunk itself adding support for more tools.
+
+If you don't like a particular recommendation you can run `trunk check disable <linter>` to teach trunk not to recommend it.

@@ -16,7 +16,7 @@ Only upgrade the Trunk CLI to the latest version.
 
 `plugins`
 
-Upgrade any [plugins](../plugins/readme.md) that you have sourced to their latest public release. The latest version must be compatible with your current `cli` version in order for the upgrade to be applied.
+Upgrade any [plugins](../plugins/plugins.md) that you have sourced to their latest public release. The latest version must be compatible with your current `cli` version in order for the upgrade to be applied.
 
 `check`
 
@@ -24,11 +24,11 @@ Upgrade any linters that you have enabled. Linters will be upgraded to the lates
 
 `tools`
 
-Upgrade any [tools](../tools/readme.md) that you have enabled. Tools will be upgraded to their latest public release. Note that any enabled linters that share a name with an enabled tool must keep their versions synced.
+Upgrade any [tools](../tools/tools.md) that you have enabled. Tools will be upgraded to their latest public release. Note that any enabled linters that share a name with an enabled tool must keep their versions synced.
 
 `runtimes`
 
-Upgrade any [runtimes](../runtimes/readme.md) that you have enabled. Runtimes will be upgraded to their recommended version for running linters, as specified by Trunk.
+Upgrade any [runtimes](../runtimes/runtimes.md) that you have enabled. Runtimes will be upgraded to their recommended version for running linters, as specified by Trunk.
 
 ### Automatic Upgrades
 
@@ -50,4 +50,4 @@ lint:
 
 ### Plugin Repos and user.yaml
 
-By default, upgrades are only applied to your repo's `.trunk/trunk.yaml`. If you're using a [plugin](../plugins/readme.md) repo that enables linters/tools, or if you would like upgrades to be applied to your [`.trunk/user.yaml`](../../reference/user-yaml.md) file, you can run `trunk upgrade --apply-to <path>` to see upgrades applied there.
+By default, upgrades are only applied to your repo's `.trunk/trunk.yaml`. If you're using a [plugin](../plugins/plugins.md) repo that enables linters/tools, or if you would like upgrades to be applied to your [`.trunk/user.yaml`](../../reference/user-yaml.md) file, you can run `trunk upgrade --apply-to <path>` to see upgrades applied there.

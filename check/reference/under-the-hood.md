@@ -41,11 +41,10 @@ By default `check` will run concurrent jobs using up to half the available cores
 
 ## Memory Utilization
 
-`check` does not current support a mechanism to throttle back jobs based on the memory consumption of concurrently runs jobs. In order to throttle memory utilization you can lower the\
-[`--jobs`](../usage.md#options) count to indirectly reduce system load.
+`check` does not current support a mechanism to throttle back jobs based on the memory consumption of concurrently runs jobs. In order to throttle memory utilization you can lower the [`--jobs`](../usage.md#options) count to indirectly reduce system load.
 
 ## Daemon
 
-`trunk check` runs a daemon which monitors relevant file changes and triggers jobs to precompute in the background while you work. The daemon is used both to support realtime background checking in supported extensions (e.g. VS Code) and to precompute check results for faster commits/pushes. Some native linters are more compute/memory intensive and `check` supports disabling background linting of those tools.\
-\
-By default linters run whenever a file is modified in the background. You can override this behavior by editing the [`run_when`](../configuration/custom-linters/#run_when) configuration for a tool.&#x20;
+`trunk check` runs a daemon which monitors relevant file changes and triggers jobs to precompute in the background while you work. The daemon is used both to support realtime background checking in supported extensions (e.g. VS Code) and to precompute check results for faster commits/pushes. Some native linters are more compute/memory intensive and `check` supports disabling background linting of those tools.
+
+By default linters run whenever a file is modified in the background. You can override this behavior by editing the [`run_when`](../configuration/custom-linters/#run_when) configuration for a tool.

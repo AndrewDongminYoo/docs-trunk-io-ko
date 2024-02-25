@@ -4,9 +4,15 @@ description: Detailed install instructions for the Trunk CLI
 
 # Install Trunk
 
-The below commands install the Trunk Launcher, a bash script that downloads the appropriate Trunk CLI version and runs it. The launcher invisibly runs the Trunk CLI version specified in a project's `.trunk/trunk.yaml` file. The actual Trunk CLI is a single binary that is cached locally in `~/.cache/trunk` and is updated automatically.
+The below commands install the Trunk Launcher, a bash script that downloads the appropriate Trunk CLI version and runs it.
 
-Run one of the following commands to install the Trunk Launcher, or add it as a dev dependency to your project if you use `npm`, `pnpm`, or `yarn`. You can also commit the Trunk launcher directly into your repo (see below).
+The launcher invisibly runs the Trunk CLI version specified in a project's `.trunk/trunk.yaml` file.
+
+The actual Trunk CLI is a single binary that is cached locally in `~/.cache/trunk` and is updated automatically.
+
+Run one of the following commands to install the Trunk Launcher, or add it as a dev dependency to your project if you use `npm`, `pnpm`, or `yarn`.
+
+You can also commit the Trunk launcher directly into your repo (see below).
 
 ```bash
 curl https://get.trunk.io -fsSL | bash
@@ -50,7 +56,9 @@ This makes it much easier for you to share Trunk with your colleagues!
 
 #### From your system
 
-Trunk has a very minimal installation, and therefore, there's not much to uninstall. The two system paths we use are:
+Trunk has a very minimal installation, and therefore, there's not much to uninstall.
+
+The two system paths we use are:
 
 - `/usr/local/bin/trunk`: the [Trunk Launcher](../../reference/components.md#trunk-launcher)
 - `~/.cache/trunk`: cached versions of the trunk cli, linters, formatters, etc.
@@ -67,7 +75,9 @@ trunk deinit
 
 #### VS Code extension
 
-To uninstall the Trunk VS Code extension, do so as you would any extension ([docs](https://code.visualstudio.com/docs/editor/extension-marketplace)). Then reload VS Code.
+To uninstall the Trunk VS Code extension, do so as you would any extension ([docs](https://code.visualstudio.com/docs/editor/extension-marketplace)).
+
+Then reload VS Code.
 
 ## Binary download (not recommended)
 
@@ -85,4 +95,12 @@ https://trunk.io/releases/${version}/trunk-${version}-${platform}-x86_64.tar.gz
 
 ## Pre-installing tools
 
-Trunk hermetically manages all the tools that it runs. To do this, it will download and install them into its cache folder only when they are needed. If you would like to ensure that all tools are installed ahead of time, then you can use the `trunk install` command. This may be useful if you want to prepare to work offline or if you would like to include the tools in a docker image. On Linux and macOS you may find the cache folder at `$HOME/.cache/trunk`.
+Trunk hermetically manages all the tools that it runs.
+
+To do this, it will download and install them into its cache folder only when they are needed.
+
+If you would like to ensure that all tools are installed ahead of time, then you can use the `trunk install` command.
+
+This may be useful if you want to prepare to work offline or if you would like to include the tools in a docker image.
+
+On Linux and macOS you may find the cache folder at `$HOME/.cache/trunk`.

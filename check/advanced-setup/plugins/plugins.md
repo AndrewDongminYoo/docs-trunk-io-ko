@@ -8,7 +8,11 @@ description: >-
 
 ### Importing a plugin repository
 
-By default trunk imports the trunk-io/plugins repository. To import a repo add it to the `plugins.sources` list. Each repo requires a URI and ref.
+By default trunk imports the trunk-io/plugins repository.
+
+To import a repo add it to the `plugins.sources` list.
+
+Each repo requires a URI and ref.
 
 ```yaml
 plugins:
@@ -28,9 +32,17 @@ plugins:
 
 ### Plugin capabilities
 
-Any configuration used in `trunk.yaml` can also be used in a plugin repository, with [some exceptions](#excluded-fields). A plugin repository must have one root level `plugin.yaml` and can have any number of other `plugin.yaml` files in other subdirectories. These configuration files are then merged into one composite plugin configuration.
+Any configuration used in `trunk.yaml` can also be used in a plugin repository, with [some exceptions](#excluded-fields).
 
-The most common use for a plugin repository is to define custom linters, actions, or tools. But they can also be used to define a common set of shared tools across an organization. For more info, see [organization configs](creating-organization-configs.md).
+A plugin repository must have one root level `plugin.yaml` and can have any number of other `plugin.yaml` files in other subdirectories.
+
+These configuration files are then merged into one composite plugin configuration.
+
+The most common use for a plugin repository is to define custom linters, actions, or tools.
+
+But they can also be used to define a common set of shared tools across an organization.
+
+For more info, see [organization configs](creating-organization-configs.md).
 
 The root `plugin.yaml` file may also have a `required_trunk_version` field which governs compatibility when [upgrading](../cli/upgrade.md) between CLI versions.
 
@@ -56,9 +68,9 @@ trunk plugins add /home/user/self/hello-world --id=hello-world
 
 ### Plugins scope
 
-Plugins are merged serially, in the order that they are sourced, and can override almost any Trunk\
-configuration. This allows organizations to provide a set of overrides and definitions in one\
-central place.
+Plugins are merged serially, in the order that they are sourced, and can override almost any Trunk configuration.
+
+This allows organizations to provide a set of overrides and definitions in one central place.
 
 For instance, you can create your own `my-plugins` repository with `plugin.yaml`:
 
@@ -94,5 +106,4 @@ Note that private GitHub plugin repositories are not currently supported.
 
 ### Excluded fields
 
-Plugin `sources`, as well as the `cli` `version`, are not merged from plugin repositories to ensure\
-that config merging occurs in a predictable, stable fashion.
+Plugin `sources`, as well as the `cli` `version`, are not merged from plugin repositories to ensure that config merging occurs in a predictable, stable fashion.

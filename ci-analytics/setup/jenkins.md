@@ -20,7 +20,7 @@ The [Trunk Plugin for Jenkins](https://plugins.jenkins.io/trunk-io/) requires th
 
 ## Upload Data
 
-If for any reason you don't see your pipeline runs in the Trunk app after 3 minutes. Please contact our support at [https://slack.trunk.io](https://slack.trunk.io).&#x20;
+If for any reason you don't see your pipeline runs in the Trunk app after 3 minutes. Please contact our support at [https://slack.trunk.io](https://slack.trunk.io).
 
 ## Troubleshooting
 
