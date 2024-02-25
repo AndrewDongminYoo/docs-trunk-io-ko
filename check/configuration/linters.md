@@ -4,7 +4,7 @@ description: Overview of Trunk Check's supported linters and configuration
 
 # Linters
 
-Trunk Check supports over [100 different linters](supported-linters.md) and formatters out of the box. The configurations for `trunk check` and `trunk fmt` are governed by the `lint` section of the [`trunk.yaml`](../reference/trunk-yaml/#cli)file stored in the `.trunk` directory of your git repo. Here's an example of what a fully-featured `lint` section looks like:
+Trunk Check supports over [100 different linters](supported-linters.md) and formatters out of the box. The configurations for `trunk check` and `trunk fmt` are governed by the `lint` section of the [`trunk.yaml`](../reference/trunk-yaml#cli)file stored in the `.trunk` directory of your git repo. Here's an example of what a fully-featured `lint` section looks like:
 
 ```yaml
 lint:
@@ -77,7 +77,7 @@ To configure **what** a linter does, you will continue to use the linter's own c
 
 If you'd like, Trunk also supports migrating any linter configurations from the root of your repository into a `.trunk/configs` folder. These config files will be symlinked in during any `trunk check` run. Note that if you're using an IDE Extension like clangd with an LSP that relies on those configs being in the root, you will need to create an additional symlink from the hidden config to the workspace root.
 
-If you find that you want to tweak how Trunk runs a given linter, you may want to consult the documentation on [overriding defaults](../reference/trunk-yaml/#overriding-defaults) and [the various linter settings](custom-linters/readme.md); for example, hold-the-line is enabled by default for most linters, but can be disabled like so:
+If you find that you want to tweak how Trunk runs a given linter, you may want to consult the documentation on [overriding defaults](../reference/trunk-yaml#overriding-defaults) and [the various linter settings](custom-linters/custom-linters.md); for example, hold-the-line is enabled by default for most linters, but can be disabled like so:
 
 ```yaml
 lint:
@@ -107,7 +107,7 @@ lint:
     - hadolint@2.6.0
 ```
 
-Custom linters are slightly different; see [those docs](custom-linters/readme.md) to learn more.
+Custom linters are slightly different; see [those docs](custom-linters/custom-linters.md) to learn more.
 
 You can also ask Trunk to detect new linters and upgrade existing linters to their latest respective versions by running [`trunk upgrade check`](../advanced-setup/cli/upgrade.md).
 
@@ -138,7 +138,7 @@ lint:
 
 #### Runtime versioning
 
-By default Trunk will install hermetic versions of runtimes required by the linters you have chosen. If you need to peg to a specific runtime version or you want to use the version installed on your system, consult the [runtimes documentation](../reference/trunk-yaml/#runtimes).
+By default Trunk will install hermetic versions of runtimes required by the linters you have chosen. If you need to peg to a specific runtime version or you want to use the version installed on your system, consult the [runtimes documentation](../reference/trunk-yaml#runtimes).
 
 ### Ignoring Issues and Files
 
@@ -170,7 +170,7 @@ For full details please see the [Ignoring Issues and Files](ignoring-issues.md) 
 
 ### Blocking Thresholds
 
-All [issue severities](../#issue-severity) are considered blocking by default. In cases where you might want to slowly try out a new linter, we provide a mechanism to set specific thresholds for each linter.
+All [issue severities](./..#issue-severity) are considered blocking by default. In cases where you might want to slowly try out a new linter, we provide a mechanism to set specific thresholds for each linter.
 
 ```yaml
 lint:

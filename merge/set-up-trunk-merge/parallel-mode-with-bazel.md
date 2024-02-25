@@ -4,7 +4,7 @@ description: When using Bazel, Trunk Merge can create parallel merge queues for 
 
 # Parallel Mode with Bazel
 
-Leveraging [parallel mode](../#single-mode-vs.-parallel-mode) for Trunk Merge is easy for Bazel enabled repos because Bazel already knows the structure of your code and can automatically generate a dependency graph. Merge can use this information in parallel mode to run your CI tests more efficiently; eliminating checks when Bazel already knows they cannot conflict.
+Leveraging [parallel mode](./..#single-mode-vs.-parallel-mode) for Trunk Merge is easy for Bazel enabled repos because Bazel already knows the structure of your code and can automatically generate a dependency graph. Merge can use this information in parallel mode to run your CI tests more efficiently; eliminating checks when Bazel already knows they cannot conflict.
 
 ### Setup Trunk Merge
 
@@ -12,7 +12,7 @@ Connect your GitHub repository with Trunk and set up Trunk Merge with [the stand
 
 ### Turn on Parallel Mode
 
-Next [enable Parallel Mode](../configuration.md) in the Trunk Merge UI.
+Next [enable Parallel Mode](../perallel-mode.md) in the Trunk Merge UI.
 
 <figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2F1CKPbolV5UO0g7elO6fl%2Fimage.png?alt=media&token=69b2ccce-4f8b-4f26-b622-45c6ee13aae3" alt="screenshot of Trunk Merge configuration screen"><figcaption><p>Enabling Parallel Mode</p></figcaption></figure>
 

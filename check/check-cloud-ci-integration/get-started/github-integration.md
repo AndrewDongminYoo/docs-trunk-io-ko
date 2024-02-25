@@ -1,97 +1,53 @@
 ---
-description: >-
-  Trunk Check integrates with GitHub to automatically identify linter issues,
-  unformatted files, and vulnerabilities in your repositories without ever
-  sending your code to Trunk.
+description: Automate your code quality enforcement with just a few clicks.
 ---
 
-# How It Works
+# GitHub Integration
 
-If you don't use GitHub, we recommend you check out the [Continuous Integration](../continuous-integration/readme.md) guide.
+Now that you have `trunk check` running on your local computer, your next step is to run Trunk automatically in the cloud and share notifications with your whole team. _Start by connecting your Trunk organization to GitHub._
 
-## How it works
+## Connect your Trunk organization to GitHub
 
-Trunk Check's GitHub integrations rely on the following:
+Sign up at [app.trunk.io](https://app.trunk.io), create a Trunk organization, and connect it to your repositories. See our GitHub App permissions [here](../../../administration/github-app-permissions.md) if interested.
 
-- An installation of the Trunk.io GitHub app in your GitHub organization, and
-- A `.trunk` repository in your GitHub organization.
+![ ](https://d2vsad3r6ug0tf.cloudfront.net/cllobexas0hc0051asw4lmlyr/eIV7VryvgLhT9Qla3y.png)
 
-### What is a `.trunk` repository?
+## Set Up Trunk Check
 
-The `.trunk` repository contains the workflows run to scan your codebase and pull requests. We recommend creating a `.trunk` repository in your GitHub organization using [this template repository](https://github.com/trunk-io/.trunk-template).
+![ ](https://d2vsad3r6ug0tf.cloudfront.net/cllobexas0hc0051asw4lmlyr/KTgGNj--kvEhDKtxts.png)
 
-Your `.trunk` repository must be added to your Trunk GitHub app installation. You can verify this by navigating to: `https://github.com/organizations/<your_organization>/settings/installations`, clicking "configure" next to Trunk-io, and verifying that the repository access is either "All repositories" or that your `.trunk` repository is selected.
+## Configure Slack Notifications (optional)
 
-To find Check issues in your repositories and pull requests, we dispatch GitHub Actions workflows in your `.trunk` repository, which check out your repositories and pull requests and then run `trunk check` in them. This strategy allows you to:
+![ ](https://d2vsad3r6ug0tf.cloudfront.net/cllobexas0hc0051asw4lmlyr/B8syrVqgaXK0BUTF5y.png)
 
-- start using Trunk Check in all your repositories without any configuration, and
-- be in full control over the environment where we analyze your code, since we're running on your GitHub Actions runners.
+## Use it
 
-> 🚧 `.trunk` should have private visibility
->
-> Since we use workflow runs in `.trunk` to analyze any repository in your organization and record Check findings, you should think carefully about who has permissions to view workflow runs in your `.trunk` repository. For most organizations, simply making your `.trunk` repository private will be sufficient.
+### Ensure that PRs are free of issues
 
-If you want to version the linter configuration for a given repo or enable linters that require more manual configuration, you can always [create and commit your Trunk configuration in said repository](../../advanced-setup/cli/init-in-a-git-repo.md#single-player-mode).
+Check out [this example](https://github.com/trunk-io/plugins/pull/424/checks?check_run_id=15730277425) in our `plugins` repository!
 
-## Checking pull requests
+<div data-full-width="true">
 
-Trunk Check can automatically detect new Check issues on your pull requests and flag them so that you can prevent pull requests from introducing any new issues in your repository.
+<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FsAz3xEetNR7hwQmi9YDb%2Fimage.png?alt=media&token=a34f5b1c-d9c5-4551-a09f-38d48d64388c" alt=""><figcaption><p>Trunk Check identifying a security issue in one of Trunk's own repositories</p></figcaption></figure>
 
-When running on a pull request, Trunk Check will only flag _new_ issues, not existing ones, so that your engineers don't have to fix pre-existing linter issues in every file they touch - this is the same [hold-the-line technology](../../#hold-the-line) that our VSCode extension and CLI use.
+</div>
 
-<details>
+### Explore issues in your repository
 
-<summary>Fixing issues in pull requests</summary>
+<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FUFUcUsBoLuaeRBwu11lu%2FScreenshot%202023-08-23%20173119.png?alt=media&token=a847e816-b8a5-4f12-96e3-211f50226170" alt=""><figcaption><p>Trunk Check showing all the issues present in trunk-demo1/sass</p></figcaption></figure>
 
-To confirm that you've fixed issues identified by Trunk Check before pushing your pull request, just run `trunk check`.
+### Get Slack notifications about new issues in your repository
 
-If Trunk continues to identify new Check issues on your PR, first try merging the latest changes from your base branch. When Trunk runs on a PR, it runs on a commit that merges your PR into its base branch, just like GitHub workflows.
+Not only do our daily scans allow you to browse and triage the issues in your repository, but they can also notify you when new security issues are discovered in packages you already depend on.
 
-If this continues to fail, then run `git checkout refs/pull/<PR number>/merge && trunk check`. This is a reference to the merge commit GitHub creates.
+<div data-full-width="true">
 
-</details>
+<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FbvI4fHl70HWiGaIguSzz%2FScreenshot%202023-08-23%20173252.png?alt=media&token=730e34ba-9bb8-4fd2-aeb8-d7f56d52af79" alt=""><figcaption><p>Slack notification showing newly discovered issues with rustls-webpki in trunk-io/trunk</p></figcaption></figure>
 
-<details>
+</div>
 
-<summary>Skipping Trunk Check</summary>
+## Learn more
 
-You can include `/trunk skip-check` in the body of a PR description (i.e. the first comment on a given PR) to mark Trunk Check as "skipped". Trunk Check will still run on your PR and report issues, but this will allow the PR to pass a GitHub required status check on `Trunk Check`.
+[Read the documentation about our GitHub integration to learn more.](how-it-works.md)
 
-This can be helpful if Check is flagging known issues in a given PR which you don't want to [ignore](../../configuration/ignoring-issues.md), which if you're doing a large refactor, can come in very handy.
-
-</details>
-
-If you don't want Trunk Check to run on pull requests, turn it off in [your repository's settings](https://app.trunk.io).
-
-## Scanning your repository
-
-Trunk Check can scan your repository for Check issues on a daily cadence, upload them to Trunk for you to review at your convenience, and notify you via Slack whenever new issues are discovered in your repository.
-
-This allows you to build confidence in the code health of your repositories:
-
-- You will be alerted quickly in a Heartbleed-type event, giving you assurances about whether or not a newly discovered vulnerability affects any of your repositories, and
-- You can monitor how many Check issues exist in each of your repositories and make data-driven decisions about prioritizing efforts to reduce tech debt
-
-If you don't want Trunk Check to scan your repository on a daily cadence or notify you, you can turn it off in [your repository's settings](https://app.trunk.io).
-
-## (optional) Custom setup logic
-
-If you need to do some setup before `trunk check` runs in `your-org/your-repo`, you can [define a GitHub composite action](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action) in `.trunk/setup-ci/action.yaml` in `your-repo`. This can be important if, for example, a linter needs some generated code to be present before it can run:
-
-```yaml
-name: Trunk Check setup
-description: Set up dependencies for Trunk Check
-
-runs:
-  using: composite
-  steps:
-    - name: Build required trunk check inputs
-      shell: bash
-      run: bazel build ... --build_tag_filters=pre-lint
-
-    - name: Install eslint dependencies
-      shell: bash
-      run: npm install
-```
-
-Read more in the documentation for [our GitHub Action](https://github.com/trunk-io/trunk-action#custom-setup).
+If you don't host your source code on GitHub, we recommend setting [up Trunk locally](../../usage.md#ci-setup).

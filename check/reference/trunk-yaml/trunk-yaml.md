@@ -153,7 +153,7 @@ runtimes:
 
 ## `lint`
 
-See the [check configuration](../../configuration/readme.md) and [custom linter](../../configuration/readme.md) documentation.
+See the [check configuration](../../configuration/linters.md) and [custom linter](../../configuration/linters.md) documentation.
 
 ### Disable upgrade notifications
 

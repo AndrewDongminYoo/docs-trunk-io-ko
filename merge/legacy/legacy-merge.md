@@ -4,7 +4,7 @@ description: Older version of Merge.
 
 # Legacy Merge
 
-This documentation is for the older version of Merge. Use if it you initially set up your Merge config **before November 16, 2023**. If you setup Merge later, then use the [new merge docs](../readme.md). If your Merge console has a _**graph**_ tab, then you should use the new merge docs instead.
+This documentation is for the older version of Merge. Use if it you initially set up your Merge config **before November 16, 2023**. If you setup Merge later, then use the [new merge docs](../merge.md). If your Merge console has a _**graph**_ tab, then you should use the new merge docs instead.
 Trunk Merge is a service that enables your repository to adhere to The “Not Rocket Science Rule Of Software Engineering”: **Automatically maintain a repository of code that always passes all the tests.**
 
 ## How It Works

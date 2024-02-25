@@ -51,7 +51,7 @@ Trunk Check has a daemon that checks code as you modify files in your repo, runs
 
 PR iterations kill productivity. Every time a dev updates a PR, even trivially, they have to context switch, break out of flow, reviewers also context switch to look at it, and that's not to mention the CI time to run a new suite of jobs.
 
-`trunk check` shows the _same_ results locally and [on CI](check-cloud-ci-integration/readme.md). It can optionally also function as a [Git Hooks](advanced-setup/actions/git-hooks.md) manager to reject `git push`es unless they're passing `trunk check`.
+`trunk check` shows the _same_ results locally and [on CI](check-cloud-ci-integration/ci-setup.md). It can optionally also function as a [Git Hooks](advanced-setup/actions/git-hooks.md) manager to reject `git push`es unless they're passing `trunk check`.
 
 </details>
 
