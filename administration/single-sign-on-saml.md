@@ -2,7 +2,7 @@
 
 > 📘 Enterprise Tier Required
 >
-> Contact sales@trunk.io for more information
+> Contact <sales@trunk.io> for more information
 
 ### Overview
 
@@ -12,7 +12,7 @@ Configuring SAML (Security Assertion Markup Language) for your Trunk account let
 
 - Trunk Enterprise Account with SAML enabled on the account.
 
-  If SAML is not enabled for your organization in Trunk please reach out to support@trunk.io to enable it.
+  If SAML is not enabled for your organization in Trunk please reach out to <support@trunk.io> to enable it.
 
 - An Identity Provider (IdP) that support SAML 2.0 protocols.
 

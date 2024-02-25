@@ -26,7 +26,7 @@ Installing the Trunk Plugin will install the GitHub plugin.
 
 If for any reason you don't see your pipeline runs in the Trunk app after 3 minutes.
 
-Please contact our support at [https://slack.trunk.io](https://slack.trunk.io).
+Please contact our support at <https://slack.trunk.io>.
 
 ## Troubleshooting
 

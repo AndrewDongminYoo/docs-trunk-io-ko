@@ -133,7 +133,7 @@ Other features - namely `trunk check` - need to be aware of the primary upstream
 
 If you use `main` or `master`, `trunk` can infer this; however, if you use some other primary branch, then you may want to consider setting this.
 
-The above configuration is how you would specify that [https://github.com/github/gitignore](https://github.com/github/gitignore) is your canonical repository and that `main` is the branch which `trunk` should always think of as your upstream branch.
+The above configuration is how you would specify that <https://github.com/github/gitignore> is your canonical repository and that `main` is the branch which `trunk` should always think of as your upstream branch.
 
 ## `api`
 

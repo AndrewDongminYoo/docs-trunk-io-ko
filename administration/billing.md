@@ -96,7 +96,7 @@ At the end of a trial, the product will be automatically added to any ongoing pa
 
 You can edit your payment details by navigating to Settings > Billing, and clicking on the pencil icon of the credit card.
 
-Trunk accepts both Credit Card and ACH; if you have a different preferred payment method, please contact us at sales@trunk.io
+Trunk accepts both Credit Card and ACH; if you have a different preferred payment method, please contact us at <sales@trunk.io>
 
 ![ ](https://files.readme.io/d7adf4f-Screen_Shot_2023-01-17_at_8.08.17_PM.png)
 
@@ -104,13 +104,13 @@ Trunk accepts both Credit Card and ACH; if you have a different preferred paymen
 
 You can cancel an active Trunk subscription by navigating to Settings > Billing and clicking the “Cancel Subscription” button.
 
-Your plan will transition back into the [free tier](billing.md#free-plans-and-trials); if you want to re-enable this plan, please contact us at sales@trunk.io.
+Your plan will transition back into the [free tier](billing.md#free-plans-and-trials); if you want to re-enable this plan, please contact us at <sales@trunk.io>.
 
 > 🚧
 >
 > Cancelling a Trunk Plan may result in a degraded product experience.
 
-Please contact us at sales@trunk.io to re-enable any canceled plan.
+Please contact us at <sales@trunk.io> to re-enable any canceled plan.
 
 ### A Note on Security
 

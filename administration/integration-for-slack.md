@@ -12,7 +12,7 @@ To receive notifications and/or interact with Trunk from Slack, an admin needs t
 
 To do this:
 
-1. Navigate to [https://app.trunk.io](https://app.trunk.io).
+1. Navigate to <https://app.trunk.io>.
 
    Select the repo you would like to Manage.
 

@@ -77,11 +77,11 @@ Normally we infer repo information from the `origin` remote, however if you don'
    1. `host`: Where your repository is hosted.
       Currently only Github is supported, so this value should be `github.com`,
    2. `owner`: The Github Owner of the repository, typically the first path section of your repository URL.
-      For example, if we were connecting with [https://github.com/google/googletest](https://github.com/google/googletest), the `owner` would be `google`.
+      For example, if we were connecting with <https://github.com/google/googletest>, the `owner` would be `google`.
    3. `name`: The name of the repository.
       Continuing with our example above, the `name` would be `googletest`.
 
-This is what the `repo` section of your config would look like if your repository was hosted at [https://github.com/google/googletest](https://github.com/google/googletest)
+This is what the `repo` section of your config would look like if your repository was hosted at <https://github.com/google/googletest>
 
 ```yaml
 repo:

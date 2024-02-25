@@ -6,7 +6,8 @@ If you run into any issues using Trunk, you can reach out to us directly on [Sla
 
 You can also reach us at [support@trunk.io](mailto:support@trunk.io) and we will get back to you as soon as possible.
 
-To help us get you the right answer, as quickly as possible, please include the version of `trunk` you are using and a brief description of the problem you are hitting.
+To help us get you the right answer, as quickly as possible,
+please include the version of `trunk` you are using and a brief description of the problem you are hitting.
 
 ```bash
 trunk version
