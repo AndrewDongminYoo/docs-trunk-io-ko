@@ -54,19 +54,19 @@ report:
 
 If linter failures occur while Trunk Check is running in CI, you'll see something like this:
 
-![ ](trunk-app-ci-failed.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FYbnmh8fqgNCkuQINTreR%2FScreenshot%202023-10-16%20at%205.09.29%20PM.png?alt=media&token=6f8f7f5d-d5c3-402f-9b9f-0cebfe105b75)
 
 To debug these, you'll need get the linter failure report(s) from the Github Actions output. Click on "Details" to see a screen like this:
 
-![ ](trunk-app-ci-failed-detail.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FxTL4stvQmCMlhUQtKARw%2FScreenshot%202023-10-16%20at%205.10.39%20PM.png?alt=media&token=4ba2e32e-37be-48b7-93d9-bf7c5deff3b0)
 
 Then click on "View more details on trunk-io"
 
-![ ](trunk-github-failed.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Ft5WA0B08S8J9ljmriuT6%2FScreenshot%202023-10-16%20at%205.11.57%20PM.png?alt=media&token=e2b7b6ca-a199-43b4-9256-65158d1bca62)
 
 You'll then see your check run summary. Click "\<your repo name>/pull_request" to see the CI logs, and scroll all the way to the bottom.
 
-![ ](trunk-github-failed-detail.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FTYEWhxDGuAZnaPlermKy%2FScreenshot%202023-10-16%20at%205.12.23%20PM.png?alt=media&token=c324966e-8d6d-43b4-ade6-9c5019495281)
 
 You'll then see a list of the failures that occurred, as well as all of the linter failure reports in collapsibles. You can then follow the instructions in [Analyzing Linter Failures](https://docs.trunk.io/check/debugging#analyzing-linter-failures) to resolve the problem.
 

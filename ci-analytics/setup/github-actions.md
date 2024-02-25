@@ -20,4 +20,4 @@ If you would like to import more than the last 30 days of GitHub actions data fo
 
 You can disable CI analytics on each repo from the **Settings** -> **\<repo name>** -> **CI Analytics** settings panel.
 
-![CI Analytics Settings.](ci-analytics.png)
+![CI Analytics Settings.](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FCkMgGzVAVimyo0nxNe2I%2FScreenshot%202024-01-24%20at%2011.55.56%E2%80%AFAM.png?alt=media&token=e93bed9a-6512-4101-9d5b-34e715660f42)

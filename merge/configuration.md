@@ -31,7 +31,7 @@ For example, the following PRs:
 
 would be split into two different queues in `Parallel` mode
 
-![" width="332](merge-flow-parallel.png)
+![Parallel Mode](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fqo9xXPfvRto0vgxTtLuH%2Fimage.png?alt=media&token=1ecba952-bfda-4af8-b13c-e510aef12ffa)
 
 #### Single Mode
 
@@ -39,7 +39,7 @@ In this mode, PRs will always be queued directly behind one another in a first-i
 
 For example, the above 3 PRs would look like this in the Merge Queue in `Single` mode
 
-![ ](merge-flow-single.png)
+![Single Mode](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FVrgSNJ0xPsKTqqJMSzsU%2Fimage.png?alt=media&token=b374f23b-7c01-49a0-9637-7bf5098995e2)
 
 #### Switching Modes
 
@@ -47,4 +47,4 @@ Merge can be swapped between `Single` and `Parallel` mode at any time. If there 
 
 Switching modes can be done from the `Merge Queue Mode` section of the `Settings > Repositories > repo name > Merge` panel
 
-<figure><img src="./set-up-trunk-merge/enable-parallel-mode.png" alt=""><figcaption><p>enabling parallel mode</p></figcaption></figure>
+<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2F1CKPbolV5UO0g7elO6fl%2Fimage.png?alt=media&token=69b2ccce-4f8b-4f26-b622-45c6ee13aae3" alt=""><figcaption><p>enabling parallel mode</p></figcaption></figure>

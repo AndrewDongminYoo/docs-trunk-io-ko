@@ -12,7 +12,7 @@ Trunk CI Analytics collects CI metrics about all CI pipelines that run on pull r
 
 CI Analytics can post comments on pull requests to highlight interesting insights about how your CI system is performing, and how that pull request impacts your CI performance and reliability.
 
-![ ](pull-request-metrics.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FAbetYCfpRY4Uvcr50b6W%2FScreenshot%202023-08-29%20at%2011.54.07%20PM.png?alt=media&token=61471ab5-4968-441f-a336-dcc4ed98002b)
 
 ### Total CI Time
 

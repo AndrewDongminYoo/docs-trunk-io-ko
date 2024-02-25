@@ -23,7 +23,7 @@ We offer similar commands for cancellation.
 - Posting a GitHub comment `/trunk cancel` on a pull request.
 - Cancellation from the WebApp:
 
-![ ](merge-job-queue.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FB3iNMFKaJcDI7DOso2cR%2Fimage.png?alt=media&token=016dc503-b4d9-43d0-b965-4931548c0a51)
 
 - Using the `trunk` CLI:
 

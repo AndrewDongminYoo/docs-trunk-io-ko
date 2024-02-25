@@ -25,7 +25,7 @@ Caching is currently enabled for about half the linters/formatters. Since Trunk 
 
 If you pass `--verbose` flag when running check you can see which results were pulled from cache.
 
-<figure><img src="./verbose-output.png" alt=""><figcaption><p>trunk check --verbose output</p></figcaption></figure>
+<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FGFwqC1UP3JImV0IIgLo9%2FSCR-20230811-mtvw.png?alt=media&token=22f18fc6-9791-4a71-bd85-fda6a8325fe5" alt=""><figcaption><p>trunk check --verbose output</p></figcaption></figure>
 
 ## Discarding Invalidated Results
 

@@ -14,7 +14,7 @@ Connect your Trunk organization to GitHub
 
 ## Set Up Trunk Merge
 
-1. Specify the branch that pull requests will be merged into (usually `main` or `master`) and the number of pull requests Trunk Merge is allowed to concurrently run tests for. <figure><img src="./merge-get-started.png" alt=""><figcaption><p>Set the target branch and maximum concurrency for Trunk Merge</p></figcaption></figure>
+1. Specify the branch that pull requests will be merged into (usually `main` or `master`) and the number of pull requests Trunk Merge is allowed to concurrently run tests for. <figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FSkjwYI7O3HIGYA8kI9Hj%2Fimage.png?alt=media&token=8403407b-b2ec-47be-8a54-84be9490a441" alt=""><figcaption><p>Set the target branch and maximum concurrency for Trunk Merge</p></figcaption></figure>
 
 2. Tell Trunk Merge how to determine whether a pull request can be merged by specifying the name of the [GitHub status checks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks) or [jobs](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#jobs) it should require to passes in `.trunk/trunk.yaml` in your repository.
 
@@ -77,7 +77,7 @@ Now that you're done with setup, take it for a spin! You can submit a pull reque
 
 Comment `/trunk merge` on a pull request
 
-![ ](../merge-comment-call.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-16b95a8844ba42c299e19e92a55fecc75831827d%2Fimage.png?alt=media)
 
 ```bash
 # Authenticate with trunk service

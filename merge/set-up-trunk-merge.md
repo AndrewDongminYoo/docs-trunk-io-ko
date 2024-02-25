@@ -10,7 +10,7 @@ Sign up at [app.trunk.io](https://app.trunk.io/), create a Trunk organization, a
 
 Select the repository you would like to use and click **Get Started.**
 
-![ ](merge-add-repository.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-c4e88ab41a1453a4056615b7599b410c54e78a87%2Fimage.png?alt=media)
 
 ### Set Up Trunk Merge
 
@@ -20,7 +20,7 @@ Go to the Merge tab. You will see the "Set Up Trunk Merge" page. From there, you
 2. The [number](set-up-trunk-merge/advanced-settings.md#concurrency) of Pull Requests that Merge can test at the same time.
 3. The [mode](configuration.md#single-parallel-mode) that Trunk Merge Queues will start in.
 
-![" width="414](merge-setup.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fceeh6VUbrAgRSaMPIZv0%2Fimage.png?alt=media&token=a4835ef9-542d-4c81-9229-17c74309a046)
 
 ### Define Required Status Checks For Testing
 
@@ -92,7 +92,7 @@ Now trigger Trunk Merge to process this PR using either a comment on the PR in G
 
 Comment `/trunk merge` on a pull request
 
-![ ](merge-comment-call.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-16b95a8844ba42c299e19e92a55fecc75831827d%2Fimage.png?alt=media)
 
 ```bash
 # Authenticate with trunk service

@@ -8,7 +8,7 @@ description: >-
 
 When you first select a repo in CI Analytics, you will see the **Overview** screen which contains charts and tables to give you a high-level view of the state of your CI system. The charts show the aggregate _Average Daily Jobs per Hour_, _Total CI Time_, and _Wait Time per day_ over the selected time period. You can adjust the time period using the selector just below the first chart on the left.
 
-<figure><img src="./ci-analytics-dashboard.png" alt="CI Analytics Overview"><figcaption><p>CI Analytics Overview</p></figcaption></figure>
+<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FQhNyVglnRLnRlYBMWIdM%2FScreenshot%202024-01-11%20at%2012.50.00%E2%80%AFPM.png?alt=media&token=54a7f2d8-fc8d-459f-9c9e-782ebd81bfff" alt="CI Analytics Overview"><figcaption><p>CI Analytics Overview</p></figcaption></figure>
 
 The bottom half of the dashboard shows aggregate statistics for each of your CI workflows _over the selected time period_. The columns are as follows:
 
@@ -57,7 +57,7 @@ The top of the view shows a chart of aggregate statistics for the filtered data 
 \
 If you click on one of the data buckets or points on the graph, you can Zoom into that period of data or view the underlying runs.&#x20;
 
-![ ](ci-analytics-pull-request.png)
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FmSdPeURwY7zOovtL75TB%2Fimage.png?alt=media&token=a900eec9-32ad-467a-8b60-a4db8efcfa3c)
 
 **Tags**: Aggregation at the job level for GitHub workflows will implicitly shard against the 'runs-on' field of the GitHub workflow. For example, if a job was running on`ubuntu-latest` and later switched to a different runner set - a unique row will be created for each distinct runs-on match. \
 \
@@ -65,7 +65,7 @@ When there is a name collision with different underlying tags, the unique tag wi
 
 ### Runs View
 
-<figure><img src="./runs-view-table.png" alt="screenshot of the Runs View"><figcaption><p>Runs View</p></figcaption></figure>
+<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FM55RhAz7PDrRUsRymuEL%2Fworkflow-jobs-steps-list.png?alt=media&token=f413c5b0-e444-467a-a514-33b8152ea92e" alt="screenshot of the Runs View"><figcaption><p>Runs View</p></figcaption></figure>
 
 The **Runs View** allows you to explore the underlying data from an aggregated view. Each row represented a single execution, including its Start time, run time, waiting time, and conclusion. \
 \

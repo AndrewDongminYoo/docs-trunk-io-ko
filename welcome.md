@@ -21,12 +21,12 @@ Trunk is a developer experience (DevEx) toolkit that enables you to ship code qu
 
 ### Tools
 
-| Name             | Description                                                                               | Link                                   | Image                             |
-| :--------------- | :---------------------------------------------------------------------------------------- | :------------------------------------- | :-------------------------------- |
-| **Check**        | An extensible superlinter with a builtin language server and pre-existing issue detection | [Check](check/readme.md)               | ![Check](Check.svg)               |
-| **Merge**        | A merge queue to make merging code in GitHub safer and easier                             | [Merge](merge/readme.md)               | ![Merge](Merge.svg)               |
-| **CI Analytics** | See live and trend data about the performance and flakiness of your CI system             | [CI Analytics](ci-analytics/readme.md) | ![CI Analytics](ci-analytics.svg) |
-| **CI Debugger**  | A real-time debugger for your CI jobs                                                     | [CI Debugger](ci-debugger/readme.md)   | ![CI Debugger](ci-debugger.svg)   |
+| Name             | Description                                                                               | Link                                   | Image                                                                                                                                                                                                                    |
+| :--------------- | :---------------------------------------------------------------------------------------- | :------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Check**        | An extensible superlinter with a builtin language server and pre-existing issue detection | [Check](check/readme.md)               | ![Check](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-a29e3f30f40c56c1e186fe46f445a932828bfebd%2FCheck.svg?alt=media)                 |
+| **Merge**        | A merge queue to make merging code in GitHub safer and easier                             | [Merge](merge/readme.md)               | ![Merge](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-babde99ac05508e4175291e4b028329fc6236059%2FMerge.svg?alt=media)                 |
+| **CI Analytics** | See live and trend data about the performance and flakiness of your CI system             | [CI Analytics](ci-analytics/readme.md) | ![CI Analytics](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-b927192a462f20cd64a98bf2fadbd3d95c98a7f2%2FCI%20Analytics.svg?alt=media) |
+| **CI Debugger**  | A real-time debugger for your CI jobs                                                     | [CI Debugger](ci-debugger/readme.md)   | ![CI Debugger](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-0ffbab4f6a0b613ed2d377c1b9cd8adc0788a29b%2FCI%20Debugger.svg?alt=media)   |
 
 ### Start Using Trunk
 
