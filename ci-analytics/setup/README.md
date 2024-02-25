@@ -2,7 +2,7 @@
 
 Trunk CI Analytics integrates with the following CI providers to gather pipeline metrics that track the performance and results of your CI systems.&#x20;
 
-|                |                                 |                                     |
+| Name           | Image                           | Link                                |
 | :------------- | :------------------------------ | :---------------------------------- |
 | GitHub Actions | ![Github](../github.png)        | [GitHub Actions](github-actions.md) |
 | **Jenkins**    | ![Jenkins](../jenkins.png)      | [Jenkins](jenkins.md)               |

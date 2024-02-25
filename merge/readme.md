@@ -34,11 +34,11 @@ In Single mode, Trunk Merge acts like a typical queue: first in, first out. All 
 
 #### Parallel mode
 
-In Parallel mode, Trunk knows which PRs are related and which are unrelated and can function effectively as having many merge queues in the same repo, queueing only related PRs on top of one another. Trunk knows the relationship between PRs by you sending it to us; we call this [impacted-targets.md](set-up-trunk-merge/impacted-targets.md "mention") and it can be information pulled from build systems like Bazel, Nx, or Turborepo, or it can be defined by a set of glob file matching patterns.
+In Parallel mode, Trunk knows which PRs are related and which are unrelated and can function effectively as having many merge queues in the same repo, queueing only related PRs on top of one another. Trunk knows the relationship between PRs by you sending it to us; we call this [Impacted Targets](set-up-trunk-merge/impacted-targets.md) and it can be information pulled from build systems like Bazel, Nx, or Turborepo, or it can be defined by a set of glob file matching patterns.
 
 ## Build system integration
 
-Trunk Merge in [#parallel-mode](#parallel-mode "mention") uses information from build systems to optimize merging code. This can be set for _**any**_ build system, but we currently have first-class support for...
+Trunk Merge in [Parallel mode](#parallel-mode) uses information from build systems to optimize merging code. This can be set for _**any**_ build system, but we currently have first-class support for...
 
 ### Bazel Integration
 
