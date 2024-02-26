@@ -24,7 +24,7 @@ You may also want to specify `--upstream` if, for example, your PRs are not merg
 Gitlab performs a shallow clone by default which limits trunk's ability to detect the upstream commit to compute changes from.
 This is easily solved by simply fetching your main branch before running `trunk`:
 
-```bash
+```shell
 git fetch origin main
 trunk check --ci
 ```
@@ -47,7 +47,7 @@ If your default branch is named something else (e.g. `master`), you should `fetc
 
 If you'd like to setup `trunk check` to run on a hourly/nightly CI run or release branch we recommend running with the following command:
 
-```bash
+```shell
 trunk check --all --ci-progress --monitor=false
 ```
 

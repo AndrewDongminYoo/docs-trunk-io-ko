@@ -10,7 +10,7 @@ description: List of linters supported out of the box by Trunk Check
 
 Enable any of the following tools with:
 
-```sh
+```shell
 trunk check enable <linter>
 ```
 

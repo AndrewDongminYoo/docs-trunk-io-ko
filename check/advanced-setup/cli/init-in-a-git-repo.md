@@ -6,7 +6,7 @@ description: Initializing Trunk Check in a git repository
 
 Initializing Trunk in a git repo is as simple as running:
 
-```bash
+```shell
 trunk init
 ```
 
@@ -14,7 +14,7 @@ This will scan your repository and create a `.trunk/trunk.yaml` file which enabl
 
 Security-conscious users may want to also record the signature of the CLI, which the [Trunk Launcher](../../reference/components.md#trunk-launcher) will use to verify the CLI's provenance:
 
-```sh
+```shell
 trunk init --lock
 ```
 
@@ -36,12 +36,12 @@ You can also initialize this way explicitly with the `trunk init --single-player
 
 If at any time you wish to toggle single-player mode on or off, it can be done with the following two commands:
 
-```bash
+```shell
 # Turn single-player mode on.
 trunk config hide
 ```
 
-```bash
+```shell
 # Turn single-player mode off.
 trunk config share
 ```

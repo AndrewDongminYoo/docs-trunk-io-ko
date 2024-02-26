@@ -20,19 +20,20 @@ To give concrete examples: we track our users' client version and operating syst
 
 ## Example usage data
 
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "anonymous_id": &#x3C;GUID>,
+```json
+{
+  "anonymous_id": <GUID>,
   "command":  "check --all",
   "launcher_version": "1.2.3",
   "os": "macOS",
   "release": 1.4.1,
   "source": "client",
-  "time": &#x3C;UTC_TIMESTAMP>,
+  "time": <UTC_TIMESTAMP>,
   "exit_code": 0,
   "duration_ms": 232,
-  "repository":&#x3C;REPO_IDENTIFIER>
+  "repository":<REPO_IDENTIFIER>
 }
-</code></pre>
+```
 
 ## Can I disable usage data?
 
@@ -40,6 +41,6 @@ Yes.
 
 You can disable usage telemetry by setting the following environment variable:
 
-```bash
+```shell
 TRUNK_TELEMETRY=off
 ```

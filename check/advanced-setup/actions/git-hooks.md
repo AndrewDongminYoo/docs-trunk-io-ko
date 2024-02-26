@@ -11,7 +11,7 @@ description: Trunk supports triggering actions on all githooks
 
 ### Manual Installation
 
-```bash
+```shell
 trunk git-hooks sync
 ```
 
@@ -60,7 +60,7 @@ This enables you to write more complicated hooks to react to user input.
 
 The following command will simulate a githook event and execute all of the enabled actions for the provided hook in the order you defined them.
 
-```bash
+```shell
 trunk git-hooks callback <hook> -- <args>
 ```
 
@@ -72,19 +72,20 @@ This is sometimes easier since some git parameters point to txt files etc...and 
 
 You can observe the actions that are triggered by a `git` event by calling:
 
-```bash
+```shell
 trunk actions history <action-name>
 ```
 
 Which will print out the last 10 executions including timestamps of the specified action.
 
-<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-b2ac6b9eada59ae61c9a61c5b1fc3de95c4fbeee%2Fimage.png?alt=media" alt=""><figcaption><p>trunk actions history for git-lfs action</p></figcaption></figure>
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-b2ac6b9eada59ae61c9a61c5b1fc3de95c4fbeee%2Fimage.png?alt=media)
+*trunk actions history for git-lfs action*
 
 ### Uninstalling
 
 Remove all actions that are triggered by githooks from `trunk.yaml` and run
 
-```bash
+```shell
 git config --unset core.hooksPath
 ```
 

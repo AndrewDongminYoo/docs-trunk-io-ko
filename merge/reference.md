@@ -13,7 +13,7 @@ We offer a few mechanisms for submitting a PR for to the Merge Graph:
 - Clicking the "Retry" button on the WebApp.
 - Using the `trunk` CLI:
 
-```sh
+```shell
 trunk login
 trunk merge <pr-number>
 ```
@@ -27,7 +27,7 @@ We offer similar commands for cancellation.
 
 - Using the `trunk` CLI:
 
-```sh
+```shell
 trunk login
 trunk merge cancel <pr-number>
 ```

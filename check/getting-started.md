@@ -6,7 +6,7 @@ description: How to install the Trunk CLI to check your code in less than 60 sec
 
 The `trunk` command line tool runs locally on your developer machine, right where your code is.
 
-Later, you can automatically scan your repo using the [Trunk Check webapp](check-cloud-ci-integration/ci-setup.md).
+Later, you can automatically scan your repo using the [Trunk Check webapp](https://docs.trunk.io/check/check-cloud-ci-integration).
 
 Trunk Check will automatically keep tools up to date, suggest standard tools for your project type (eg: `clang-format` for C++, `eslint` for JS/TS), and pin versions in `trunk.yaml` to ensure Trunk Check is reproducible.
 
@@ -14,27 +14,27 @@ Trunk Check will automatically keep tools up to date, suggest standard tools for
 
 Run one of the following to install the `trunk` command line tool.
 
-```bash
+```shell
 curl https://get.trunk.io -fsSL | bash
 ```
 
-```bash
+```shell
 curl https://get.trunk.io -fsSL | bash -s -- -y
 ```
 
-```bash
+```shell
 brew install trunk-io
 ```
 
-```bash
+```shell
 npm install -D @trunkio/launcher
 ```
 
-```bash
+```shell
 pnpm add -D @trunkio/launcher
 ```
 
-```bash
+```shell
 yarn add -D @trunkio/launcher
 ```
 
@@ -42,19 +42,19 @@ yarn add -D @trunkio/launcher
 
 From the root of a git repo, run:
 
-```bash
+```shell
 trunk init
 ```
 
 This will scan your repository and create a `.trunk/trunk.yaml` that enables all the linters, formatters, and security analyzers that [Trunk Check](check.md) recommends.
 
-For more details, see [here](advanced-setup/cli/init-in-a-git-repo.md).
+For more details, see [here](https://docs.trunk.io/check/advanced-setup/cli/init-in-a-git-repo).
 
 ## Basic Usage
 
 The main commands when running `trunk` from the command line are:
 
-```bash
+```shell
 trunk check       # runs the universal linter on all applicable files
 trunk fmt         # runs all the enabled formatters and auto-applies changes
 ```
@@ -85,7 +85,7 @@ Run all applicable formatters as configured in `trunk.yaml`. `trunk fmt` is shor
 | `--fix`      | Auto-apply all suggested fixes                                                                                                        |
 | `--no-fix`   | Surface, but do not prompt for autofixes                                                                                              |
 | `--filter`   | List of comma-separated linters to run. Specify `--filter=-linter` to disable a linter.                                               |
-| `--sample=N` | Run check on a [sampling](usage.md#sample) of all files in the repo                                                                   |
+| `--sample=N` | Run check on a [sampling](./advanced-setup/cli/cli-options.md#sample) of all files in the repo                                        |
 | `--help`     | Output help information                                                                                                               |
 
 ### Recipes
@@ -105,19 +105,19 @@ Run all applicable formatters as configured in `trunk.yaml`. `trunk fmt` is shor
 
 List all of the available linters
 
-```sh
+```shell
 trunk check list
 ```
 
 Enable a single linter
 
-```sh
+```shell
 trunk check enable <linter name>
 ```
 
 Disable a single linter
 
-```sh
+```shell
 trunk check disable <linter name>
 ```
 
@@ -154,7 +154,7 @@ We highly recommend running on the latest validated versions of tools as updates
 
 Trunk only auto-suggests linter upgrades to versions that we have tested and support, so you may see a slight lag time when a new linter version is released.
 
-```sh
+```shell
 trunk upgrade
 ```
 

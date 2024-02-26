@@ -2,7 +2,7 @@
 
 - [Welcome](welcome.md)
 - [Check](check/check.md)
-  - [Getting Started](check/usage.md)
+  - [Getting Started](check/getting-started.md)
   - [CI Setup](check/check-cloud-ci-integration/ci-setup.md)
     - [GitHub Integration](check/check-cloud-ci-integration/get-started/github-integration.md)
       - [How It Works](check/check-cloud-ci-integration/get-started/how-it-works.md)

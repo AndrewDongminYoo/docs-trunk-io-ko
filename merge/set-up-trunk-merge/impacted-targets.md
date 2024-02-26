@@ -34,7 +34,8 @@ Impacted Targets should be computed for every PR.
 
 The list of impacted targets should be computed by comparing two different SHAs: the **head of the target branch**, and the **merge commit of the pr**.
 
-<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FT3PrwXK27gQTstE9KyId%2F02%20Branch-1%20kopiera.png?alt=media&token=694e9723-54b9-4fe1-a451-00f71d07f1cb" alt=""><figcaption><p>From <a href="https://www.atlassian.com/git/tutorials/using-branches/git-merge">https://www.atlassian.com/git/tutorials/using-branches/git-merge</a>. In this diagram, we want to compare the merge commit and the main tip.</p></figcaption></figure>
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FT3PrwXK27gQTstE9KyId%2F02%20Branch-1%20kopiera.png?alt=media&token=694e9723-54b9-4fe1-a451-00f71d07f1cb)
+*From <https://www.atlassian.com/git/tutorials/using-branches/git-merge>. In this diagram, we want to compare the merge commit and the main tip.*
 
 Our [reference implementation](https://github.com/trunk-io/merge-action/blob/main/src/scripts/compute_impacted_targets.sh) may be useful in guiding your implementation.
 
@@ -71,7 +72,7 @@ Specifying "ALL" is the equivalent of saying that everything that comes into the
 
 ### Impacted Targets for Forked PRs
 
-The HTTP POST must contain the `x-api-token` to prove that it is a valid request from a workflow your org controls. _Workflows which come from forked PRs most likely will not have access to the Trunk org token_ required for the HTTP POST above.
+The HTTP POST must contain the `x-api-token` to prove that it is a valid request from a workflow your org controls. *Workflows which come from forked PRs most likely will not have access to the Trunk org token* required for the HTTP POST above.
 
 In this case you should provide the **run ID** of the workflow as the `x-forked-workflow-run-id` header in place of the `x-api-token`.
 

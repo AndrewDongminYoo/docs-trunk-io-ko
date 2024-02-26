@@ -229,12 +229,13 @@ definitions:
 
 If you wanted to flip the value of `disable_upstream` to `false`, you could, in your own `trunk.yaml`, specify:
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>definitions:
-</strong>  ...
+```yaml
+definitions:
+  ...
   - name: clang-tidy
     disable_upstream: false
   ...
-</code></pre>
+```
 
 Some linters have multiple commands, such as [trivy](https://github.com/trunk-io/plugins/blob/main/linters/trivy/plugin.yaml), which can run in different ways.
 

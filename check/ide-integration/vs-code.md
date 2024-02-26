@@ -52,7 +52,7 @@ Users normally check this file in to your repository so that you can run Trunk r
 
 To check it in to your repository, all you have to do is run
 
-```bash
+```shell
 trunk config share
 ```
 

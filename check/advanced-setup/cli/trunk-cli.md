@@ -8,27 +8,27 @@ description: Learn more about the Trunk CLI
 
 To use `trunk` locally, install via:
 
-```bash
+```shell
 curl https://get.trunk.io -fsSL | bash
 ```
 
-```bash
+```shell
 curl https://get.trunk.io -fsSL | bash -s -- -y
 ```
 
-```bash
+```shell
 brew install trunk-io
 ```
 
-```bash
+```shell
 npm install -D @trunkio/launcher
 ```
 
-```bash
+```shell
 pnpm add -D @trunkio/launcher
 ```
 
-```bash
+```shell
 yarn add -D @trunkio/launcher
 ```
 
@@ -47,7 +47,7 @@ The Trunk CLI can be used for:
 
 Whether you aim to use [Trunk Check](../../check.md), [Trunk Merge](../../../merge/merge.md), [Trunk Actions](../actions/actions.md), or all of the above, the first step is to initialize Trunk in your git repo:
 
-```bash
+```shell
 trunk init
 ```
 

@@ -37,13 +37,13 @@ description: Trunk Check detailed command line options
 
 For example, to run `eslint` and `isort` on the entire repo:
 
-```bash
+```shell
 trunk check --all --filter=eslint,isort
 ```
 
 Alternatively, to run every linter _except_ `clang-tidy` and `shellcheck`:
 
-```bash
+```shell
 trunk check --all --filter=-clang-tidy,-shellcheck
 ```
 
@@ -59,12 +59,12 @@ The sample command will attempt to run each linter N times, but may run fewer if
 
 For example, to run `prettier` against 10 different prettier supported files:
 
-```bash
+```shell
 trunk check --sample=10 --filter=prettier
 ```
 
 Alternatively, to run every linter at most 5 times against its supported files:
 
-```bash
+```shell
 trunk check --sample=5
 ```

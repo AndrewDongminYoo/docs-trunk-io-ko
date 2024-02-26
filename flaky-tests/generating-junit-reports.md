@@ -8,7 +8,7 @@ description: How to generate JUnit Reports for common test runners
 
 1. Install [`jest-junit`](https://github.com/jest-community/jest-junit)
 
-   ```bash
+   ```shell
    npm install jest-junit --save-dev
    ```
 

@@ -43,7 +43,8 @@ That's also how you can enable/disable caching for any custom linters you integr
 
 If you pass `--verbose` flag when running check you can see which results were pulled from cache.
 
-<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FGFwqC1UP3JImV0IIgLo9%2FSCR-20230811-mtvw.png?alt=media&token=22f18fc6-9791-4a71-bd85-fda6a8325fe5" alt=""><figcaption><p>trunk check --verbose output</p></figcaption></figure>
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FGFwqC1UP3JImV0IIgLo9%2FSCR-20230811-mtvw.png?alt=media&token=22f18fc6-9791-4a71-bd85-fda6a8325fe5)
+*trunk check --verbose output*
 
 ## Discarding Invalidated Results
 

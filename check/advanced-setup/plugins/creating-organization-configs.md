@@ -22,7 +22,7 @@ Let's walk through how to create a simple linter that warns about TODOs in your 
 
 We'll start by creating a new Git repository:
 
-```bash
+```shell
 PLUGIN_PATH=~/my-first-trunk-plugin
 mkdir "${PLUGIN_PATH}" && cd "${PLUGIN_PATH}"
 git init
@@ -30,7 +30,7 @@ git init
 
 And then create a linter that can find TODOs in your codebase using `grep` and `sed`:
 
-```bash
+```shell
 cat >plugin.yaml <<EOF
 version: 0.1
 lint:
@@ -49,14 +49,14 @@ EOF
 
 Now we can turn this linter on in a repository where we have `trunk` set up:
 
-```bash
+```shell
 trunk plugins add my-first-plugin <plugin-path>
 trunk check enable todo-finder
 ```
 
 And now, to demonstrate how this works, let's `trunk check` some files where we know we have TODOs:
 
-```bash
+```shell
 trunk check $(git grep -li todo | head -n 10)
 ```
 
@@ -74,7 +74,7 @@ In the example we gave above, we put the linter's source code in `plugin.yaml`, 
 
 We can take the `sed` command from the plugin we created earlier and push that into the shell script:
 
-```bash
+```shell
 #!/bin/bash
 sed -E 's/(.*):([0-9]+):(.*)/\1:\2:0: [error] Found todo in \"\3\" (found-todo)/'"
 ```
@@ -83,7 +83,7 @@ sed -E 's/(.*):([0-9]+):(.*)/\1:\2:0: [error] Found todo in \"\3\" (found-todo)/
 
 and also point the definition of `todo-finder` at it:
 
-```bash
+```shell
 version: 0.1
 lint:
   definitions:
@@ -100,7 +100,7 @@ lint:
 
 We can also go another step and push the entire linter definition into a shell script:
 
-```bash
+```shell
 #!/bin/bash
 grep --with-filename --line-number --ignore-case todo "${1}" | \
   sed -E 's/(.*):([0-9]+):(.*)/\1:\2:0: [error] Found todo in \"\3\" (found-todo)/'"
@@ -124,7 +124,7 @@ See our documentation on [custom linters](../../configuration/custom-linters/cus
 
 To share your plugin with the world, all you have to do is tag a release and push it to GitHub, Gitlab, or some other repository hosting service:
 
-```bash
+```shell
 git add .
 git commit "Create a TODO finder"
 git tag -a v0.0.0 --message "Initial TODO finder release"
@@ -134,6 +134,6 @@ git push origin main v0.0.0
 
 Now that it's available on the Internet, everyone else can just use your plugin by running:
 
-```bash
+```shell
 trunk plugins add --id=their-first-plugin <repo-url> v0.0.0
 ```

@@ -48,11 +48,11 @@ Name of the uploading client
 
 Repo object properties:
 
-| Property | Description                                                                              | Required              |
-| :------- | :--------------------------------------------------------------------------------------- | :-------------------- |
-| `host`   | The name of the code host for this repository. Currently only `github.com` is supported. | <code>Required</code> |
-| `owner`  | The owner of this repository                                                             | <code>Required</code> |
-| `name`   | The name of this repository                                                              | <code>Required</code> |
+| Property | Description                                                                              | Required   |
+| :------- | :--------------------------------------------------------------------------------------- | :--------- |
+| `host`   | The name of the code host for this repository. Currently only `github.com` is supported. | `Required` |
+| `owner`  | The owner of this repository                                                             | `Required` |
+| `name`   | The name of this repository                                                              | `Required` |
 
 For example, the repository `https://github.com/trunk-io/jenkins-plugin` would be
 
@@ -115,7 +115,7 @@ Sequence object properties:
 
 #### Example Request
 
-```bash
+```shell
 curl \
     -i \
     -X POST https://api.trunk.io/v1/metrics/trackEvents \

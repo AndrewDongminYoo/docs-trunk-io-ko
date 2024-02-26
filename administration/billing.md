@@ -38,7 +38,7 @@ At the end of every billing cycle, Trunk calculates what the next invoice should
 
 Trunk determines which products are billing eligible, then charges you for the number of users using that product.
 
-A product is billing eligible if you are already paying for that product, or if you have exceeded your [free tier usage limits](billing.md#free-plans-and-trials) .
+A product is billing eligible if you are already paying for that product, or if you have exceeded your [free tier usage limits](billing.md#free-plans-and-trials).
 
 See our section on [calculating user counts](billing.md#calculating-user-counts) to determine how much we charge per product.
 

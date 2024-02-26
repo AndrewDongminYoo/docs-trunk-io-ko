@@ -27,13 +27,13 @@ There are plenty more linters you can use, however.
 
 You can see all possible (built in) linters with
 
-```sh
+```shell
 trunk check list
 ```
 
 and enable a new linter with
 
-```sh
+```shell
 trunk check enable cool_new_linter
 ```
 
@@ -51,13 +51,13 @@ By default Trunk Check only processes new changes to your codebase (read about [
 
 To scan older changes try running:
 
-```sh
+```shell
 trunk check --samples=5
 ```
 
 to look at a sampling of each linter's issues for 5 random files
 
-```sh
+```shell
 trunk check --all
 ```
 
@@ -149,13 +149,13 @@ More [on how Hold the Line works](configuration/hold-the-line.md).
 
 If you specifically want to work on older files you can do that by running `trunk check` directly on that file
 
-```sh
+```shell
 trunk check foo.file
 ```
 
 or
 
-```sh
+```shell
 trunk check --all
 ```
 
@@ -191,7 +191,7 @@ Trunk is working on a way to automatically remove unneeded files from the cache.
 
 In the meantime you can safely clear your cache with
 
-```sh
+```shell
 trunk cache clean --all
 ```
 
@@ -211,7 +211,7 @@ Trunk is intended to be the one-stop-shop for running all of your linters.
 
 To see a list of currently available linters run
 
-```sh
+```shell
 trunk check list
 ```
 

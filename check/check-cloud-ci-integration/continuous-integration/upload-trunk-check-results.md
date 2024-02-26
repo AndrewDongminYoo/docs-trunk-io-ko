@@ -64,7 +64,7 @@ Example nightly workflow to upload results: [`nightly.yaml`](https://github.com/
 
       If you're unsure of what to use for `--series`, just use the name of your main branch (typically `main` or `master`)
 
-```bash
+```shell
 trunk check --all --upload --series main --token REDACTED
 ```
 

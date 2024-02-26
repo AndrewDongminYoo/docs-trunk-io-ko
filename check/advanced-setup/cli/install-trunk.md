@@ -14,27 +14,27 @@ Run one of the following commands to install the Trunk Launcher, or add it as a 
 
 You can also commit the Trunk launcher directly into your repo (see below).
 
-```bash
+```shell
 curl https://get.trunk.io -fsSL | bash
 ```
 
-```bash
+```shell
 curl https://get.trunk.io -fsSL | bash -s -- -y
 ```
 
-```bash
+```shell
 brew install trunk-io
 ```
 
-```bash
+```shell
 npm install -D @trunkio/launcher
 ```
 
-```bash
+```shell
 pnpm add -D @trunkio/launcher
 ```
 
-```bash
+```shell
 yarn add -D @trunkio/launcher
 ```
 
@@ -44,7 +44,7 @@ For use on Windows, check out our [Windows (beta)](windows-support-beta.md) page
 
 To allow your teammates to use `trunk` without installing anything, the launcher can be committed directly into your repo:
 
-```sh
+```shell
 curl -LO https://trunk.io/releases/trunk
 chmod +x ./trunk
 git commit ./trunk -m "Commit Trunk to our repo"
@@ -69,7 +69,7 @@ You can delete those two paths to uninstall.
 
 To cleanly remove Trunk from a particular repo, run:
 
-```bash
+```shell
 trunk deinit
 ```
 
@@ -88,7 +88,7 @@ You can directly download the `trunk` binary. _We don't recommend this mode of o
 | version  | the semver of the binary you want to download |
 | platform | 'darwin', 'linux'                             |
 
-```bash
+```shell
 # for example https://trunk.io/releases/1.0.0/trunk-1.0.0-linux-x86_64.tar.gz
 https://trunk.io/releases/${version}/trunk-${version}-${platform}-x86_64.tar.gz
 ```

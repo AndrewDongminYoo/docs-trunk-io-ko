@@ -86,6 +86,6 @@ The output of the `check` run will include an `ACTIONS` section with a execution
 
 For example, to run a report on all actions taken on hello.py:
 
-```bash
+```shell
 trunk check --verbose hello.py
 ```

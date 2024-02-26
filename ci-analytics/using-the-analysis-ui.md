@@ -12,7 +12,8 @@ The charts show the aggregate _Average Daily Jobs per Hour_, _Total CI Time_, an
 
 You can adjust the time period using the selector just below the first chart on the left.
 
-<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FQhNyVglnRLnRlYBMWIdM%2FScreenshot%202024-01-11%20at%2012.50.00%E2%80%AFPM.png?alt=media&token=54a7f2d8-fc8d-459f-9c9e-782ebd81bfff" alt="CI Analytics Overview"><figcaption><p>CI Analytics Overview</p></figcaption></figure>
+![CI Analytics Overview](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FQhNyVglnRLnRlYBMWIdM%2FScreenshot%202024-01-11%20at%2012.50.00%E2%80%AFPM.png?alt=media&token=54a7f2d8-fc8d-459f-9c9e-782ebd81bfff)
+*CI Analytics Overview*
 
 The bottom half of the dashboard shows aggregate statistics for each of your CI workflows _over the selected time period_.
 
@@ -93,7 +94,8 @@ This makes it possible, for example, to compare a runner's impact on your system
 
 ### Runs View
 
-<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FM55RhAz7PDrRUsRymuEL%2Fworkflow-jobs-steps-list.png?alt=media&token=f413c5b0-e444-467a-a514-33b8152ea92e" alt="screenshot of the Runs View"><figcaption><p>Runs View</p></figcaption></figure>
+![screenshot of the Runs View](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FM55RhAz7PDrRUsRymuEL%2Fworkflow-jobs-steps-list.png?alt=media&token=f413c5b0-e444-467a-a514-33b8152ea92e)
+*Runs View*
 
 The **Runs View** allows you to explore the underlying data from an aggregated view.
 

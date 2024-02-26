@@ -9,7 +9,7 @@ You can also reach us at [support@trunk.io](mailto:support@trunk.io) and we will
 To help us get you the right answer, as quickly as possible,
 please include the version of `trunk` you are using and a brief description of the problem you are hitting.
 
-```bash
+```shell
 trunk version
 ```
 

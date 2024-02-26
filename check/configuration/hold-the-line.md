@@ -40,7 +40,7 @@ We recommend you run it once with `--no-fix` to get an overview.
 
 You can also run it with `--filter` to only use certain linters.
 
-```sh
+```shell
 trunk check --all --no-fix --filter=eslint
 ```
 

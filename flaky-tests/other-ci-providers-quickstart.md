@@ -16,7 +16,7 @@ The trunk analytics uploader supports Linux x64. If you have another use case, p
 
 2. After the test step, download and run the test uploader binary:
 
-   ```bash
+   ```shell
    $ curl -fsSL --retry 3 "https://trunk.io/releases/analytics-cli/latest" -o ./trunk-analytics-uploader
    $ chmod +x ./trunk-analytics-uploader
    $ ./trunk-analytics-uploader upload \

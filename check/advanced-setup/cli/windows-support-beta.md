@@ -12,19 +12,19 @@ description: Using Trunk Check on Windows
 
 From **`git-bash` or `msys2`**, download the Bash launcher and add it to your `PATH`:
 
-```bash
+```shell
 curl https://get.trunk.io -fsSL | bash
 ```
 
 From **`powershell`**, download the powershell launcher:
 
-```Text
+```powershell
 Invoke-RestMethod -Uri https://trunk.io/releases/trunk.ps1 -OutFile trunk.ps1
 ```
 
 Ensure you can execute powershell scripts:
 
-```Text
+```powershell
 Set-ExecutionPolicy Bypass -Scope CurrentUser
 ```
 

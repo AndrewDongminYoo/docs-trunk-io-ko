@@ -35,11 +35,12 @@ The trunk [plugins](https://github.com/trunk-io/plugins) repo ships with a colle
 
 To see a list of actions that you can enable in your repo run:
 
-```bash
+```shell
 trunk actions list
 ```
 
-<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-dbd8b50c0181d1cd831e77f778eed931229bb0ad%2Fimage.png?alt=media" alt=""><figcaption><p>List of actions reported by <code>trunk actions list</code></p></figcaption></figure>
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-dbd8b50c0181d1cd831e77f778eed931229bb0ad%2Fimage.png?alt=media)
+*List of actions reported by `trunk actions list`*
 
 ### Enable/Disable Actions
 

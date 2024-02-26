@@ -16,7 +16,8 @@ To do this:
 
    Select the repo you would like to Manage.
 
-   Click "Settings" > "Connect" <figure><img src="https://files.readme.io/14d4355-image.png" alt=""></figure>
+   ![ ](https://files.readme.io/14d4355-image.png)
+   *Click "Settings" > "Connect"*
 
 2. This will open a window where you can sign in to your Slack team.
 
@@ -30,8 +31,11 @@ Now that you've connected your Slack account with Trunk, you will choose the typ
 
 You can manage your repository notifications under your repo settings.
 
-<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-4854ce3bdfd1333322d1d7f02e08e6b0fd0a2bd7%2FMergeOptions.png?alt=media" alt=""><figcaption><p>Configure notifications for <code>trunk merge</code></p></figcaption></figure>
-<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-a8303b41607a3dbc4e728fe99163800a2b87800e%2FCheckOptions.png?alt=media" alt=""><figcaption><p>Configure notifications for <code>trunk check</code></p></figcaption></figure>
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-4854ce3bdfd1333322d1d7f02e08e6b0fd0a2bd7%2FMergeOptions.png?alt=media)
+*Configure notifications for `trunk merge`*
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-a8303b41607a3dbc4e728fe99163800a2b87800e%2FCheckOptions.png?alt=media)
+*Configure notifications for `trunk check`*
+
 ## Set your user-level notification preferences
 
 To set your individual user Slack notifications go to Settings > Account > Connect

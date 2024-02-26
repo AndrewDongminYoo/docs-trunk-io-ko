@@ -61,4 +61,5 @@ During this time, PRs will not be able to enter the queue.
 
 Switching modes can be done from the `Merge Queue Mode` section of the `Settings > Repositories > repo name > Merge` panel
 
-<figure><img src="https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2F1CKPbolV5UO0g7elO6fl%2Fimage.png?alt=media&token=69b2ccce-4f8b-4f26-b622-45c6ee13aae3" alt=""><figcaption><p>enabling parallel mode</p></figcaption></figure>
+![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2F1CKPbolV5UO0g7elO6fl%2Fimage.png?alt=media&token=69b2ccce-4f8b-4f26-b622-45c6ee13aae3)
+*enabling parallel mode*

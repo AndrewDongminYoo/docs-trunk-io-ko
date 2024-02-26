@@ -18,7 +18,7 @@ The `*` wildcard may appear multiple times in a single path segment.
 
 A double `**` is even broader; it will match zero or more complete path segments and must appear exclusively in it's own segment (i.e. `**/foo` is legal syntax whereas `foo**/bar` is not).
 
-```none
+```log
 /hello_world
 ├── bar
 │   ├── hello.cpp

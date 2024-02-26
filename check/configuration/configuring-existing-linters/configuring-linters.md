@@ -133,7 +133,7 @@ We do not yet automatically parse your Gradle scripts to infer your `detekt` con
 
 You will also need to provide a valid detekt config as `.detekt.yaml` (an empty `.detekt.yaml` is valid, if you don't want to configure `detekt`); if you already have a detekt config, then you can symlink it like so:
 
-```bash
+```shell
 ln -s path/to/existing/detekt-config.yml .detekt-config.yaml
 ```
 

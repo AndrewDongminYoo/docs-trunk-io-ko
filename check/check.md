@@ -6,7 +6,7 @@ description: "Meta-linter for over 100 code checking tools: CLI, IDE, and on the
 
 ## What is Trunk Check?
 
-**Trunk Check** runs 100+ idiomatic code-checking tools for every language and technology, locally ([CLI](advanced-setup/cli/trunk-cli.md), [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)), on CI ([CI](advanced-setup/cli/trunk-cli.md), [GitHub Bot](advanced-setup/cli/trunk-cli.md)), and in our [web app](https://app.trunk.io).
+**Trunk Check** runs 100+ idiomatic code-checking tools for every language and technology, locally ([CLI](advanced-setup/cli/trunk-cli.md), [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=trunk.io)), on CI ([CI](advanced-setup/actions/git-hooks.md), [GitHub Bot](advanced-setup/cli/trunk-cli.md)), and in our [web app](https://app.trunk.io).
 
 You're probably already running a few of these tools (ESLint, Prettier, etc), but Trunk Check adds valuable features to let you integrate with CI and PRs, run them faster, upgrade them easier, integrate them with CI and PRs, version them better, and much more.
 
@@ -116,7 +116,7 @@ Check out our full list of [Supported Linters](configuration/supported-linters.m
 
 Stop by on [Slack](https://slack.trunk.io) and let us know what you'd like next! All tool integrations are open-source [here](https://github.com/trunk-io/plugins).Enable the following tools:
 
-```bash
+```shell
 trunk check enable <linter>
 ```
 
@@ -139,7 +139,7 @@ Read more about it [here](https://marketplace.visualstudio.com/items?itemName=Tr
 
 `trunk` is git-aware, so without further arguments, it will run on the files you've changed in your repo:
 
-```bash
+```shell
 trunk check
 ```
 

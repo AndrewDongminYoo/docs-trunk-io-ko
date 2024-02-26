@@ -108,7 +108,7 @@ Comment `/trunk merge` on a pull request
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-16b95a8844ba42c299e19e92a55fecc75831827d%2Fimage.png?alt=media)
 
-```bash
+```shell
 # Authenticate with trunk service
 $ trunk login
 # Queue pull request for merge
