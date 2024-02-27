@@ -8,9 +8,3 @@ line_length: false
 spaces: false
 url: false
 whitespace: false
-# Heading levels should only increment by one level at a time
-MD001: false
-# Multiple top-level headings in the same document
-MD025: false
-# Multiple headings with the same content
-MD024: false
