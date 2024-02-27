@@ -8,7 +8,7 @@ This documentation is for the older version of Merge.
 
 Use if it you initially set up your Merge config **before November 16, 2023**.
 
-If you setup Merge later, then use the [new merge docs](../merge.md).
+If you setup Merge later, then use the [new merge docs](https://docs.trunk.io/merge).
 
 If your Merge console has a _**graph**_ tab, then you should use the new merge docs instead.
 

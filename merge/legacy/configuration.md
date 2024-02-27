@@ -20,7 +20,7 @@ Configure how long a PR should wait for tests to start before auto-cancelling.
 
 The MergeQueue creates a test branch for every PR in the queue.
 
-CI should be configured to run tests when that branch is created: see [getting started](getting-started.md) for some examples.
+CI should be configured to run tests when that branch is created: see [getting started](https://docs.trunk.io/merge/legacy/getting-started) for some examples.
 
 However, CI can have transient failures, and tests may not start.
 

@@ -38,9 +38,9 @@ At the end of every billing cycle, Trunk calculates what the next invoice should
 
 Trunk determines which products are billing eligible, then charges you for the number of users using that product.
 
-A product is billing eligible if you are already paying for that product, or if you have exceeded your [free tier usage limits](billing.md#free-plans-and-trials).
+A product is billing eligible if you are already paying for that product, or if you have exceeded your [free tier usage limits](https://docs.trunk.io/administration/billing#free-plans-and-trials).
 
-See our section on [calculating user counts](billing.md#calculating-user-counts) to determine how much we charge per product.
+See our section on [calculating user counts](https://docs.trunk.io/administration/billing#calculating-user-counts) to determine how much we charge per product.
 
 For example, consider a team of 19 that owns many repositories.
 
@@ -50,11 +50,11 @@ For the first billing cycle, their invoice would look something like this:
 
 ![ ](https://files.readme.io/63bc876-Screen_Shot_2023-01-17_at_8.01.43_PM.png)
 
-At the beginning of the next billing cycle, they have exceeded their [free tier usage](billing.md#free-plans-and-trials) of CI Analytics.
+At the beginning of the next billing cycle, they have exceeded their [free tier usage](https://docs.trunk.io/administration/billing#free-plans-and-trials) of CI Analytics.
 
 In that case, we would see three invoice line items; one for Merge, one for Check, and another for CI Analytics.
 
-The quantity per product would also be reflected with the [latest user counts](billing.md#calculating-user-counts).
+The quantity per product would also be reflected with the [latest user counts](https://docs.trunk.io/administration/billing#calculating-user-counts).
 
 ### Free Plans and Trials
 
@@ -74,7 +74,7 @@ On the next billing cycle, the user will start to be charged for CI Analytics.
 
 #### **Free Tier Limits**
 
-Similar to [calculating user counts](../administration/billing.md#calculating-user-counts), our free tier limits are calculated based on a 30 day rolling window.
+Similar to [calculating user counts](../administration/https://docs.trunk.io/administration/billing#calculating-user-counts), our free tier limits are calculated based on a 30 day rolling window.
 
 | Product      | Free Tier Limit         |
 | ------------ | ----------------------- |
@@ -104,7 +104,7 @@ Trunk accepts both Credit Card and ACH; if you have a different preferred paymen
 
 You can cancel an active Trunk subscription by navigating to Settings > Billing and clicking the “Cancel Subscription” button.
 
-Your plan will transition back into the [free tier](billing.md#free-plans-and-trials); if you want to re-enable this plan, please contact us at <sales@trunk.io>.
+Your plan will transition back into the [free tier](https://docs.trunk.io/administration/billing#free-plans-and-trials); if you want to re-enable this plan, please contact us at <sales@trunk.io>.
 
 > 🚧
 >

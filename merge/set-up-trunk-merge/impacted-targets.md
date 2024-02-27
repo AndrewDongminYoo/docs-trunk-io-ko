@@ -18,7 +18,7 @@ Anytime two PRs have an overlap in the list of impacted target strings, Trunk Me
 
 The repo using the Merge Queue is required to generate impacted targets for every pull request.
 
-Some build systems (e.g. [Bazel](parallel-mode-with-bazel.md), Buck, Gradle, Turborepo, ...) define targets, which can be uploaded to the Merge Queue.
+Some build systems (e.g. [Bazel](https://docs.trunk.io/merge/set-up-trunk-merge/merge-+-bazel), Buck, Gradle, Turborepo, ...) define targets, which can be uploaded to the Merge Queue.
 
 Alternatively, a glob-based pattern approach could be used, where filepaths map to a target (e.g. files in `src/backend` upload the `backend` target.)
 
@@ -35,7 +35,7 @@ Impacted Targets should be computed for every PR.
 The list of impacted targets should be computed by comparing two different SHAs: the **head of the target branch**, and the **merge commit of the pr**.
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FT3PrwXK27gQTstE9KyId%2F02%20Branch-1%20kopiera.png?alt=media&token=694e9723-54b9-4fe1-a451-00f71d07f1cb)
-*From <https://www.atlassian.com/git/tutorials/using-branches/git-merge>. In this diagram, we want to compare the merge commit and the main tip.*
+_From <https://www.atlassian.com/git/tutorials/using-branches/git-merge>. In this diagram, we want to compare the merge commit and the main tip._
 
 Our [reference implementation](https://github.com/trunk-io/merge-action/blob/main/src/scripts/compute_impacted_targets.sh) may be useful in guiding your implementation.
 
@@ -72,7 +72,7 @@ Specifying "ALL" is the equivalent of saying that everything that comes into the
 
 ### Impacted Targets for Forked PRs
 
-The HTTP POST must contain the `x-api-token` to prove that it is a valid request from a workflow your org controls. *Workflows which come from forked PRs most likely will not have access to the Trunk org token* required for the HTTP POST above.
+The HTTP POST must contain the `x-api-token` to prove that it is a valid request from a workflow your org controls. _Workflows which come from forked PRs most likely will not have access to the Trunk org token_ required for the HTTP POST above.
 
 In this case you should provide the **run ID** of the workflow as the `x-forked-workflow-run-id` header in place of the `x-api-token`.
 
@@ -88,4 +88,4 @@ This would allow workflows from forked PRs to get secrets, which is a security r
 
 ### Impacted Targets Generation: Bazel + GitHub Actions
 
-For Bazel specific instructions, see [the Bazel guide](parallel-mode-with-bazel.md).
+For Bazel specific instructions, see [the Bazel guide](https://docs.trunk.io/merge/set-up-trunk-merge/merge-+-bazel).

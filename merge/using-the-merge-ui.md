@@ -44,7 +44,7 @@ From this menu you can:
    If the PR is "Not Ready", then it will cancel it, preventing it from going into the queue until it is re-queued.
    If the PR is currently in the queue, it will be removed from the queue, which will restart all PRs that depended on it
 2. Re-queue a PR if it is currently not in the queue
-3. Download any impacted targets that have been [uploaded](set-up-trunk-merge/impacted-targets.md#generating-impacted-targets) for the PR (uploading impacted targets is only required for [Parallel](parallel-mode.md#parallel-mode) mode, but this option will still show regardless of mode if impacted targets have been uploaded for the PR)
+3. Download any impacted targets that have been [uploaded](https://docs.trunk.io/merge/set-up-trunk-merge/impacted-targets#generating-impacted-targets) for the PR (uploading impacted targets is only required for [Parallel](https://docs.trunk.io/merge/set-up-trunk-merge/configuration#parallel-mode) mode, but this option will still show regardless of mode if impacted targets have been uploaded for the PR)
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FOgbgOUiFMB9xdForkfYT%2Fimage.png?alt=media&token=fa1727a2-c209-478a-a021-d6a404e448e7)
 

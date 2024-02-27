@@ -10,7 +10,7 @@ Solution: Most likely you did not set up the required status checks to trigger f
 
 It is also possible that your CI provider just randomly never started testing on the Trunk Merge branch, even after setting the required status checks to trigger.
 
-To assist with this, you can [configure a testing timeout](parallel-mode.md#timeout-for-tests-to-complete).
+To assist with this, you can [configure a testing timeout](https://docs.trunk.io/merge/set-up-trunk-merge/configuration#timeout-for-tests-to-complete).
 
 ## My PR appears to be ready but isn't entering the Merge Queue?
 

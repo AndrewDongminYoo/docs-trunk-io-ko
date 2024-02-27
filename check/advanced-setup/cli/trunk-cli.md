@@ -39,13 +39,13 @@ The Trunk CLI can be used for:
 - [Trunk Check](https://docs.trunk.io/check): a pluggable superlinter with a builtin language server and pre-existing issue detection
 - [Trunk Tools:](https://docs.trunk.io/check/advanced-setup/tools) hermetic runtime and CLI tool manager
 - [Trunk Actions](https://docs.trunk.io/check/advanced-setup/actions): local workflow automation and githooks manager
-- [Trunk Merge](../../../merge/merge.md): a merge queue to make merging code in github safer and easier
+- [Trunk Merge](https://docs.trunk.io/merge): a merge queue to make merging code in github safer and easier
 
 [Trunk Check](https://docs.trunk.io/check) and [Trunk Actions](https://docs.trunk.io/check/advanced-setup/actions) can be used entirely locally without depending on hosted services or even having a Trunk account
 
 ### Initialize Trunk in your repo
 
-Whether you aim to use [Trunk Check](https://docs.trunk.io/check), [Trunk Merge](../../../merge/merge.md), [Trunk Actions](https://docs.trunk.io/check/advanced-setup/actions), or all of the above, the first step is to initialize Trunk in your git repo:
+Whether you aim to use [Trunk Check](https://docs.trunk.io/check), [Trunk Merge](https://docs.trunk.io/merge), [Trunk Actions](https://docs.trunk.io/check/advanced-setup/actions), or all of the above, the first step is to initialize Trunk in your git repo:
 
 ```shell
 trunk init
@@ -59,6 +59,6 @@ This is then used by the Trunk Launcher when it downloads the `trunk` binary.
 
 The scan will identify all the particular languages and technologies you use and automatically configure the correct set of linters / formatters to run.
 
-If you only want to use [Trunk Merge](../../../merge/merge.md), you can safely ignore the linter setup, or even strip enabled linters from `.trunk/trunk.yaml`.
+If you only want to use [Trunk Merge](https://docs.trunk.io/merge), you can safely ignore the linter setup, or even strip enabled linters from `.trunk/trunk.yaml`.
 
-You will additionally need to login to use [Trunk Merge](../../../merge/merge.md) via `trunk login`.
+You will additionally need to login to use [Trunk Merge](https://docs.trunk.io/merge) via `trunk login`.

@@ -55,7 +55,7 @@ This is a simple and effective way to start using Trunk Merge.
 
 In Parallel mode, Trunk knows which PRs are related and which are unrelated and can function effectively as having many merge queues in the same repo, queueing only related PRs on top of one another.
 
-Trunk knows the relationship between PRs by you sending it to us; we call this [Impacted Targets](set-up-trunk-merge/impacted-targets.md) and it can be information pulled from build systems like Bazel, Nx, or Turborepo, or it can be defined by a set of glob file matching patterns.
+Trunk knows the relationship between PRs by you sending it to us; we call this [Impacted Targets](https://docs.trunk.io/merge/set-up-trunk-merge/impacted-targets) and it can be information pulled from build systems like Bazel, Nx, or Turborepo, or it can be defined by a set of glob file matching patterns.
 
 ## Build system integration
 
@@ -71,8 +71,8 @@ Trunk Merge will automatically form a graph of PRs in parallel mode that mirrors
 
 Testing enqueued PRs via Trunk Merge tests against _only_ other enqueued PRs with overlapping bazel dependencies.
 
-Read more about how to hook this up in the [Impacted Targets docs](set-up-trunk-merge/impacted-targets.md).
+Read more about how to hook this up in the [Impacted Targets docs](https://docs.trunk.io/merge/set-up-trunk-merge/impacted-targets).
 
 ## Getting Started
 
-Setup Trunk Merge with your repo [now](set-up-trunk-merge.md).
+Setup Trunk Merge with your repo [now](https://docs.trunk.io/merge/set-up-trunk-merge).

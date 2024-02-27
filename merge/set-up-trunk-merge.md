@@ -23,8 +23,8 @@ You will see the "Set Up Trunk Merge" page.
 From there, you can specify:
 
 1. The name of the branch that Trunk Merge should help manage merging PRs into.
-2. The [number](set-up-trunk-merge/advanced-settings.md#concurrency) of Pull Requests that Merge can test at the same time.
-3. The [mode](parallel-mode.md#single-parallel-mode) that Trunk Merge Queues will start in.
+2. The [number](https://docs.trunk.io/merge/set-up-trunk-merge/advanced-settings#concurrency) of Pull Requests that Merge can test at the same time.
+3. The [mode](https://docs.trunk.io/merge/set-up-trunk-merge/configuration#single-parallel-mode) that Trunk Merge Queues will start in.
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fceeh6VUbrAgRSaMPIZv0%2Fimage.png?alt=media&token=a4835ef9-542d-4c81-9229-17c74309a046)
 
@@ -115,7 +115,7 @@ $ trunk login
 $ trunk merge {pr-number}
 ```
 
-If you have any problems with merge queueing PRs, take a look at the [branch protection](set-up-trunk-merge/advanced-settings.md#branch-protection) docs.
+If you have any problems with merge queueing PRs, take a look at the [branch protection](https://docs.trunk.io/merge/set-up-trunk-merge/advanced-settings#branch-protection) docs.
 
 ### Pull Request Processing
 
@@ -129,7 +129,7 @@ Once the remaining upstream PRs are complete, the PR will be merged and then rem
 
 If a PR fails or is canceled then it will go to the failed or canceled state.
 
-Read more about [PR States](reference.md#pr-states).
+Read more about [PR States](https://docs.trunk.io/merge/reference#pr-states).
 
 ## Success
 
@@ -139,6 +139,6 @@ Whenever a PR is pushed to your merge branch it will be safely tested and automa
 
 ### Next Steps
 
-You can configure [parallel mode](parallel-mode.md) for potential performance gains, read how to [cancel pull requests](parallel-mode.md#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](set-up-trunk-merge/integration-for-slack.md).
+You can configure [parallel mode](https://docs.trunk.io/merge/set-up-trunk-merge/configuration) for potential performance gains, read how to [cancel pull requests](https://docs.trunk.io/merge/set-up-trunk-merge/configuration#submitting-and-cancelling-pull-requests), and setup a [Slack Integration](https://docs.trunk.io/merge/set-up-trunk-merge/integration-for-slack).
 
-If you are using Bazel you may want to [further customize](set-up-trunk-merge/parallel-mode-with-bazel.md) it for parallel mode.
+If you are using Bazel you may want to [further customize](https://docs.trunk.io/merge/set-up-trunk-merge/merge-+-bazel) it for parallel mode.

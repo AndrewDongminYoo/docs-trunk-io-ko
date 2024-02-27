@@ -10,7 +10,7 @@ Now that you have `trunk check` running on your local computer, your next step i
 
 Sign up at [app.trunk.io](https://app.trunk.io), create a Trunk organization, and connect it to your repositories.
 
-See our GitHub App permissions [here](../../../administration/github-app-permissions.md) if interested.
+See our GitHub App permissions [here](https://docs.trunk.io/administration/github-app-permissions) if interested.
 
 ![ ](https://d2vsad3r6ug0tf.cloudfront.net/cllobexas0hc0051asw4lmlyr/eIV7VryvgLhT9Qla3y.png)
 
