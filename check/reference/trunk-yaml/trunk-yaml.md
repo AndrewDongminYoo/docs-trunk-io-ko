@@ -1,8 +1,6 @@
----
-description: trunk.yaml specification
----
-
 # Trunk YAML (.trunk/trunk.yaml)
+
+trunk.yaml specification.
 
 Trunk is controlled by the `.trunk/trunk.yaml` file in your repository.
 

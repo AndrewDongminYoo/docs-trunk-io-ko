@@ -1,8 +1,6 @@
----
-description: Overview of Trunk Check's supported linters and configuration
----
-
 # Linters
+
+Overview of Trunk Check's supported linters and configuration.
 
 Trunk Check supports over [100 different linters](https://docs.trunk.io/check/configuration/supported-linters) and formatters out of the box.
 

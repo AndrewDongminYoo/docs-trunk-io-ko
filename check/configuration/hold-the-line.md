@@ -1,8 +1,6 @@
----
-description: How Trunk Check suppresses pre-existing issues so only new issues are flagged
----
-
 # Hold the Line
+
+How Trunk Check suppresses pre-existing issues so only new issues are flagged.
 
 ## What is Hold the Line?
 

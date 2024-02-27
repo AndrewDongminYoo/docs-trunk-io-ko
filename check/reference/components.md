@@ -1,8 +1,6 @@
----
-description: List of major components of Trunk Check
----
-
 # Components
+
+List of major components of Trunk Check.
 
 ### Trunk Binary
 

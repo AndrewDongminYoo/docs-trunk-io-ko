@@ -1,8 +1,6 @@
----
-description: Details of how various Trunk Check features work under the hood.
----
-
 # Under the Hood
+
+Details of how various Trunk Check features work under the hood.
 
 `trunk check` does a lot of cool stuff under the hood so that you have a good experience with it.
 

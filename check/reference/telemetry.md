@@ -1,8 +1,6 @@
----
-description: Trunk Check usage data tracking
----
-
 # Telemetry
+
+Trunk Check usage data tracking.
 
 Trunk sends basic usage metrics from our local tools ([CLI](https://docs.trunk.io/check/advanced-setup/cli) & [VS Code Extension](https://docs.trunk.io/check/ide-integration/vs-code)) to our analytics system to help us understand our usage and improve our tools over time.
 

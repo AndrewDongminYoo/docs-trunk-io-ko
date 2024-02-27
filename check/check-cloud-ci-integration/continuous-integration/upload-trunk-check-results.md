@@ -1,8 +1,6 @@
----
-description: Manually upload Trunk Check results for CI use.
----
-
 # Upload Trunk Check Results
+
+Manually upload Trunk Check results for CI use.
 
 If you use GitHub, we recommend you follow the [GitHub Integration](https://docs.trunk.io/check/check-cloud-ci-integration/get-started/github-integration) guide.
 Trunk Check has the ability to post its results to app.trunk.io.

@@ -1,8 +1,6 @@
----
-description: Configuration to avoid duplicate runtimes
----
-
 # Prevent Duplicate Runtimes
+
+Configuration to avoid duplicate runtimes.
 
 If you would like to avoid having two copies of a specific runtime; For example, the system-managed version, and the Trunk-managed version, then you can always format your `trunk.yaml` file accordingly.
 

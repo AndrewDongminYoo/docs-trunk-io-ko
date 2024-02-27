@@ -1,8 +1,6 @@
----
-description: Sharing configuration between codebases using public config repos
----
-
 # Creating Organization Configs
+
+Sharing configuration between codebases using public config repos.
 
 To standardize Trunk configuration across an organization, you can create and publish a public plugins repository.
 

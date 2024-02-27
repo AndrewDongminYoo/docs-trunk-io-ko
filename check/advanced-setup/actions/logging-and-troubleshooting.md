@@ -1,8 +1,6 @@
----
-description: Diagnosing problems with actions
----
-
 # Logging and Troubleshooting
+
+Diagnosing problems with actions.
 
 We provide a number of tools for inspecting the results of actions that run in the background and wouldn't otherwise surface their errors.
 

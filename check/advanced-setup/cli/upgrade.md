@@ -1,8 +1,6 @@
----
-description: Upgrading the Trunk CLI for new versions and features
----
-
 # Upgrade
+
+Upgrading the Trunk CLI for new versions and features.
 
 Run `trunk upgrade` to update the Trunk CLI and all of your plugins linters, tools, and runtimes.
 

@@ -1,8 +1,6 @@
----
-description: Detailed install instructions for the Trunk CLI
----
-
 # Install Trunk
+
+Detailed install instructions for the Trunk CLI.
 
 The below commands install the Trunk Launcher, a bash script that downloads the appropriate Trunk CLI version and runs it.
 

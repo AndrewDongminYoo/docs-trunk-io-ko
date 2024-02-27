@@ -1,8 +1,6 @@
----
-description: How to generate JUnit Reports for common test runners
----
-
 # Generating JUnit Reports
+
+How to generate JUnit Reports for common test runners.
 
 ## Jest
 

@@ -1,8 +1,6 @@
----
-description: Older version of Merge.
----
-
 # Legacy Merge
+
+Older version of Merge.
 
 This documentation is for the older version of Merge.
 

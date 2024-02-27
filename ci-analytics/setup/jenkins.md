@@ -1,8 +1,6 @@
----
-description: How to integrate Trunk CI Analytics with Jenkins CI/CD
----
-
 # Jenkins
+
+How to integrate Trunk CI Analytics with Jenkins CI/CD.
 
 ## Compatibility
 

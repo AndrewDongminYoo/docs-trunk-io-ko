@@ -1,8 +1,6 @@
----
-description: CI Analytics provides metrics about the CI pipelines running on Pull Requests
----
-
 # Pull Request Metrics
+
+CI Analytics provides metrics about the CI pipelines running on Pull Requests.
 
 ## Overview
 

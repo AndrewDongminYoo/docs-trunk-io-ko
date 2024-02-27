@@ -1,8 +1,6 @@
----
-description: How to integrate Trunk CI Analytics with GitHub Actions
----
-
 # GitHub Actions
+
+How to integrate Trunk CI Analytics with GitHub Actions.
 
 ## Compatibility
 

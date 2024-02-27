@@ -1,8 +1,6 @@
----
-description: Initializing Trunk Check in a git repository
----
-
 # Init in a git repo
+
+Initializing Trunk Check in a git repository.
 
 Initializing Trunk in a git repo is as simple as running:
 

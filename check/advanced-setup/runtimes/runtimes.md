@@ -1,8 +1,6 @@
----
-description: Managing Runtimes (Pythong, NodeJS, etc) with Trunk Check
----
-
 # Runtimes
+
+Managing Runtimes (Pythong, NodeJS, etc) with Trunk Check.
 
 Trunk makes it easy for you to run tools (such as linters and actions) because, under the hood, Trunk actually downloads everything a given tool depends on, and then executes said tool in the context of its dependencies.
 

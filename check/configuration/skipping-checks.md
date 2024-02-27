@@ -1,8 +1,6 @@
----
-description: Skip checks for a particular PR using the skip-check command.
----
-
 # Skipping Checks (CI)
+
+Skip checks for a particular PR using the skip-check command.
 
 ## Bypass `trunk check` on a Pull Request
 

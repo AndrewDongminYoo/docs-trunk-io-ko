@@ -1,8 +1,6 @@
----
-description: Trunk supports triggering actions on all githooks
----
-
 # Git Hooks
+
+Trunk supports triggering actions on all githooks.
 
 ### Features
 

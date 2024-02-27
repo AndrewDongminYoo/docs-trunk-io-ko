@@ -1,8 +1,6 @@
----
-description: List of linters supported out of the box by Trunk Check
----
-
 # Supported Standard Linters
+
+List of linters supported out of the box by Trunk Check.
 
 > 📘 Our linter integrations are open-source!
 >

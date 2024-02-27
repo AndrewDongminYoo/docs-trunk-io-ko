@@ -1,8 +1,6 @@
----
-description: Getting started with the older legacy Trunk Merge
----
-
 # Getting Started
+
+Getting started with the older legacy Trunk Merge.
 
 This guide will walk you through running Trunk Merge in your GitHub repository.
 
@@ -66,7 +64,7 @@ Connect your Trunk organization to GitHub
          - name: Checkout
            uses: actions/checkout@v3
 
-       # Add more steps here..
+       # Add more steps here.
    ```
 
 ## Adjust GitHub Branch Protection Rules

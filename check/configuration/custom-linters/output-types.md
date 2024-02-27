@@ -1,8 +1,6 @@
----
-description: Custom Linters should output one of several output formats.
----
-
 # Output Types
+
+Custom Linters should output one of several output formats.
 
 Trunk supports several different generic output types.
 

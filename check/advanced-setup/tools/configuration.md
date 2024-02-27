@@ -1,8 +1,6 @@
----
-description: Let's look at how to configure Trunk Tools.
----
-
 # Configuration
+
+Let's look at how to configure Trunk Tools.
 
 Tools are configured in the `tools` section of [`trunk.yaml`](https://docs.trunk.io/check/reference/trunk-yaml).
 

@@ -1,8 +1,6 @@
----
-description: Operating System compatibility list
----
-
 # Compatibility
+
+Operating System compatibility list.
 
 ## Linux
 

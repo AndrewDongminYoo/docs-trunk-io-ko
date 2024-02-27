@@ -1,8 +1,6 @@
----
-description: enabling and writing your own actions
----
-
 # Configuration
+
+enabling and writing your own actions.
 
 Actions are defined and enabled in the `actions` section of [`trunk.yaml`](https://docs.trunk.io/check/reference/trunk-yaml).
 

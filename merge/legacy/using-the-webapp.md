@@ -1,8 +1,6 @@
----
-description: Using the webapp with the older legacy Trunk Merge.
----
-
 # Using the Webapp
+
+Using the webapp with the older legacy Trunk Merge.
 
 The Trunk web app has a UI for inspecting the status of pull requests or your queue health.
 

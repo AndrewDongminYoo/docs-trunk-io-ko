@@ -1,19 +1,6 @@
----
-description: Merge can be configured in single or parallel mode depending on your needs.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Parallel Mode
+
+Merge can be configured in single or parallel mode depending on your needs.
 
 ## Single / Parallel Mode
 

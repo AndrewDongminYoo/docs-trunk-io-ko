@@ -1,8 +1,6 @@
----
-description: Integrating Slack with the older legacy Trunk Merge.
----
-
 # Integration for Slack
+
+Integrating Slack with the older legacy Trunk Merge.
 
 Trunk Merge integrates with Slack to push relevant information to your team so you can stay up to date with the status of your pull requests.
 

@@ -1,8 +1,6 @@
----
-description: Integrate with Trunk CI Analytics using the API
----
-
 # API Reference
+
+Integrate with Trunk CI Analytics using the API.
 
 ## REST API Overview
 

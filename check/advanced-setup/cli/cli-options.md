@@ -1,8 +1,6 @@
----
-description: Trunk Check detailed command line options
----
-
 # CLI options
+
+Trunk Check detailed command line options.
 
 ## Options
 

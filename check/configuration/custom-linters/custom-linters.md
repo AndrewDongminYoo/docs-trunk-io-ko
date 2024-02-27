@@ -1,8 +1,6 @@
----
-description: Custom linter configuration overview
----
-
 # Custom Linters
+
+Custom linter configuration overview.
 
 Trunk Check's linter integrations are fully configurable.
 

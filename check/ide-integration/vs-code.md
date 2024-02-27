@@ -1,8 +1,6 @@
----
-description: Installing the Visual Studio Code extension
----
-
 # VS Code
+
+Installing the Visual Studio Code extension.
 
 Trunk Check is available as a [VSCode extension](https://marketplace.visualstudio.com/items?itemName=trunk.io) that you can use to streamline your linting and formatting experience.
 

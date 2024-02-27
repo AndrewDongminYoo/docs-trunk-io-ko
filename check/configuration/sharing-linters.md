@@ -1,8 +1,6 @@
----
-description: Different ways to share linters between projects.
----
-
 # Sharing Linters
+
+Different ways to share linters between projects.
 
 ## Single Repo
 

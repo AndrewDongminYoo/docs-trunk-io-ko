@@ -1,8 +1,6 @@
----
-description: Using Trunk Check within your favorite IDE
----
-
 # IDE Integration
+
+Using Trunk Check within your favorite IDE.
 
 Trunk Check supports direct integration with [VS Code](https://docs.trunk.io/check/ide-integration/vs-code) and [Neovim](https://docs.trunk.io/check/ide-integration/neovim-plugin) using Trunk supported plugins.
 

@@ -1,8 +1,6 @@
----
-description: Common reference points about Trunk Merge
----
-
 # Reference
+
+Common reference points about Trunk Merge.
 
 ## Submitting and Cancelling Pull Requests
 

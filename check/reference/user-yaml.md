@@ -1,8 +1,6 @@
----
-description: user.yaml specification
----
-
 # User YAML (.trunk/user.yaml)
+
+user.yaml specification.
 
 ## Per-User Customization
 

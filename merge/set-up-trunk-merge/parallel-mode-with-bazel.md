@@ -1,8 +1,6 @@
----
-description: When using Bazel, Trunk Merge can create parallel merge queues for your PRs.
----
-
 # Parallel Mode with Bazel
+
+When using Bazel, Trunk Merge can create parallel merge queues for your PRs.
 
 Leveraging [parallel mode](https://docs.trunk.io/merge#single-mode-vs-parallel-mode) for Trunk Merge is easy for Bazel enabled repos because Bazel already knows the structure of your code and can automatically generate a dependency graph.
 

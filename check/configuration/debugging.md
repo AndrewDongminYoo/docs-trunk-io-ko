@@ -1,8 +1,6 @@
----
-description: How to diagnose problems when a linter fails.
----
-
 # Debugging
+
+How to diagnose problems when a linter fails.
 
 Sometimes you need to get under-the-hood to diagnose why a linter is failing on a particular file or to more easily reproduce an issue you are seeing with a tool.
 

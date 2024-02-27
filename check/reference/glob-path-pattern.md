@@ -1,8 +1,6 @@
----
-description: Path pattern specification
----
-
 # Glob Path Pattern
+
+Path pattern specification.
 
 Path patterns in Trunk configuration are always relative to the repo root.
 

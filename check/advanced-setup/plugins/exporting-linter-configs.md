@@ -1,8 +1,6 @@
----
-description: Reusing linter configs across projects.
----
-
 # Exporting Linter Configs
+
+Reusing linter configs across projects.
 
 Plugin repositories can also export their own linter config files in order to keep configuration synced across an organization.
 

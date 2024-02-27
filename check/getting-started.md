@@ -1,8 +1,6 @@
----
-description: How to install the Trunk CLI to check your code in less than 60 seconds.
----
-
 # Getting Started
+
+How to install the Trunk CLI to check your code in less than 60 seconds.
 
 The `trunk` command line tool runs locally on your developer machine, right where your code is.
 

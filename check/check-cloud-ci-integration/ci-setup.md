@@ -1,8 +1,6 @@
----
-description: Continuous Integration Setup
----
-
 # CI Setup
+
+Continuous Integration Setup.
 
 Trunk Check has the ability to post its results to the [Trunk Check web app](https://app.trunk.io/).
 

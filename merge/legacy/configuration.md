@@ -1,8 +1,6 @@
----
-description: Configuring the old legacy Trunk Merge
----
-
 # Configuration
+
+Configuring the old legacy Trunk Merge.
 
 We offer some knobs and dials when configuring a MergeQueue.
 

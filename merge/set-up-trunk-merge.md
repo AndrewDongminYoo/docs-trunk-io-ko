@@ -1,8 +1,6 @@
----
-description: How to set up Trunk Merge for your project
----
-
 # Set Up Trunk Merge
+
+How to set up Trunk Merge for your project.
 
 ### Connect your Trunk Organization to GitHub
 
@@ -91,7 +89,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-    # Add more steps here..
+    # Add more steps here.
 ```
 
 Now you are ready to submit your first PR.

@@ -1,8 +1,6 @@
----
-description: How to set up Clang Tidy to work with Trunk Check
----
-
 # Clang Tidy Setup
+
+How to set up Clang Tidy to work with Trunk Check.
 
 **Clang-Tidy** is a linter and static analysis tool for checking **C and C++ source code.** It provides additional warnings and checks beyond what the compiler typically provides.
 

@@ -1,8 +1,6 @@
----
-description: Special configuration for specific linters
----
-
 # Configuring Linters
+
+Special configuration for specific linters.
 
 Most linters provide some mechanism to tweak their configuration, e.g. `.eslintrc` or `Cargo.toml`.
 

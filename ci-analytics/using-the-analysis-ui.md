@@ -1,10 +1,6 @@
----
-description: >-
-  See an overview of your CI Statistics then dig deep into individual workflows,
-  jobs, and runs.
----
-
 # Using the Analysis UI
+
+See an overview of your CI Statistics then dig deep into individual workflows, jobs, and runs.
 
 When you first select a repo in CI Analytics, you will see the **Overview** screen which contains charts and tables to give you a high-level view of the state of your CI system.
 

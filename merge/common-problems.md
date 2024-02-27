@@ -1,8 +1,6 @@
----
-description: Troubleshooting and FAQ
----
-
 # Common Problems
+
+Troubleshooting and FAQ.
 
 ## My PR is testing in my Merge Queue but it doesn't look like my required status checks are being triggered?
 

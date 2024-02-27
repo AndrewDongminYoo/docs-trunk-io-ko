@@ -1,8 +1,6 @@
----
-description: Push updates about your queue status to Slack to keep your team informed.
----
-
 # Integration for Slack
+
+Push updates about your queue status to Slack to keep your team informed.
 
 Trunk Merge integrates with Slack to push relevant information to your team so you can stay up to date with the status of your pull requests.
 
