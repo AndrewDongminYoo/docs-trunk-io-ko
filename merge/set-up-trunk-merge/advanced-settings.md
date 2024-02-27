@@ -1,10 +1,6 @@
----
-description: >-
-  Explanation of settings for states, timeouts, concurrency, and branch
-  protection.
----
-
 # Advanced Settings
+
+Explanation of settings for states, timeouts, concurrency, and branch protection.
 
 We offer some knobs and dials when configuring Merge.
 
@@ -20,9 +16,9 @@ Below are the possible different states:
 
 | State      | Will PRs Enter the Queue? | Will PRs Merge After Testing? |
 | :--------- | :------------------------ | :---------------------------- |
-| `Running`  | Yes ✅                    | Yes ✅                        |
-| `Paused`   | No ❌                     | No ❌                         |
-| `Draining` | No ❌                     | Yes ✅                        |
+| `Running`  | Yes ✅                     | Yes ✅                         |
+| `Paused`   | No ❌                      | No ❌                          |
+| `Draining` | No ❌                      | Yes ✅                         |
 
 There is an additional state, `Switching Modes`, that functions exactly like `Draining`.
 

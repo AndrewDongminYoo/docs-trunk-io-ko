@@ -1,10 +1,6 @@
----
-description: >-
-  The web app offers detailed information about pull requests, the state of the
-  merge queue, and more.
----
-
 # Using the Merge UI
+
+The web app offers detailed information about pull requests, the state of the merge queue, and more.
 
 The web app can be found at [app.trunk.io](https://app.trunk.io).
 

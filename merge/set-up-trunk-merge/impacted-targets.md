@@ -1,10 +1,6 @@
----
-description: >-
-  Impacted targets are metadata about a PR describing which parts of the
-  codebase changed.
----
-
 # Impacted Targets
+
+Impacted targets are metadata about a PR describing which parts of the codebase changed.
 
 ## What are Impacted Targets?
 

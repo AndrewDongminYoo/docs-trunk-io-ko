@@ -1,10 +1,6 @@
----
-description: >-
-  How to tell a Trunk Check linter to ignore certain issues or entire groups of
-  files.
----
-
 # Ignoring Issues and Files
+
+How to tell a Trunk Check linter to ignore certain issues or entire groups of files.
 
 ## Ignoring parts of a file
 

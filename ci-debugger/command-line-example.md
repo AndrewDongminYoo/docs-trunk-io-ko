@@ -1,10 +1,6 @@
----
-description: >-
-  The CI Debugger can be used from non-CI machines.
-  For example your local terminal or any machine under your control.
----
-
 # Command Line Example
+
+The CI Debugger can be used from non-CI machines. For example your local terminal or any machine under your control.
 
 ### Requirements
 

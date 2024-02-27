@@ -1,21 +1,6 @@
----
-description: >-
-  How to integrate Trunk Check into CI for GitLab and other non-GitHub
-  providers, or for GitHub without using the Trunk GitHub App
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # GitLab and other CI Integration
+
+How to integrate Trunk Check into CI for GitLab and other non-GitHub providers, or for GitHub without using the Trunk GitHub App.
 
 If you use GitHub, we recommend you follow the [GitHub Integration](https://docs.trunk.io/check/check-cloud-ci-integration/get-started) guide.
 `trunk check --ci` will work on any CI provider.

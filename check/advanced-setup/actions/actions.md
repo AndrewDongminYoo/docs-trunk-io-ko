@@ -1,10 +1,6 @@
----
-description: >-
-  You can think of Trunk Actions as IFTTT for your repository.
-  An action is a command that is run when a specified trigger occurs.
----
-
 # Actions
+
+You can think of Trunk Actions as IFTTT for your repository. An action is a command that is run when a specified trigger occurs.
 
 The most common Trunk Actions are provided out of the box with trunk, and are triggered to invisibly autoformat (`trunk fmt`) your commits every time you `git commit`, and run `trunk check` when you `git push`.
 

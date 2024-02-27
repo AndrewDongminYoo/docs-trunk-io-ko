@@ -1,10 +1,6 @@
----
-description: >-
-  Trunk Actions can also produce notifications to display in your terminal or in
-  the VSCode extension!
----
-
 # Notifications
+
+Trunk Actions can also produce notifications to display in your terminal or in the VSCode extension!
 
 ### Defining actions that produce notifications
 

@@ -1,11 +1,6 @@
----
-description: >-
-  Trunk Check integrates with GitHub to automatically identify linter issues,
-  unformatted files, and vulnerabilities in your repositories without ever
-  sending your code to Trunk.
----
-
 # How It Works
+
+Trunk Check integrates with GitHub to automatically identify linter issues, unformatted files, and vulnerabilities in your repositories without ever sending your code to Trunk.
 
 If you don't use GitHub, we recommend you check out the [Continuous Integration](https://docs.trunk.io/check/check-cloud-ci-integration/continuous-integration) guide.
 

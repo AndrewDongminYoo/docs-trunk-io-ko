@@ -1,10 +1,6 @@
----
-description: >-
-  Learn more about which permissions the Trunk GitHub app requests and why Trunk
-  needs them.
----
-
 # GitHub App Permissions
+
+Learn more about which permissions the Trunk GitHub app requests and why Trunk needs them.
 
 ## Actions (Read and write)
 

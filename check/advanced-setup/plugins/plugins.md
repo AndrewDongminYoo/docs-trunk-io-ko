@@ -1,10 +1,6 @@
----
-description: >-
-  Plugins repositories allow users to expand the core capabilities of the Trunk
-  CLI and to share configuration between different repositories.
----
-
 # Plugins
+
+Plugins repositories allow users to expand the core capabilities of the Trunk CLI and to share configuration between different repositories.
 
 ### Importing a plugin repository
 
