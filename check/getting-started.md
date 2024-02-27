@@ -46,7 +46,7 @@ From the root of a git repo, run:
 trunk init
 ```
 
-This will scan your repository and create a `.trunk/trunk.yaml` that enables all the linters, formatters, and security analyzers that [Trunk Check](check.md) recommends.
+This will scan your repository and create a `.trunk/trunk.yaml` that enables all the linters, formatters, and security analyzers that [Trunk Check](https://docs.trunk.io/check) recommends.
 
 For more details, see [here](https://docs.trunk.io/check/advanced-setup/cli/init-in-a-git-repo).
 
@@ -85,7 +85,7 @@ Run all applicable formatters as configured in `trunk.yaml`. `trunk fmt` is shor
 | `--fix`      | Auto-apply all suggested fixes                                                                                                        |
 | `--no-fix`   | Surface, but do not prompt for autofixes                                                                                              |
 | `--filter`   | List of comma-separated linters to run. Specify `--filter=-linter` to disable a linter.                                               |
-| `--sample=N` | Run check on a [sampling](./advanced-setup/cli/cli-options.md#sample) of all files in the repo                                        |
+| `--sample=N` | Run check on a [sampling](https://docs.trunk.io/check/advanced-setup/cli/cli-options#sample) of all files in the repo                 |
 | `--help`     | Output help information                                                                                                               |
 
 ### Recipes
@@ -125,13 +125,13 @@ trunk check disable <linter name>
 
 Once you have Trunk Check configured on your local machine, you can set up the Trunk Check webapp to automatically run checks whenever your CI system builds and runs tests.
 
-See [Continuous Integration Setup](check-cloud-ci-integration/ci-setup.md) for more information.
+See [Continuous Integration Setup](https://docs.trunk.io/check/check-cloud-ci-integration) for more information.
 
 ## Hold the Line
 
 By default Trunk Check will _Hold The Line_, meaning it will only run against new changes in your codebase, not old ones.
 
-For more see [Hold the Line](configuration/hold-the-line.md).
+For more see [Hold the Line](https://docs.trunk.io/check/configuration/hold-the-line).
 
 ## Ignoring Issues
 
@@ -144,7 +144,7 @@ struct FooBar {
 };
 ```
 
-The comment should contain the name of the linter you want to ignore the following line, in this case `clang-tidy` For more complex ignore commands, see [Ignoring Issues](configuration/ignoring-issues-and-files.md).
+The comment should contain the name of the linter you want to ignore the following line, in this case `clang-tidy` For more complex ignore commands, see [Ignoring Issues](https://docs.trunk.io/check/configuration/ignoring-issues).
 
 ## Upgrading
 

@@ -4,7 +4,7 @@ description: Manually upload Trunk Check results for CI use.
 
 # Upload Trunk Check Results
 
-If you use GitHub, we recommend you follow the [GitHub Integration](../get-started/how-it-works.md) guide.
+If you use GitHub, we recommend you follow the [GitHub Integration](https://docs.trunk.io/check/check-cloud-ci-integration/get-started/github-integration) guide.
 Trunk Check has the ability to post its results to app.trunk.io.
 
 This will enable you to view your repository's Check history over time so you can track the trend of issues in your code, as well as browse the issues in your repository to help you understand which issues should be prioritized to fix.
@@ -19,7 +19,7 @@ However, the system supports uploading results for every commit, so the granular
 
 ### Running `trunk check --upload`
 
-Before running `trunk check --upload` you must have [connected your Github repository to your Trunk account](upload-trunk-check-results.md).
+Before running `trunk check --upload` you must have [connected your Github repository to your Trunk account](https://docs.trunk.io/check/check-cloud-ci-integration/continuous-integration/upload-trunk-check-results).
 
 #### CI Setup for nightly uploads
 

@@ -38,7 +38,7 @@ pnpm add -D @trunkio/launcher
 yarn add -D @trunkio/launcher
 ```
 
-For use on Windows, check out our [Windows (beta)](windows-support-beta.md) page.
+For use on Windows, check out our [Windows (beta)](https://docs.trunk.io/check/advanced-setup/cli/windows-beta) page.
 
 ## Commit the Trunk Launcher (optional)
 
@@ -60,7 +60,7 @@ Trunk has a very minimal installation, and therefore, there's not much to uninst
 
 The two system paths we use are:
 
-- `/usr/local/bin/trunk`: the [Trunk Launcher](../../reference/components.md#trunk-launcher)
+- `/usr/local/bin/trunk`: the [Trunk Launcher](https://docs.trunk.io/check/reference/components#trunk-launcher)
 - `~/.cache/trunk`: cached versions of the trunk cli, linters, formatters, etc.
 
 You can delete those two paths to uninstall.

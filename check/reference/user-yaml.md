@@ -12,7 +12,7 @@ This file is optional, but it allows individual developers to customize how they
 
 Simply configure `.trunk/user.yaml` as you would for `.trunk/trunk.yaml`.
 
-Now you can add additional linters, enable [actions](../advanced-setup/actions/actions.md), or specify [default command options](trunk-yaml/#cli), without impacting the way other developers run `trunk`.
+Now you can add additional linters, enable [actions](https://docs.trunk.io/check/advanced-setup/actions), or specify [default command options](trunk-yaml/#cli), without impacting the way other developers run `trunk`.
 
 Be mindful that `.trunk/user.yaml` takes precedence over `.trunk/trunk.yaml`, so substantial modifications could violate hermeticity.
 
@@ -20,4 +20,4 @@ Be mindful that `.trunk/user.yaml` takes precedence over `.trunk/trunk.yaml`, so
 
 Trunk also saves a user config in `$HOME/.cache/trunk/user.yaml`.
 
-This is auto-generated in order to manage [anonymous usage data](telemetry.md) and persist login sessions.
+This is auto-generated in order to manage [anonymous usage data](https://docs.trunk.io/check/reference/usage-data) and persist login sessions.

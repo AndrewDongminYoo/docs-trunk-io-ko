@@ -25,18 +25,18 @@ Use Trunk to check, test, merge, and monitor your code.
 
 | Name             | Description                                                                               | Link                                         | Image                                                                                                                                                                                                                    |
 | :--------------- | :---------------------------------------------------------------------------------------- | :------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Check**        | An extensible superlinter with a builtin language server and pre-existing issue detection | [Check](check/check.md)                      | ![Check](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-a29e3f30f40c56c1e186fe46f445a932828bfebd%2FCheck.svg?alt=media)                 |
+| **Check**        | An extensible superlinter with a builtin language server and pre-existing issue detection | [Check](https://docs.trunk.io/check)         | ![Check](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-a29e3f30f40c56c1e186fe46f445a932828bfebd%2FCheck.svg?alt=media)                 |
 | **Merge**        | A merge queue to make merging code in GitHub safer and easier                             | [Merge](merge/merge.md)                      | ![Merge](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-babde99ac05508e4175291e4b028329fc6236059%2FMerge.svg?alt=media)                 |
 | **CI Analytics** | See live and trend data about the performance and flakiness of your CI system             | [CI Analytics](ci-analytics/ci-analytics.md) | ![CI Analytics](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-b927192a462f20cd64a98bf2fadbd3d95c98a7f2%2FCI%20Analytics.svg?alt=media) |
 | **CI Debugger**  | A real-time debugger for your CI jobs                                                     | [CI Debugger](ci-debugger/ci-debugger.md)    | ![CI Debugger](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-0ffbab4f6a0b613ed2d377c1b9cd8adc0788a29b%2FCI%20Debugger.svg?alt=media)   |
 
 ### Start Using Trunk
 
-| Name                  | Description                                                                  | Link                                                  |
-| :-------------------- | :--------------------------------------------------------------------------- | :---------------------------------------------------- |
-| **CLI**               | Use the Trunk CLI to check your code for issues and automate local workflows | [CLI](check/advanced-setup/cli/trunk-cli.md)          |
-| **VS Code Extension** | Get Trunk code checking results inline in VS Code                            | [VS Code Extension](check/ide-integration/vs-code.md) |
-| **Web App**           | Access dashboards and analytics for all of Trunk's tools                     | [Web App](https://app.trunk.io)                       |
+| Name                  | Description                                                                  | Link                                                                     |
+| :-------------------- | :--------------------------------------------------------------------------- | :----------------------------------------------------------------------- |
+| **CLI**               | Use the Trunk CLI to check your code for issues and automate local workflows | [CLI](https://docs.trunk.io/check/advanced-setup/cli)                    |
+| **VS Code Extension** | Get Trunk code checking results inline in VS Code                            | [VS Code Extension](https://docs.trunk.io/check/ide-integration/vs-code) |
+| **Web App**           | Access dashboards and analytics for all of Trunk's tools                     | [Web App](https://app.trunk.io)                                          |
 
 ### Join Our Community
 

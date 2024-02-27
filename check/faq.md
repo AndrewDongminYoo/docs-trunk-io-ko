@@ -145,7 +145,7 @@ HTL also runs checks much faster than scanning the entire codebase would.
 
 HTL works even within files! Check only processes changed lines in a file, not the entire file.
 
-More [on how Hold the Line works](configuration/hold-the-line.md).
+More [on how Hold the Line works](https://docs.trunk.io/check/configuration/hold-the-line).
 
 If you specifically want to work on older files you can do that by running `trunk check` directly on that file
 
@@ -388,6 +388,6 @@ lint:
         - test/test_data
 ```
 
-This approach lets you specify which linters to ignore for particular paths, optimizing the check process and focusing on relevant files. [More details on ignoring files](configuration/ignoring-issues-and-files.md#ignoring-all-issues-formatting-in-a-file).
+This approach lets you specify which linters to ignore for particular paths, optimizing the check process and focusing on relevant files. [More details on ignoring files](https://docs.trunk.io/check/configuration/ignoring-issues#ignoring-all-issues-formatting-in-a-file).
 
 </details>

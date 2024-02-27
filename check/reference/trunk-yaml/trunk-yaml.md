@@ -181,7 +181,7 @@ runtimes:
 
 ## `lint`
 
-See the [check configuration](../../configuration/linters.md) and [custom linter](../../configuration/linters.md) documentation.
+See the [check configuration](https://docs.trunk.io/check/configuration) and [custom linter](https://docs.trunk.io/check/configuration) documentation.
 
 ### Disable upgrade notifications
 

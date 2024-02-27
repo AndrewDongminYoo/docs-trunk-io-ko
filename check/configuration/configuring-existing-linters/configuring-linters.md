@@ -16,7 +16,7 @@ Check out our open source [configs](https://github.com/trunk-io/configs/tree/mai
 
 Ansible-lint must be configured with a trigger.
 
-See the [trigger rules](../linters.md#trigger-rules) documentation for more information.
+See the [trigger rules](https://docs.trunk.io/check/configuration#trigger-rules) documentation for more information.
 
 If your ansible setup is not contained within a single folder you would list all files and directories belonging to your ansible setup.
 
@@ -191,7 +191,7 @@ runtimes:
 
 As always, you can view the defaults and configuration of everything Trunk runs via `trunk print-config`.
 
-Note that Python runtime versions specifically are [allowlisted to a limited set](../../faq.md#runtime-and-download-versioning).
+Note that Python runtime versions specifically are [allowlisted to a limited set](https://docs.trunk.io/check/faq#runtime-and-download-versioning).
 
 ### Flake8
 

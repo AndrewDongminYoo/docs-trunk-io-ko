@@ -42,9 +42,9 @@ The most common use for a plugin repository is to define custom linters, actions
 
 But they can also be used to define a common set of shared tools across an organization.
 
-For more info, see [organization configs](creating-organization-configs.md).
+For more info, see [organization configs](https://docs.trunk.io/check/advanced-setup/plugins/external-repositories).
 
-The root `plugin.yaml` file may also have a `required_trunk_version` field which governs compatibility when [upgrading](../cli/upgrade.md) between CLI versions.
+The root `plugin.yaml` file may also have a `required_trunk_version` field which governs compatibility when [upgrading](https://docs.trunk.io/check/advanced-setup/cli/upgrade) between CLI versions.
 
 #### Add a plugin to your `trunk.yaml` file
 

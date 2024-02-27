@@ -4,7 +4,7 @@ description: enabling and writing your own actions
 
 # Configuration
 
-Actions are defined and enabled in the `actions` section of [`trunk.yaml`](../../reference/trunk-yaml/trunk-yaml.md).
+Actions are defined and enabled in the `actions` section of [`trunk.yaml`](https://docs.trunk.io/check/reference/trunk-yaml).
 
 Here is an example of the actions section of `trunk.yaml`.
 
@@ -146,7 +146,7 @@ In this case `my-action` will execute if either `foo.txt` is edited (or created)
 
 You can also configure Trunk to manage your git hooks.
 
-More detail is provided on this in our [git hooks reference](git-hooks.md).
+More detail is provided on this in our [git hooks reference](https://docs.trunk.io/check/advanced-setup/actions/git-hooks).
 
 ### Interactivity
 

@@ -29,22 +29,22 @@ See our GitHub App permissions [here](../../../administration/github-app-permiss
 Check out [this example](https://github.com/trunk-io/plugins/pull/424/checks?check_run_id=15730277425) in our `plugins` repository!
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FsAz3xEetNR7hwQmi9YDb%2Fimage.png?alt=media&token=a34f5b1c-d9c5-4551-a09f-38d48d64388c)
-*Trunk Check identifying a security issue in one of Trunk's own repositories*
+_Trunk Check identifying a security issue in one of Trunk's own repositories_
 
 ### Explore issues in your repository
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FUFUcUsBoLuaeRBwu11lu%2FScreenshot%202023-08-23%20173119.png?alt=media&token=a847e816-b8a5-4f12-96e3-211f50226170)
-*Trunk Check showing all the issues present in trunk-demo1/sass*
+_Trunk Check showing all the issues present in trunk-demo1/sass_
 
 ### Get Slack notifications about new issues in your repository
 
 Not only do our daily scans allow you to browse and triage the issues in your repository, but they can also notify you when new security issues are discovered in packages you already depend on.
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FbvI4fHl70HWiGaIguSzz%2FScreenshot%202023-08-23%20173252.png?alt=media&token=730e34ba-9bb8-4fd2-aeb8-d7f56d52af79)
-*Slack notification showing newly discovered issues with rustls-webpki in trunk-io/trunk*
+_Slack notification showing newly discovered issues with rustls-webpki in trunk-io/trunk_
 
 ## Learn more
 
-[Read the documentation about our GitHub integration to learn more.](how-it-works.md)
+[Read the documentation about our GitHub integration to learn more.](https://docs.trunk.io/check/check-cloud-ci-integration/get-started/github-integration)
 
-If you don't host your source code on GitHub, we recommend setting [up Trunk locally](../../usage.md#ci-setup).
+If you don't host your source code on GitHub, we recommend setting [up Trunk locally](https://docs.trunk.io/check/usage#ci-setup).

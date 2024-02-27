@@ -70,4 +70,4 @@ trunk check enable <linter>
 
 Some linters require a bit more modification to properly set up.
 
-See [Configuring Existing Linters](configuring-existing-linters/configuring-linters.md) for more info.
+See [Configuring Existing Linters](https://docs.trunk.io/check/configuration/configuring-existing-linters) for more info.

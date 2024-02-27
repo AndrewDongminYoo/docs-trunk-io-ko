@@ -7,7 +7,7 @@ description: >-
 
 # How It Works
 
-If you don't use GitHub, we recommend you check out the [Continuous Integration](../continuous-integration/gitlab-and-other-ci-integration.md) guide.
+If you don't use GitHub, we recommend you check out the [Continuous Integration](https://docs.trunk.io/check/check-cloud-ci-integration/continuous-integration) guide.
 
 ## How it works
 
@@ -39,13 +39,13 @@ This strategy allows you to:
 
 For most organizations, simply making your `.trunk` repository private will be sufficient.
 
-If you want to version the linter configuration for a given repo or enable linters that require more manual configuration, you can always [create and commit your Trunk configuration in said repository](../../advanced-setup/cli/init-in-a-git-repo.md#single-player-mode).
+If you want to version the linter configuration for a given repo or enable linters that require more manual configuration, you can always [create and commit your Trunk configuration in said repository](https://docs.trunk.io/check/advanced-setup/cli/init-in-a-git-repo#single-player-mode).
 
 ## Checking pull requests
 
 Trunk Check can automatically detect new Check issues on your pull requests and flag them so that you can prevent pull requests from introducing any new issues in your repository.
 
-When running on a pull request, Trunk Check will only flag _new_ issues, not existing ones, so that your engineers don't have to fix pre-existing linter issues in every file they touch - this is the same [hold-the-line technology](../../configuration/hold-the-line.md) that our VSCode extension and CLI use.
+When running on a pull request, Trunk Check will only flag _new_ issues, not existing ones, so that your engineers don't have to fix pre-existing linter issues in every file they touch - this is the same [hold-the-line technology](https://docs.trunk.io/check/configuration/hold-the-line) that our VSCode extension and CLI use.
 
 <details>
 
@@ -71,7 +71,7 @@ You can include `/trunk skip-check` in the body of a PR description (i.e. the fi
 
 Trunk Check will still run on your PR and report issues, but this will allow the PR to pass a GitHub required status check on `Trunk Check`.
 
-This can be helpful if Check is flagging known issues in a given PR which you don't want to [ignore](../../configuration/ignoring-issues-and-files.md), which if you're doing a large refactor, can come in very handy.
+This can be helpful if Check is flagging known issues in a given PR which you don't want to [ignore](https://docs.trunk.io/check/configuration/ignoring-issues), which if you're doing a large refactor, can come in very handy.
 
 </details>
 

@@ -4,9 +4,9 @@ description: Let's look at how to configure Trunk Tools.
 
 # Configuration
 
-Tools are configured in the `tools` section of [`trunk.yaml`](../../reference/trunk-yaml/trunk-yaml.md).
+Tools are configured in the `tools` section of [`trunk.yaml`](https://docs.trunk.io/check/reference/trunk-yaml).
 
-As with other settings, you can override these values in your [User YAML](../../reference/user-yaml.md).
+As with other settings, you can override these values in your [User YAML](https://docs.trunk.io/check/reference/user-yaml).
 
 ```yaml
 tools:

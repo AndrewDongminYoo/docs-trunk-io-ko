@@ -48,7 +48,7 @@ Thank you for being a beta tester of Trunk Check on Windows! We are actively wor
 
 If you have any feedback or questions, please reach out to us directly on [Slack](https://slack.trunk.io/).
 
-If you want to override a repo-wide setting just for your Windows machine, you can modify your [`.trunk/user.yaml`](../../reference/user-yaml.md).
+If you want to override a repo-wide setting just for your Windows machine, you can modify your [`.trunk/user.yaml`](https://docs.trunk.io/check/reference/user-yaml).
 
 ### Supported Features
 
@@ -56,9 +56,9 @@ We intend to bring full feature support to Windows for Trunk.
 
 Currently, the following features are supported:
 
-- [Trunk Check](../../check.md)
-- Non-interactive [Trunk Actions](../actions/actions.md) and [git-hooks](../actions/git-hooks.md)
-- [VSCode](../../ide-integration/vs-code.md)
+- [Trunk Check](https://docs.trunk.io/check)
+- Non-interactive [Trunk Actions](https://docs.trunk.io/check/advanced-setup/actions) and [git-hooks](https://docs.trunk.io/check/advanced-setup/actions/git-hooks)
+- [VSCode](https://docs.trunk.io/check/ide-integration/vs-code)
 
 ### Unsupported Linters (as of Plugins v1.2.0)
 

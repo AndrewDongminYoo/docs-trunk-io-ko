@@ -46,4 +46,4 @@ trunk check --all --no-fix --filter=eslint
 
 If you wish to run Trunk Check against all code changes since a particular release or timestamp of your codebase you can use the `--upstream` option to specify the upstream branch used to calculate new vs existing issues.
 
-See [Advanced Trunk Check Features](../advanced-setup/cli/cli-options.md#advanced-trunk-check-features) for more information.
+See [Advanced Trunk Check Features](https://docs.trunk.io/check/advanced-setup/cli/cli-options#advanced-trunk-check-features) for more information.

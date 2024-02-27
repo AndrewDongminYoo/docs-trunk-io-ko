@@ -6,7 +6,7 @@ description: Custom linter configuration overview
 
 Trunk Check's linter integrations are fully configurable.
 
-This means that you can easily tune existing linters or leverage our caching and [hold-the-line](../../reference/under-the-hood.md#hold-the-line) solution with your own custom linters.
+This means that you can easily tune existing linters or leverage our caching and [hold-the-line](https://docs.trunk.io/check/reference/under-the-hood#hold-the-line) solution with your own custom linters.
 
 Let's walk through the steps of setting up your own linter.
 
@@ -29,20 +29,20 @@ Running `trunk check` tells `trunk` to do the following:
 - parse linter [outputs](#output-types) into configurable output types
 - determine which lint issues are new, existing, or fixed
 
-### [Output Types](output-types.md)
+### [Output Types](https://docs.trunk.io/check/configuration/custom-linters/output-types)
 
 Trunk currently supports the following types of additional/proprietary linters:
 
-| Linter Type                                      | Autofixsupport | Description                                                                                                                              |
-| :----------------------------------------------- | :------------: | :--------------------------------------------------------------------------------------------------------------------------------------- |
-| [`sarif`](output-types.md#sarif)                 |       ✓        | Produces diagnostics as [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) JSON. |
-| [`lsp_json`](output-types.md#lsp-json)           |                | Produces diagnostics as [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) JSON.                          |
-| [`pass_fail`](output-types.md#pass-fail-linters) |                | Writes a single file-level diagnostic to `stdout`.                                                                                       |
-| [`regex`](output-types.md#regex)                 |                | Produces diagnostics using a custom regex format.                                                                                        |
-| [`arcanist`](output-types.md#arcanist)           |       ✓        | Produces diagnostics as Arcanist JSON.                                                                                                   |
-| [`rewrite`](output-types.md#formatters)          |       ✓        | Writes the formatted version of a file to `stdout`.                                                                                      |
+| Linter Type                                                                                            | Autofixsupport | Description                                                                                                                              |
+| :----------------------------------------------------------------------------------------------------- | :------------: | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| [`sarif`](https://docs.trunk.io/check/configuration/custom-linters/output-types#sarif)                 |       ✓        | Produces diagnostics as [Static Analysis Results Interchange Format](https://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) JSON. |
+| [`lsp_json`](https://docs.trunk.io/check/configuration/custom-linters/output-types#lsp-json)           |                | Produces diagnostics as [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) JSON.                          |
+| [`pass_fail`](https://docs.trunk.io/check/configuration/custom-linters/output-types#pass-fail-linters) |                | Writes a single file-level diagnostic to `stdout`.                                                                                       |
+| [`regex`](https://docs.trunk.io/check/configuration/custom-linters/output-types#regex)                 |                | Produces diagnostics using a custom regex format.                                                                                        |
+| [`arcanist`](https://docs.trunk.io/check/configuration/custom-linters/output-types#arcanist)           |       ✓        | Produces diagnostics as Arcanist JSON.                                                                                                   |
+| [`rewrite`](https://docs.trunk.io/check/configuration/custom-linters/output-types#formatters)          |       ✓        | Writes the formatted version of a file to `stdout`.                                                                                      |
 
-If your linter produces a different output type, you can also write a [parser](custom-parsers.md) to transform the linter's output into something Trunk can understand.
+If your linter produces a different output type, you can also write a [parser](https://docs.trunk.io/check/configuration/custom-linters/custom-parsers) to transform the linter's output into something Trunk can understand.
 
 To set up a custom linter, add it to `trunk.yaml` under `lint.definitions` and enable it:
 
@@ -266,7 +266,7 @@ The `tools` key should specify a list of tool names.
 
 We have two kinds of tool dependencies - they are described in turn below.
 
-See the [Tools Configuration](../../advanced-setup/tools/configuration.md) page for more details on how to set up your tools.
+See the [Tools Configuration](https://docs.trunk.io/check/advanced-setup/tools/configuration) page for more details on how to set up your tools.
 
 Using tools is the preferred way of defining and versioning a linter, as it also allows repo users to conveniently run the linter binary outside of the `trunk check` context.
 

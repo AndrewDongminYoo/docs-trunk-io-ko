@@ -10,7 +10,7 @@ Trunk Check is available as a [VSCode extension](https://marketplace.visualstudi
 
 By default, Trunk will try to automatically initialize itself in single-player mode.
 
-This means that it'll create a Trunk configuration that is hidden from git, which allows you to try it out [without Trunk's versioning powers](vs-code.md#single-player-mode).
+This means that it'll create a Trunk configuration that is hidden from git, which allows you to try it out [without Trunk's versioning powers](https://docs.trunk.io/check/ide-integration/vs-code#single-player-mode).
 
 If Trunk has not initialized itself in single-player mode, then you will need to initialize it manually, either by pressing the 'Initialize Trunk' button in the Trunk side panel:
 
@@ -46,7 +46,7 @@ Trunk also shows Trunk Check Issues in a panel in the File Explorer, but you can
 
 #### Single-player Mode
 
-In single-player mode, Trunk creates a [configuration file](../reference/trunk-yaml/trunk-yaml.md) and hides it from Git, so that you can test out Trunk on your own and get familiar with how it works, without committing this file.
+In single-player mode, Trunk creates a [configuration file](https://docs.trunk.io/check/reference/trunk-yaml) and hides it from Git, so that you can test out Trunk on your own and get familiar with how it works, without committing this file.
 
 Users normally check this file in to your repository so that you can run Trunk reproducibly: it pins the version of trunk, as well as that of every runtime and linter that you've enabled, allowing your team to guarantee that everyone and your CI runners are always running the exact same checks on your code.
 
@@ -60,7 +60,7 @@ or click on the notification to "Share trunk config", which will commit `.trunk/
 
 ### Learn more
 
-Check out how to [install the CLI](../advanced-setup/cli/install-trunk.md), [set it up in CI](../check-cloud-ci-integration/get-started/how-it-works.md), [ignore issues](../configuration/ignoring-issues-and-files.md), and set up [Custom Linters](../configuration/custom-linters/custom-linters.md).
+Check out how to [install the CLI](https://docs.trunk.io/check/check-cloud-ci-integration/get-started/github-integration), [ignore issues](https://docs.trunk.io/check/configuration/ignoring-issues), and set up [Custom Linters](https://docs.trunk.io/check/configuration/custom-linters).
 
 ![linter code docs](https://static.trunk.io/assets/vscode_doc_links.png)
 

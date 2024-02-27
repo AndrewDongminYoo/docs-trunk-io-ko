@@ -12,7 +12,7 @@ Clang-Tidy is part of the [Clang C compiler project](https://clang.llvm.org/) bu
 
 ### Installing Clang-Tidy with Trunk
 
-1. Install [Trunk Check](../../check.md) in your project if you haven’t already.
+1. Install [Trunk Check](https://docs.trunk.io/check) in your project if you haven’t already.
 2. Enable clang-tidy with `trunk check enable clang-tidy`
 3. Run `trunk check`
 
@@ -58,4 +58,4 @@ If there is another build system you would like Check to work with, please let u
 
 Trunk Check also supports [Clang Format](https://docs.trunk.io/check/configuration/configuring-existing-linters#clang-format), a code formatter & beautifier for C/C++ code.
 
-[Other linters](../supported-linters.md) supported by Trunk Check.
+[Other linters](https://docs.trunk.io/check/configuration/supported-linters) supported by Trunk Check.

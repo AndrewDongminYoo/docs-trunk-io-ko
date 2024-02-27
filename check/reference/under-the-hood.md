@@ -12,7 +12,7 @@ Linters usually operate only on source code and have no awareness of your commit
 
 Sure, this new linter may be flagging all sorts of potential existing bugs in your code, but you've got features to ship and you know your code works as is, so clearly those potential bugs aren't showstoppers.
 
-Trunk's ability to [hold-the-line](../configuration/hold-the-line.md) suppresses pre-existing issues, which means only new issues are flagged.
+Trunk's ability to [hold-the-line](https://docs.trunk.io/check/configuration/hold-the-line) suppresses pre-existing issues, which means only new issues are flagged.
 
 We achieve this by checking both your mainline and in-progress code and comparing the results and source code to determine which issues you actually care about.
 
@@ -44,7 +44,7 @@ That's also how you can enable/disable caching for any custom linters you integr
 If you pass `--verbose` flag when running check you can see which results were pulled from cache.
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2FGFwqC1UP3JImV0IIgLo9%2FSCR-20230811-mtvw.png?alt=media&token=22f18fc6-9791-4a71-bd85-fda6a8325fe5)
-*trunk check --verbose output*
+_trunk check --verbose output_
 
 ## Discarding Invalidated Results
 
@@ -62,7 +62,7 @@ Trunk uses git to detect your changes so we only check the code you've changed.
 
 Additionally we use it to accurately detect errors _caused_ by your changes, even if the errors aren't on lines you changed.
 
-Read more about [hold-the-line](under-the-hood.md#hold-the-line).
+Read more about [hold-the-line](https://docs.trunk.io/check/reference/under-the-hood#hold-the-line).
 
 ## CPU Utilization
 
@@ -70,15 +70,15 @@ By default `check` will run concurrent jobs using up to half the available cores
 
 This default is intended to balance system utilization and check responsiveness.
 
-If `check` detects that it is running in a continuous integration environment or you pass the [`--ci`](../usage.md) flag, then it will instead use all cores on the machine.
+If `check` detects that it is running in a continuous integration environment or you pass the [`--ci`](https://docs.trunk.io/check/usage) flag, then it will instead use all cores on the machine.
 
-This behavior can be overwritten by manually calling `check` with the [`--jobs`](../usage.md#options) argument.
+This behavior can be overwritten by manually calling `check` with the [`--jobs`](https://docs.trunk.io/check/usage#options) argument.
 
 ## Memory Utilization
 
 `check` does not current support a mechanism to throttle back jobs based on the memory consumption of concurrently runs jobs.
 
-In order to throttle memory utilization you can lower the [`--jobs`](../usage.md#options) count to indirectly reduce system load.
+In order to throttle memory utilization you can lower the [`--jobs`](https://docs.trunk.io/check/usage#options) count to indirectly reduce system load.
 
 ## Daemon
 

@@ -18,6 +18,6 @@ Trunk Check can also **run periodically** (ex: every night) to check for new vul
 
 To run Trunk Check automatically you must setup the [Trunk Check web app](https://app.trunk.io/) to connect to your CI system.
 
-If you are using GitHub see the [GitHub Integration Guide](get-started/github-integration.md).
+If you are using GitHub see the [GitHub Integration Guide](https://docs.trunk.io/check/check-cloud-ci-integration/get-started).
 
-If you are using GitLab or another CI system, see the [GitLab and other CI Integration Guide](continuous-integration/gitlab-and-other-ci-integration.md).
+If you are using GitLab or another CI system, see the [GitLab and other CI Integration Guide](https://docs.trunk.io/check/check-cloud-ci-integration/continuous-integration).

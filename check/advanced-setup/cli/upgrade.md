@@ -16,7 +16,7 @@ Only upgrade the Trunk CLI to the latest version.
 
 `plugins`
 
-Upgrade any [plugins](../plugins/plugins.md) that you have sourced to their latest public release.
+Upgrade any [plugins](https://docs.trunk.io/check/advanced-setup/plugins) that you have sourced to their latest public release.
 
 The latest version must be compatible with your current `cli` version in order for the upgrade to be applied.
 
@@ -30,7 +30,7 @@ Additional recommended linters can also be enabled by running with `-y`.
 
 `tools`
 
-Upgrade any [tools](../tools/tools.md) that you have enabled.
+Upgrade any [tools](https://docs.trunk.io/check/advanced-setup/tools) that you have enabled.
 
 Tools will be upgraded to their latest public release.
 
@@ -38,7 +38,7 @@ Note that any enabled linters that share a name with an enabled tool must keep t
 
 `runtimes`
 
-Upgrade any [runtimes](../runtimes/runtimes.md) that you have enabled.
+Upgrade any [runtimes](https://docs.trunk.io/check/advanced-setup/runtimes) that you have enabled.
 
 Runtimes will be upgraded to their recommended version for running linters, as specified by Trunk.
 
@@ -54,7 +54,7 @@ You'll see notifications for these upgrades appear in the VSCode Extension or at
 
 To stop seeing these notifications, you can run `trunk actions disable trunk-upgrade-available`.
 
-When running in [single-player mode](init-in-a-git-repo.md#single-player-mode), Trunk will automatically upgrade itself in the background and stay up to date.
+When running in [single-player mode](https://docs.trunk.io/check/advanced-setup/cli/init-in-a-git-repo#single-player-mode), Trunk will automatically upgrade itself in the background and stay up to date.
 
 ### Pinning Versions
 
@@ -72,4 +72,4 @@ lint:
 
 By default, upgrades are only applied to your repo's `.trunk/trunk.yaml`.
 
-If you're using a [plugin](../plugins/plugins.md) repo that enables linters/tools, or if you would like upgrades to be applied to your [`.trunk/user.yaml`](../../reference/user-yaml.md) file, you can run `trunk upgrade --apply-to <path>` to see upgrades applied there.
+If you're using a [plugin](https://docs.trunk.io/check/advanced-setup/plugins) repo that enables linters/tools, or if you would like upgrades to be applied to your [`.trunk/user.yaml`](https://docs.trunk.io/check/reference/user-yaml) file, you can run `trunk upgrade --apply-to <path>` to see upgrades applied there.

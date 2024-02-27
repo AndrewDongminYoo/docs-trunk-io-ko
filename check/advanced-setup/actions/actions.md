@@ -12,12 +12,12 @@ The most common Trunk Actions are provided out of the box with trunk, and are tr
 
 There are several different types of Trunk Actions, based on when they are triggered:
 
-| Trigger                  | Description                                                          |
-| :----------------------- | :------------------------------------------------------------------- |
-| time-based               | run on a schedule (once per hour, once per day, once per week)       |
-| file modification        | run whenever a file or directory in your repo changes.               |
-| [githooks](git-hooks.md) | run whenever a listed githook event fires (e.g. pre-commit, on-push) |
-| manual                   | `trunk run <action-name>`                                            |
+| Trigger                                                                  | Description                                                          |
+| :----------------------------------------------------------------------- | :------------------------------------------------------------------- |
+| time-based                                                               | run on a schedule (once per hour, once per day, once per week)       |
+| file modification                                                        | run whenever a file or directory in your repo changes.               |
+| [githooks](https://docs.trunk.io/check/advanced-setup/actions/git-hooks) | run whenever a listed githook event fires (e.g. pre-commit, on-push) |
+| manual                                                                   | `trunk run <action-name>`                                            |
 
 ### **Command Line**
 
@@ -40,7 +40,7 @@ trunk actions list
 ```
 
 ![ ](https://682515401-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F61Ep9MrYBkJa0Yq3zS1s%2Fuploads%2Fgit-blob-dbd8b50c0181d1cd831e77f778eed931229bb0ad%2Fimage.png?alt=media)
-*List of actions reported by `trunk actions list`*
+_List of actions reported by `trunk actions list`_
 
 ### Enable/Disable Actions
 

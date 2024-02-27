@@ -47,13 +47,13 @@ For other plugin managers and installation methods, see our [Neovim Plugin repo]
 
 ### Features
 
-The Neovim Plugin is designed to mirror the [VSCode extension](vs-code.md).
+The Neovim Plugin is designed to mirror the [VSCode extension](https://docs.trunk.io/check/ide-integration/vs-code).
 
 Supported features include:
 
 - Provide inline diagnostics and auto-fixes
 - Format files on save
-- Run [Trunk Actions](../advanced-setup/actions/actions.md) notifications
+- Run [Trunk Actions](https://docs.trunk.io/check/advanced-setup/actions) notifications
 - Display the linters that Trunk runs on a file
 
 ### Limitations

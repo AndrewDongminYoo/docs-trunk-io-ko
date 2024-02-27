@@ -36,16 +36,16 @@ yarn add -D @trunkio/launcher
 
 The Trunk CLI can be used for:
 
-- [Trunk Check](../../check.md): a pluggable superlinter with a builtin language server and pre-existing issue detection
-- [Trunk Tools:](../tools/tools.md) hermetic runtime and CLI tool manager
-- [Trunk Actions](../actions/actions.md): local workflow automation and githooks manager
+- [Trunk Check](https://docs.trunk.io/check): a pluggable superlinter with a builtin language server and pre-existing issue detection
+- [Trunk Tools:](https://docs.trunk.io/check/advanced-setup/tools) hermetic runtime and CLI tool manager
+- [Trunk Actions](https://docs.trunk.io/check/advanced-setup/actions): local workflow automation and githooks manager
 - [Trunk Merge](../../../merge/merge.md): a merge queue to make merging code in github safer and easier
 
-[Trunk Check](../../check.md) and [Trunk Actions](../actions/actions.md) can be used entirely locally without depending on hosted services or even having a Trunk account
+[Trunk Check](https://docs.trunk.io/check) and [Trunk Actions](https://docs.trunk.io/check/advanced-setup/actions) can be used entirely locally without depending on hosted services or even having a Trunk account
 
 ### Initialize Trunk in your repo
 
-Whether you aim to use [Trunk Check](../../check.md), [Trunk Merge](../../../merge/merge.md), [Trunk Actions](../actions/actions.md), or all of the above, the first step is to initialize Trunk in your git repo:
+Whether you aim to use [Trunk Check](https://docs.trunk.io/check), [Trunk Merge](../../../merge/merge.md), [Trunk Actions](https://docs.trunk.io/check/advanced-setup/actions), or all of the above, the first step is to initialize Trunk in your git repo:
 
 ```shell
 trunk init

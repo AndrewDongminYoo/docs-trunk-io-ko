@@ -18,8 +18,8 @@ Trunk will run on macOS version 10.15 or later.
 
 ## Windows
 
-[Currently in public beta.](windows-support-beta.md)
+[Currently in public beta.](https://docs.trunk.io/check/advanced-setup/cli/windows-beta)
 
 ## Backward Compatibility
 
-We generally strive to maintain backward compatibility between the [Trunk Launcher](../../reference/components.md#trunk-launcher) and the Trunk binary, but you may need to occasionally upgrade the launcher to support the newest version of Trunk.
+We generally strive to maintain backward compatibility between the [Trunk Launcher](https://docs.trunk.io/check/reference/components#trunk-launcher) and the Trunk binary, but you may need to occasionally upgrade the launcher to support the newest version of Trunk.
