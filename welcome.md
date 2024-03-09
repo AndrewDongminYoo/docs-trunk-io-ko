@@ -1,19 +1,6 @@
----
-description: Trunk is a devex toolkit to check, test, merge, and monitor your code.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: false
-  pagination:
-    visible: false
----
-
 # Welcome
+
+Trunk is a devex toolkit to check, test, merge, and monitor your code.
 
 ### What is Trunk?
 

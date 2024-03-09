@@ -34,5 +34,6 @@
     "trivy",
     "trunkio"
   ],
+  "codesnap.showWindowTitle": false,
   "editor.copyWithSyntaxHighlighting": false
 }

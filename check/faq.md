@@ -1,19 +1,6 @@
----
-description: Frequently Asked Questions
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: false
-  pagination:
-    visible: true
----
-
 # FAQ
+
+Frequently Asked Questions.
 
 <details>
 
